@@ -1,0 +1,1111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6AFD615D-F502-48BE-95B9-7F8158B84B9C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccessLayer</RootNamespace>
+    <AssemblyName>DataAccessLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationGroup.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationGroupRole.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationUserGroup.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetRole.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUser.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserAppData.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserClaim.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserLogin.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AspNetUserRole.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="C__MigrationHistory.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GSTModelContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GSTModelContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GSTModelContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GSTModelContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GSTModelContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="GST_API_LOG.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_BUSINESSTYPE.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_CLASS.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_CUSTOM_INVOICE.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_EXCEPTIONLOG.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_FINYEAR.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_GROUP.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_ITEM.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_ITEM_CONDITION.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_ITEM_NOTIFIED.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_MESSAGE.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_MESSAGELOG.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_OFFLINE_SECTION.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_PRESENT_USER.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_PRODUCT_DESCRIPTION.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_PURCHASE_DATA.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_PURCHASE_REGISTER.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_REPORT.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_REPORT_PERMISSION.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_SALE_REGISTER.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_STATE.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_SUBCLASS.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_SUBGROUP.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_USER_BUSINESSTYPE.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_USER_CURRENT_TURNOVER.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_USER_SIGNATORY.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_VENDOR.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_VENDOR_SERVICE.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_VENDOR_TRANS_SHIPMENT.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_CONSOLIDATED_INVOICE.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_CRDR_AUDIT_TRAIL.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_CRDR_NOTE.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_CRDR_NOTE_DATA.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_ERROR_HANDLING.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_INVOICE.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_INVOICE_AUDIT_TRAIL.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_INVOICE_DATA.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_INVOICE_MAP.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_ITC.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_ITC_DATA.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_OFFLINE.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_OFFLINE_INVOICE.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_OFFLINE_INVOICE_DATAITEM.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_OFFLINE_INVOICE_RATE.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_OFFLINE_INVOICE_SECTION_RULE.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_OFFLINE_ISSUINGNOTE_REASON.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_RETURN_STATUS.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_TRN_VENDOR_SERVICE.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR1_10_AMENDED_B2C_OTHER_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR1_11A111A2_TAXLIABILITY_ADV_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR1_11A_AME_TAXLIABILITY_ADV_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR1_11B1_11B2_ADJUSTMENT_ADV_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR1_11B_AMENDED_ADJ_ADV_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR1_4A4B4C6B6C_B2B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR1_5A5B_B2C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR1_6A_EXPORT_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR1_7C_B2C_OTHER_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR1_8_NILRATE_EXEMPTED_NONGST_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR1_9A_AMENDED_B2B_INVOICES_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR1_9A_AMENDED_B2C_LARGE_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR1_9A_AMENDED_EXPORT_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR1_9B_CRDR_REGISTER_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR1_9B_CRDR_UNREGISTER_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR1_9C_AMENDED_CRDR_REGISTER_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR1_9C_AMENDED_CRDR_UNREGISTER_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR3B_3_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR3B_3_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR3B_5_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR3B_5_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR3B_ITC_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR_1_HEADER_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR_1_HEADER_Result1.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILERETURN_GSTR_3B_HEADER_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR1A_3A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR1A_3B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR1_6A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR1_6B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR1_6C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR2A_3_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR2A_4_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR2_3_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR2_4A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR2_4B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR2_4C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR2_5A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR2_5B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR2_6A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR2_6B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR2_6C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR2_6D_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR2_7A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR2_7B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_3_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_3_2_Test_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_4A_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_4A_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_4A_3_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_4A_4_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_4A_5_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_4A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_4B_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_4B_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_4B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_4C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_4D_1__Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_4D_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_4D_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_4_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_5_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_5_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_5_3_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_5_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_6_1_A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_6_1_B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_6_1_C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_6_1_D_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_6_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_6_2_A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_6_2_B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR3B_6_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR6_6A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR6_6B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR6_6C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_11A1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_11A2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1A_4A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1A_4B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1A_5_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_10AA_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_10BB_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_11B1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_11B2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_12_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_4A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_4A_test_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_4B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_4C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_4_TEST_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_5A_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_5A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_7A_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_7A_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_7B_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_7B_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_8A_1E_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_8A_1N_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_8A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_8B_1E_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_8B_1N_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_8B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_8C_1E_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_8C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_8D_1E_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_8D_1N_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_8D_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_9B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_9C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_Test4A_details_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_1_Test4A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_3B_3_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4A_3B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4A_3_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4A_4_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4A_5_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4_10_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4_11_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4_12_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4_13_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4_4A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4_4B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4_4C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4_4D_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4_5A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4_5B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4_5C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4_6_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4_7_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4_8A_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4_8A_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4_8B_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4_8B_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_4_9_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_6A_3_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_6A_4_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_6_10_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_6_11A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_6_11B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_6_3_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_6_4B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_6_4C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_6_4_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_6_5A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_6_5B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_6_7A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_6_7B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_6_8A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_6_8B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_6_9A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_6_9B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_7_3_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_7_4_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_7_5A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_7_5B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_7_5C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_7_6_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_7_7A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_7_7B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_7_7C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_7_8A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_7_8B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_7_8C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_8_3A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_8_3_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_8_4A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_8_4B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_8_5_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_8_6A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_8_6B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_8_6C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_8_7A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_8_7B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_8_7C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_8_8A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_8_8B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_8_8C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_8_9A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_8_9B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_8_9C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_GSTR_TEST_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_OFFLIEN_GSTR3B_6_2A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_OFFLIEN_GSTR3B_6_2B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_OFFLIEN_GSTR3B_6_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_OFFLINE_GSTR3B_3_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_OFFLINE_GSTR3B_4A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_OFFLINE_GSTR3B_4B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_Offline_GSTR3B_4C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_OFFLINE_GSTR3B_4D_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_OFFLINE_GSTR3B_4_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_OFFLINE_GSTR3B_5_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_OFFLINE_GSTR3B_6_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_OFFLINE_GSTR_3B_3_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_RETURN_GSTR_1_4A_4B_4C_6B_6C_B2C_Invoices_DETAILS_test_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_FILE_RETURN_GSTR_1_5_B2CL_largeInvoices_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_GSTR1_HSN_SUMMARY_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_GSTR1_SUMMARY_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3B_4B_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3B_4C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3B_4_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3B_5_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_10A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_10B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_10C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_10D_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_11_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_12A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_12B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_12C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_12D_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_13_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_13_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_14_A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_14_B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_14_C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_14_D_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_15_A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_15_B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_15_C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_15_D_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_4_1_A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_4_1_B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_4_1_C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_4_1_D_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_4_2_A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_4_2_B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_4_2_C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_4_3_1_A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_4_3_1_B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_4_3_1_C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_4_3_2_A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_4_3_2_B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_5A_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_5A_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_5B_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_5B_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_6_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_6_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_7_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_8A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_8B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_8C_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_8D_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_9A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR3_9B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2A_5_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2A_6_CREDIT_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2A_6_CREDIT_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2A_6_CREDIT_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2A_6_INVOICE_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2A_6_INVOICE_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2A_6_INVOICE_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2A_7A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2A_7B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2_10A_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2_10A_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2_10B_1_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2_10B_2_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2_11A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2_11B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2_11_B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2_11_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2_12A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2_12_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2_13_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2_8A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2_8B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2_9A_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_IMPORT_GSTR_2_9B_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_MST_HSN_SAC_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PROC_PURCHASE_STOCK_INVENTRY_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RPT_INVOICE_GENERATE_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <EntityDeploy Include="GSTModelContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>GSTModelContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="GSTModelContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GSTModelContext.edmx</DependentUpon>
+      <LastGenOutput>GSTModelContext.Context.cs</LastGenOutput>
+    </None>
+    <None Include="GSTModelContext.edmx.diagram">
+      <DependentUpon>GSTModelContext.edmx</DependentUpon>
+    </None>
+    <None Include="GSTModelContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>GSTModelContext.edmx</DependentUpon>
+      <LastGenOutput>GSTModelContext.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

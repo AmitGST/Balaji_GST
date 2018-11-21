@@ -1,0 +1,19 @@
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Debug\EntityFramework.dll
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Debug\EntityFramework.xml
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+D:\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+D:\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Debug\EntityFramework.dll
+D:\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Debug\EntityFramework.xml
+D:\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\BALAJI.GSP.APPLICATION\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\BALAJI.GSP.APPLICATION\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

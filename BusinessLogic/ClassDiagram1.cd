@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="com.B2B.GST.GSTInvoices.AmendedB2BCreditNotesInvoice" Collapsed="true">
+    <Position X="4" Y="1.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAAAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>AmendedB2BCreditNotesInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.AmendedB2BDebitNotesInvoice" Collapsed="true">
+    <Position X="10.75" Y="1.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAAAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>AmendedB2BDebitNotesInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.AmendedB2BExportInvoice" Collapsed="true">
+    <Position X="15.25" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAAAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>AmendedB2BExportInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.AmendedB2BInvoice" Collapsed="true">
+    <Position X="19.75" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAAAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>AmendedB2BInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.AmendedB2BTaxLiability_AdvTaxLiabilityPaymentInvoice" Collapsed="true">
+    <Position X="28.75" Y="1.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAAAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>AmendedB2BTaxLiability_AdvTaxLiabilityPaymentInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.AmendedB2CInvoice" Collapsed="true">
+    <Position X="35.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAAAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>AmendedB2CInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.AmendedB2CLargeInvoice" Collapsed="true">
+    <Position X="40" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAAAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>AmendedB2CLargeInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.B2BCreditNotesInvoice" Collapsed="true">
+    <Position X="6.25" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAAAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>B2BCreditNotesInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.B2BDebitNotesInvoice" Collapsed="true">
+    <Position X="13" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAAAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>B2BDebitNotesInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.B2BExportInvoice" Collapsed="true">
+    <Position X="17.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAAAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>B2BExportInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.B2BInvoice" Collapsed="true">
+    <Position X="22" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAAAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>B2BInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.B2BTaxLiability_AdvTaxLiabilityPaymentInvoice" Collapsed="true">
+    <Position X="31" Y="1.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAAAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>B2BTaxLiability_AdvTaxLiabilityPaymentInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.B2CLargeInvoice" Collapsed="true">
+    <Position X="37.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAAAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>B2CLargeInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.B2CSmallInvoice" Collapsed="true">
+    <Position X="42.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAAAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>B2CSmallInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.HSN" Collapsed="true">
+    <Position X="47" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAHAAQABgAhCAABIBgBAQQAQAAAQAAAAAAAgAEAAAA=</HashCode>
+      <FileName>HSN.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.Notified" Collapsed="true">
+    <Position X="52.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAKAAAAAgAIACIAIAAgAAAAAAAAAAAAIAAAAAgAA=</HashCode>
+      <FileName>HSN.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.Condition" Collapsed="true">
+    <Position X="47" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HSN.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.HSNSummaryB2BInvoice" Collapsed="true">
+    <Position X="24.25" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAAAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>HSNSummaryB2BInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.Invoice" Collapsed="true">
+    <Position X="24.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UEBkBCBoYCIEgABSqgAAaI6CYkFCACQEEAQAAMKEQBE=</HashCode>
+      <FileName>IInvoice.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.InvoiceFactory" Collapsed="true">
+    <Position X="48.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InvoiceFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.LineEntry" Collapsed="true">
+    <Position X="50.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIBIQAkEACBlIAYEISAACABAgBhBQIgQa0gIMAZIBFg=</HashCode>
+      <FileName>LineEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.NilRatedInvoice">
+    <Position X="26.5" Y="1.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAIAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>NilRatedInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.OutwardSuppliesThruECommPortal" Collapsed="true">
+    <Position X="33.25" Y="1.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAAAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>OutwardSuppliesThruECommPortal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.SAC" Collapsed="true">
+    <Position X="48.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAHAAQCBgAlCAABIBgBAQwAAAAAQAAAAAAAAAEAAAA=</HashCode>
+      <FileName>SAC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.SACSumamryB2BInvoice" Collapsed="true">
+    <Position X="44.5" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAAAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>SACSumamryB2BInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTInvoices.TaxPaidOnInvoicesIssuedInCurrentPeriod" Collapsed="true">
+    <Position X="8.5" Y="1.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAAAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>TaxPaidOnInvoicesIssuedInCurrentPeriod.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.ExcelFunctionality.ExcelDB" Collapsed="true">
+    <Position X="50.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GQIgAAiCKIATAAYacqIgAEgEGOAIQAoM0QBVEiLIIBA=</HashCode>
+      <FileName>ExcelDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTIN.Seller" Collapsed="true">
+    <Position X="50.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>TACLCAUEhkAbIIygmABCooggKAdEACgyRSCAsBXALQQ=</HashCode>
+      <FileName>GST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTIN.SerialNoOfInvoice" Collapsed="true">
+    <Position X="52.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAQABIAAAEAAAAAAAAAAAQAAAQEAAAFEgAAASAAEAA=</HashCode>
+      <FileName>GST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTIN.Reciever" Collapsed="true">
+    <Position X="47" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAJAAACAAEKAggAigAAAIggAAIAAAACAAAAAQEACQA=</HashCode>
+      <FileName>GST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.GSTIN.Consignee" Collapsed="true">
+    <Position X="48.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAEIAAgACAAAAAggAAIAAAACAAAAAQEAAAA=</HashCode>
+      <FileName>GST.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="businessAccessLayer.GSTINBLStaticValues" Collapsed="true">
+    <Position X="52.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAEAgAAAAABBAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GSTINBLStaticValues.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="com.B2B.GST.LoginModule.UserLogin" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="47" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQIAAAAAAAAAAQAAAAAAEAAAAAAACAAAAAgYAQAA=</HashCode>
+      <FileName>Login.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="com.B2B.GST.GSTInvoices.IInvoice" Collapsed="true">
+    <Position X="47" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAoICAAAAAAKAAAAAwCIAEAAAQEEAAAAAIAABE=</HashCode>
+      <FileName>IInvoice.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="com.B2B.GST.GSTReturn.IReturn" Collapsed="true">
+    <Position X="50.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IReturn.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="com.B2B.GST.LoginModule.ILogin" Collapsed="true">
+    <Position X="48.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Login.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="com.B2B.GST.GSTInvoices.InvoiceType" Collapsed="true">
+    <Position X="48.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAQQIEAAEAAAAAQEAAAAAAAAAABAAACAAAAA=</HashCode>
+      <FileName>InvoiceFactory.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.B2B.GST.GSTInvoices.LineType" Collapsed="true">
+    <Position X="50.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAQAAAAAAAAAAAACA=</HashCode>
+      <FileName>LineEntry.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="com.B2B.GST.GSTIN.BusinessEntityType" Collapsed="true">
+    <Position X="47" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GST.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

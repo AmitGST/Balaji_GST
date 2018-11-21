@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="uc_Groups.ascx.cs" Inherits="BALAJI.GSP.APPLICATION.Account.uc_Groups" %>
+<asp:CheckBoxList ID="cbGroupList" CssClass="table table-striped" DataTextField="Name" DataValueField="ID" runat="server" RepeatColumns="5"></asp:CheckBoxList>

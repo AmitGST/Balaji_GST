@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49B8A70F-E151-4D34-96B3-055925641472}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GSTN.API</RootNamespace>
+    <AssemblyName>GSTN.API</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.1.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\..\..\..\BalajiGSP\UserInterface\bin\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="eSignASPLib, Version=1.1.6.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\eSignASPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\..\..\..\BALAJI.GSP.WEBAPPLICATION\BALAJI.GSP.APPLICATION\BALAJI.GSP.APPLICATION\bin\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\..\..\..\BALAJI.GSP.WEBAPPLICATION\BALAJI.GSP.APPLICATION\BALAJI.GSP.APPLICATION\bin\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Security.Cryptography, Version=1.7.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Console\bin\Debug\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Clients\DSCUtils.cs" />
+    <Compile Include="Clients\EncryptionUtils.cs" />
+    <Compile Include="Clients\GSTNApiClientBase.cs" />
+    <Compile Include="Clients\GSTNAuthClient.cs" />
+    <Compile Include="Clients\GSTNDSClient.cs" />
+    <Compile Include="Clients\GSTNReturnsClient.cs" />
+    <Compile Include="Clients\GSTR1ApiClient.cs" />
+    <Compile Include="Clients\GSTR2ApiClient.cs" />
+    <Compile Include="Clients\GSTR3ApiClient.cs" />
+    <Compile Include="Clients\LedgerApiClient.cs" />
+    <Compile Include="Clients\MxApiClient.cs" />
+    <Compile Include="Models\ApiResult.cs" />
+    <Compile Include="Models\Auth\AuthModel.cs" />
+    <Compile Include="Models\GSTNConstants.cs" />
+    <Compile Include="Models\GSTR1\ATAOutward.cs" />
+    <Compile Include="Models\GSTR1\ATOutward.cs" />
+    <Compile Include="Models\GSTR1\B2bAOutward.cs" />
+    <Compile Include="Models\GSTR1\B2bOutward.cs" />
+    <Compile Include="Models\GSTR1\B2CLAOutward.cs" />
+    <Compile Include="Models\GSTR1\B2CLOutward.cs" />
+    <Compile Include="Models\GSTR1\B2CSAOutward.cs" />
+    <Compile Include="Models\GSTR1\B2CSOutward.cs" />
+    <Compile Include="Models\GSTR1\CDNAOutward.cs" />
+    <Compile Include="Models\GSTR1\CDNOutward.cs" />
+    <Compile Include="Models\GSTR1\EComOutward.cs" />
+    <Compile Include="Models\GSTR1\Exp.cs" />
+    <Compile Include="Models\GSTR1\ExpA.cs" />
+    <Compile Include="Models\GSTR1\GSTR1Total.cs" />
+    <Compile Include="Models\GSTR1\NilRatedOutward.cs" />
+    <Compile Include="Models\GSTR1\SummaryOutward.cs" />
+    <Compile Include="Models\GSTR1\TxpOutward.cs" />
+    <Compile Include="Models\GSTR2\B2bAInward.cs" />
+    <Compile Include="Models\GSTR2\B2bInward.cs" />
+    <Compile Include="Models\GSTR2\CdnAInward.cs" />
+    <Compile Include="Models\GSTR2\CdnInward.cs" />
+    <Compile Include="Models\GSTR2\GSTR2Total.cs" />
+    <Compile Include="Models\GSTR2\ImpG.cs" />
+    <Compile Include="Models\GSTR2\ImpGA.cs" />
+    <Compile Include="Models\GSTR2\ImpS.cs" />
+    <Compile Include="Models\GSTR2\ImpSA.cs" />
+    <Compile Include="Models\GSTR2\IsdRcd.cs" />
+    <Compile Include="Models\GSTR2\ItcRcd.cs" />
+    <Compile Include="Models\GSTR2\ItcRvsl.cs" />
+    <Compile Include="Models\GSTR2\NilRatedInward.cs" />
+    <Compile Include="Models\GSTR2\SummaryInward.cs" />
+    <Compile Include="Models\GSTR2\TcsData.cs" />
+    <Compile Include="Models\GSTR2\TdsCredit.cs" />
+    <Compile Include="Models\GSTR2\Txli.cs" />
+    <Compile Include="Models\GSTR2\TxliA.cs" />
+    <Compile Include="Models\GSTR2\Txpd.cs" />
+    <Compile Include="Models\GSTR3\Exp.cs" />
+    <Compile Include="Models\GSTR3\GSTR3SaveModel.cs" />
+    <Compile Include="Models\GSTR3\GSTR3Total.cs" />
+    <Compile Include="Models\GSTR3\GSTR3_Submit.cs" />
+    <Compile Include="Models\GSTR3\ICSC.cs" />
+    <Compile Include="Models\GSTR3\Imp.cs" />
+    <Compile Include="Models\GSTR3\InS.cs" />
+    <Compile Include="Models\GSTR3\IntraSupConReg.cs" />
+    <Compile Include="Models\GSTR3\IntrSupConReg.cs" />
+    <Compile Include="Models\GSTR3\IntrSupRec.cs" />
+    <Compile Include="Models\GSTR3\ItcCredit.cs" />
+    <Compile Include="Models\GSTR3\ItcRev.cs" />
+    <Compile Include="Models\GSTR3\ItraSupRec.cs" />
+    <Compile Include="Models\GSTR3\JobWork.cs" />
+    <Compile Include="Models\GSTR3\Out.cs" />
+    <Compile Include="Models\GSTR3\Pdcash.cs" />
+    <Compile Include="Models\GSTR3\Pdcr.cs" />
+    <Compile Include="Models\GSTR3\RevInv.cs" />
+    <Compile Include="Models\GSTR3\RevInv2.cs" />
+    <Compile Include="Models\GSTR3\RfClm.cs" />
+    <Compile Include="Models\GSTR3\RfClm2.cs" />
+    <Compile Include="Models\GSTR3\TcsCredit.cs" />
+    <Compile Include="Models\GSTR3\TdsCredit.cs" />
+    <Compile Include="Models\GSTR3\Tod.cs" />
+    <Compile Include="Models\GSTR3\Tpm.cs" />
+    <Compile Include="Models\GSTR3\Ttl.cs" />
+    <Compile Include="Models\GSTR3\Ttl2.cs" />
+    <Compile Include="Models\Ledger\CashLedgerDetails.cs" />
+    <Compile Include="Models\Ledger\ITCLedgerDetails.cs" />
+    <Compile Include="Models\Ledger\LedgerSummary.cs" />
+    <Compile Include="Models\Ledger\TaxLedgerDetails.cs" />
+    <Compile Include="Models\Ledger\UtilizeCashModel.cs" />
+    <Compile Include="Models\Ledger\UtilizeITCModel.cs" />
+    <Compile Include="My Project\Resources.Designer.cs" />
+    <Compile Include="PGP\DetachedSignatureProcessor.cs" />
+    <Compile Include="PGP\PgpExampleUtilities.cs" />
+    <Compile Include="PGP\PGPKeyGenerator.cs" />
+    <Compile Include="Prompts.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\Docsigntest.pfx" />
+    <None Include="Resources\GSTN_G2B_SANDBOX_UAT_public.pem" />
+    <None Include="Resources\GSTN_public.cer" />
+    <None Include="Resources\GSTN_PublicKey.cer" />
+    <None Include="Resources\uidai_auth_prod.cer" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\eSignASPLib.dll" />
+    <Content Include="Resources\itextsharp.dll" />
+    <Content Include="Resources\Security.Cryptography.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

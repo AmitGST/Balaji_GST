@@ -1,0 +1,1326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GST_DBModelStoreContainer" CdmEntityContainer="GST_DBEntities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="GST_DBModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicationGroupRoles">
+      <EntityTypeMapping TypeName="GST_DBModel.ApplicationGroupRole">
+        <MappingFragment StoreEntitySet="ApplicationGroupRoles">
+          <ScalarProperty Name="ApplicationGroupId" ColumnName="ApplicationGroupId" />
+          <ScalarProperty Name="ApplicationRoleId" ColumnName="ApplicationRoleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicationGroups">
+      <EntityTypeMapping TypeName="GST_DBModel.ApplicationGroup">
+        <MappingFragment StoreEntitySet="ApplicationGroups">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Applications">
+      <EntityTypeMapping TypeName="GST_DBModel.Application">
+        <MappingFragment StoreEntitySet="Applications">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ApplicationUserGroups">
+      <EntityTypeMapping TypeName="GST_DBModel.ApplicationUserGroup">
+        <MappingFragment StoreEntitySet="ApplicationUserGroups">
+          <ScalarProperty Name="ApplicationGroupId" ColumnName="ApplicationGroupId" />
+          <ScalarProperty Name="ApplicationUserId" ColumnName="ApplicationUserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="GST_DBModel.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserAppDatas">
+      <EntityTypeMapping TypeName="GST_DBModel.AspNetUserAppData">
+        <MappingFragment StoreEntitySet="AspNetUserAppData">
+          <ScalarProperty Name="LargeImage" ColumnName="LargeImage" />
+          <ScalarProperty Name="SmallImage" ColumnName="SmallImage" />
+          <ScalarProperty Name="ITC" ColumnName="ITC" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="RegisterWithUs" ColumnName="RegisterWithUs" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="NameOfSignatory" ColumnName="NameOfSignatory" />
+          <ScalarProperty Name="GSTINUserId" ColumnName="GSTINUserId" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+          <ScalarProperty Name="GrossTurnOver" ColumnName="GrossTurnOver" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="OrganizationName" ColumnName="OrganizationName" />
+          <ScalarProperty Name="ParentUserID" ColumnName="ParentUserID" />
+          <ScalarProperty Name="GSTNNo" ColumnName="GSTNNo" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="AspUserId" ColumnName="AspUserId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="GST_DBModel.AspNetUserClaim">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="GST_DBModel.AspNetUserLogin">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserRoles">
+      <EntityTypeMapping TypeName="GST_DBModel.AspNetUserRole">
+        <MappingFragment StoreEntitySet="AspNetUserRoles">
+          <ScalarProperty Name="ApplicationUser_Id" ColumnName="ApplicationUser_Id" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="GST_DBModel.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="LargeImage" ColumnName="LargeImage" />
+          <ScalarProperty Name="SmallImage" ColumnName="SmallImage" />
+          <ScalarProperty Name="ITC" ColumnName="ITC" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="RegisterWithUs" ColumnName="RegisterWithUs" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="NameOfSignatory" ColumnName="NameOfSignatory" />
+          <ScalarProperty Name="GSTINUserId" ColumnName="GSTINUserId" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+          <ScalarProperty Name="GrossTurnOver" ColumnName="GrossTurnOver" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="OrganizationName" ColumnName="OrganizationName" />
+          <ScalarProperty Name="ParentUserID" ColumnName="ParentUserID" />
+          <ScalarProperty Name="GSTNNo" ColumnName="GSTNNo" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_MST_SUBSUPPLY_TYPE">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_MST_SUBSUPPLY_TYPE">
+        <MappingFragment StoreEntitySet="EWB_MST_SUBSUPPLY_TYPE">
+          <ScalarProperty Name="SupplyType" ColumnName="SupplyType" />
+          <ScalarProperty Name="SubSupplyTypeName" ColumnName="SubSupplyTypeName" />
+          <ScalarProperty Name="SubSupplyTypeID" ColumnName="SubSupplyTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_MST_VEHICLE_REASON">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_MST_VEHICLE_REASON">
+        <MappingFragment StoreEntitySet="EWB_MST_VEHICLE_REASON">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ReasonText" ColumnName="ReasonText" />
+          <ScalarProperty Name="VehicleReasonID" ColumnName="VehicleReasonID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_TRN_CANCEL_EWBILL">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_TRN_CANCEL_EWBILL">
+        <MappingFragment StoreEntitySet="EWB_TRN_CANCEL_EWBILL">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CancelRmrk" ColumnName="CancelRmrk" />
+          <ScalarProperty Name="CancelRsnCode" ColumnName="CancelRsnCode" />
+          <ScalarProperty Name="EWBNo" ColumnName="EWBNo" />
+          <ScalarProperty Name="EWB_ID" ColumnName="EWB_ID" />
+          <ScalarProperty Name="CancleEW_ID" ColumnName="CancleEW_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_TRN_CONSOLIDATED_EWBILL">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_TRN_CONSOLIDATED_EWBILL">
+        <MappingFragment StoreEntitySet="EWB_TRN_CONSOLIDATED_EWBILL">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EWBNo" ColumnName="EWBNo" />
+          <ScalarProperty Name="TripSheetEWBBills" ColumnName="TripSheetEWBBills" />
+          <ScalarProperty Name="FromState" ColumnName="FromState" />
+          <ScalarProperty Name="TransDocDate" ColumnName="TransDocDate" />
+          <ScalarProperty Name="TransDocNo" ColumnName="TransDocNo" />
+          <ScalarProperty Name="TransMode" ColumnName="TransMode" />
+          <ScalarProperty Name="FromPlace" ColumnName="FromPlace" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="EWB_ID" ColumnName="EWB_ID" />
+          <ScalarProperty Name="ConsolidatedID" ColumnName="ConsolidatedID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_TRN_EWBILL">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_TRN_EWBILL">
+        <MappingFragment StoreEntitySet="EWB_TRN_EWBILL">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ValidUpto" ColumnName="ValidUpto" />
+          <ScalarProperty Name="EwayBillDate" ColumnName="EwayBillDate" />
+          <ScalarProperty Name="EwayBillNo" ColumnName="EwayBillNo" />
+          <ScalarProperty Name="EWBDocNo" ColumnName="EWBDocNo" />
+          <ScalarProperty Name="ErrorCodes" ColumnName="ErrorCodes" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="TransDocDate" ColumnName="TransDocDate" />
+          <ScalarProperty Name="TransDocNo" ColumnName="TransDocNo" />
+          <ScalarProperty Name="TransporterName" ColumnName="TransporterName" />
+          <ScalarProperty Name="TransporterId" ColumnName="TransporterId" />
+          <ScalarProperty Name="TransDistance" ColumnName="TransDistance" />
+          <ScalarProperty Name="VehicleType" ColumnName="VehicleType" />
+          <ScalarProperty Name="TransMode" ColumnName="TransMode" />
+          <ScalarProperty Name="CessValue" ColumnName="CessValue" />
+          <ScalarProperty Name="IGSTValue" ColumnName="IGSTValue" />
+          <ScalarProperty Name="SGSTValue" ColumnName="SGSTValue" />
+          <ScalarProperty Name="CGSTValue" ColumnName="CGSTValue" />
+          <ScalarProperty Name="TotalValue" ColumnName="TotalValue" />
+          <ScalarProperty Name="ToStateCode" ColumnName="ToStateCode" />
+          <ScalarProperty Name="ToPincode" ColumnName="ToPincode" />
+          <ScalarProperty Name="ToPlace" ColumnName="ToPlace" />
+          <ScalarProperty Name="ToAddress2" ColumnName="ToAddress2" />
+          <ScalarProperty Name="ToAddress1" ColumnName="ToAddress1" />
+          <ScalarProperty Name="ToTrdName" ColumnName="ToTrdName" />
+          <ScalarProperty Name="ActToStateCode" ColumnName="ActToStateCode" />
+          <ScalarProperty Name="ToGSTIN" ColumnName="ToGSTIN" />
+          <ScalarProperty Name="FromStateCode" ColumnName="FromStateCode" />
+          <ScalarProperty Name="FromPincode" ColumnName="FromPincode" />
+          <ScalarProperty Name="FromPlace" ColumnName="FromPlace" />
+          <ScalarProperty Name="FromAddress2" ColumnName="FromAddress2" />
+          <ScalarProperty Name="FromAddress1" ColumnName="FromAddress1" />
+          <ScalarProperty Name="FromTrdName" ColumnName="FromTrdName" />
+          <ScalarProperty Name="ActFromStateCode" ColumnName="ActFromStateCode" />
+          <ScalarProperty Name="FromGSTIN" ColumnName="FromGSTIN" />
+          <ScalarProperty Name="DocDate" ColumnName="DocDate" />
+          <ScalarProperty Name="DocNo" ColumnName="DocNo" />
+          <ScalarProperty Name="DocType" ColumnName="DocType" />
+          <ScalarProperty Name="SubSupplyType" ColumnName="SubSupplyType" />
+          <ScalarProperty Name="SupplyType" ColumnName="SupplyType" />
+          <ScalarProperty Name="UserGSTIN" ColumnName="UserGSTIN" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="EWB_ID" ColumnName="EWB_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_TRN_EWBILL_AUDITTRAIL">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_TRN_EWBILL_AUDITTRAIL">
+        <MappingFragment StoreEntitySet="EWB_TRN_EWBILL_AUDITTRAIL">
+          <ScalarProperty Name="Updateddate" ColumnName="Updateddate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="AuditTrailStatus" ColumnName="AuditTrailStatus" />
+          <ScalarProperty Name="EWB_ID" ColumnName="EWB_ID" />
+          <ScalarProperty Name="AuditTrailID" ColumnName="AuditTrailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_TRN_EWBILL_ITEM">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_TRN_EWBILL_ITEM">
+        <MappingFragment StoreEntitySet="EWB_TRN_EWBILL_ITEM">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CESSRate" ColumnName="CESSRate" />
+          <ScalarProperty Name="IGSTRate" ColumnName="IGSTRate" />
+          <ScalarProperty Name="SGSTRate" ColumnName="SGSTRate" />
+          <ScalarProperty Name="CGSTRate" ColumnName="CGSTRate" />
+          <ScalarProperty Name="TaxableAmount" ColumnName="TaxableAmount" />
+          <ScalarProperty Name="QtyUnit" ColumnName="QtyUnit" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="HsnCode" ColumnName="HsnCode" />
+          <ScalarProperty Name="ProductDesc" ColumnName="ProductDesc" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="EWB_ID" ColumnName="EWB_ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_TRN_REJECT_EWBILL">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_TRN_REJECT_EWBILL">
+        <MappingFragment StoreEntitySet="EWB_TRN_REJECT_EWBILL">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="RejectStatus" ColumnName="RejectStatus" />
+          <ScalarProperty Name="RejectRemark" ColumnName="RejectRemark" />
+          <ScalarProperty Name="RejectReasonCode" ColumnName="RejectReasonCode" />
+          <ScalarProperty Name="EWBNo" ColumnName="EWBNo" />
+          <ScalarProperty Name="EWB_ID" ColumnName="EWB_ID" />
+          <ScalarProperty Name="RejectEWB_ID" ColumnName="RejectEWB_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_TRN_REPONSE_EWBILL">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_TRN_REPONSE_EWBILL">
+        <MappingFragment StoreEntitySet="EWB_TRN_REPONSE_EWBILL">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ErrorDescription" ColumnName="ErrorDescription" />
+          <ScalarProperty Name="ErrorCode" ColumnName="ErrorCode" />
+          <ScalarProperty Name="ValidUpto" ColumnName="ValidUpto" />
+          <ScalarProperty Name="EwayBillDate" ColumnName="EwayBillDate" />
+          <ScalarProperty Name="EwaybillNo" ColumnName="EwaybillNo" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="EWB_ID" ColumnName="EWB_ID" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="ReponseEW_ID" ColumnName="ReponseEW_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_TRN_UPDATE_VEHICLE">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_TRN_UPDATE_VEHICLE">
+        <MappingFragment StoreEntitySet="EWB_TRN_UPDATE_VEHICLE">
+          <ScalarProperty Name="Updateddate" ColumnName="Updateddate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TransMode" ColumnName="TransMode" />
+          <ScalarProperty Name="TransDocDate" ColumnName="TransDocDate" />
+          <ScalarProperty Name="TransDocNo" ColumnName="TransDocNo" />
+          <ScalarProperty Name="ReasonRem" ColumnName="ReasonRem" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="ReasonCode" ColumnName="ReasonCode" />
+          <ScalarProperty Name="FromState" ColumnName="FromState" />
+          <ScalarProperty Name="FromPlace" ColumnName="FromPlace" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="EWBNo" ColumnName="EWBNo" />
+          <ScalarProperty Name="EWB_ID" ColumnName="EWB_ID" />
+          <ScalarProperty Name="VehicleUpdate_ID" ColumnName="VehicleUpdate_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_API_LOG">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_API_LOG">
+        <MappingFragment StoreEntitySet="GST_API_LOG">
+          <ScalarProperty Name="HitDateTime" ColumnName="HitDateTime" />
+          <ScalarProperty Name="ActionName" ColumnName="ActionName" />
+          <ScalarProperty Name="ControllerName" ColumnName="ControllerName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_BUSINESSTYPE">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_BUSINESSTYPE">
+        <MappingFragment StoreEntitySet="GST_MST_BUSINESSTYPE">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="BusinessType" ColumnName="BusinessType" />
+          <ScalarProperty Name="BusinessID" ColumnName="BusinessID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_CLASS">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_CLASS">
+        <MappingFragment StoreEntitySet="GST_MST_CLASS">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ClassDescription" ColumnName="ClassDescription" />
+          <ScalarProperty Name="ClassCode" ColumnName="ClassCode" />
+          <ScalarProperty Name="SubGroupID" ColumnName="SubGroupID" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_CUSTOM_INVOICE">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_CUSTOM_INVOICE">
+        <MappingFragment StoreEntitySet="GST_MST_CUSTOM_INVOICE">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="CustomInvoiceNo" ColumnName="CustomInvoiceNo" />
+          <ScalarProperty Name="InvoiceType" ColumnName="InvoiceType" />
+          <ScalarProperty Name="InvNoId" ColumnName="InvNoId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_EXCEPTIONLOG">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_EXCEPTIONLOG">
+        <MappingFragment StoreEntitySet="GST_MST_EXCEPTIONLOG">
+          <ScalarProperty Name="EXCEPTIONLOGGINGTIME" ColumnName="EXCEPTIONLOGGINGTIME" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="SERVERNAME" ColumnName="SERVERNAME" />
+          <ScalarProperty Name="EXCEPTIONLINENUMBER" ColumnName="EXCEPTIONLINENUMBER" />
+          <ScalarProperty Name="EXCEPTIONMESSAGE" ColumnName="EXCEPTIONMESSAGE" />
+          <ScalarProperty Name="EXCEPTIONMETHODNAME" ColumnName="EXCEPTIONMETHODNAME" />
+          <ScalarProperty Name="EXCEPTIONCLASSNAME" ColumnName="EXCEPTIONCLASSNAME" />
+          <ScalarProperty Name="APPLICATIONNAME" ColumnName="APPLICATIONNAME" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="EXCEPTIONID" ColumnName="EXCEPTIONID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_FINYEAR">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_FINYEAR">
+        <MappingFragment StoreEntitySet="GST_MST_FINYEAR">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Finyear_Format" ColumnName="Finyear_Format" />
+          <ScalarProperty Name="Finyear" ColumnName="Finyear" />
+          <ScalarProperty Name="Fin_ID" ColumnName="Fin_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_GROUP">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_GROUP">
+        <MappingFragment StoreEntitySet="GST_MST_GROUP">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="GroupType" ColumnName="GroupType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="GroupCode" ColumnName="GroupCode" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_ITEM">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_ITEM">
+        <MappingFragment StoreEntitySet="GST_MST_ITEM">
+          <ScalarProperty Name="BuisnessTypeId" ColumnName="BuisnessTypeId" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ActiveTo" ColumnName="ActiveTo" />
+          <ScalarProperty Name="SpecialConditionApplied" ColumnName="SpecialConditionApplied" />
+          <ScalarProperty Name="ActiveFrom" ColumnName="ActiveFrom" />
+          <ScalarProperty Name="IsNonGSTGoods" ColumnName="IsNonGSTGoods" />
+          <ScalarProperty Name="IsZeroRated" ColumnName="IsZeroRated" />
+          <ScalarProperty Name="IsExempted" ColumnName="IsExempted" />
+          <ScalarProperty Name="IsCondition" ColumnName="IsCondition" />
+          <ScalarProperty Name="IsNilRated" ColumnName="IsNilRated" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IsNotified" ColumnName="IsNotified" />
+          <ScalarProperty Name="UGST" ColumnName="UGST" />
+          <ScalarProperty Name="CESS" ColumnName="CESS" />
+          <ScalarProperty Name="SGST" ColumnName="SGST" />
+          <ScalarProperty Name="CGST" ColumnName="CGST" />
+          <ScalarProperty Name="IGST" ColumnName="IGST" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SubGroupID" ColumnName="SubGroupID" />
+          <ScalarProperty Name="SubClassID" ColumnName="SubClassID" />
+          <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="Item_ID" ColumnName="Item_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_ITEM_CONDITION">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_ITEM_CONDITION">
+        <MappingFragment StoreEntitySet="GST_MST_ITEM_CONDITION">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ActiveTo" ColumnName="ActiveTo" />
+          <ScalarProperty Name="ActiveFrom" ColumnName="ActiveFrom" />
+          <ScalarProperty Name="SpecialConditionApplied" ColumnName="SpecialConditionApplied" />
+          <ScalarProperty Name="IsNonGSTGoods" ColumnName="IsNonGSTGoods" />
+          <ScalarProperty Name="IsZeroRated" ColumnName="IsZeroRated" />
+          <ScalarProperty Name="IsExempted" ColumnName="IsExempted" />
+          <ScalarProperty Name="IsNilRated" ColumnName="IsNilRated" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Notified_Id" ColumnName="Notified_Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ConditionSNo" ColumnName="ConditionSNo" />
+          <ScalarProperty Name="ConditionNo" ColumnName="ConditionNo" />
+          <ScalarProperty Name="Condition_Id" ColumnName="Condition_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_ITEM_NOTIFIED">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_ITEM_NOTIFIED">
+        <MappingFragment StoreEntitySet="GST_MST_ITEM_NOTIFIED">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ActiveTo" ColumnName="ActiveTo" />
+          <ScalarProperty Name="ActiveFrom" ColumnName="ActiveFrom" />
+          <ScalarProperty Name="SpecialConditionApplied" ColumnName="SpecialConditionApplied" />
+          <ScalarProperty Name="IsNonGSTGoods" ColumnName="IsNonGSTGoods" />
+          <ScalarProperty Name="IsZeroRated" ColumnName="IsZeroRated" />
+          <ScalarProperty Name="IsExempted" ColumnName="IsExempted" />
+          <ScalarProperty Name="IsNilRated" ColumnName="IsNilRated" />
+          <ScalarProperty Name="IsCondition" ColumnName="IsCondition" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TarrifDuty" ColumnName="TarrifDuty" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Item_ID" ColumnName="Item_ID" />
+          <ScalarProperty Name="NotificationSNo" ColumnName="NotificationSNo" />
+          <ScalarProperty Name="NotificationNo" ColumnName="NotificationNo" />
+          <ScalarProperty Name="Notified_Id" ColumnName="Notified_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_MESSAGE">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_MESSAGE">
+        <MappingFragment StoreEntitySet="GST_MST_MESSAGE">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ActiveTo" ColumnName="ActiveTo" />
+          <ScalarProperty Name="ActiveFrom" ColumnName="ActiveFrom" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="MessageType" ColumnName="MessageType" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_MESSAGELOG">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_MESSAGELOG">
+        <MappingFragment StoreEntitySet="GST_MST_MESSAGELOG">
+          <ScalarProperty Name="LOGGINGTIME" ColumnName="LOGGINGTIME" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="SERVERNAME" ColumnName="SERVERNAME" />
+          <ScalarProperty Name="MESSAGE" ColumnName="MESSAGE" />
+          <ScalarProperty Name="METHODNAME" ColumnName="METHODNAME" />
+          <ScalarProperty Name="CLASSNAME" ColumnName="CLASSNAME" />
+          <ScalarProperty Name="MACHINENAME" ColumnName="MACHINENAME" />
+          <ScalarProperty Name="APPLICATIONNAME" ColumnName="APPLICATIONNAME" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="LOGID" ColumnName="LOGID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_OFFLINE_SECTION">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_OFFLINE_SECTION">
+        <MappingFragment StoreEntitySet="GST_MST_OFFLINE_SECTION">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ActiveStatus" ColumnName="ActiveStatus" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Section_ID" ColumnName="Section_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_PRESENT_USER">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_PRESENT_USER">
+        <MappingFragment StoreEntitySet="GST_MST_PRESENT_USER">
+          <ScalarProperty Name="ParentUserID" ColumnName="ParentUserID" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PresentUSERID" ColumnName="PresentUSERID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_PRODUCT_DESCRIPTION">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_PRODUCT_DESCRIPTION">
+        <MappingFragment StoreEntitySet="GST_MST_PRODUCT_DESCRIPTION">
+          <ScalarProperty Name="Volume" ColumnName="Volume" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="GoodDescription" ColumnName="GoodDescription" />
+          <ScalarProperty Name="Packages" ColumnName="Packages" />
+          <ScalarProperty Name="MarksNos" ColumnName="MarksNos" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_PURCHASE_DATA">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_PURCHASE_DATA">
+        <MappingFragment StoreEntitySet="GST_MST_PURCHASE_DATA">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="InvoiceDataStatus" ColumnName="InvoiceDataStatus" />
+          <ScalarProperty Name="CessAmt" ColumnName="CessAmt" />
+          <ScalarProperty Name="CessRate" ColumnName="CessRate" />
+          <ScalarProperty Name="UGSTAmt" ColumnName="UGSTAmt" />
+          <ScalarProperty Name="UGSTRate" ColumnName="UGSTRate" />
+          <ScalarProperty Name="SGSTAmt" ColumnName="SGSTAmt" />
+          <ScalarProperty Name="SGSTRate" ColumnName="SGSTRate" />
+          <ScalarProperty Name="CGSTAmt" ColumnName="CGSTAmt" />
+          <ScalarProperty Name="CGSTRate" ColumnName="CGSTRate" />
+          <ScalarProperty Name="IGSTAmt" ColumnName="IGSTAmt" />
+          <ScalarProperty Name="IGSTRate" ColumnName="IGSTRate" />
+          <ScalarProperty Name="TotalAmountWithTax" ColumnName="TotalAmountWithTax" />
+          <ScalarProperty Name="TaxableAmount" ColumnName="TaxableAmount" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Item_ID" ColumnName="Item_ID" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="PurchageRegisterID" ColumnName="PurchageRegisterID" />
+          <ScalarProperty Name="PurchaseDataID" ColumnName="PurchaseDataID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_PURCHASE_REGISTER">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_PURCHASE_REGISTER">
+        <MappingFragment StoreEntitySet="GST_MST_PURCHASE_REGISTER">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ActiveTo" ColumnName="ActiveTo" />
+          <ScalarProperty Name="ActiveFrom" ColumnName="ActiveFrom" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PurchaseStatus" ColumnName="PurchaseStatus" />
+          <ScalarProperty Name="ElectronicReferenceNoDate" ColumnName="ElectronicReferenceNoDate" />
+          <ScalarProperty Name="ElectronicReferenceNo" ColumnName="ElectronicReferenceNo" />
+          <ScalarProperty Name="PackingAndForwadingCharges" ColumnName="PackingAndForwadingCharges" />
+          <ScalarProperty Name="Insurance" ColumnName="Insurance" />
+          <ScalarProperty Name="Freight" ColumnName="Freight" />
+          <ScalarProperty Name="SupplierInvoiceMonth" ColumnName="SupplierInvoiceMonth" />
+          <ScalarProperty Name="SupplierInvoiceDate" ColumnName="SupplierInvoiceDate" />
+          <ScalarProperty Name="SupplierInvoiceNo" ColumnName="SupplierInvoiceNo" />
+          <ScalarProperty Name="OrderPoDate" ColumnName="OrderPoDate" />
+          <ScalarProperty Name="OrderPo" ColumnName="OrderPo" />
+          <ScalarProperty Name="StockOrderDate" ColumnName="StockOrderDate" />
+          <ScalarProperty Name="StockInwardDate" ColumnName="StockInwardDate" />
+          <ScalarProperty Name="ConsigneeAddress" ColumnName="ConsigneeAddress" />
+          <ScalarProperty Name="ConsigneeName" ColumnName="ConsigneeName" />
+          <ScalarProperty Name="ReceiverAddress" ColumnName="ReceiverAddress" />
+          <ScalarProperty Name="ReceiverName" ColumnName="ReceiverName" />
+          <ScalarProperty Name="SellerAddress" ColumnName="SellerAddress" />
+          <ScalarProperty Name="SellerName" ColumnName="SellerName" />
+          <ScalarProperty Name="SellerGSTN" ColumnName="SellerGSTN" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="PurchageRegisterID" ColumnName="PurchageRegisterID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_REPORT">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_REPORT">
+        <MappingFragment StoreEntitySet="GST_MST_REPORT">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ReportControlName" ColumnName="ReportControlName" />
+          <ScalarProperty Name="ReportPath" ColumnName="ReportPath" />
+          <ScalarProperty Name="ReportName" ColumnName="ReportName" />
+          <ScalarProperty Name="ReportId" ColumnName="ReportId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_REPORT_PERMISSION">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_REPORT_PERMISSION">
+        <MappingFragment StoreEntitySet="GST_MST_REPORT_PERMISSION">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdateBy" ColumnName="UpdateBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ReportId" ColumnName="ReportId" />
+          <ScalarProperty Name="ReportPermissionID" ColumnName="ReportPermissionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_SALE_REGISTER">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_SALE_REGISTER">
+        <MappingFragment StoreEntitySet="GST_MST_SALE_REGISTER">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ActiveTo" ColumnName="ActiveTo" />
+          <ScalarProperty Name="ActiveFrom" ColumnName="ActiveFrom" />
+          <ScalarProperty Name="SaleStatus" ColumnName="SaleStatus" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PerUnitRate" ColumnName="PerUnitRate" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="Item_ID" ColumnName="Item_ID" />
+          <ScalarProperty Name="SaleRegisterID" ColumnName="SaleRegisterID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_STATE">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_STATE">
+        <MappingFragment StoreEntitySet="GST_MST_STATE">
+          <ScalarProperty Name="IsExempted" ColumnName="IsExempted" />
+          <ScalarProperty Name="UT" ColumnName="UT" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CompCeilingAmount" ColumnName="CompCeilingAmount" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="StateCodeID" ColumnName="StateCodeID" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+          <ScalarProperty Name="StateName" ColumnName="StateName" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_SUBCLASS">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_SUBCLASS">
+        <MappingFragment StoreEntitySet="GST_MST_SUBCLASS">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SubClassCode" ColumnName="SubClassCode" />
+          <ScalarProperty Name="SubClassID" ColumnName="SubClassID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_SUBGROUP">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_SUBGROUP">
+        <MappingFragment StoreEntitySet="GST_MST_SUBGROUP">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SubGroupCode" ColumnName="SubGroupCode" />
+          <ScalarProperty Name="SubGroupID" ColumnName="SubGroupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_USER_BUSINESSTYPE">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_USER_BUSINESSTYPE">
+        <MappingFragment StoreEntitySet="GST_MST_USER_BUSINESSTYPE">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="BusinessID" ColumnName="BusinessID" />
+          <ScalarProperty Name="UserBusinessID" ColumnName="UserBusinessID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_USER_CURRENT_TURNOVER">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_USER_CURRENT_TURNOVER">
+        <MappingFragment StoreEntitySet="GST_MST_USER_CURRENT_TURNOVER">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TurnOverStatus" ColumnName="TurnOverStatus" />
+          <ScalarProperty Name="InvoiceAmountWithoutTax" ColumnName="InvoiceAmountWithoutTax" />
+          <ScalarProperty Name="InvoiceAmountWithTax" ColumnName="InvoiceAmountWithTax" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="CurrentTurnover_ID" ColumnName="CurrentTurnover_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_USER_SIGNATORY">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_USER_SIGNATORY">
+        <MappingFragment StoreEntitySet="GST_MST_USER_SIGNATORY">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="OrgAddress" ColumnName="OrgAddress" />
+          <ScalarProperty Name="GSTNNo" ColumnName="GSTNNo" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CertificateKey" ColumnName="CertificateKey" />
+          <ScalarProperty Name="SignatoryName" ColumnName="SignatoryName" />
+          <ScalarProperty Name="Signatory_Id" ColumnName="Signatory_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_VENDOR">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_VENDOR">
+        <MappingFragment StoreEntitySet="GST_MST_VENDOR">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="StateID" ColumnName="StateID" />
+          <ScalarProperty Name="OwnerShip" ColumnName="OwnerShip" />
+          <ScalarProperty Name="GSTNNo" ColumnName="GSTNNo" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="NameOfSignatory" ColumnName="NameOfSignatory" />
+          <ScalarProperty Name="EmailID" ColumnName="EmailID" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="VendorName" ColumnName="VendorName" />
+          <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_VENDOR_SERVICE">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_VENDOR_SERVICE">
+        <MappingFragment StoreEntitySet="GST_MST_VENDOR_SERVICE">
+          <ScalarProperty Name="Item_ID" ColumnName="Item_ID" />
+          <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+          <ScalarProperty Name="VendorServiceID" ColumnName="VendorServiceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_VENDOR_TRANS_SHIPMENT">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_VENDOR_TRANS_SHIPMENT">
+        <MappingFragment StoreEntitySet="GST_MST_VENDOR_TRANS_SHIPMENT">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TransShipmentStatus" ColumnName="TransShipmentStatus" />
+          <ScalarProperty Name="Item_ID" ColumnName="Item_ID" />
+          <ScalarProperty Name="BillAmount" ColumnName="BillAmount" />
+          <ScalarProperty Name="Distance_ID" ColumnName="Distance_ID" />
+          <ScalarProperty Name="TransShipmentDate" ColumnName="TransShipmentDate" />
+          <ScalarProperty Name="ToLocation" ColumnName="ToLocation" />
+          <ScalarProperty Name="FromLocation" ColumnName="FromLocation" />
+          <ScalarProperty Name="IsInterNationalWarehouseAvailed" ColumnName="IsInterNationalWarehouseAvailed" />
+          <ScalarProperty Name="DriverLicenceNumber" ColumnName="DriverLicenceNumber" />
+          <ScalarProperty Name="VehicleRegistrationNumber" ColumnName="VehicleRegistrationNumber" />
+          <ScalarProperty Name="TransShipmentNo" ColumnName="TransShipmentNo" />
+          <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+          <ScalarProperty Name="TransShipment_ID" ColumnName="TransShipment_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_TRN_CONSOLIDATED_INVOICE">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_CONSOLIDATED_INVOICE">
+        <MappingFragment StoreEntitySet="GST_TRN_CONSOLIDATED_INVOICE">
+          <ScalarProperty Name="GSTNNO" ColumnName="GSTNNO" />
+          <ScalarProperty Name="TAXABLEAMOUNT" ColumnName="TAXABLEAMOUNT" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="QTY" ColumnName="QTY" />
+          <ScalarProperty Name="INVOICESPECIALCONDITION" ColumnName="INVOICESPECIALCONDITION" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="InvoiceDataID" ColumnName="InvoiceDataID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ReconsileID" ColumnName="ReconsileID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_TRN_CRDR_AUDIT_TRAIL">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_CRDR_AUDIT_TRAIL">
+        <MappingFragment StoreEntitySet="GST_TRN_CRDR_AUDIT_TRAIL">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ReceiverInvoiceActionDate" ColumnName="ReceiverInvoiceActionDate" />
+          <ScalarProperty Name="SellerInvoiceActionDate" ColumnName="SellerInvoiceActionDate" />
+          <ScalarProperty Name="ReceiverInvoiceAction" ColumnName="ReceiverInvoiceAction" />
+          <ScalarProperty Name="SellerInvoiceAction" ColumnName="SellerInvoiceAction" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="AuditTrailStatus" ColumnName="AuditTrailStatus" />
+          <ScalarProperty Name="CreditDebitID" ColumnName="CreditDebitID" />
+          <ScalarProperty Name="CrDrAuditTrailID" ColumnName="CrDrAuditTrailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_TRN_CRDR_NOTE">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_CRDR_NOTE">
+        <MappingFragment StoreEntitySet="GST_TRN_CRDR_NOTE">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="P_Gst" ColumnName="P_Gst" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="NoteNumber" ColumnName="NoteNumber" />
+          <ScalarProperty Name="TotalNoteValue" ColumnName="TotalNoteValue" />
+          <ScalarProperty Name="NoteTypeStatus" ColumnName="NoteTypeStatus" />
+          <ScalarProperty Name="NoteType" ColumnName="NoteType" />
+          <ScalarProperty Name="CDN_Date" ColumnName="CDN_Date" />
+          <ScalarProperty Name="CDN_ParentID" ColumnName="CDN_ParentID" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="To_UserID" ColumnName="To_UserID" />
+          <ScalarProperty Name="From_UserID" ColumnName="From_UserID" />
+          <ScalarProperty Name="CreditDebitID" ColumnName="CreditDebitID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_TRN_CRDR_NOTE_DATA">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_CRDR_NOTE_DATA">
+        <MappingFragment StoreEntitySet="GST_TRN_CRDR_NOTE_DATA">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="InvoiceDataStatus" ColumnName="InvoiceDataStatus" />
+          <ScalarProperty Name="CessAmt" ColumnName="CessAmt" />
+          <ScalarProperty Name="CessRate" ColumnName="CessRate" />
+          <ScalarProperty Name="UGSTAmt" ColumnName="UGSTAmt" />
+          <ScalarProperty Name="UGSTRate" ColumnName="UGSTRate" />
+          <ScalarProperty Name="SGSTAmt" ColumnName="SGSTAmt" />
+          <ScalarProperty Name="SGSTRate" ColumnName="SGSTRate" />
+          <ScalarProperty Name="CGSTAmt" ColumnName="CGSTAmt" />
+          <ScalarProperty Name="CGSTRate" ColumnName="CGSTRate" />
+          <ScalarProperty Name="IGSTAmt" ColumnName="IGSTAmt" />
+          <ScalarProperty Name="IGSTRate" ColumnName="IGSTRate" />
+          <ScalarProperty Name="TotalAmountWithTax" ColumnName="TotalAmountWithTax" />
+          <ScalarProperty Name="TaxableAmount" ColumnName="TaxableAmount" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Item_ID" ColumnName="Item_ID" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="CreditDebitID" ColumnName="CreditDebitID" />
+          <ScalarProperty Name="CreditDebit_ItemID" ColumnName="CreditDebit_ItemID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_TRN_ERROR_HANDLING">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_ERROR_HANDLING">
+        <MappingFragment StoreEntitySet="GST_TRN_ERROR_HANDLING">
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="RequestUrl" ColumnName="RequestUrl" />
+          <ScalarProperty Name="ErrorSource" ColumnName="ErrorSource" />
+          <ScalarProperty Name="ServerName" ColumnName="ServerName" />
+          <ScalarProperty Name="StackTrace" ColumnName="StackTrace" />
+          <ScalarProperty Name="TargetSite" ColumnName="TargetSite" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="ErrorPage" ColumnName="ErrorPage" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="ErrorLogId" ColumnName="ErrorLogId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_TRN_INVOICE">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_INVOICE">
+        <MappingFragment StoreEntitySet="GST_TRN_INVOICE">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="InvoiceSpecialCondition" ColumnName="InvoiceSpecialCondition" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TaxBenefitingState" ColumnName="TaxBenefitingState" />
+          <ScalarProperty Name="InvoiceStatus" ColumnName="InvoiceStatus" />
+          <ScalarProperty Name="ParentInvoiceID" ColumnName="ParentInvoiceID" />
+          <ScalarProperty Name="ReceiverFinYear_ID" ColumnName="ReceiverFinYear_ID" />
+          <ScalarProperty Name="IsInter" ColumnName="IsInter" />
+          <ScalarProperty Name="InvoiceMode" ColumnName="InvoiceMode" />
+          <ScalarProperty Name="FinYear_ID" ColumnName="FinYear_ID" />
+          <ScalarProperty Name="InvoiceType" ColumnName="InvoiceType" />
+          <ScalarProperty Name="ElectronicReferenceNoDate" ColumnName="ElectronicReferenceNoDate" />
+          <ScalarProperty Name="ElectronicReferenceNo" ColumnName="ElectronicReferenceNo" />
+          <ScalarProperty Name="PackingAndForwadingCharges" ColumnName="PackingAndForwadingCharges" />
+          <ScalarProperty Name="Insurance" ColumnName="Insurance" />
+          <ScalarProperty Name="Freight" ColumnName="Freight" />
+          <ScalarProperty Name="TransShipment_ID" ColumnName="TransShipment_ID" />
+          <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="ConsigneeUserID" ColumnName="ConsigneeUserID" />
+          <ScalarProperty Name="ReceiverUserID" ColumnName="ReceiverUserID" />
+          <ScalarProperty Name="SellerUserID" ColumnName="SellerUserID" />
+          <ScalarProperty Name="InvoiceMonth" ColumnName="InvoiceMonth" />
+          <ScalarProperty Name="InvoiceUserID" ColumnName="InvoiceUserID" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_TRN_INVOICE_AUDIT_TRAIL">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_INVOICE_AUDIT_TRAIL">
+        <MappingFragment StoreEntitySet="GST_TRN_INVOICE_AUDIT_TRAIL">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ReceiverInvoiceActionDate" ColumnName="ReceiverInvoiceActionDate" />
+          <ScalarProperty Name="SellerInvoiceActionDate" ColumnName="SellerInvoiceActionDate" />
+          <ScalarProperty Name="ReceiverInvoiceAction" ColumnName="ReceiverInvoiceAction" />
+          <ScalarProperty Name="SellerInvoiceAction" ColumnName="SellerInvoiceAction" />
+          <ScalarProperty Name="InvoiceAction" ColumnName="InvoiceAction" />
+          <ScalarProperty Name="UserIP" ColumnName="UserIP" />
+          <ScalarProperty Name="AuditTrailStatus" ColumnName="AuditTrailStatus" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="AuditTrailID" ColumnName="AuditTrailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_TRN_INVOICE_DATA">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_INVOICE_DATA">
+        <MappingFragment StoreEntitySet="GST_TRN_INVOICE_DATA">
+          <ScalarProperty Name="InvoiceDataStatus" ColumnName="InvoiceDataStatus" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CessAmt" ColumnName="CessAmt" />
+          <ScalarProperty Name="CessRate" ColumnName="CessRate" />
+          <ScalarProperty Name="UGSTAmt" ColumnName="UGSTAmt" />
+          <ScalarProperty Name="UGSTRate" ColumnName="UGSTRate" />
+          <ScalarProperty Name="SGSTAmt" ColumnName="SGSTAmt" />
+          <ScalarProperty Name="SGSTRate" ColumnName="SGSTRate" />
+          <ScalarProperty Name="CGSTAmt" ColumnName="CGSTAmt" />
+          <ScalarProperty Name="CGSTRate" ColumnName="CGSTRate" />
+          <ScalarProperty Name="IGSTAmt" ColumnName="IGSTAmt" />
+          <ScalarProperty Name="IGSTRate" ColumnName="IGSTRate" />
+          <ScalarProperty Name="TotalAmountWithTax" ColumnName="TotalAmountWithTax" />
+          <ScalarProperty Name="TaxableAmount" ColumnName="TaxableAmount" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Item_ID" ColumnName="Item_ID" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="InvoiceDataID" ColumnName="InvoiceDataID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_TRN_INVOICE_MAP">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_INVOICE_MAP">
+        <MappingFragment StoreEntitySet="GST_TRN_INVOICE_MAP">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="MaptoInvoiceID" ColumnName="MaptoInvoiceID" />
+          <ScalarProperty Name="MapfromInvoiceID" ColumnName="MapfromInvoiceID" />
+          <ScalarProperty Name="RegularMappedID" ColumnName="RegularMappedID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_TRN_ITC">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_ITC">
+        <MappingFragment StoreEntitySet="GST_TRN_ITC">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Cess" ColumnName="Cess" />
+          <ScalarProperty Name="SGST" ColumnName="SGST" />
+          <ScalarProperty Name="CGST" ColumnName="CGST" />
+          <ScalarProperty Name="IGST" ColumnName="IGST" />
+          <ScalarProperty Name="TaxType" ColumnName="TaxType" />
+          <ScalarProperty Name="ITCMovement" ColumnName="ITCMovement" />
+          <ScalarProperty Name="ITCDate" ColumnName="ITCDate" />
+          <ScalarProperty Name="ITCVoucherType" ColumnName="ITCVoucherType" />
+          <ScalarProperty Name="ITCParentID" ColumnName="ITCParentID" />
+          <ScalarProperty Name="ITCStatus" ColumnName="ITCStatus" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ITC_ID" ColumnName="ITC_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_TRN_ITC_DATA">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_ITC_DATA">
+        <MappingFragment StoreEntitySet="GST_TRN_ITC_DATA">
+          <ScalarProperty Name="InvoiceDataStatus" ColumnName="InvoiceDataStatus" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CessAmt" ColumnName="CessAmt" />
+          <ScalarProperty Name="CessRate" ColumnName="CessRate" />
+          <ScalarProperty Name="UGSTAmt" ColumnName="UGSTAmt" />
+          <ScalarProperty Name="UGSTRate" ColumnName="UGSTRate" />
+          <ScalarProperty Name="SGSTAmt" ColumnName="SGSTAmt" />
+          <ScalarProperty Name="SGSTRate" ColumnName="SGSTRate" />
+          <ScalarProperty Name="CGSTAmt" ColumnName="CGSTAmt" />
+          <ScalarProperty Name="CGSTRate" ColumnName="CGSTRate" />
+          <ScalarProperty Name="IGSTAmt" ColumnName="IGSTAmt" />
+          <ScalarProperty Name="IGSTRate" ColumnName="IGSTRate" />
+          <ScalarProperty Name="TotalAmountWithTax" ColumnName="TotalAmountWithTax" />
+          <ScalarProperty Name="TaxableAmount" ColumnName="TaxableAmount" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="Rate" ColumnName="Rate" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="Item_ID" ColumnName="Item_ID" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="ITC_ID" ColumnName="ITC_ID" />
+          <ScalarProperty Name="ITCDATA_ID" ColumnName="ITCDATA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_TRN_OFFLINE">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_OFFLINE">
+        <MappingFragment StoreEntitySet="GST_TRN_OFFLINE">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UploadStatus" ColumnName="UploadStatus" />
+          <ScalarProperty Name="ExcelData" ColumnName="ExcelData" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="AggregateTurnoverQuater" ColumnName="AggregateTurnoverQuater" />
+          <ScalarProperty Name="AggregateTurnover" ColumnName="AggregateTurnover" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Fin_ID" ColumnName="Fin_ID" />
+          <ScalarProperty Name="SupplierGSTIN" ColumnName="SupplierGSTIN" />
+          <ScalarProperty Name="UploadedBy" ColumnName="UploadedBy" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="AuditTrailID" ColumnName="AuditTrailID" />
+          <ScalarProperty Name="OfflineID" ColumnName="OfflineID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_TRN_OFFLINE_INVOICE">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_OFFLINE_INVOICE">
+        <MappingFragment StoreEntitySet="GST_TRN_OFFLINE_INVOICE">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="URType" ColumnName="URType" />
+          <ScalarProperty Name="NonGSTSupplies" ColumnName="NonGSTSupplies" />
+          <ScalarProperty Name="IsExempted" ColumnName="IsExempted" />
+          <ScalarProperty Name="NilRated" ColumnName="NilRated" />
+          <ScalarProperty Name="CompoundingDealerSupplies" ColumnName="CompoundingDealerSupplies" />
+          <ScalarProperty Name="ImportfromSEZ" ColumnName="ImportfromSEZ" />
+          <ScalarProperty Name="BillofEntryValue" ColumnName="BillofEntryValue" />
+          <ScalarProperty Name="BillofEntryDate" ColumnName="BillofEntryDate" />
+          <ScalarProperty Name="BillOfEntry" ColumnName="BillOfEntry" />
+          <ScalarProperty Name="NoteType" ColumnName="NoteType" />
+          <ScalarProperty Name="HSNDescription" ColumnName="HSNDescription" />
+          <ScalarProperty Name="UQC" ColumnName="UQC" />
+          <ScalarProperty Name="HSN" ColumnName="HSN" />
+          <ScalarProperty Name="ShippingBillDate" ColumnName="ShippingBillDate" />
+          <ScalarProperty Name="ShippingBillNo" ColumnName="ShippingBillNo" />
+          <ScalarProperty Name="PortCode" ColumnName="PortCode" />
+          <ScalarProperty Name="GST_Payment" ColumnName="GST_Payment" />
+          <ScalarProperty Name="Pre_GST" ColumnName="Pre_GST" />
+          <ScalarProperty Name="Voucher_Value" ColumnName="Voucher_Value" />
+          <ScalarProperty Name="Issuing_Note" ColumnName="Issuing_Note" />
+          <ScalarProperty Name="Document_Type" ColumnName="Document_Type" />
+          <ScalarProperty Name="Voucher_date" ColumnName="Voucher_date" />
+          <ScalarProperty Name="Voucher_No" ColumnName="Voucher_No" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ECommerce_GSTIN" ColumnName="ECommerce_GSTIN" />
+          <ScalarProperty Name="ReverseCharge" ColumnName="ReverseCharge" />
+          <ScalarProperty Name="InvoiceType" ColumnName="InvoiceType" />
+          <ScalarProperty Name="ReturnType" ColumnName="ReturnType" />
+          <ScalarProperty Name="SectionType" ColumnName="SectionType" />
+          <ScalarProperty Name="SupplyType" ColumnName="SupplyType" />
+          <ScalarProperty Name="PlaceofSupply" ColumnName="PlaceofSupply" />
+          <ScalarProperty Name="TotalInvoiceValue" ColumnName="TotalInvoiceValue" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="ReceiverGSTIN" ColumnName="ReceiverGSTIN" />
+          <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+          <ScalarProperty Name="SupplierGSTIN" ColumnName="SupplierGSTIN" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="OfflineID" ColumnName="OfflineID" />
+          <ScalarProperty Name="ValueId" ColumnName="ValueId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL">
+        <MappingFragment StoreEntitySet="GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="InvoiceDate" ColumnName="InvoiceDate" />
+          <ScalarProperty Name="Month" ColumnName="Month" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="JobType" ColumnName="JobType" />
+          <ScalarProperty Name="JobName" ColumnName="JobName" />
+          <ScalarProperty Name="ExcelName" ColumnName="ExcelName" />
+          <ScalarProperty Name="AuditTrailID" ColumnName="AuditTrailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_TRN_OFFLINE_INVOICE_DATAITEM">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_OFFLINE_INVOICE_DATAITEM">
+        <MappingFragment StoreEntitySet="GST_TRN_OFFLINE_INVOICE_DATAITEM">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="GrossAdvance" ColumnName="GrossAdvance" />
+          <ScalarProperty Name="ITC_Eligibility" ColumnName="ITC_Eligibility" />
+          <ScalarProperty Name="ITC_Cess" ColumnName="ITC_Cess" />
+          <ScalarProperty Name="ITC_UTGST" ColumnName="ITC_UTGST" />
+          <ScalarProperty Name="ITC_CGST" ColumnName="ITC_CGST" />
+          <ScalarProperty Name="ITC_SGST" ColumnName="ITC_SGST" />
+          <ScalarProperty Name="ITC_IGST" ColumnName="ITC_IGST" />
+          <ScalarProperty Name="TotalValue" ColumnName="TotalValue" />
+          <ScalarProperty Name="CessAmt" ColumnName="CessAmt" />
+          <ScalarProperty Name="CessRate" ColumnName="CessRate" />
+          <ScalarProperty Name="UTGSTAmt" ColumnName="UTGSTAmt" />
+          <ScalarProperty Name="UTGSTRate" ColumnName="UTGSTRate" />
+          <ScalarProperty Name="SGSTAmt" ColumnName="SGSTAmt" />
+          <ScalarProperty Name="SGSTRate" ColumnName="SGSTRate" />
+          <ScalarProperty Name="CGSTAmt" ColumnName="CGSTAmt" />
+          <ScalarProperty Name="CGSTRate" ColumnName="CGSTRate" />
+          <ScalarProperty Name="IGSTAmt" ColumnName="IGSTAmt" />
+          <ScalarProperty Name="IGSTRate" ColumnName="IGSTRate" />
+          <ScalarProperty Name="TotalTaxableValue" ColumnName="TotalTaxableValue" />
+          <ScalarProperty Name="TaxableAmount" ColumnName="TaxableAmount" />
+          <ScalarProperty Name="RateId" ColumnName="RateId" />
+          <ScalarProperty Name="TotalQuantity" ColumnName="TotalQuantity" />
+          <ScalarProperty Name="ValueID" ColumnName="ValueID" />
+          <ScalarProperty Name="OfflineDataID" ColumnName="OfflineDataID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_TRN_OFFLINE_INVOICE_RATE">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_OFFLINE_INVOICE_RATE">
+        <MappingFragment StoreEntitySet="GST_TRN_OFFLINE_INVOICE_RATE">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ActiveTo" ColumnName="ActiveTo" />
+          <ScalarProperty Name="ActiveFrom" ColumnName="ActiveFrom" />
+          <ScalarProperty Name="RATE" ColumnName="RATE" />
+          <ScalarProperty Name="RATE_ID" ColumnName="RATE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_TRN_OFFLINE_INVOICE_SECTION_RULE">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_OFFLINE_INVOICE_SECTION_RULE">
+        <MappingFragment StoreEntitySet="GST_TRN_OFFLINE_INVOICE_SECTION_RULE">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Any_other_reversal______Any_other_reclaim____" ColumnName="Any_other_reversal_(+)_ Any_other_reclaim (-)" />
+          <ScalarProperty Name="On_account_of_amount_paid_subsequent_to_reversal_of_ITC" ColumnName="On_account_of_amount_paid_subsequent_to_reversal_of_ITC" />
+          <ScalarProperty Name="Amount_in_terms_of_rule_43_1__h_" ColumnName="Amount_in_terms_of_rule_43(1)(h)" />
+          <ScalarProperty Name="Amount_in_terms_of_rule_42_2__b_" ColumnName="Amount_in_terms_of_rule_42(2)(b)" />
+          <ScalarProperty Name="Amount_in_terms_of_rule_42_2__a" ColumnName="Amount_in_terms_of_rule_42(2)(a" />
+          <ScalarProperty Name="Amount_in_terms_of_rule_42_1__m_" ColumnName="Amount_in_terms_of_rule_42(1)(m)" />
+          <ScalarProperty Name="Amount_in_terms_of_rule_37_2_" ColumnName="Amount_in_terms_of_rule 37(2)" />
+          <ScalarProperty Name="RuleId" ColumnName="RuleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_TRN_OFFLINE_ISSUINGNOTE_REASON">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_OFFLINE_ISSUINGNOTE_REASON">
+        <MappingFragment StoreEntitySet="GST_TRN_OFFLINE_ISSUINGNOTE_REASON">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="IssuingNoteName" ColumnName="IssuingNoteName" />
+          <ScalarProperty Name="NoteCode" ColumnName="NoteCode" />
+          <ScalarProperty Name="NoteID" ColumnName="NoteID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_TRN_VENDOR_SERVICE">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_VENDOR_SERVICE">
+        <MappingFragment StoreEntitySet="GST_TRN_VENDOR_SERVICE">
+          <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+          <ScalarProperty Name="Item_ID" ColumnName="Item_ID" />
+          <ScalarProperty Name="VendorServiceID" ColumnName="VendorServiceID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="GST_DBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GSTR3B_2_2">
+      <EntityTypeMapping TypeName="GST_DBModel.GSTR3B_2_2">
+        <MappingFragment StoreEntitySet="GSTR3B_2_2">
+          <ScalarProperty Name="STATENAME" ColumnName="STATENAME" />
+          <ScalarProperty Name="IGSTAMT" ColumnName="IGSTAMT" />
+          <ScalarProperty Name="TAXABLEAMOUNT" ColumnName="TAXABLEAMOUNT" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vInvoiceDatas">
+      <EntityTypeMapping TypeName="GST_DBModel.vInvoiceData">
+        <MappingFragment StoreEntitySet="vInvoiceData">
+          <ScalarProperty Name="TotalAmountWithTax" ColumnName="TotalAmountWithTax" />
+          <ScalarProperty Name="TaxableAmount" ColumnName="TaxableAmount" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="SellerInvoiceActionDate" ColumnName="SellerInvoiceActionDate" />
+          <ScalarProperty Name="SellerInvoiceAction" ColumnName="SellerInvoiceAction" />
+          <ScalarProperty Name="ReceiverInvoiceActionDate" ColumnName="ReceiverInvoiceActionDate" />
+          <ScalarProperty Name="ReceiverInvoiceAction" ColumnName="ReceiverInvoiceAction" />
+          <ScalarProperty Name="AuditTrailStatus" ColumnName="AuditTrailStatus" />
+          <ScalarProperty Name="AuditTrailID" ColumnName="AuditTrailID" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="Seller_GSTIN_No" ColumnName="Seller GSTIN No" />
+          <ScalarProperty Name="Organizational_Name" ColumnName="Organizational Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b71d666f781b4c36a6b43ed0fe989678" Name="Diagram1" ZoomLevel="91">
+        <EntityTypeShape EntityType="GST_DBModel.C__MigrationHistory" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="GST_DBModel.ApplicationGroupRole" Width="1.5" PointX="3" PointY="3.375" />
+        <EntityTypeShape EntityType="GST_DBModel.ApplicationGroup" Width="1.5" PointX="0.75" PointY="2" />
+        <EntityTypeShape EntityType="GST_DBModel.Application" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="GST_DBModel.ApplicationUserGroup" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="GST_DBModel.AspNetRole" Width="1.5" PointX="0.75" PointY="74.875" />
+        <EntityTypeShape EntityType="GST_DBModel.AspNetUserAppData" Width="1.5" PointX="3" PointY="119.5" />
+        <EntityTypeShape EntityType="GST_DBModel.AspNetUserClaim" Width="1.5" PointX="3" PointY="68.5" />
+        <EntityTypeShape EntityType="GST_DBModel.AspNetUserLogin" Width="1.5" PointX="3" PointY="144.875" />
+        <EntityTypeShape EntityType="GST_DBModel.AspNetUserRole" Width="1.5" PointX="3" PointY="75.625" />
+        <EntityTypeShape EntityType="GST_DBModel.AspNetUser" Width="1.5" PointX="0.75" PointY="78.375" />
+        <EntityTypeShape EntityType="GST_DBModel.EWB_MST_SUBSUPPLY_TYPE" Width="1.5" PointX="3.75" PointY="88.875" />
+        <EntityTypeShape EntityType="GST_DBModel.EWB_MST_VEHICLE_REASON" Width="1.5" PointX="2.75" PointY="5.75" />
+        <EntityTypeShape EntityType="GST_DBModel.EWB_TRN_CANCEL_EWBILL" Width="1.5" PointX="8.25" PointY="66.125" />
+        <EntityTypeShape EntityType="GST_DBModel.EWB_TRN_CONSOLIDATED_EWBILL" Width="1.5" PointX="8.25" PointY="113.375" />
+        <EntityTypeShape EntityType="GST_DBModel.EWB_TRN_EWBILL" Width="1.5" PointX="6" PointY="77.875" />
+        <EntityTypeShape EntityType="GST_DBModel.EWB_TRN_EWBILL_AUDITTRAIL" Width="1.5" PointX="8.25" PointY="110.125" />
+        <EntityTypeShape EntityType="GST_DBModel.EWB_TRN_EWBILL_ITEM" Width="1.5" PointX="8.25" PointY="70.875" />
+        <EntityTypeShape EntityType="GST_DBModel.EWB_TRN_REJECT_EWBILL" Width="1.5" PointX="8.25" PointY="62" />
+        <EntityTypeShape EntityType="GST_DBModel.EWB_TRN_REPONSE_EWBILL" Width="1.5" PointX="11.25" PointY="81.75" />
+        <EntityTypeShape EntityType="GST_DBModel.EWB_TRN_UPDATE_VEHICLE" Width="1.5" PointX="8.25" PointY="104.875" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_API_LOG" Width="1.5" PointX="5.75" PointY="3.75" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_BUSINESSTYPE" Width="1.5" PointX="6.75" PointY="58.5" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_CLASS" Width="1.5" PointX="1.5" PointY="65.25" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_CUSTOM_INVOICE" Width="1.5" PointX="4.75" PointY="6.75" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_EXCEPTIONLOG" Width="1.5" PointX="6.75" PointY="6.75" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_FINYEAR" Width="1.5" PointX="14.25" PointY="79.375" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_GROUP" Width="1.5" PointX="1.5" PointY="94.125" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_ITEM" Width="1.5" PointX="3" PointY="79.375" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_ITEM_CONDITION" Width="1.5" PointX="7.5" PointY="118.875" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_ITEM_NOTIFIED" Width="1.5" PointX="5.25" PointY="118.5" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_MESSAGE" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_MESSAGELOG" Width="1.5" PointX="8.75" PointY="4.75" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_OFFLINE_SECTION" Width="1.5" PointX="8.75" PointY="8.75" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_PRESENT_USER" Width="1.5" PointX="3" PointY="147.375" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_PRODUCT_DESCRIPTION" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_PURCHASE_DATA" Width="1.5" PointX="10.25" PointY="119.125" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_PURCHASE_REGISTER" Width="1.5" PointX="3" PointY="150" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_REPORT" Width="1.5" PointX="6.75" PointY="50.25" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_REPORT_PERMISSION" Width="1.5" PointX="9" PointY="82.375" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_SALE_REGISTER" Width="1.5" PointX="11.25" PointY="76.625" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_STATE" Width="1.5" PointX="6.75" PointY="54.125" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_SUBCLASS" Width="1.5" PointX="0.75" PointY="71.25" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_SUBGROUP" Width="1.5" PointX="0.75" PointY="89.875" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_USER_BUSINESSTYPE" Width="1.5" PointX="9" PointY="78.375" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_USER_CURRENT_TURNOVER" Width="1.5" PointX="21.75" PointY="82.5" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_USER_SIGNATORY" Width="1.5" PointX="3" PointY="157.875" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_VENDOR" Width="1.5" PointX="9" PointY="86.25" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_VENDOR_SERVICE" Width="1.5" PointX="11.25" PointY="87.375" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_VENDOR_TRANS_SHIPMENT" Width="1.5" PointX="14.25" PointY="87.875" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_TRN_CONSOLIDATED_INVOICE" Width="1.5" PointX="18.75" PointY="93.5" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_TRN_CRDR_AUDIT_TRAIL" Width="1.5" PointX="21" PointY="77.75" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_TRN_CRDR_NOTE" Width="1.5" PointX="18.75" PointY="75.875" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_TRN_CRDR_NOTE_DATA" Width="1.5" PointX="24" PointY="78.75" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_TRN_ERROR_HANDLING" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_TRN_INVOICE" Width="1.5" PointX="16.5" PointY="80.875" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_TRN_INVOICE_AUDIT_TRAIL" Width="1.5" PointX="18.75" PointY="110.375" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_TRN_INVOICE_DATA" Width="1.5" PointX="18.75" PointY="81.625" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_TRN_INVOICE_MAP" Width="1.5" PointX="2.75" PointY="10.75" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_TRN_ITC" Width="1.5" PointX="21.75" PointY="87.875" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_TRN_ITC_DATA" Width="1.5" PointX="24" PointY="87" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_TRN_OFFLINE" Width="1.5" PointX="5.25" PointY="107.25" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_TRN_OFFLINE_INVOICE" Width="1.5" PointX="7.5" PointY="92.875" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL" Width="1.5" PointX="3" PointY="107.625" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_TRN_OFFLINE_INVOICE_DATAITEM" Width="1.5" PointX="9.75" PointY="94.625" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_TRN_OFFLINE_INVOICE_RATE" Width="1.5" PointX="7.5" PointY="124.625" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_TRN_OFFLINE_INVOICE_SECTION_RULE" Width="1.5" PointX="10.75" PointY="3.75" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_TRN_OFFLINE_ISSUINGNOTE_REASON" Width="1.5" PointX="5.25" PointY="96.75" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_TRN_VENDOR_SERVICE" Width="1.5" PointX="14.25" PointY="84.375" />
+        <EntityTypeShape EntityType="GST_DBModel.sysdiagram" Width="1.5" PointX="4.75" PointY="10.75" />
+        <EntityTypeShape EntityType="GST_DBModel.GSTR3B_2_2" Width="1.5" PointX="10.75" PointY="8.75" />
+        <EntityTypeShape EntityType="GST_DBModel.vInvoiceData" Width="1.5" PointX="10.75" PointY="11.75" />
+        <AssociationConnector Association="GST_DBModel.FK_dbo_ApplicationGroupRoles_dbo_ApplicationGroups_ApplicationGroupId" />
+        <AssociationConnector Association="GST_DBModel.FK_dbo_ApplicationUserGroups_dbo_ApplicationGroups_ApplicationGroupId" />
+        <AssociationConnector Association="GST_DBModel.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" />
+        <AssociationConnector Association="GST_DBModel.FK_AspNetUserAppData_AspNetUsers" />
+        <AssociationConnector Association="GST_DBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="GST_DBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="GST_DBModel.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_ApplicationUser_Id" />
+        <AssociationConnector Association="GST_DBModel.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="GST_DBModel.FK_AddSignatory_AspNetUsers" />
+        <AssociationConnector Association="GST_DBModel.FK_EWB_TRN_EWBILLS_AspNetUsers" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_HSN_AspNetUsers" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_PRESENT_USER_AspNetUsers" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_PURCHASE_REGISTER_AspNetUsers" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_REPORT_PERMISSION_AspNetUsers" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_SALE_REGISTER_AspNetUsers" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_USER_BUSINESSTYPE_AspNetUsers1" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_USER_CURRENT_TURNOVER_AspNetUsers" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_VENDOR_AspNetUsers" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_CRDR_NOTE_AspNetUsers" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_CRDR_NOTE_AspNetUsers_ToUser" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_INVOICE_AspNetUsers" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_INVOICE_AspNetUsers1" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_INVOICE_AspNetUsers2" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_ITC_GST_TRN_ITC" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_OFFLINE_INVOICE_AspNetUsers" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL_AspNetUsers" />
+        <AssociationConnector Association="GST_DBModel.FK_EWB_TRN_EWBILLS_EWB_MST_SUBSUPPLY_TYPE" />
+        <AssociationConnector Association="GST_DBModel.FK_EWB_TRN_CANCEL_EWBILL_EWB_TRN_EWBILLS" />
+        <AssociationConnector Association="GST_DBModel.FK_EWB_TRN_CONSOLIDATED_EWBILL_EWB_TRN_EWBILLS" />
+        <AssociationConnector Association="GST_DBModel.FK_EWB_TRN_EWBILLS_AUDITTRAIL_EWB_TRN_EWBILLS" />
+        <AssociationConnector Association="GST_DBModel.FK_EWB_TRN_EWBILLS_PRODUCT_EWB_TRN_EWBILLS" />
+        <AssociationConnector Association="GST_DBModel.FK_EWB_TRN_REJECT_EWBILL_EWB_TRN_EWBILLS" />
+        <AssociationConnector Association="GST_DBModel.FK_EWB_TRN_REPONSE_EWBILL_EWB_TRN_EWBILLS" />
+        <AssociationConnector Association="GST_DBModel.FK_EWB_TRN_UPDATE_VEHICLE_EWB_TRN_EWBILLS" />
+        <AssociationConnector Association="GST_DBModel.FK_EWB_TRN_REPONSE_EWBILL_GST_TRN_INVOICE" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_ITEM_GST_MST_BUSINESSTYPE" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_USER_BUSINESSTYPE_GST_MST_BUSINESSTYPE" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_CLASS_GST_MST_SUBGROUP" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_SUBCLASS_GST_MST_CLASS" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_INVOICE_GST_MST_FINYEAR" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_SUBGROUP_GST_MST_GROUP" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_HSN_GST_MST_SUBGROUP" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_ITEM_GST_MST_SUBCLASS" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_ITEM_NOTIFIED_GST_MST_ITEM" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_PURCHASE_DATA_GST_MST_ITEM" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_SALE_REGISTER_GST_MST_ITEM" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_VENDOR_SERVICE_GST_MST_ITEM" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_VENDOR_TRANS_SHIPMENT_GST_MST_ITEM" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_CRDR_NOTE_DATA_GST_MST_ITEM" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_INVOICE_DATA_GST_MST_ITEM" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_VENDOR_SERVICE_GST_MST_ITEM" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_ITEM_CONDITION_GST_MST_ITEM_NOTIFIED" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_PURCHASE_DATA_GST_MST_PURCHASE_REGISTER" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_REPORT_PERMISSION_GST_MST_REPORT_PERMISSION" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_SALE_REGISTER_GST_TRN_INVOICE" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_VENDOR_GST_MST_STATE" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_OFFLINE_INVOICE_GST_MST_STATE1" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_USER_CURRENT_TURNOVER_GST_TRN_INVOICE" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_VENDOR_SERVICE_GST_MST_VENDOR" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_VENDOR_TRANS_SHIPMENT_GST_MST_VENDOR" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_INVOICE_GST_MST_VENDOR" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_VENDOR_SERVICE_GST_MST_VENDOR" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_INVOICE_GST_MST_VENDOR_TRANS_SHIPMENT" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_CONSOLIDATED_INVOICE_GST_TRN_INVOICE" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_CR_DR_AUDIT_TRAIL_GST_TRN_CRDR_NOTE" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_CRDR_NOTE_DATA_GST_TRN_CRDR_NOTE" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_CRDR_NOTE_GST_TRN_INVOICE" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_INVOICE_AUDIT_TRAIL_GST_TRN_INVOICE" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_INVOICE_DATA_GST_TRN_INVOICE" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_ITC_GST_TRN_INVOICE" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_ITC_DATA_GST_TRN_ITC" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_ITC_DATA_GST_TRN_ITC_DATA" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_OFFLINE_GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_OFFLINE_INVOICE_GST_TRN_OFFLINE" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_OFFLINE_INVOICE_DATAITEM_GST_TRN_OFFLINE_INVOICE" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_OFFLINE_INVOICE_GST_TRN_OFFLINE_ISSUINGNOTE_REASON" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_TRN_OFFLINE_INVOICE_DATAITEM_GST_TRN_OFFLINE_INVOICE_RATE" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

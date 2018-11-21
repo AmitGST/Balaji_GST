@@ -1,0 +1,32 @@
+﻿{
+  "gstin": "27GSPMH0231G1ZZ",
+  "ret_period": "042017",
+  "summ_typ": "L",
+  "chksum": "AflJufPlFStqKBZ",
+  "sec_sum": [
+    {
+      "sec_nm": "b2b",
+      "chksum": "AflJufPlFStqKBZ",
+      "ttl_rec": 10,
+      "ttl_val": 12345,
+      "ttl_igst": 124.99,
+      "ttl_cgst": 3423,
+      "ttl_sgst": 5589.87,
+      "ttl_cess": 3423,
+      "ttl_tax": 1234,
+      "cpty_sum": [
+        {
+          "ctin": "20GRRHF2562D3A3",
+          "chksum": "AflJufPlFStqKBZ",
+          "ttl_rec": 10,
+          "ttl_val": 12345,
+          "ttl_igst": 124.99,
+          "ttl_cgst": 3423,
+          "ttl_sgst": 5589.87,
+          "ttl_cess": 3423,
+          "ttl_tax": 1234
+        }
+      ]
+    }
+  ]
+}

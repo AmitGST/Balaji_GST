@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5223D128-FE24-4870-82CB-02BB4D0CA02A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BusinessLogic</RootNamespace>
+    <AssemblyName>BusinessLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\BusinessLogic.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AmendedCreditNotesInvoice.cs" />
+    <Compile Include="AmendedDebitNotesInvoice.cs" />
+    <Compile Include="AmendedB2BExportInvoice.cs" />
+    <Compile Include="AmendedB2BInvoice.cs" />
+    <Compile Include="AdvanceRecieptInvoice.cs" />
+    <Compile Include="AmendedB2CInvoice.cs" />
+    <Compile Include="AmendedB2CLargeInvoice.cs" />
+    <Compile Include="clsState.cs" />
+    <Compile Include="CreditNotesInvoice.cs" />
+    <Compile Include="B2BDebitNotesInvoice.cs" />
+    <Compile Include="B2BExportInvoice.cs" />
+    <Compile Include="B2BInvoice.cs" />
+    <Compile Include="B2BTaxLiability_AdvTaxLiabilityPaymentInvoice.cs" />
+    <Compile Include="B2CLargeInvoice.cs" />
+    <Compile Include="B2CSmallInvoice.cs" />
+    <Compile Include="ExcelDB.cs" />
+    <Compile Include="GST.cs" />
+    <Compile Include="GSTINBLStaticValues.cs" />
+    <Compile Include="GSTNAPI\GSTNAPI_Data.cs" />
+    <Compile Include="HSN.cs" />
+    <Compile Include="HSNSummaryB2BInvoice.cs" />
+    <Compile Include="IInvoice.cs" />
+    <Compile Include="InvoiceFactory.cs" />
+    <Compile Include="IReturn.cs" />
+    <Compile Include="LineEntry.cs" />
+    <Compile Include="Login.cs" />
+    <Compile Include="NilRatedInvoice.cs" />
+    <Compile Include="OutwardSuppliesThruECommPortal.cs" />
+    <Compile Include="PurchaseLedger.cs" />
+    <Compile Include="Repositories\clsCommonAttribute.cs" />
+    <Compile Include="Repositories\clsMessageAttribute.cs" />
+    <Compile Include="Repositories\cls_CreditDebit_Note.cs" />
+    <Compile Include="Repositories\cls_ErrorLog.cs" />
+    <Compile Include="Repositories\cls_ExcelReader.cs" />
+    <Compile Include="Repositories\cls_GSTNInvoices.cs" />
+    <Compile Include="Repositories\cls_Invoice.cs" />
+    <Compile Include="Repositories\cls_ITC.cs" />
+    <Compile Include="Repositories\cls_Masters.cs" />
+    <Compile Include="Repositories\cls_Message.cs" />
+    <Compile Include="Repositories\cls_OfflineData.cs" />
+    <Compile Include="Repositories\cls_PurchaseRegister.cs" />
+    <Compile Include="Repositories\GSTN_API\cls_SaveGSTR1Data.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\JSON\clsJson3B.cs" />
+    <Compile Include="Repositories\JSON\cls_GSTN_Api.cs" />
+    <Compile Include="Repositories\JSON\cls_Invoice_JSON.cs" />
+    <Compile Include="Repositories\Offline\clsJSONOffline.cs" />
+    <Compile Include="Repositories\Offline\clsOffline.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\StateRepo.cs" />
+    <Compile Include="Repositories\UnitOfWork .cs" />
+    <Compile Include="SAC.cs" />
+    <Compile Include="SACSumamryB2BInvoice.cs" />
+    <Compile Include="SaleLedger.cs" />
+    <Compile Include="SaveInvoiceDelegate.cs" />
+    <Compile Include="TaxPaidOnInvoicesIssuedInCurrentPeriod.cs" />
+    <Compile Include="TransitionalProvisonal.cs" />
+    <Compile Include="TransShipment.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="DataAccessLayer">
+      <HintPath>..\DataAccessLayer\bin\Debug\DataAccessLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\DataAccessLayer\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.1.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.1.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.1.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.1.0\lib\net45\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="ExceptionHandling">
+      <HintPath>..\ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="GST.Utility">
+      <HintPath>..\GST.Utility\GST.Utility\bin\Debug\GST.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="GSTN.API.Library">
+      <HintPath>..\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\GSTN.API\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\Masters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GSTN.API\GSTN.API.csproj">
+      <Project>{49b8a70f-e151-4d34-96b3-055925641472}</Project>
+      <Name>GSTN.API</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

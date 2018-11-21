@@ -1,0 +1,34 @@
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\GST.Utility.dll
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\GST.Utility.pdb
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\DataAccessLayer.dll
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\EntityFramework.dll
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\Newtonsoft.Json.dll
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\DataAccessLayer.pdb
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\EntityFramework.xml
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Debug\GST.Utility.csprojResolveAssemblyReference.cache
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Debug\GST.Utility.dll
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Debug\GST.Utility.pdb
+D:\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\GST.Utility.dll
+D:\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\GST.Utility.pdb
+D:\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\DataAccessLayer.dll
+D:\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\EntityFramework.dll
+D:\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\EntityFramework.SqlServer.dll
+D:\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\DataAccessLayer.pdb
+D:\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\EntityFramework.xml
+D:\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\EntityFramework.SqlServer.xml
+D:\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Debug\GST.Utility.csprojResolveAssemblyReference.cache
+D:\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Debug\GST.Utility.dll
+D:\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Debug\GST.Utility.pdb
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\GST.Utility.dll
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\GST.Utility.pdb
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\DataAccessLayer.dll
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\EntityFramework.dll
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\EntityFramework.SqlServer.dll
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\Newtonsoft.Json.dll
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\DataAccessLayer.pdb
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\EntityFramework.xml
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\EntityFramework.SqlServer.xml
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Debug\GST.Utility.dll
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Debug\GST.Utility.pdb
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Debug\GST.Utility.csprojResolveAssemblyReference.cache

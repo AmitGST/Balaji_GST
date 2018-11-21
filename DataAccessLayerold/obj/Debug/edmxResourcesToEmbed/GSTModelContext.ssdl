@@ -1,0 +1,2604 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GST_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ApplicationGroupRoles">
+    <Key>
+      <PropertyRef Name="ApplicationRoleId" />
+      <PropertyRef Name="ApplicationGroupId" />
+    </Key>
+    <Property Name="ApplicationRoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ApplicationGroupId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ApplicationGroups">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Applications">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="nvarchar" MaxLength="235" Nullable="false" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="ApplicationUserGroups">
+    <Key>
+      <PropertyRef Name="ApplicationUserId" />
+      <PropertyRef Name="ApplicationGroupId" />
+    </Key>
+    <Property Name="ApplicationUserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ApplicationGroupId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserAppData">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="AspUserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="GSTNNo" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="ParentUserID" Type="nvarchar" MaxLength="40" />
+    <Property Name="OrganizationName" Type="nvarchar" MaxLength="40" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="GrossTurnOver" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="StateCode" Type="nvarchar" MaxLength="3" />
+    <Property Name="GSTINUserId" Type="nvarchar" MaxLength="20" />
+    <Property Name="NameOfSignatory" Type="nvarchar" MaxLength="20" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegisterWithUs" Type="bit" />
+    <Property Name="UserType" Type="tinyint" />
+    <Property Name="ITC" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SmallImage" Type="image" />
+    <Property Name="LargeImage" Type="image" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ApplicationUser_Id" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="GSTNNo" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="ParentUserID" Type="nvarchar" MaxLength="40" />
+    <Property Name="OrganizationName" Type="nvarchar" MaxLength="40" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="GrossTurnOver" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="StateCode" Type="nvarchar" MaxLength="3" />
+    <Property Name="GSTINUserId" Type="nvarchar" MaxLength="20" />
+    <Property Name="NameOfSignatory" Type="nvarchar" MaxLength="20" />
+    <Property Name="Designation" Type="nvarchar" MaxLength="50" />
+    <Property Name="RegisterWithUs" Type="bit" />
+    <Property Name="UserType" Type="tinyint" />
+    <Property Name="ITC" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SmallImage" Type="image" />
+    <Property Name="LargeImage" Type="image" />
+  </EntityType>
+  <EntityType Name="EWB_MST_SUBSUPPLY_TYPE">
+    <Key>
+      <PropertyRef Name="SubSupplyTypeID" />
+    </Key>
+    <Property Name="SubSupplyTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubSupplyTypeName" Type="varchar" MaxLength="40" />
+    <Property Name="SupplyType" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="EWB_MST_VEHICLE_REASON">
+    <Key>
+      <PropertyRef Name="VehicleReasonID" />
+    </Key>
+    <Property Name="VehicleReasonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReasonText" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EWB_TRN_CANCEL_EWBILL">
+    <Key>
+      <PropertyRef Name="CancleEW_ID" />
+    </Key>
+    <Property Name="CancleEW_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EWB_ID" Type="int" Nullable="false" />
+    <Property Name="EWBNo" Type="int" />
+    <Property Name="CancelRsnCode" Type="int" />
+    <Property Name="CancelRmrk" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EWB_TRN_CONSOLIDATED_EWBILL">
+    <Key>
+      <PropertyRef Name="ConsolidatedID" />
+    </Key>
+    <Property Name="ConsolidatedID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EWB_ID" Type="int" />
+    <Property Name="VehicleNo" Type="varchar" MaxLength="20" />
+    <Property Name="FromPlace" Type="varchar" MaxLength="50" />
+    <Property Name="TransMode" Type="int" />
+    <Property Name="TransDocNo" Type="varchar" MaxLength="50" />
+    <Property Name="TransDocDate" Type="datetime" />
+    <Property Name="FromState" Type="int" />
+    <Property Name="TripSheetEWBBills" Type="nvarchar" MaxLength="50" />
+    <Property Name="EWBNo" Type="int" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EWB_TRN_EWBILL">
+    <Key>
+      <PropertyRef Name="EWB_ID" />
+    </Key>
+    <Property Name="EWB_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="128" />
+    <Property Name="UserGSTIN" Type="varchar" MaxLength="15" />
+    <Property Name="SupplyType" Type="tinyint" />
+    <Property Name="SubSupplyType" Type="int" />
+    <Property Name="DocType" Type="varchar" MaxLength="5" />
+    <Property Name="DocNo" Type="varchar" MaxLength="50" />
+    <Property Name="DocDate" Type="datetime" />
+    <Property Name="FromGSTIN" Type="varchar" MaxLength="15" />
+    <Property Name="ActFromStateCode" Type="int" />
+    <Property Name="FromTrdName" Type="varchar" MaxLength="100" />
+    <Property Name="FromAddress1" Type="varchar" MaxLength="120" />
+    <Property Name="FromAddress2" Type="varchar" MaxLength="120" />
+    <Property Name="FromPlace" Type="varchar" MaxLength="50" />
+    <Property Name="FromPincode" Type="int" />
+    <Property Name="FromStateCode" Type="int" />
+    <Property Name="ToGSTIN" Type="varchar" MaxLength="15" />
+    <Property Name="ActToStateCode" Type="int" />
+    <Property Name="ToTrdName" Type="varchar" MaxLength="100" />
+    <Property Name="ToAddress1" Type="varchar" MaxLength="120" />
+    <Property Name="ToAddress2" Type="varchar" MaxLength="120" />
+    <Property Name="ToPlace" Type="varchar" MaxLength="50" />
+    <Property Name="ToPincode" Type="int" />
+    <Property Name="ToStateCode" Type="int" />
+    <Property Name="TotalValue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CGSTValue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SGSTValue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IGSTValue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CessValue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TransMode" Type="int" />
+    <Property Name="VehicleType" Type="char" MaxLength="1" />
+    <Property Name="TransDistance" Type="int" />
+    <Property Name="TransporterId" Type="nvarchar" MaxLength="15" />
+    <Property Name="TransporterName" Type="varchar" MaxLength="100" />
+    <Property Name="TransDocNo" Type="varchar" MaxLength="15" />
+    <Property Name="TransDocDate" Type="datetime" />
+    <Property Name="VehicleNo" Type="varchar" MaxLength="10" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="ErrorCodes" Type="varchar" MaxLength="200" />
+    <Property Name="EWBDocNo" Type="varchar" MaxLength="50" />
+    <Property Name="EwayBillNo" Type="int" />
+    <Property Name="EwayBillDate" Type="datetime" />
+    <Property Name="ValidUpto" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EWB_TRN_EWBILL_AUDITTRAIL">
+    <Key>
+      <PropertyRef Name="AuditTrailID" />
+    </Key>
+    <Property Name="AuditTrailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EWB_ID" Type="int" />
+    <Property Name="AuditTrailStatus" Type="tinyint" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="Updateddate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EWB_TRN_EWBILL_ITEM">
+    <Key>
+      <PropertyRef Name="Product_ID" />
+    </Key>
+    <Property Name="Product_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EWB_ID" Type="int" />
+    <Property Name="ProductName" Type="varchar" MaxLength="100" />
+    <Property Name="ProductDesc" Type="varchar(max)" />
+    <Property Name="HsnCode" Type="int" />
+    <Property Name="Quantity" Type="decimal" Precision="8" Scale="2" />
+    <Property Name="QtyUnit" Type="varchar" MaxLength="3" />
+    <Property Name="TaxableAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CGSTRate" Type="decimal" Precision="6" Scale="3" />
+    <Property Name="SGSTRate" Type="decimal" Precision="6" Scale="3" />
+    <Property Name="IGSTRate" Type="decimal" Precision="6" Scale="3" />
+    <Property Name="CESSRate" Type="decimal" Precision="6" Scale="3" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EWB_TRN_REJECT_EWBILL">
+    <Key>
+      <PropertyRef Name="RejectEWB_ID" />
+    </Key>
+    <Property Name="RejectEWB_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EWB_ID" Type="int" />
+    <Property Name="EWBNo" Type="int" />
+    <Property Name="RejectReasonCode" Type="int" />
+    <Property Name="RejectRemark" Type="varchar" MaxLength="50" />
+    <Property Name="RejectStatus" Type="tinyint" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EWB_TRN_REPONSE_EWBILL">
+    <Key>
+      <PropertyRef Name="ReponseEW_ID" />
+    </Key>
+    <Property Name="ReponseEW_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceID" Type="bigint" />
+    <Property Name="EWB_ID" Type="int" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="EwaybillNo" Type="int" />
+    <Property Name="EwayBillDate" Type="datetime" />
+    <Property Name="ValidUpto" Type="datetime" />
+    <Property Name="ErrorCode" Type="int" />
+    <Property Name="ErrorDescription" Type="varchar(max)" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EWB_TRN_UPDATE_VEHICLE">
+    <Key>
+      <PropertyRef Name="VehicleUpdate_ID" />
+    </Key>
+    <Property Name="VehicleUpdate_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EWB_ID" Type="int" />
+    <Property Name="EWBNo" Type="int" />
+    <Property Name="VehicleNo" Type="varchar" MaxLength="20" />
+    <Property Name="FromPlace" Type="varchar" MaxLength="50" />
+    <Property Name="FromState" Type="int" />
+    <Property Name="ReasonCode" Type="int" />
+    <Property Name="Reason" Type="varchar" MaxLength="50" />
+    <Property Name="ReasonRem" Type="varchar" MaxLength="50" />
+    <Property Name="TransDocNo" Type="varchar" MaxLength="50" />
+    <Property Name="TransDocDate" Type="datetime" />
+    <Property Name="TransMode" Type="int" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Updateddate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GST_API_LOG">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ControllerName" Type="varchar" MaxLength="50" />
+    <Property Name="ActionName" Type="varchar" MaxLength="50" />
+    <Property Name="HitDateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GST_MST_BUSINESSTYPE">
+    <Key>
+      <PropertyRef Name="BusinessID" />
+    </Key>
+    <Property Name="BusinessID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BusinessType" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GST_MST_CLASS">
+    <Key>
+      <PropertyRef Name="ClassID" />
+    </Key>
+    <Property Name="ClassID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubGroupID" Type="int" />
+    <Property Name="ClassCode" Type="varchar" MaxLength="8" />
+    <Property Name="ClassDescription" Type="varchar(max)" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="GST_MST_CUSTOM_INVOICE">
+    <Key>
+      <PropertyRef Name="InvNoId" />
+    </Key>
+    <Property Name="InvNoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceType" Type="tinyint" />
+    <Property Name="CustomInvoiceNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GST_MST_EXCEPTIONLOG">
+    <Key>
+      <PropertyRef Name="EXCEPTIONID" />
+    </Key>
+    <Property Name="EXCEPTIONID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERNAME" Type="varchar" MaxLength="50" />
+    <Property Name="APPLICATIONNAME" Type="varchar" MaxLength="50" />
+    <Property Name="EXCEPTIONCLASSNAME" Type="varchar" MaxLength="50" />
+    <Property Name="EXCEPTIONMETHODNAME" Type="varchar" MaxLength="50" />
+    <Property Name="EXCEPTIONMESSAGE" Type="varchar" MaxLength="50" />
+    <Property Name="EXCEPTIONLINENUMBER" Type="varchar" MaxLength="50" />
+    <Property Name="SERVERNAME" Type="varchar" MaxLength="50" />
+    <Property Name="URL" Type="varchar" MaxLength="50" />
+    <Property Name="EXCEPTIONLOGGINGTIME" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GST_MST_FINYEAR">
+    <Key>
+      <PropertyRef Name="Fin_ID" />
+    </Key>
+    <Property Name="Fin_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Finyear" Type="nvarchar" MaxLength="10" />
+    <Property Name="Finyear_Format" Type="nvarchar" MaxLength="15" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="GST_MST_GROUP">
+    <Key>
+      <PropertyRef Name="GroupID" />
+    </Key>
+    <Property Name="GroupID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GroupCode" Type="varchar" MaxLength="5" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="GroupType" Type="tinyint" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="GST_MST_ITEM">
+    <Key>
+      <PropertyRef Name="Item_ID" />
+    </Key>
+    <Property Name="Item_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemCode" Type="varchar" MaxLength="20" />
+    <Property Name="ItemType" Type="tinyint" />
+    <Property Name="SubClassID" Type="int" />
+    <Property Name="SubGroupID" Type="int" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Unit" Type="char" MaxLength="5" />
+    <Property Name="IGST" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="CGST" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="SGST" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="CESS" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="UGST" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="IsNotified" Type="bit" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsNilRated" Type="bit" />
+    <Property Name="IsCondition" Type="bit" />
+    <Property Name="IsExempted" Type="bit" />
+    <Property Name="IsZeroRated" Type="bit" />
+    <Property Name="IsNonGSTGoods" Type="bit" />
+    <Property Name="ActiveFrom" Type="datetime" />
+    <Property Name="SpecialConditionApplied" Type="tinyint" />
+    <Property Name="ActiveTo" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="BuisnessTypeId" Type="int" />
+  </EntityType>
+  <EntityType Name="GST_MST_ITEM_CONDITION">
+    <Key>
+      <PropertyRef Name="Condition_Id" />
+    </Key>
+    <Property Name="Condition_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ConditionNo" Type="varchar" MaxLength="20" />
+    <Property Name="ConditionSNo" Type="varchar" MaxLength="10" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="Notified_Id" Type="int" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="IsNilRated" Type="bit" />
+    <Property Name="IsExempted" Type="bit" />
+    <Property Name="IsZeroRated" Type="bit" />
+    <Property Name="IsNonGSTGoods" Type="bit" />
+    <Property Name="SpecialConditionApplied" Type="tinyint" />
+    <Property Name="ActiveFrom" Type="datetime" />
+    <Property Name="ActiveTo" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GST_MST_ITEM_NOTIFIED">
+    <Key>
+      <PropertyRef Name="Notified_Id" />
+    </Key>
+    <Property Name="Notified_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NotificationNo" Type="varchar" MaxLength="20" />
+    <Property Name="NotificationSNo" Type="varchar" MaxLength="10" />
+    <Property Name="Item_ID" Type="int" Nullable="false" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="TarrifDuty" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="IsCondition" Type="bit" />
+    <Property Name="IsNilRated" Type="bit" />
+    <Property Name="IsExempted" Type="bit" />
+    <Property Name="IsZeroRated" Type="bit" />
+    <Property Name="IsNonGSTGoods" Type="bit" />
+    <Property Name="SpecialConditionApplied" Type="tinyint" />
+    <Property Name="ActiveFrom" Type="datetime" />
+    <Property Name="ActiveTo" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GST_MST_MESSAGE">
+    <Key>
+      <PropertyRef Name="MessageId" />
+    </Key>
+    <Property Name="MessageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Message" Type="nvarchar(max)" />
+    <Property Name="MessageType" Type="tinyint" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="ActiveFrom" Type="datetime" />
+    <Property Name="ActiveTo" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GST_MST_MESSAGELOG">
+    <Key>
+      <PropertyRef Name="LOGID" />
+    </Key>
+    <Property Name="LOGID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USERNAME" Type="varchar" MaxLength="50" />
+    <Property Name="APPLICATIONNAME" Type="varchar" MaxLength="50" />
+    <Property Name="MACHINENAME" Type="varchar" MaxLength="50" />
+    <Property Name="CLASSNAME" Type="varchar" MaxLength="50" />
+    <Property Name="METHODNAME" Type="varchar" MaxLength="50" />
+    <Property Name="MESSAGE" Type="varchar" MaxLength="100" />
+    <Property Name="SERVERNAME" Type="varchar" MaxLength="100" />
+    <Property Name="URL" Type="varchar" MaxLength="100" />
+    <Property Name="LOGGINGTIME" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GST_MST_OFFLINE_SECTION">
+    <Key>
+      <PropertyRef Name="Section_ID" />
+    </Key>
+    <Property Name="Section_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Type" Type="tinyint" />
+    <Property Name="ActiveStatus" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="GST_MST_PRESENT_USER">
+    <Key>
+      <PropertyRef Name="PresentUSERID" />
+    </Key>
+    <Property Name="PresentUSERID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id" Type="nvarchar" MaxLength="128" />
+    <Property Name="ParentUserID" Type="nvarchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="GST_MST_PRODUCT_DESCRIPTION">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="int" Nullable="false" />
+    <Property Name="MarksNos" Type="nvarchar" MaxLength="500" />
+    <Property Name="Packages" Type="nvarchar" MaxLength="100" />
+    <Property Name="GoodDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="Weight" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Volume" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="GST_MST_PURCHASE_DATA">
+    <Key>
+      <PropertyRef Name="PurchaseDataID" />
+    </Key>
+    <Property Name="PurchaseDataID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PurchageRegisterID" Type="bigint" />
+    <Property Name="LineID" Type="nchar" MaxLength="10" />
+    <Property Name="Item_ID" Type="int" />
+    <Property Name="Qty" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Rate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Discount" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="TaxableAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TotalAmountWithTax" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IGSTRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="IGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CGSTRate" Type="nchar" MaxLength="10" />
+    <Property Name="CGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SGSTRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="SGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UGSTRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="UGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CessRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="CessAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="InvoiceDataStatus" Type="tinyint" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="GST_MST_PURCHASE_REGISTER">
+    <Key>
+      <PropertyRef Name="PurchageRegisterID" />
+    </Key>
+    <Property Name="PurchageRegisterID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="128" />
+    <Property Name="StateCode" Type="nvarchar" MaxLength="3" />
+    <Property Name="SellerGSTN" Type="nvarchar" MaxLength="20" />
+    <Property Name="SellerName" Type="nchar" MaxLength="100" />
+    <Property Name="SellerAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="ReceiverName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ReceiverAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="ConsigneeName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ConsigneeAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="StockInwardDate" Type="datetime" />
+    <Property Name="StockOrderDate" Type="datetime" />
+    <Property Name="OrderPo" Type="nvarchar" MaxLength="50" />
+    <Property Name="OrderPoDate" Type="datetime" />
+    <Property Name="SupplierInvoiceNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierInvoiceDate" Type="datetime" />
+    <Property Name="SupplierInvoiceMonth" Type="tinyint" />
+    <Property Name="Freight" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Insurance" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="PackingAndForwadingCharges" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ElectronicReferenceNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="ElectronicReferenceNoDate" Type="datetime" />
+    <Property Name="PurchaseStatus" Type="tinyint" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="ActiveFrom" Type="datetime" />
+    <Property Name="ActiveTo" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GST_MST_REPORT">
+    <Key>
+      <PropertyRef Name="ReportId" />
+    </Key>
+    <Property Name="ReportId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReportName" Type="nvarchar" MaxLength="200" />
+    <Property Name="ReportPath" Type="nvarchar" MaxLength="200" />
+    <Property Name="ReportControlName" Type="nvarchar" MaxLength="200" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="SerialNo" Type="int" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GST_MST_REPORT_PERMISSION">
+    <Key>
+      <PropertyRef Name="ReportPermissionID" />
+    </Key>
+    <Property Name="ReportPermissionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReportId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GST_MST_SALE_REGISTER">
+    <Key>
+      <PropertyRef Name="SaleRegisterID" />
+    </Key>
+    <Property Name="SaleRegisterID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Item_ID" Type="int" />
+    <Property Name="InvoiceID" Type="bigint" />
+    <Property Name="Id" Type="nvarchar" MaxLength="128" />
+    <Property Name="Qty" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="PerUnitRate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="SaleStatus" Type="tinyint" />
+    <Property Name="ActiveFrom" Type="datetime" />
+    <Property Name="ActiveTo" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GST_MST_STATE">
+    <Key>
+      <PropertyRef Name="StateID" />
+    </Key>
+    <Property Name="StateID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StateName" Type="nvarchar" MaxLength="30" />
+    <Property Name="StateCode" Type="nvarchar" MaxLength="3" />
+    <Property Name="StateCodeID" Type="nvarchar" MaxLength="5" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="CompCeilingAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UT" Type="bit" />
+    <Property Name="IsExempted" Type="bit" />
+  </EntityType>
+  <EntityType Name="GST_MST_SUBCLASS">
+    <Key>
+      <PropertyRef Name="SubClassID" />
+    </Key>
+    <Property Name="SubClassID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubClassCode" Type="varchar" MaxLength="10" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="ClassID" Type="int" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="GST_MST_SUBGROUP">
+    <Key>
+      <PropertyRef Name="SubGroupID" />
+    </Key>
+    <Property Name="SubGroupID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubGroupCode" Type="varchar" MaxLength="8" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="GroupID" Type="int" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="GST_MST_USER_BUSINESSTYPE">
+    <Key>
+      <PropertyRef Name="UserBusinessID" />
+    </Key>
+    <Property Name="UserBusinessID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BusinessID" Type="int" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GST_MST_USER_CURRENT_TURNOVER">
+    <Key>
+      <PropertyRef Name="CurrentTurnover_ID" />
+    </Key>
+    <Property Name="CurrentTurnover_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User_ID" Type="nvarchar" MaxLength="128" />
+    <Property Name="Month" Type="int" />
+    <Property Name="InvoiceID" Type="bigint" />
+    <Property Name="InvoiceAmountWithTax" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="InvoiceAmountWithoutTax" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TurnOverStatus" Type="tinyint" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="GST_MST_USER_SIGNATORY">
+    <Key>
+      <PropertyRef Name="Signatory_Id" />
+    </Key>
+    <Property Name="Signatory_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SignatoryName" Type="varchar" MaxLength="30" />
+    <Property Name="CertificateKey" Type="nvarchar(max)" />
+    <Property Name="Id" Type="nvarchar" MaxLength="128" />
+    <Property Name="GSTNNo" Type="nvarchar" MaxLength="15" />
+    <Property Name="OrgAddress" Type="nvarchar" MaxLength="100" />
+    <Property Name="State" Type="nvarchar" MaxLength="30" />
+    <Property Name="Pincode" Type="int" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GST_MST_VENDOR">
+    <Key>
+      <PropertyRef Name="VendorID" />
+    </Key>
+    <Property Name="VendorID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VendorName" Type="varchar" MaxLength="100" />
+    <Property Name="Address" Type="varchar" MaxLength="150" />
+    <Property Name="EmailID" Type="varchar" MaxLength="50" />
+    <Property Name="NameOfSignatory" Type="varchar" MaxLength="50" />
+    <Property Name="Designation" Type="varchar" MaxLength="50" />
+    <Property Name="GSTNNo" Type="varchar" MaxLength="20" />
+    <Property Name="OwnerShip" Type="tinyint" />
+    <Property Name="StateID" Type="tinyint" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="128" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GST_MST_VENDOR_SERVICE">
+    <Key>
+      <PropertyRef Name="VendorServiceID" />
+    </Key>
+    <Property Name="VendorServiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VendorID" Type="int" />
+    <Property Name="Item_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="GST_MST_VENDOR_TRANS_SHIPMENT">
+    <Key>
+      <PropertyRef Name="TransShipment_ID" />
+    </Key>
+    <Property Name="TransShipment_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VendorID" Type="int" />
+    <Property Name="TransShipmentNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="VehicleRegistrationNumber" Type="nvarchar" MaxLength="20" />
+    <Property Name="DriverLicenceNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsInterNationalWarehouseAvailed" Type="bit" />
+    <Property Name="FromLocation" Type="nvarchar" MaxLength="50" />
+    <Property Name="ToLocation" Type="nvarchar" MaxLength="50" />
+    <Property Name="TransShipmentDate" Type="datetime" />
+    <Property Name="Distance_ID" Type="int" />
+    <Property Name="BillAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Item_ID" Type="int" />
+    <Property Name="TransShipmentStatus" Type="tinyint" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="GST_TRN_CONSOLIDATED_INVOICE">
+    <Key>
+      <PropertyRef Name="ReconsileID" />
+    </Key>
+    <Property Name="ReconsileID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="128" />
+    <Property Name="InvoiceDataID" Type="bigint" />
+    <Property Name="InvoiceID" Type="bigint" />
+    <Property Name="INVOICESPECIALCONDITION" Type="tinyint" />
+    <Property Name="QTY" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Rate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TAXABLEAMOUNT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="GSTNNO" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="GST_TRN_CRDR_AUDIT_TRAIL">
+    <Key>
+      <PropertyRef Name="CrDrAuditTrailID" />
+    </Key>
+    <Property Name="CrDrAuditTrailID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="CreditDebitID" Type="bigint" />
+    <Property Name="AuditTrailStatus" Type="tinyint" />
+    <Property Name="UserIP" Type="nvarchar" MaxLength="30" />
+    <Property Name="SellerInvoiceAction" Type="tinyint" />
+    <Property Name="ReceiverInvoiceAction" Type="tinyint" />
+    <Property Name="SellerInvoiceActionDate" Type="datetime" />
+    <Property Name="ReceiverInvoiceActionDate" Type="datetime" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="GST_TRN_CRDR_NOTE">
+    <Key>
+      <PropertyRef Name="CreditDebitID" />
+    </Key>
+    <Property Name="CreditDebitID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="From_UserID" Type="nvarchar" MaxLength="128" />
+    <Property Name="To_UserID" Type="nvarchar" MaxLength="128" />
+    <Property Name="InvoiceID" Type="bigint" />
+    <Property Name="CDN_ParentID" Type="bigint" />
+    <Property Name="CDN_Date" Type="datetime" />
+    <Property Name="NoteType" Type="tinyint" />
+    <Property Name="NoteTypeStatus" Type="tinyint" />
+    <Property Name="TotalNoteValue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="NoteNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="P_Gst" Type="tinyint" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="GST_TRN_CRDR_NOTE_DATA">
+    <Key>
+      <PropertyRef Name="CreditDebit_ItemID" />
+    </Key>
+    <Property Name="CreditDebit_ItemID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreditDebitID" Type="bigint" />
+    <Property Name="LineID" Type="int" />
+    <Property Name="Item_ID" Type="int" />
+    <Property Name="Qty" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Rate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Discount" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="TaxableAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TotalAmountWithTax" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IGSTRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="IGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CGSTRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="CGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SGSTRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="SGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UGSTRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="UGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CessRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="CessAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="InvoiceDataStatus" Type="tinyint" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="GST_TRN_ERROR_HANDLING">
+    <Key>
+      <PropertyRef Name="ErrorLogId" />
+    </Key>
+    <Property Name="ErrorLogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserIP" Type="nvarchar" MaxLength="20" />
+    <Property Name="ErrorPage" Type="nvarchar" MaxLength="50" />
+    <Property Name="Message" Type="nvarchar" MaxLength="200" />
+    <Property Name="TargetSite" Type="nvarchar" MaxLength="200" />
+    <Property Name="StackTrace" Type="nvarchar" MaxLength="500" />
+    <Property Name="ServerName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ErrorSource" Type="nvarchar" MaxLength="200" />
+    <Property Name="RequestUrl" Type="nvarchar" MaxLength="500" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="GST_TRN_INVOICE">
+    <Key>
+      <PropertyRef Name="InvoiceID" />
+    </Key>
+    <Property Name="InvoiceID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="InvoiceDate" Type="datetime" />
+    <Property Name="InvoiceUserID" Type="nvarchar" MaxLength="128" />
+    <Property Name="InvoiceMonth" Type="tinyint" />
+    <Property Name="SellerUserID" Type="nvarchar" MaxLength="128" />
+    <Property Name="ReceiverUserID" Type="nvarchar" MaxLength="128" />
+    <Property Name="ConsigneeUserID" Type="nvarchar" MaxLength="128" />
+    <Property Name="OrderDate" Type="datetime" />
+    <Property Name="VendorID" Type="int" />
+    <Property Name="TransShipment_ID" Type="bigint" />
+    <Property Name="Freight" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Insurance" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="PackingAndForwadingCharges" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ElectronicReferenceNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="ElectronicReferenceNoDate" Type="datetime" />
+    <Property Name="InvoiceType" Type="tinyint" />
+    <Property Name="FinYear_ID" Type="int" />
+    <Property Name="InvoiceMode" Type="tinyint" />
+    <Property Name="IsInter" Type="bit" />
+    <Property Name="ReceiverFinYear_ID" Type="int" />
+    <Property Name="ParentInvoiceID" Type="bigint" />
+    <Property Name="InvoiceStatus" Type="tinyint" />
+    <Property Name="TaxBenefitingState" Type="nvarchar" MaxLength="3" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="InvoiceSpecialCondition" Type="tinyint" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="GST_TRN_INVOICE_AUDIT_TRAIL">
+    <Key>
+      <PropertyRef Name="AuditTrailID" />
+    </Key>
+    <Property Name="AuditTrailID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceID" Type="bigint" />
+    <Property Name="AuditTrailStatus" Type="tinyint" />
+    <Property Name="UserIP" Type="nvarchar" MaxLength="30" />
+    <Property Name="InvoiceAction" Type="tinyint" />
+    <Property Name="SellerInvoiceAction" Type="tinyint" />
+    <Property Name="ReceiverInvoiceAction" Type="tinyint" />
+    <Property Name="SellerInvoiceActionDate" Type="datetime" />
+    <Property Name="ReceiverInvoiceActionDate" Type="datetime" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="GST_TRN_INVOICE_DATA">
+    <Key>
+      <PropertyRef Name="InvoiceDataID" />
+    </Key>
+    <Property Name="InvoiceDataID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceID" Type="bigint" />
+    <Property Name="LineID" Type="int" />
+    <Property Name="Item_ID" Type="int" />
+    <Property Name="Qty" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Rate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Discount" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="TaxableAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TotalAmountWithTax" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IGSTRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="IGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CGSTRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="CGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SGSTRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="SGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UGSTRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="UGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CessRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="CessAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="InvoiceDataStatus" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="GST_TRN_INVOICE_MAP">
+    <Key>
+      <PropertyRef Name="RegularMappedID" />
+    </Key>
+    <Property Name="RegularMappedID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MapfromInvoiceID" Type="bigint" />
+    <Property Name="MaptoInvoiceID" Type="bigint" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="GST_TRN_ITC">
+    <Key>
+      <PropertyRef Name="ITC_ID" />
+    </Key>
+    <Property Name="ITC_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="128" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="InvoiceID" Type="bigint" />
+    <Property Name="ITCStatus" Type="tinyint" />
+    <Property Name="ITCParentID" Type="bigint" />
+    <Property Name="ITCVoucherType" Type="tinyint" />
+    <Property Name="ITCDate" Type="datetime" />
+    <Property Name="ITCMovement" Type="tinyint" />
+    <Property Name="TaxType" Type="tinyint" />
+    <Property Name="IGST" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CGST" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SGST" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Cess" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="GST_TRN_ITC_DATA">
+    <Key>
+      <PropertyRef Name="ITCDATA_ID" />
+    </Key>
+    <Property Name="ITCDATA_ID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ITC_ID" Type="bigint" />
+    <Property Name="LineID" Type="int" />
+    <Property Name="Item_ID" Type="int" />
+    <Property Name="Qty" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Rate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Discount" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="TaxableAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TotalAmountWithTax" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IGSTRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="IGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CGSTRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="CGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SGSTRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="SGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UGSTRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="UGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CessRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="CessAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="InvoiceDataStatus" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="GST_TRN_OFFLINE">
+    <Key>
+      <PropertyRef Name="OfflineID" />
+    </Key>
+    <Property Name="OfflineID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AuditTrailID" Type="bigint" />
+    <Property Name="FileType" Type="tinyint" />
+    <Property Name="UploadedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="SupplierGSTIN" Type="nvarchar" MaxLength="20" />
+    <Property Name="Fin_ID" Type="int" />
+    <Property Name="Month" Type="tinyint" />
+    <Property Name="AggregateTurnover" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AggregateTurnoverQuater" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Section" Type="tinyint" />
+    <Property Name="ExcelData" Type="xml" />
+    <Property Name="UploadStatus" Type="tinyint" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="GST_TRN_OFFLINE_INVOICE">
+    <Key>
+      <PropertyRef Name="ValueId" />
+    </Key>
+    <Property Name="ValueId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OfflineID" Type="bigint" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="128" />
+    <Property Name="SupplierGSTIN" Type="nvarchar" MaxLength="15" />
+    <Property Name="SupplierName" Type="nvarchar" MaxLength="30" />
+    <Property Name="ReceiverGSTIN" Type="nvarchar" MaxLength="15" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="InvoiceDate" Type="datetime" />
+    <Property Name="TotalInvoiceValue" Type="nvarchar" MaxLength="128" />
+    <Property Name="PlaceofSupply" Type="tinyint" />
+    <Property Name="SupplyType" Type="tinyint" />
+    <Property Name="SectionType" Type="tinyint" Nullable="false" />
+    <Property Name="ReturnType" Type="tinyint" Nullable="false" />
+    <Property Name="InvoiceType" Type="tinyint" />
+    <Property Name="ReverseCharge" Type="bit" />
+    <Property Name="ECommerce_GSTIN" Type="nvarchar" MaxLength="15" />
+    <Property Name="Type" Type="tinyint" />
+    <Property Name="Voucher_No" Type="nvarchar" MaxLength="15" />
+    <Property Name="Voucher_date" Type="datetime" />
+    <Property Name="Document_Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Issuing_Note" Type="int" />
+    <Property Name="Voucher_Value" Type="nvarchar" MaxLength="15" />
+    <Property Name="Pre_GST" Type="bit" />
+    <Property Name="GST_Payment" Type="tinyint" />
+    <Property Name="PortCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShippingBillNo" Type="nvarchar" MaxLength="20" />
+    <Property Name="ShippingBillDate" Type="datetime" />
+    <Property Name="HSN" Type="varchar" MaxLength="20" />
+    <Property Name="UQC" Type="tinyint" />
+    <Property Name="HSNDescription" Type="nvarchar(max)" />
+    <Property Name="NoteType" Type="tinyint" />
+    <Property Name="BillOfEntry" Type="nvarchar" MaxLength="300" />
+    <Property Name="BillofEntryDate" Type="datetime" />
+    <Property Name="BillofEntryValue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ImportfromSEZ" Type="bit" />
+    <Property Name="CompoundingDealerSupplies" Type="bit" />
+    <Property Name="NilRated" Type="bit" />
+    <Property Name="IsExempted" Type="bit" />
+    <Property Name="NonGSTSupplies" Type="bit" />
+    <Property Name="URType" Type="tinyint" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL">
+    <Key>
+      <PropertyRef Name="AuditTrailID" />
+    </Key>
+    <Property Name="AuditTrailID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ExcelName" Type="nvarchar" MaxLength="50" />
+    <Property Name="JobName" Type="nvarchar" MaxLength="50" />
+    <Property Name="JobType" Type="tinyint" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="Month" Type="tinyint" />
+    <Property Name="InvoiceDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="GST_TRN_OFFLINE_INVOICE_DATAITEM">
+    <Key>
+      <PropertyRef Name="OfflineDataID" />
+    </Key>
+    <Property Name="OfflineDataID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ValueID" Type="int" />
+    <Property Name="TotalQuantity" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="RateId" Type="int" />
+    <Property Name="TaxableAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TotalTaxableValue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IGSTRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="IGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CGSTRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="CGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SGSTRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="SGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="UTGSTRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="UTGSTAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CessRate" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="CessAmt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TotalValue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ITC_IGST" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ITC_SGST" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ITC_CGST" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ITC_UTGST" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ITC_Cess" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ITC_Eligibility" Type="bit" />
+    <Property Name="GrossAdvance" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="GST_TRN_OFFLINE_INVOICE_RATE">
+    <Key>
+      <PropertyRef Name="RATE_ID" />
+    </Key>
+    <Property Name="RATE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RATE" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ActiveFrom" Type="datetime" />
+    <Property Name="ActiveTo" Type="datetime" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="GST_TRN_OFFLINE_INVOICE_SECTION_RULE">
+    <Key>
+      <PropertyRef Name="RuleId" />
+    </Key>
+    <Property Name="RuleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Amount_in_terms_of_rule 37(2)" Type="nvarchar" MaxLength="500" />
+    <Property Name="Amount_in_terms_of_rule_42(1)(m)" Type="nvarchar" MaxLength="500" />
+    <Property Name="Amount_in_terms_of_rule_42(2)(a" Type="nvarchar" MaxLength="500" />
+    <Property Name="Amount_in_terms_of_rule_42(2)(b)" Type="nvarchar" MaxLength="500" />
+    <Property Name="Amount_in_terms_of_rule_43(1)(h)" Type="nvarchar" MaxLength="500" />
+    <Property Name="On_account_of_amount_paid_subsequent_to_reversal_of_ITC" Type="nvarchar" MaxLength="500" />
+    <Property Name="Any_other_reversal_(+)_ Any_other_reclaim (-)" Type="nvarchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="GST_TRN_OFFLINE_ISSUINGNOTE_REASON">
+    <Key>
+      <PropertyRef Name="NoteID" />
+    </Key>
+    <Property Name="NoteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NoteCode" Type="nvarchar" MaxLength="4" />
+    <Property Name="IssuingNoteName" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
+  <EntityType Name="GST_TRN_VENDOR_SERVICE">
+    <Key>
+      <PropertyRef Name="VendorServiceID" />
+    </Key>
+    <Property Name="VendorServiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Item_ID" Type="int" />
+    <Property Name="VendorID" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BALAJA_GST_LOCAL_DB.dbo.GSTR3B_2_2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="GSTR3B_2_2">
+    <Key>
+      <PropertyRef Name="Description" />
+    </Key>
+    <Property Name="Description" Type="varchar" MaxLength="48" Nullable="false" />
+    <Property Name="TAXABLEAMOUNT" Type="decimal" Precision="38" Scale="2" />
+    <Property Name="IGSTAMT" Type="decimal" Precision="38" Scale="2" />
+    <Property Name="STATENAME" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'BALAJA_GST_LOCAL_DB.dbo.vInvoiceData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vInvoiceData">
+    <Key>
+      <PropertyRef Name="Seller GSTIN No" />
+      <PropertyRef Name="InvoiceID" />
+      <PropertyRef Name="AuditTrailID" />
+    </Key>
+    <Property Name="Organizational Name" Type="nvarchar" MaxLength="40" />
+    <Property Name="Seller GSTIN No" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="InvoiceID" Type="bigint" Nullable="false" />
+    <Property Name="AuditTrailID" Type="bigint" Nullable="false" />
+    <Property Name="AuditTrailStatus" Type="tinyint" />
+    <Property Name="ReceiverInvoiceAction" Type="tinyint" />
+    <Property Name="ReceiverInvoiceActionDate" Type="datetime" />
+    <Property Name="SellerInvoiceAction" Type="tinyint" />
+    <Property Name="SellerInvoiceActionDate" Type="datetime" />
+    <Property Name="TotalAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TaxableAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TotalAmountWithTax" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <Association Name="FK_AddSignatory_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="GST_MST_USER_SIGNATORY" Type="Self.GST_MST_USER_SIGNATORY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GST_MST_USER_SIGNATORY">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUserAppData_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="AspNetUserAppData" Type="Self.AspNetUserAppData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserAppData">
+        <PropertyRef Name="AspUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ApplicationGroupRoles_dbo_ApplicationGroups_ApplicationGroupId">
+    <End Role="ApplicationGroups" Type="Self.ApplicationGroups" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ApplicationGroupRoles" Type="Self.ApplicationGroupRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ApplicationGroups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ApplicationGroupRoles">
+        <PropertyRef Name="ApplicationGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_ApplicationUserGroups_dbo_ApplicationGroups_ApplicationGroupId">
+    <End Role="ApplicationGroups" Type="Self.ApplicationGroups" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="ApplicationUserGroups" Type="Self.ApplicationUserGroups" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ApplicationGroups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ApplicationUserGroups">
+        <PropertyRef Name="ApplicationGroupId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_ApplicationUser_Id">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="ApplicationUser_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWB_TRN_CANCEL_EWBILL_EWB_TRN_EWBILLS">
+    <End Role="EWB_TRN_EWBILL" Type="Self.EWB_TRN_EWBILL" Multiplicity="1" />
+    <End Role="EWB_TRN_CANCEL_EWBILL" Type="Self.EWB_TRN_CANCEL_EWBILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWB_TRN_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Principal>
+      <Dependent Role="EWB_TRN_CANCEL_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWB_TRN_CONSOLIDATED_EWBILL_EWB_TRN_EWBILLS">
+    <End Role="EWB_TRN_EWBILL" Type="Self.EWB_TRN_EWBILL" Multiplicity="0..1" />
+    <End Role="EWB_TRN_CONSOLIDATED_EWBILL" Type="Self.EWB_TRN_CONSOLIDATED_EWBILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWB_TRN_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Principal>
+      <Dependent Role="EWB_TRN_CONSOLIDATED_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWB_TRN_EWBILLS_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="EWB_TRN_EWBILL" Type="Self.EWB_TRN_EWBILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EWB_TRN_EWBILL">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWB_TRN_EWBILLS_AUDITTRAIL_EWB_TRN_EWBILLS">
+    <End Role="EWB_TRN_EWBILL" Type="Self.EWB_TRN_EWBILL" Multiplicity="0..1" />
+    <End Role="EWB_TRN_EWBILL_AUDITTRAIL" Type="Self.EWB_TRN_EWBILL_AUDITTRAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWB_TRN_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Principal>
+      <Dependent Role="EWB_TRN_EWBILL_AUDITTRAIL">
+        <PropertyRef Name="EWB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWB_TRN_EWBILLS_EWB_MST_SUBSUPPLY_TYPE">
+    <End Role="EWB_MST_SUBSUPPLY_TYPE" Type="Self.EWB_MST_SUBSUPPLY_TYPE" Multiplicity="0..1" />
+    <End Role="EWB_TRN_EWBILL" Type="Self.EWB_TRN_EWBILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWB_MST_SUBSUPPLY_TYPE">
+        <PropertyRef Name="SubSupplyTypeID" />
+      </Principal>
+      <Dependent Role="EWB_TRN_EWBILL">
+        <PropertyRef Name="SubSupplyType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWB_TRN_EWBILLS_PRODUCT_EWB_TRN_EWBILLS">
+    <End Role="EWB_TRN_EWBILL" Type="Self.EWB_TRN_EWBILL" Multiplicity="0..1" />
+    <End Role="EWB_TRN_EWBILL_ITEM" Type="Self.EWB_TRN_EWBILL_ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWB_TRN_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Principal>
+      <Dependent Role="EWB_TRN_EWBILL_ITEM">
+        <PropertyRef Name="EWB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWB_TRN_REJECT_EWBILL_EWB_TRN_EWBILLS">
+    <End Role="EWB_TRN_EWBILL" Type="Self.EWB_TRN_EWBILL" Multiplicity="0..1" />
+    <End Role="EWB_TRN_REJECT_EWBILL" Type="Self.EWB_TRN_REJECT_EWBILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWB_TRN_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Principal>
+      <Dependent Role="EWB_TRN_REJECT_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWB_TRN_REPONSE_EWBILL_EWB_TRN_EWBILLS">
+    <End Role="EWB_TRN_EWBILL" Type="Self.EWB_TRN_EWBILL" Multiplicity="0..1" />
+    <End Role="EWB_TRN_REPONSE_EWBILL" Type="Self.EWB_TRN_REPONSE_EWBILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWB_TRN_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Principal>
+      <Dependent Role="EWB_TRN_REPONSE_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWB_TRN_REPONSE_EWBILL_GST_TRN_INVOICE">
+    <End Role="GST_TRN_INVOICE" Type="Self.GST_TRN_INVOICE" Multiplicity="0..1" />
+    <End Role="EWB_TRN_REPONSE_EWBILL" Type="Self.EWB_TRN_REPONSE_EWBILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_TRN_INVOICE">
+        <PropertyRef Name="InvoiceID" />
+      </Principal>
+      <Dependent Role="EWB_TRN_REPONSE_EWBILL">
+        <PropertyRef Name="InvoiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWB_TRN_UPDATE_VEHICLE_EWB_TRN_EWBILLS">
+    <End Role="EWB_TRN_EWBILL" Type="Self.EWB_TRN_EWBILL" Multiplicity="0..1" />
+    <End Role="EWB_TRN_UPDATE_VEHICLE" Type="Self.EWB_TRN_UPDATE_VEHICLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWB_TRN_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Principal>
+      <Dependent Role="EWB_TRN_UPDATE_VEHICLE">
+        <PropertyRef Name="EWB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_CLASS_GST_MST_SUBGROUP">
+    <End Role="GST_MST_SUBGROUP" Type="Self.GST_MST_SUBGROUP" Multiplicity="0..1" />
+    <End Role="GST_MST_CLASS" Type="Self.GST_MST_CLASS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_SUBGROUP">
+        <PropertyRef Name="SubGroupID" />
+      </Principal>
+      <Dependent Role="GST_MST_CLASS">
+        <PropertyRef Name="SubGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_HSN_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="GST_MST_ITEM" Type="Self.GST_MST_ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GST_MST_ITEM">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_HSN_GST_MST_SUBGROUP">
+    <End Role="GST_MST_SUBGROUP" Type="Self.GST_MST_SUBGROUP" Multiplicity="0..1" />
+    <End Role="GST_MST_ITEM" Type="Self.GST_MST_ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_SUBGROUP">
+        <PropertyRef Name="SubGroupID" />
+      </Principal>
+      <Dependent Role="GST_MST_ITEM">
+        <PropertyRef Name="SubGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_ITEM_CONDITION_GST_MST_ITEM_NOTIFIED">
+    <End Role="GST_MST_ITEM_NOTIFIED" Type="Self.GST_MST_ITEM_NOTIFIED" Multiplicity="0..1" />
+    <End Role="GST_MST_ITEM_CONDITION" Type="Self.GST_MST_ITEM_CONDITION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_ITEM_NOTIFIED">
+        <PropertyRef Name="Notified_Id" />
+      </Principal>
+      <Dependent Role="GST_MST_ITEM_CONDITION">
+        <PropertyRef Name="Notified_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_ITEM_GST_MST_BUSINESSTYPE">
+    <End Role="GST_MST_BUSINESSTYPE" Type="Self.GST_MST_BUSINESSTYPE" Multiplicity="0..1" />
+    <End Role="GST_MST_ITEM" Type="Self.GST_MST_ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_BUSINESSTYPE">
+        <PropertyRef Name="BusinessID" />
+      </Principal>
+      <Dependent Role="GST_MST_ITEM">
+        <PropertyRef Name="BuisnessTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_ITEM_GST_MST_SUBCLASS">
+    <End Role="GST_MST_SUBCLASS" Type="Self.GST_MST_SUBCLASS" Multiplicity="0..1" />
+    <End Role="GST_MST_ITEM" Type="Self.GST_MST_ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_SUBCLASS">
+        <PropertyRef Name="SubClassID" />
+      </Principal>
+      <Dependent Role="GST_MST_ITEM">
+        <PropertyRef Name="SubClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_ITEM_NOTIFIED_GST_MST_ITEM">
+    <End Role="GST_MST_ITEM" Type="Self.GST_MST_ITEM" Multiplicity="1" />
+    <End Role="GST_MST_ITEM_NOTIFIED" Type="Self.GST_MST_ITEM_NOTIFIED" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_ITEM">
+        <PropertyRef Name="Item_ID" />
+      </Principal>
+      <Dependent Role="GST_MST_ITEM_NOTIFIED">
+        <PropertyRef Name="Item_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_PRESENT_USER_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="GST_MST_PRESENT_USER" Type="Self.GST_MST_PRESENT_USER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GST_MST_PRESENT_USER">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_PURCHASE_DATA_GST_MST_ITEM">
+    <End Role="GST_MST_ITEM" Type="Self.GST_MST_ITEM" Multiplicity="0..1" />
+    <End Role="GST_MST_PURCHASE_DATA" Type="Self.GST_MST_PURCHASE_DATA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_ITEM">
+        <PropertyRef Name="Item_ID" />
+      </Principal>
+      <Dependent Role="GST_MST_PURCHASE_DATA">
+        <PropertyRef Name="Item_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_PURCHASE_DATA_GST_MST_PURCHASE_REGISTER">
+    <End Role="GST_MST_PURCHASE_REGISTER" Type="Self.GST_MST_PURCHASE_REGISTER" Multiplicity="0..1" />
+    <End Role="GST_MST_PURCHASE_DATA" Type="Self.GST_MST_PURCHASE_DATA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_PURCHASE_REGISTER">
+        <PropertyRef Name="PurchageRegisterID" />
+      </Principal>
+      <Dependent Role="GST_MST_PURCHASE_DATA">
+        <PropertyRef Name="PurchageRegisterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_PURCHASE_REGISTER_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="GST_MST_PURCHASE_REGISTER" Type="Self.GST_MST_PURCHASE_REGISTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GST_MST_PURCHASE_REGISTER">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_REPORT_PERMISSION_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+    <End Role="GST_MST_REPORT_PERMISSION" Type="Self.GST_MST_REPORT_PERMISSION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GST_MST_REPORT_PERMISSION">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_REPORT_PERMISSION_GST_MST_REPORT_PERMISSION">
+    <End Role="GST_MST_REPORT" Type="Self.GST_MST_REPORT" Multiplicity="1" />
+    <End Role="GST_MST_REPORT_PERMISSION" Type="Self.GST_MST_REPORT_PERMISSION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_REPORT">
+        <PropertyRef Name="ReportId" />
+      </Principal>
+      <Dependent Role="GST_MST_REPORT_PERMISSION">
+        <PropertyRef Name="ReportId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_SALE_REGISTER_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="GST_MST_SALE_REGISTER" Type="Self.GST_MST_SALE_REGISTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GST_MST_SALE_REGISTER">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_SALE_REGISTER_GST_MST_ITEM">
+    <End Role="GST_MST_ITEM" Type="Self.GST_MST_ITEM" Multiplicity="0..1" />
+    <End Role="GST_MST_SALE_REGISTER" Type="Self.GST_MST_SALE_REGISTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_ITEM">
+        <PropertyRef Name="Item_ID" />
+      </Principal>
+      <Dependent Role="GST_MST_SALE_REGISTER">
+        <PropertyRef Name="Item_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_SALE_REGISTER_GST_TRN_INVOICE">
+    <End Role="GST_TRN_INVOICE" Type="Self.GST_TRN_INVOICE" Multiplicity="0..1" />
+    <End Role="GST_MST_SALE_REGISTER" Type="Self.GST_MST_SALE_REGISTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_TRN_INVOICE">
+        <PropertyRef Name="InvoiceID" />
+      </Principal>
+      <Dependent Role="GST_MST_SALE_REGISTER">
+        <PropertyRef Name="InvoiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_SUBCLASS_GST_MST_CLASS">
+    <End Role="GST_MST_CLASS" Type="Self.GST_MST_CLASS" Multiplicity="0..1" />
+    <End Role="GST_MST_SUBCLASS" Type="Self.GST_MST_SUBCLASS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_CLASS">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="GST_MST_SUBCLASS">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_SUBGROUP_GST_MST_GROUP">
+    <End Role="GST_MST_GROUP" Type="Self.GST_MST_GROUP" Multiplicity="0..1" />
+    <End Role="GST_MST_SUBGROUP" Type="Self.GST_MST_SUBGROUP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_GROUP">
+        <PropertyRef Name="GroupID" />
+      </Principal>
+      <Dependent Role="GST_MST_SUBGROUP">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_USER_BUSINESSTYPE_AspNetUsers1">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="GST_MST_USER_BUSINESSTYPE" Type="Self.GST_MST_USER_BUSINESSTYPE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GST_MST_USER_BUSINESSTYPE">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_USER_BUSINESSTYPE_GST_MST_BUSINESSTYPE">
+    <End Role="GST_MST_BUSINESSTYPE" Type="Self.GST_MST_BUSINESSTYPE" Multiplicity="0..1" />
+    <End Role="GST_MST_USER_BUSINESSTYPE" Type="Self.GST_MST_USER_BUSINESSTYPE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_BUSINESSTYPE">
+        <PropertyRef Name="BusinessID" />
+      </Principal>
+      <Dependent Role="GST_MST_USER_BUSINESSTYPE">
+        <PropertyRef Name="BusinessID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_USER_CURRENT_TURNOVER_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="GST_MST_USER_CURRENT_TURNOVER" Type="Self.GST_MST_USER_CURRENT_TURNOVER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GST_MST_USER_CURRENT_TURNOVER">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_USER_CURRENT_TURNOVER_GST_TRN_INVOICE">
+    <End Role="GST_TRN_INVOICE" Type="Self.GST_TRN_INVOICE" Multiplicity="0..1" />
+    <End Role="GST_MST_USER_CURRENT_TURNOVER" Type="Self.GST_MST_USER_CURRENT_TURNOVER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_TRN_INVOICE">
+        <PropertyRef Name="InvoiceID" />
+      </Principal>
+      <Dependent Role="GST_MST_USER_CURRENT_TURNOVER">
+        <PropertyRef Name="InvoiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_VENDOR_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="GST_MST_VENDOR" Type="Self.GST_MST_VENDOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GST_MST_VENDOR">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_VENDOR_GST_MST_STATE">
+    <End Role="GST_MST_STATE" Type="Self.GST_MST_STATE" Multiplicity="0..1" />
+    <End Role="GST_MST_VENDOR" Type="Self.GST_MST_VENDOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_STATE">
+        <PropertyRef Name="StateID" />
+      </Principal>
+      <Dependent Role="GST_MST_VENDOR">
+        <PropertyRef Name="StateID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_VENDOR_SERVICE_GST_MST_ITEM">
+    <End Role="GST_MST_ITEM" Type="Self.GST_MST_ITEM" Multiplicity="0..1" />
+    <End Role="GST_MST_VENDOR_SERVICE" Type="Self.GST_MST_VENDOR_SERVICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_ITEM">
+        <PropertyRef Name="Item_ID" />
+      </Principal>
+      <Dependent Role="GST_MST_VENDOR_SERVICE">
+        <PropertyRef Name="Item_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_VENDOR_SERVICE_GST_MST_VENDOR">
+    <End Role="GST_MST_VENDOR" Type="Self.GST_MST_VENDOR" Multiplicity="0..1" />
+    <End Role="GST_MST_VENDOR_SERVICE" Type="Self.GST_MST_VENDOR_SERVICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_VENDOR">
+        <PropertyRef Name="VendorID" />
+      </Principal>
+      <Dependent Role="GST_MST_VENDOR_SERVICE">
+        <PropertyRef Name="VendorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_VENDOR_TRANS_SHIPMENT_GST_MST_ITEM">
+    <End Role="GST_MST_ITEM" Type="Self.GST_MST_ITEM" Multiplicity="0..1" />
+    <End Role="GST_MST_VENDOR_TRANS_SHIPMENT" Type="Self.GST_MST_VENDOR_TRANS_SHIPMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_ITEM">
+        <PropertyRef Name="Item_ID" />
+      </Principal>
+      <Dependent Role="GST_MST_VENDOR_TRANS_SHIPMENT">
+        <PropertyRef Name="Item_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_VENDOR_TRANS_SHIPMENT_GST_MST_VENDOR">
+    <End Role="GST_MST_VENDOR" Type="Self.GST_MST_VENDOR" Multiplicity="0..1" />
+    <End Role="GST_MST_VENDOR_TRANS_SHIPMENT" Type="Self.GST_MST_VENDOR_TRANS_SHIPMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_VENDOR">
+        <PropertyRef Name="VendorID" />
+      </Principal>
+      <Dependent Role="GST_MST_VENDOR_TRANS_SHIPMENT">
+        <PropertyRef Name="VendorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_CONSOLIDATED_INVOICE_GST_TRN_INVOICE">
+    <End Role="GST_TRN_INVOICE" Type="Self.GST_TRN_INVOICE" Multiplicity="0..1" />
+    <End Role="GST_TRN_CONSOLIDATED_INVOICE" Type="Self.GST_TRN_CONSOLIDATED_INVOICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_TRN_INVOICE">
+        <PropertyRef Name="InvoiceID" />
+      </Principal>
+      <Dependent Role="GST_TRN_CONSOLIDATED_INVOICE">
+        <PropertyRef Name="InvoiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_CR_DR_AUDIT_TRAIL_GST_TRN_CRDR_NOTE">
+    <End Role="GST_TRN_CRDR_NOTE" Type="Self.GST_TRN_CRDR_NOTE" Multiplicity="0..1" />
+    <End Role="GST_TRN_CRDR_AUDIT_TRAIL" Type="Self.GST_TRN_CRDR_AUDIT_TRAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_TRN_CRDR_NOTE">
+        <PropertyRef Name="CreditDebitID" />
+      </Principal>
+      <Dependent Role="GST_TRN_CRDR_AUDIT_TRAIL">
+        <PropertyRef Name="CreditDebitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_CRDR_NOTE_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="GST_TRN_CRDR_NOTE" Type="Self.GST_TRN_CRDR_NOTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GST_TRN_CRDR_NOTE">
+        <PropertyRef Name="From_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_CRDR_NOTE_AspNetUsers_ToUser">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="GST_TRN_CRDR_NOTE" Type="Self.GST_TRN_CRDR_NOTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GST_TRN_CRDR_NOTE">
+        <PropertyRef Name="To_UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_CRDR_NOTE_DATA_GST_MST_ITEM">
+    <End Role="GST_MST_ITEM" Type="Self.GST_MST_ITEM" Multiplicity="0..1" />
+    <End Role="GST_TRN_CRDR_NOTE_DATA" Type="Self.GST_TRN_CRDR_NOTE_DATA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_ITEM">
+        <PropertyRef Name="Item_ID" />
+      </Principal>
+      <Dependent Role="GST_TRN_CRDR_NOTE_DATA">
+        <PropertyRef Name="Item_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_CRDR_NOTE_DATA_GST_TRN_CRDR_NOTE">
+    <End Role="GST_TRN_CRDR_NOTE" Type="Self.GST_TRN_CRDR_NOTE" Multiplicity="0..1" />
+    <End Role="GST_TRN_CRDR_NOTE_DATA" Type="Self.GST_TRN_CRDR_NOTE_DATA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_TRN_CRDR_NOTE">
+        <PropertyRef Name="CreditDebitID" />
+      </Principal>
+      <Dependent Role="GST_TRN_CRDR_NOTE_DATA">
+        <PropertyRef Name="CreditDebitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_CRDR_NOTE_GST_TRN_INVOICE">
+    <End Role="GST_TRN_INVOICE" Type="Self.GST_TRN_INVOICE" Multiplicity="0..1" />
+    <End Role="GST_TRN_CRDR_NOTE" Type="Self.GST_TRN_CRDR_NOTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_TRN_INVOICE">
+        <PropertyRef Name="InvoiceID" />
+      </Principal>
+      <Dependent Role="GST_TRN_CRDR_NOTE">
+        <PropertyRef Name="InvoiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_INVOICE_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="GST_TRN_INVOICE" Type="Self.GST_TRN_INVOICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GST_TRN_INVOICE">
+        <PropertyRef Name="SellerUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_INVOICE_AspNetUsers1">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="GST_TRN_INVOICE" Type="Self.GST_TRN_INVOICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GST_TRN_INVOICE">
+        <PropertyRef Name="ReceiverUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_INVOICE_AspNetUsers2">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="GST_TRN_INVOICE" Type="Self.GST_TRN_INVOICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GST_TRN_INVOICE">
+        <PropertyRef Name="ConsigneeUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_INVOICE_AUDIT_TRAIL_GST_TRN_INVOICE">
+    <End Role="GST_TRN_INVOICE" Type="Self.GST_TRN_INVOICE" Multiplicity="0..1" />
+    <End Role="GST_TRN_INVOICE_AUDIT_TRAIL" Type="Self.GST_TRN_INVOICE_AUDIT_TRAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_TRN_INVOICE">
+        <PropertyRef Name="InvoiceID" />
+      </Principal>
+      <Dependent Role="GST_TRN_INVOICE_AUDIT_TRAIL">
+        <PropertyRef Name="InvoiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_INVOICE_DATA_GST_MST_ITEM">
+    <End Role="GST_MST_ITEM" Type="Self.GST_MST_ITEM" Multiplicity="0..1" />
+    <End Role="GST_TRN_INVOICE_DATA" Type="Self.GST_TRN_INVOICE_DATA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_ITEM">
+        <PropertyRef Name="Item_ID" />
+      </Principal>
+      <Dependent Role="GST_TRN_INVOICE_DATA">
+        <PropertyRef Name="Item_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_INVOICE_DATA_GST_TRN_INVOICE">
+    <End Role="GST_TRN_INVOICE" Type="Self.GST_TRN_INVOICE" Multiplicity="0..1" />
+    <End Role="GST_TRN_INVOICE_DATA" Type="Self.GST_TRN_INVOICE_DATA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_TRN_INVOICE">
+        <PropertyRef Name="InvoiceID" />
+      </Principal>
+      <Dependent Role="GST_TRN_INVOICE_DATA">
+        <PropertyRef Name="InvoiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_INVOICE_GST_MST_FINYEAR">
+    <End Role="GST_MST_FINYEAR" Type="Self.GST_MST_FINYEAR" Multiplicity="0..1" />
+    <End Role="GST_TRN_INVOICE" Type="Self.GST_TRN_INVOICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_FINYEAR">
+        <PropertyRef Name="Fin_ID" />
+      </Principal>
+      <Dependent Role="GST_TRN_INVOICE">
+        <PropertyRef Name="FinYear_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_INVOICE_GST_MST_VENDOR">
+    <End Role="GST_MST_VENDOR" Type="Self.GST_MST_VENDOR" Multiplicity="0..1" />
+    <End Role="GST_TRN_INVOICE" Type="Self.GST_TRN_INVOICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_VENDOR">
+        <PropertyRef Name="VendorID" />
+      </Principal>
+      <Dependent Role="GST_TRN_INVOICE">
+        <PropertyRef Name="VendorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_INVOICE_GST_MST_VENDOR_TRANS_SHIPMENT">
+    <End Role="GST_MST_VENDOR_TRANS_SHIPMENT" Type="Self.GST_MST_VENDOR_TRANS_SHIPMENT" Multiplicity="0..1" />
+    <End Role="GST_TRN_INVOICE" Type="Self.GST_TRN_INVOICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_VENDOR_TRANS_SHIPMENT">
+        <PropertyRef Name="TransShipment_ID" />
+      </Principal>
+      <Dependent Role="GST_TRN_INVOICE">
+        <PropertyRef Name="TransShipment_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_ITC_DATA_GST_TRN_ITC">
+    <End Role="GST_TRN_ITC" Type="Self.GST_TRN_ITC" Multiplicity="0..1" />
+    <End Role="GST_TRN_ITC_DATA" Type="Self.GST_TRN_ITC_DATA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_TRN_ITC">
+        <PropertyRef Name="ITC_ID" />
+      </Principal>
+      <Dependent Role="GST_TRN_ITC_DATA">
+        <PropertyRef Name="ITC_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_ITC_DATA_GST_TRN_ITC_DATA">
+    <End Role="GST_TRN_ITC_DATA" Type="Self.GST_TRN_ITC_DATA" Multiplicity="1" />
+    <End Role="GST_TRN_ITC_DATA1" Type="Self.GST_TRN_ITC_DATA" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="GST_TRN_ITC_DATA">
+        <PropertyRef Name="ITCDATA_ID" />
+      </Principal>
+      <Dependent Role="GST_TRN_ITC_DATA1">
+        <PropertyRef Name="ITCDATA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_ITC_GST_TRN_INVOICE">
+    <End Role="GST_TRN_INVOICE" Type="Self.GST_TRN_INVOICE" Multiplicity="0..1" />
+    <End Role="GST_TRN_ITC" Type="Self.GST_TRN_ITC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_TRN_INVOICE">
+        <PropertyRef Name="InvoiceID" />
+      </Principal>
+      <Dependent Role="GST_TRN_ITC">
+        <PropertyRef Name="InvoiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_ITC_GST_TRN_ITC">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="GST_TRN_ITC" Type="Self.GST_TRN_ITC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GST_TRN_ITC">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_OFFLINE_GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL">
+    <End Role="GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL" Type="Self.GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL" Multiplicity="0..1" />
+    <End Role="GST_TRN_OFFLINE" Type="Self.GST_TRN_OFFLINE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL">
+        <PropertyRef Name="AuditTrailID" />
+      </Principal>
+      <Dependent Role="GST_TRN_OFFLINE">
+        <PropertyRef Name="AuditTrailID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_OFFLINE_INVOICE_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="GST_TRN_OFFLINE_INVOICE" Type="Self.GST_TRN_OFFLINE_INVOICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GST_TRN_OFFLINE_INVOICE">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL" Type="Self.GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_OFFLINE_INVOICE_DATAITEM_GST_TRN_OFFLINE_INVOICE">
+    <End Role="GST_TRN_OFFLINE_INVOICE" Type="Self.GST_TRN_OFFLINE_INVOICE" Multiplicity="0..1" />
+    <End Role="GST_TRN_OFFLINE_INVOICE_DATAITEM" Type="Self.GST_TRN_OFFLINE_INVOICE_DATAITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_TRN_OFFLINE_INVOICE">
+        <PropertyRef Name="ValueId" />
+      </Principal>
+      <Dependent Role="GST_TRN_OFFLINE_INVOICE_DATAITEM">
+        <PropertyRef Name="ValueID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_OFFLINE_INVOICE_DATAITEM_GST_TRN_OFFLINE_INVOICE_RATE">
+    <End Role="GST_TRN_OFFLINE_INVOICE_RATE" Type="Self.GST_TRN_OFFLINE_INVOICE_RATE" Multiplicity="0..1" />
+    <End Role="GST_TRN_OFFLINE_INVOICE_DATAITEM" Type="Self.GST_TRN_OFFLINE_INVOICE_DATAITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_TRN_OFFLINE_INVOICE_RATE">
+        <PropertyRef Name="RATE_ID" />
+      </Principal>
+      <Dependent Role="GST_TRN_OFFLINE_INVOICE_DATAITEM">
+        <PropertyRef Name="RateId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_OFFLINE_INVOICE_GST_MST_STATE1">
+    <End Role="GST_MST_STATE" Type="Self.GST_MST_STATE" Multiplicity="0..1" />
+    <End Role="GST_TRN_OFFLINE_INVOICE" Type="Self.GST_TRN_OFFLINE_INVOICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_STATE">
+        <PropertyRef Name="StateID" />
+      </Principal>
+      <Dependent Role="GST_TRN_OFFLINE_INVOICE">
+        <PropertyRef Name="PlaceofSupply" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_OFFLINE_INVOICE_GST_TRN_OFFLINE">
+    <End Role="GST_TRN_OFFLINE" Type="Self.GST_TRN_OFFLINE" Multiplicity="0..1" />
+    <End Role="GST_TRN_OFFLINE_INVOICE" Type="Self.GST_TRN_OFFLINE_INVOICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_TRN_OFFLINE">
+        <PropertyRef Name="OfflineID" />
+      </Principal>
+      <Dependent Role="GST_TRN_OFFLINE_INVOICE">
+        <PropertyRef Name="OfflineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_OFFLINE_INVOICE_GST_TRN_OFFLINE_ISSUINGNOTE_REASON">
+    <End Role="GST_TRN_OFFLINE_ISSUINGNOTE_REASON" Type="Self.GST_TRN_OFFLINE_ISSUINGNOTE_REASON" Multiplicity="0..1" />
+    <End Role="GST_TRN_OFFLINE_INVOICE" Type="Self.GST_TRN_OFFLINE_INVOICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_TRN_OFFLINE_ISSUINGNOTE_REASON">
+        <PropertyRef Name="NoteID" />
+      </Principal>
+      <Dependent Role="GST_TRN_OFFLINE_INVOICE">
+        <PropertyRef Name="Issuing_Note" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_VENDOR_SERVICE_GST_MST_ITEM">
+    <End Role="GST_MST_ITEM" Type="Self.GST_MST_ITEM" Multiplicity="0..1" />
+    <End Role="GST_TRN_VENDOR_SERVICE" Type="Self.GST_TRN_VENDOR_SERVICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_ITEM">
+        <PropertyRef Name="Item_ID" />
+      </Principal>
+      <Dependent Role="GST_TRN_VENDOR_SERVICE">
+        <PropertyRef Name="Item_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_TRN_VENDOR_SERVICE_GST_MST_VENDOR">
+    <End Role="GST_MST_VENDOR" Type="Self.GST_MST_VENDOR" Multiplicity="0..1" />
+    <End Role="GST_TRN_VENDOR_SERVICE" Type="Self.GST_TRN_VENDOR_SERVICE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_VENDOR">
+        <PropertyRef Name="VendorID" />
+      </Principal>
+      <Dependent Role="GST_TRN_VENDOR_SERVICE">
+        <PropertyRef Name="VendorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GST_DBModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ApplicationGroupRoles" EntityType="Self.ApplicationGroupRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ApplicationGroups" EntityType="Self.ApplicationGroups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Applications" EntityType="Self.Applications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ApplicationUserGroups" EntityType="Self.ApplicationUserGroups" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserAppData" EntityType="Self.AspNetUserAppData" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_MST_SUBSUPPLY_TYPE" EntityType="Self.EWB_MST_SUBSUPPLY_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_MST_VEHICLE_REASON" EntityType="Self.EWB_MST_VEHICLE_REASON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_TRN_CANCEL_EWBILL" EntityType="Self.EWB_TRN_CANCEL_EWBILL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_TRN_CONSOLIDATED_EWBILL" EntityType="Self.EWB_TRN_CONSOLIDATED_EWBILL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_TRN_EWBILL" EntityType="Self.EWB_TRN_EWBILL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_TRN_EWBILL_AUDITTRAIL" EntityType="Self.EWB_TRN_EWBILL_AUDITTRAIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_TRN_EWBILL_ITEM" EntityType="Self.EWB_TRN_EWBILL_ITEM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_TRN_REJECT_EWBILL" EntityType="Self.EWB_TRN_REJECT_EWBILL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_TRN_REPONSE_EWBILL" EntityType="Self.EWB_TRN_REPONSE_EWBILL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_TRN_UPDATE_VEHICLE" EntityType="Self.EWB_TRN_UPDATE_VEHICLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_API_LOG" EntityType="Self.GST_API_LOG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_BUSINESSTYPE" EntityType="Self.GST_MST_BUSINESSTYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_CLASS" EntityType="Self.GST_MST_CLASS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_CUSTOM_INVOICE" EntityType="Self.GST_MST_CUSTOM_INVOICE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_EXCEPTIONLOG" EntityType="Self.GST_MST_EXCEPTIONLOG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_FINYEAR" EntityType="Self.GST_MST_FINYEAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_GROUP" EntityType="Self.GST_MST_GROUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_ITEM" EntityType="Self.GST_MST_ITEM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_ITEM_CONDITION" EntityType="Self.GST_MST_ITEM_CONDITION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_ITEM_NOTIFIED" EntityType="Self.GST_MST_ITEM_NOTIFIED" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_MESSAGE" EntityType="Self.GST_MST_MESSAGE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_MESSAGELOG" EntityType="Self.GST_MST_MESSAGELOG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_OFFLINE_SECTION" EntityType="Self.GST_MST_OFFLINE_SECTION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_PRESENT_USER" EntityType="Self.GST_MST_PRESENT_USER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_PRODUCT_DESCRIPTION" EntityType="Self.GST_MST_PRODUCT_DESCRIPTION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_PURCHASE_DATA" EntityType="Self.GST_MST_PURCHASE_DATA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_PURCHASE_REGISTER" EntityType="Self.GST_MST_PURCHASE_REGISTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_REPORT" EntityType="Self.GST_MST_REPORT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_REPORT_PERMISSION" EntityType="Self.GST_MST_REPORT_PERMISSION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_SALE_REGISTER" EntityType="Self.GST_MST_SALE_REGISTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_STATE" EntityType="Self.GST_MST_STATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_SUBCLASS" EntityType="Self.GST_MST_SUBCLASS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_SUBGROUP" EntityType="Self.GST_MST_SUBGROUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_USER_BUSINESSTYPE" EntityType="Self.GST_MST_USER_BUSINESSTYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_USER_CURRENT_TURNOVER" EntityType="Self.GST_MST_USER_CURRENT_TURNOVER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_USER_SIGNATORY" EntityType="Self.GST_MST_USER_SIGNATORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_VENDOR" EntityType="Self.GST_MST_VENDOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_VENDOR_SERVICE" EntityType="Self.GST_MST_VENDOR_SERVICE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_VENDOR_TRANS_SHIPMENT" EntityType="Self.GST_MST_VENDOR_TRANS_SHIPMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_TRN_CONSOLIDATED_INVOICE" EntityType="Self.GST_TRN_CONSOLIDATED_INVOICE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_TRN_CRDR_AUDIT_TRAIL" EntityType="Self.GST_TRN_CRDR_AUDIT_TRAIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_TRN_CRDR_NOTE" EntityType="Self.GST_TRN_CRDR_NOTE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_TRN_CRDR_NOTE_DATA" EntityType="Self.GST_TRN_CRDR_NOTE_DATA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_TRN_ERROR_HANDLING" EntityType="Self.GST_TRN_ERROR_HANDLING" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_TRN_INVOICE" EntityType="Self.GST_TRN_INVOICE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_TRN_INVOICE_AUDIT_TRAIL" EntityType="Self.GST_TRN_INVOICE_AUDIT_TRAIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_TRN_INVOICE_DATA" EntityType="Self.GST_TRN_INVOICE_DATA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_TRN_INVOICE_MAP" EntityType="Self.GST_TRN_INVOICE_MAP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_TRN_ITC" EntityType="Self.GST_TRN_ITC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_TRN_ITC_DATA" EntityType="Self.GST_TRN_ITC_DATA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_TRN_OFFLINE" EntityType="Self.GST_TRN_OFFLINE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_TRN_OFFLINE_INVOICE" EntityType="Self.GST_TRN_OFFLINE_INVOICE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL" EntityType="Self.GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_TRN_OFFLINE_INVOICE_DATAITEM" EntityType="Self.GST_TRN_OFFLINE_INVOICE_DATAITEM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_TRN_OFFLINE_INVOICE_RATE" EntityType="Self.GST_TRN_OFFLINE_INVOICE_RATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_TRN_OFFLINE_INVOICE_SECTION_RULE" EntityType="Self.GST_TRN_OFFLINE_INVOICE_SECTION_RULE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_TRN_OFFLINE_ISSUINGNOTE_REASON" EntityType="Self.GST_TRN_OFFLINE_ISSUINGNOTE_REASON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_TRN_VENDOR_SERVICE" EntityType="Self.GST_TRN_VENDOR_SERVICE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GSTR3B_2_2" EntityType="Self.GSTR3B_2_2" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [GSTR3B_2_2].[Description] AS [Description], 
+    [GSTR3B_2_2].[TAXABLEAMOUNT] AS [TAXABLEAMOUNT], 
+    [GSTR3B_2_2].[IGSTAMT] AS [IGSTAMT], 
+    [GSTR3B_2_2].[STATENAME] AS [STATENAME]
+    FROM [dbo].[GSTR3B_2_2] AS [GSTR3B_2_2]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="vInvoiceData" EntityType="Self.vInvoiceData" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vInvoiceData].[Organizational Name] AS [Organizational Name], 
+    [vInvoiceData].[Seller GSTIN No] AS [Seller GSTIN No], 
+    [vInvoiceData].[InvoiceID] AS [InvoiceID], 
+    [vInvoiceData].[AuditTrailID] AS [AuditTrailID], 
+    [vInvoiceData].[AuditTrailStatus] AS [AuditTrailStatus], 
+    [vInvoiceData].[ReceiverInvoiceAction] AS [ReceiverInvoiceAction], 
+    [vInvoiceData].[ReceiverInvoiceActionDate] AS [ReceiverInvoiceActionDate], 
+    [vInvoiceData].[SellerInvoiceAction] AS [SellerInvoiceAction], 
+    [vInvoiceData].[SellerInvoiceActionDate] AS [SellerInvoiceActionDate], 
+    [vInvoiceData].[TotalAmount] AS [TotalAmount], 
+    [vInvoiceData].[TaxableAmount] AS [TaxableAmount], 
+    [vInvoiceData].[TotalAmountWithTax] AS [TotalAmountWithTax]
+    FROM [dbo].[vInvoiceData] AS [vInvoiceData]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_AddSignatory_AspNetUsers" Association="Self.FK_AddSignatory_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="GST_MST_USER_SIGNATORY" EntitySet="GST_MST_USER_SIGNATORY" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUserAppData_AspNetUsers" Association="Self.FK_AspNetUserAppData_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserAppData" EntitySet="AspNetUserAppData" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ApplicationGroupRoles_dbo_ApplicationGroups_ApplicationGroupId" Association="Self.FK_dbo_ApplicationGroupRoles_dbo_ApplicationGroups_ApplicationGroupId">
+      <End Role="ApplicationGroups" EntitySet="ApplicationGroups" />
+      <End Role="ApplicationGroupRoles" EntitySet="ApplicationGroupRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_ApplicationUserGroups_dbo_ApplicationGroups_ApplicationGroupId" Association="Self.FK_dbo_ApplicationUserGroups_dbo_ApplicationGroups_ApplicationGroupId">
+      <End Role="ApplicationGroups" EntitySet="ApplicationGroups" />
+      <End Role="ApplicationUserGroups" EntitySet="ApplicationUserGroups" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_ApplicationUser_Id" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_ApplicationUser_Id">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_CANCEL_EWBILL_EWB_TRN_EWBILLS" Association="Self.FK_EWB_TRN_CANCEL_EWBILL_EWB_TRN_EWBILLS">
+      <End Role="EWB_TRN_EWBILL" EntitySet="EWB_TRN_EWBILL" />
+      <End Role="EWB_TRN_CANCEL_EWBILL" EntitySet="EWB_TRN_CANCEL_EWBILL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_CONSOLIDATED_EWBILL_EWB_TRN_EWBILLS" Association="Self.FK_EWB_TRN_CONSOLIDATED_EWBILL_EWB_TRN_EWBILLS">
+      <End Role="EWB_TRN_EWBILL" EntitySet="EWB_TRN_EWBILL" />
+      <End Role="EWB_TRN_CONSOLIDATED_EWBILL" EntitySet="EWB_TRN_CONSOLIDATED_EWBILL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_EWBILLS_AspNetUsers" Association="Self.FK_EWB_TRN_EWBILLS_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="EWB_TRN_EWBILL" EntitySet="EWB_TRN_EWBILL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_EWBILLS_AUDITTRAIL_EWB_TRN_EWBILLS" Association="Self.FK_EWB_TRN_EWBILLS_AUDITTRAIL_EWB_TRN_EWBILLS">
+      <End Role="EWB_TRN_EWBILL" EntitySet="EWB_TRN_EWBILL" />
+      <End Role="EWB_TRN_EWBILL_AUDITTRAIL" EntitySet="EWB_TRN_EWBILL_AUDITTRAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_EWBILLS_EWB_MST_SUBSUPPLY_TYPE" Association="Self.FK_EWB_TRN_EWBILLS_EWB_MST_SUBSUPPLY_TYPE">
+      <End Role="EWB_MST_SUBSUPPLY_TYPE" EntitySet="EWB_MST_SUBSUPPLY_TYPE" />
+      <End Role="EWB_TRN_EWBILL" EntitySet="EWB_TRN_EWBILL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_EWBILLS_PRODUCT_EWB_TRN_EWBILLS" Association="Self.FK_EWB_TRN_EWBILLS_PRODUCT_EWB_TRN_EWBILLS">
+      <End Role="EWB_TRN_EWBILL" EntitySet="EWB_TRN_EWBILL" />
+      <End Role="EWB_TRN_EWBILL_ITEM" EntitySet="EWB_TRN_EWBILL_ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_REJECT_EWBILL_EWB_TRN_EWBILLS" Association="Self.FK_EWB_TRN_REJECT_EWBILL_EWB_TRN_EWBILLS">
+      <End Role="EWB_TRN_EWBILL" EntitySet="EWB_TRN_EWBILL" />
+      <End Role="EWB_TRN_REJECT_EWBILL" EntitySet="EWB_TRN_REJECT_EWBILL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_REPONSE_EWBILL_EWB_TRN_EWBILLS" Association="Self.FK_EWB_TRN_REPONSE_EWBILL_EWB_TRN_EWBILLS">
+      <End Role="EWB_TRN_EWBILL" EntitySet="EWB_TRN_EWBILL" />
+      <End Role="EWB_TRN_REPONSE_EWBILL" EntitySet="EWB_TRN_REPONSE_EWBILL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_REPONSE_EWBILL_GST_TRN_INVOICE" Association="Self.FK_EWB_TRN_REPONSE_EWBILL_GST_TRN_INVOICE">
+      <End Role="GST_TRN_INVOICE" EntitySet="GST_TRN_INVOICE" />
+      <End Role="EWB_TRN_REPONSE_EWBILL" EntitySet="EWB_TRN_REPONSE_EWBILL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_UPDATE_VEHICLE_EWB_TRN_EWBILLS" Association="Self.FK_EWB_TRN_UPDATE_VEHICLE_EWB_TRN_EWBILLS">
+      <End Role="EWB_TRN_EWBILL" EntitySet="EWB_TRN_EWBILL" />
+      <End Role="EWB_TRN_UPDATE_VEHICLE" EntitySet="EWB_TRN_UPDATE_VEHICLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_CLASS_GST_MST_SUBGROUP" Association="Self.FK_GST_MST_CLASS_GST_MST_SUBGROUP">
+      <End Role="GST_MST_SUBGROUP" EntitySet="GST_MST_SUBGROUP" />
+      <End Role="GST_MST_CLASS" EntitySet="GST_MST_CLASS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_HSN_AspNetUsers" Association="Self.FK_GST_MST_HSN_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="GST_MST_ITEM" EntitySet="GST_MST_ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_HSN_GST_MST_SUBGROUP" Association="Self.FK_GST_MST_HSN_GST_MST_SUBGROUP">
+      <End Role="GST_MST_SUBGROUP" EntitySet="GST_MST_SUBGROUP" />
+      <End Role="GST_MST_ITEM" EntitySet="GST_MST_ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_ITEM_CONDITION_GST_MST_ITEM_NOTIFIED" Association="Self.FK_GST_MST_ITEM_CONDITION_GST_MST_ITEM_NOTIFIED">
+      <End Role="GST_MST_ITEM_NOTIFIED" EntitySet="GST_MST_ITEM_NOTIFIED" />
+      <End Role="GST_MST_ITEM_CONDITION" EntitySet="GST_MST_ITEM_CONDITION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_ITEM_GST_MST_BUSINESSTYPE" Association="Self.FK_GST_MST_ITEM_GST_MST_BUSINESSTYPE">
+      <End Role="GST_MST_BUSINESSTYPE" EntitySet="GST_MST_BUSINESSTYPE" />
+      <End Role="GST_MST_ITEM" EntitySet="GST_MST_ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_ITEM_GST_MST_SUBCLASS" Association="Self.FK_GST_MST_ITEM_GST_MST_SUBCLASS">
+      <End Role="GST_MST_SUBCLASS" EntitySet="GST_MST_SUBCLASS" />
+      <End Role="GST_MST_ITEM" EntitySet="GST_MST_ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_ITEM_NOTIFIED_GST_MST_ITEM" Association="Self.FK_GST_MST_ITEM_NOTIFIED_GST_MST_ITEM">
+      <End Role="GST_MST_ITEM" EntitySet="GST_MST_ITEM" />
+      <End Role="GST_MST_ITEM_NOTIFIED" EntitySet="GST_MST_ITEM_NOTIFIED" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_PRESENT_USER_AspNetUsers" Association="Self.FK_GST_MST_PRESENT_USER_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="GST_MST_PRESENT_USER" EntitySet="GST_MST_PRESENT_USER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_PURCHASE_DATA_GST_MST_ITEM" Association="Self.FK_GST_MST_PURCHASE_DATA_GST_MST_ITEM">
+      <End Role="GST_MST_ITEM" EntitySet="GST_MST_ITEM" />
+      <End Role="GST_MST_PURCHASE_DATA" EntitySet="GST_MST_PURCHASE_DATA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_PURCHASE_DATA_GST_MST_PURCHASE_REGISTER" Association="Self.FK_GST_MST_PURCHASE_DATA_GST_MST_PURCHASE_REGISTER">
+      <End Role="GST_MST_PURCHASE_REGISTER" EntitySet="GST_MST_PURCHASE_REGISTER" />
+      <End Role="GST_MST_PURCHASE_DATA" EntitySet="GST_MST_PURCHASE_DATA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_PURCHASE_REGISTER_AspNetUsers" Association="Self.FK_GST_MST_PURCHASE_REGISTER_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="GST_MST_PURCHASE_REGISTER" EntitySet="GST_MST_PURCHASE_REGISTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_REPORT_PERMISSION_AspNetUsers" Association="Self.FK_GST_MST_REPORT_PERMISSION_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="GST_MST_REPORT_PERMISSION" EntitySet="GST_MST_REPORT_PERMISSION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_REPORT_PERMISSION_GST_MST_REPORT_PERMISSION" Association="Self.FK_GST_MST_REPORT_PERMISSION_GST_MST_REPORT_PERMISSION">
+      <End Role="GST_MST_REPORT" EntitySet="GST_MST_REPORT" />
+      <End Role="GST_MST_REPORT_PERMISSION" EntitySet="GST_MST_REPORT_PERMISSION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_SALE_REGISTER_AspNetUsers" Association="Self.FK_GST_MST_SALE_REGISTER_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="GST_MST_SALE_REGISTER" EntitySet="GST_MST_SALE_REGISTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_SALE_REGISTER_GST_MST_ITEM" Association="Self.FK_GST_MST_SALE_REGISTER_GST_MST_ITEM">
+      <End Role="GST_MST_ITEM" EntitySet="GST_MST_ITEM" />
+      <End Role="GST_MST_SALE_REGISTER" EntitySet="GST_MST_SALE_REGISTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_SALE_REGISTER_GST_TRN_INVOICE" Association="Self.FK_GST_MST_SALE_REGISTER_GST_TRN_INVOICE">
+      <End Role="GST_TRN_INVOICE" EntitySet="GST_TRN_INVOICE" />
+      <End Role="GST_MST_SALE_REGISTER" EntitySet="GST_MST_SALE_REGISTER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_SUBCLASS_GST_MST_CLASS" Association="Self.FK_GST_MST_SUBCLASS_GST_MST_CLASS">
+      <End Role="GST_MST_CLASS" EntitySet="GST_MST_CLASS" />
+      <End Role="GST_MST_SUBCLASS" EntitySet="GST_MST_SUBCLASS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_SUBGROUP_GST_MST_GROUP" Association="Self.FK_GST_MST_SUBGROUP_GST_MST_GROUP">
+      <End Role="GST_MST_GROUP" EntitySet="GST_MST_GROUP" />
+      <End Role="GST_MST_SUBGROUP" EntitySet="GST_MST_SUBGROUP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_USER_BUSINESSTYPE_AspNetUsers1" Association="Self.FK_GST_MST_USER_BUSINESSTYPE_AspNetUsers1">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="GST_MST_USER_BUSINESSTYPE" EntitySet="GST_MST_USER_BUSINESSTYPE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_USER_BUSINESSTYPE_GST_MST_BUSINESSTYPE" Association="Self.FK_GST_MST_USER_BUSINESSTYPE_GST_MST_BUSINESSTYPE">
+      <End Role="GST_MST_BUSINESSTYPE" EntitySet="GST_MST_BUSINESSTYPE" />
+      <End Role="GST_MST_USER_BUSINESSTYPE" EntitySet="GST_MST_USER_BUSINESSTYPE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_USER_CURRENT_TURNOVER_AspNetUsers" Association="Self.FK_GST_MST_USER_CURRENT_TURNOVER_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="GST_MST_USER_CURRENT_TURNOVER" EntitySet="GST_MST_USER_CURRENT_TURNOVER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_USER_CURRENT_TURNOVER_GST_TRN_INVOICE" Association="Self.FK_GST_MST_USER_CURRENT_TURNOVER_GST_TRN_INVOICE">
+      <End Role="GST_TRN_INVOICE" EntitySet="GST_TRN_INVOICE" />
+      <End Role="GST_MST_USER_CURRENT_TURNOVER" EntitySet="GST_MST_USER_CURRENT_TURNOVER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_VENDOR_AspNetUsers" Association="Self.FK_GST_MST_VENDOR_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="GST_MST_VENDOR" EntitySet="GST_MST_VENDOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_VENDOR_GST_MST_STATE" Association="Self.FK_GST_MST_VENDOR_GST_MST_STATE">
+      <End Role="GST_MST_STATE" EntitySet="GST_MST_STATE" />
+      <End Role="GST_MST_VENDOR" EntitySet="GST_MST_VENDOR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_VENDOR_SERVICE_GST_MST_ITEM" Association="Self.FK_GST_MST_VENDOR_SERVICE_GST_MST_ITEM">
+      <End Role="GST_MST_ITEM" EntitySet="GST_MST_ITEM" />
+      <End Role="GST_MST_VENDOR_SERVICE" EntitySet="GST_MST_VENDOR_SERVICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_VENDOR_SERVICE_GST_MST_VENDOR" Association="Self.FK_GST_MST_VENDOR_SERVICE_GST_MST_VENDOR">
+      <End Role="GST_MST_VENDOR" EntitySet="GST_MST_VENDOR" />
+      <End Role="GST_MST_VENDOR_SERVICE" EntitySet="GST_MST_VENDOR_SERVICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_VENDOR_TRANS_SHIPMENT_GST_MST_ITEM" Association="Self.FK_GST_MST_VENDOR_TRANS_SHIPMENT_GST_MST_ITEM">
+      <End Role="GST_MST_ITEM" EntitySet="GST_MST_ITEM" />
+      <End Role="GST_MST_VENDOR_TRANS_SHIPMENT" EntitySet="GST_MST_VENDOR_TRANS_SHIPMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_VENDOR_TRANS_SHIPMENT_GST_MST_VENDOR" Association="Self.FK_GST_MST_VENDOR_TRANS_SHIPMENT_GST_MST_VENDOR">
+      <End Role="GST_MST_VENDOR" EntitySet="GST_MST_VENDOR" />
+      <End Role="GST_MST_VENDOR_TRANS_SHIPMENT" EntitySet="GST_MST_VENDOR_TRANS_SHIPMENT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_CONSOLIDATED_INVOICE_GST_TRN_INVOICE" Association="Self.FK_GST_TRN_CONSOLIDATED_INVOICE_GST_TRN_INVOICE">
+      <End Role="GST_TRN_INVOICE" EntitySet="GST_TRN_INVOICE" />
+      <End Role="GST_TRN_CONSOLIDATED_INVOICE" EntitySet="GST_TRN_CONSOLIDATED_INVOICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_CR_DR_AUDIT_TRAIL_GST_TRN_CRDR_NOTE" Association="Self.FK_GST_TRN_CR_DR_AUDIT_TRAIL_GST_TRN_CRDR_NOTE">
+      <End Role="GST_TRN_CRDR_NOTE" EntitySet="GST_TRN_CRDR_NOTE" />
+      <End Role="GST_TRN_CRDR_AUDIT_TRAIL" EntitySet="GST_TRN_CRDR_AUDIT_TRAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_CRDR_NOTE_AspNetUsers" Association="Self.FK_GST_TRN_CRDR_NOTE_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="GST_TRN_CRDR_NOTE" EntitySet="GST_TRN_CRDR_NOTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_CRDR_NOTE_AspNetUsers_ToUser" Association="Self.FK_GST_TRN_CRDR_NOTE_AspNetUsers_ToUser">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="GST_TRN_CRDR_NOTE" EntitySet="GST_TRN_CRDR_NOTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_CRDR_NOTE_DATA_GST_MST_ITEM" Association="Self.FK_GST_TRN_CRDR_NOTE_DATA_GST_MST_ITEM">
+      <End Role="GST_MST_ITEM" EntitySet="GST_MST_ITEM" />
+      <End Role="GST_TRN_CRDR_NOTE_DATA" EntitySet="GST_TRN_CRDR_NOTE_DATA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_CRDR_NOTE_DATA_GST_TRN_CRDR_NOTE" Association="Self.FK_GST_TRN_CRDR_NOTE_DATA_GST_TRN_CRDR_NOTE">
+      <End Role="GST_TRN_CRDR_NOTE" EntitySet="GST_TRN_CRDR_NOTE" />
+      <End Role="GST_TRN_CRDR_NOTE_DATA" EntitySet="GST_TRN_CRDR_NOTE_DATA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_CRDR_NOTE_GST_TRN_INVOICE" Association="Self.FK_GST_TRN_CRDR_NOTE_GST_TRN_INVOICE">
+      <End Role="GST_TRN_INVOICE" EntitySet="GST_TRN_INVOICE" />
+      <End Role="GST_TRN_CRDR_NOTE" EntitySet="GST_TRN_CRDR_NOTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_INVOICE_AspNetUsers" Association="Self.FK_GST_TRN_INVOICE_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="GST_TRN_INVOICE" EntitySet="GST_TRN_INVOICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_INVOICE_AspNetUsers1" Association="Self.FK_GST_TRN_INVOICE_AspNetUsers1">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="GST_TRN_INVOICE" EntitySet="GST_TRN_INVOICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_INVOICE_AspNetUsers2" Association="Self.FK_GST_TRN_INVOICE_AspNetUsers2">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="GST_TRN_INVOICE" EntitySet="GST_TRN_INVOICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_INVOICE_AUDIT_TRAIL_GST_TRN_INVOICE" Association="Self.FK_GST_TRN_INVOICE_AUDIT_TRAIL_GST_TRN_INVOICE">
+      <End Role="GST_TRN_INVOICE" EntitySet="GST_TRN_INVOICE" />
+      <End Role="GST_TRN_INVOICE_AUDIT_TRAIL" EntitySet="GST_TRN_INVOICE_AUDIT_TRAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_INVOICE_DATA_GST_MST_ITEM" Association="Self.FK_GST_TRN_INVOICE_DATA_GST_MST_ITEM">
+      <End Role="GST_MST_ITEM" EntitySet="GST_MST_ITEM" />
+      <End Role="GST_TRN_INVOICE_DATA" EntitySet="GST_TRN_INVOICE_DATA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_INVOICE_DATA_GST_TRN_INVOICE" Association="Self.FK_GST_TRN_INVOICE_DATA_GST_TRN_INVOICE">
+      <End Role="GST_TRN_INVOICE" EntitySet="GST_TRN_INVOICE" />
+      <End Role="GST_TRN_INVOICE_DATA" EntitySet="GST_TRN_INVOICE_DATA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_INVOICE_GST_MST_FINYEAR" Association="Self.FK_GST_TRN_INVOICE_GST_MST_FINYEAR">
+      <End Role="GST_MST_FINYEAR" EntitySet="GST_MST_FINYEAR" />
+      <End Role="GST_TRN_INVOICE" EntitySet="GST_TRN_INVOICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_INVOICE_GST_MST_VENDOR" Association="Self.FK_GST_TRN_INVOICE_GST_MST_VENDOR">
+      <End Role="GST_MST_VENDOR" EntitySet="GST_MST_VENDOR" />
+      <End Role="GST_TRN_INVOICE" EntitySet="GST_TRN_INVOICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_INVOICE_GST_MST_VENDOR_TRANS_SHIPMENT" Association="Self.FK_GST_TRN_INVOICE_GST_MST_VENDOR_TRANS_SHIPMENT">
+      <End Role="GST_MST_VENDOR_TRANS_SHIPMENT" EntitySet="GST_MST_VENDOR_TRANS_SHIPMENT" />
+      <End Role="GST_TRN_INVOICE" EntitySet="GST_TRN_INVOICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_ITC_DATA_GST_TRN_ITC" Association="Self.FK_GST_TRN_ITC_DATA_GST_TRN_ITC">
+      <End Role="GST_TRN_ITC" EntitySet="GST_TRN_ITC" />
+      <End Role="GST_TRN_ITC_DATA" EntitySet="GST_TRN_ITC_DATA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_ITC_DATA_GST_TRN_ITC_DATA" Association="Self.FK_GST_TRN_ITC_DATA_GST_TRN_ITC_DATA">
+      <End Role="GST_TRN_ITC_DATA" EntitySet="GST_TRN_ITC_DATA" />
+      <End Role="GST_TRN_ITC_DATA1" EntitySet="GST_TRN_ITC_DATA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_ITC_GST_TRN_INVOICE" Association="Self.FK_GST_TRN_ITC_GST_TRN_INVOICE">
+      <End Role="GST_TRN_INVOICE" EntitySet="GST_TRN_INVOICE" />
+      <End Role="GST_TRN_ITC" EntitySet="GST_TRN_ITC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_ITC_GST_TRN_ITC" Association="Self.FK_GST_TRN_ITC_GST_TRN_ITC">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="GST_TRN_ITC" EntitySet="GST_TRN_ITC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_OFFLINE_GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL" Association="Self.FK_GST_TRN_OFFLINE_GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL">
+      <End Role="GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL" EntitySet="GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL" />
+      <End Role="GST_TRN_OFFLINE" EntitySet="GST_TRN_OFFLINE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_OFFLINE_INVOICE_AspNetUsers" Association="Self.FK_GST_TRN_OFFLINE_INVOICE_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="GST_TRN_OFFLINE_INVOICE" EntitySet="GST_TRN_OFFLINE_INVOICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL_AspNetUsers" Association="Self.FK_GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL" EntitySet="GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_OFFLINE_INVOICE_DATAITEM_GST_TRN_OFFLINE_INVOICE" Association="Self.FK_GST_TRN_OFFLINE_INVOICE_DATAITEM_GST_TRN_OFFLINE_INVOICE">
+      <End Role="GST_TRN_OFFLINE_INVOICE" EntitySet="GST_TRN_OFFLINE_INVOICE" />
+      <End Role="GST_TRN_OFFLINE_INVOICE_DATAITEM" EntitySet="GST_TRN_OFFLINE_INVOICE_DATAITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_OFFLINE_INVOICE_DATAITEM_GST_TRN_OFFLINE_INVOICE_RATE" Association="Self.FK_GST_TRN_OFFLINE_INVOICE_DATAITEM_GST_TRN_OFFLINE_INVOICE_RATE">
+      <End Role="GST_TRN_OFFLINE_INVOICE_RATE" EntitySet="GST_TRN_OFFLINE_INVOICE_RATE" />
+      <End Role="GST_TRN_OFFLINE_INVOICE_DATAITEM" EntitySet="GST_TRN_OFFLINE_INVOICE_DATAITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_OFFLINE_INVOICE_GST_MST_STATE1" Association="Self.FK_GST_TRN_OFFLINE_INVOICE_GST_MST_STATE1">
+      <End Role="GST_MST_STATE" EntitySet="GST_MST_STATE" />
+      <End Role="GST_TRN_OFFLINE_INVOICE" EntitySet="GST_TRN_OFFLINE_INVOICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_OFFLINE_INVOICE_GST_TRN_OFFLINE" Association="Self.FK_GST_TRN_OFFLINE_INVOICE_GST_TRN_OFFLINE">
+      <End Role="GST_TRN_OFFLINE" EntitySet="GST_TRN_OFFLINE" />
+      <End Role="GST_TRN_OFFLINE_INVOICE" EntitySet="GST_TRN_OFFLINE_INVOICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_OFFLINE_INVOICE_GST_TRN_OFFLINE_ISSUINGNOTE_REASON" Association="Self.FK_GST_TRN_OFFLINE_INVOICE_GST_TRN_OFFLINE_ISSUINGNOTE_REASON">
+      <End Role="GST_TRN_OFFLINE_ISSUINGNOTE_REASON" EntitySet="GST_TRN_OFFLINE_ISSUINGNOTE_REASON" />
+      <End Role="GST_TRN_OFFLINE_INVOICE" EntitySet="GST_TRN_OFFLINE_INVOICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_VENDOR_SERVICE_GST_MST_ITEM" Association="Self.FK_GST_TRN_VENDOR_SERVICE_GST_MST_ITEM">
+      <End Role="GST_MST_ITEM" EntitySet="GST_MST_ITEM" />
+      <End Role="GST_TRN_VENDOR_SERVICE" EntitySet="GST_TRN_VENDOR_SERVICE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_TRN_VENDOR_SERVICE_GST_MST_VENDOR" Association="Self.FK_GST_TRN_VENDOR_SERVICE_GST_MST_VENDOR">
+      <End Role="GST_MST_VENDOR" EntitySet="GST_MST_VENDOR" />
+      <End Role="GST_TRN_VENDOR_SERVICE" EntitySet="GST_TRN_VENDOR_SERVICE" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

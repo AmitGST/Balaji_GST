@@ -1,0 +1,10 @@
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Release\DataAccessLayer.dll.config
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Release\DataAccessLayer.dll
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Release\DataAccessLayer.pdb
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Release\EntityFramework.dll
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Release\EntityFramework.SqlServer.dll
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Release\EntityFramework.xml
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Release\EntityFramework.SqlServer.xml
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\obj\Release\DataAccessLayer.dll
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\obj\Release\DataAccessLayer.pdb
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\DataAccessLayer\obj\Release\DataAccessLayer.csprojResolveAssemblyReference.cache

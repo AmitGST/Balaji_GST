@@ -1,0 +1,22 @@
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Release\GST.Utility.dll
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Release\GST.Utility.pdb
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Release\DataAccessLayer.dll
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Release\EntityFramework.dll
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Release\Newtonsoft.Json.dll
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Release\DataAccessLayer.pdb
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Release\EntityFramework.xml
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Release\GST.Utility.csprojResolveAssemblyReference.cache
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Release\GST.Utility.dll
+E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Release\GST.Utility.pdb
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Release\GST.Utility.dll
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Release\GST.Utility.pdb
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Release\DataAccessLayer.dll
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Release\EntityFramework.dll
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Release\EntityFramework.SqlServer.dll
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Release\Newtonsoft.Json.dll
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Release\DataAccessLayer.pdb
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Release\EntityFramework.xml
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Release\EntityFramework.SqlServer.xml
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Release\GST.Utility.csprojResolveAssemblyReference.cache
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Release\GST.Utility.dll
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Release\GST.Utility.pdb

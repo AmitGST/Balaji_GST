@@ -1,0 +1,178 @@
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.My_Project.Resources.resources
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.csproj.GenerateResource.Cache
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_PublicKey.cer
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Resources\uidai_auth_prod.cer
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_G2B_SANDBOX_UAT_public.pem
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_public.cer
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Resources\Docsigntest.pfx
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.dll.config
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.dll
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.pdb
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\risersoft.shared.cloud.xml
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\BouncyCastle.Crypto.dll
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\eSignASPLib.dll
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Microsoft.Owin.dll
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Newtonsoft.Json.dll
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Owin.dll
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Security.Cryptography.dll
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\System.Net.Http.Formatting.dll
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\itextsharp.dll
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Microsoft.Owin.xml
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Newtonsoft.Json.xml
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\System.Net.Http.Formatting.xml
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.dll
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.pdb
+D:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.csprojResolveAssemblyReference.cache
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_PublicKey.cer
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Resources\uidai_auth_prod.cer
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_G2B_SANDBOX_UAT_public.pem
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_public.cer
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Resources\Docsigntest.pfx
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.dll.config
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.dll
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.pdb
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\risersoft.shared.cloud.xml
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\BouncyCastle.Crypto.dll
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\eSignASPLib.dll
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Microsoft.Owin.dll
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Newtonsoft.Json.dll
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Owin.dll
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Security.Cryptography.dll
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\System.Net.Http.Formatting.dll
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\itextsharp.dll
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Microsoft.Owin.xml
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\Newtonsoft.Json.xml
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\bin\Debug\System.Net.Http.Formatting.xml
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.csprojResolveAssemblyReference.cache
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.My_Project.Resources.resources
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.csproj.GenerateResource.Cache
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.csproj.CoreCompileInputs.cache
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.dll
+E:\PramodGK\API-CODE\GSTN API LATEST\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.pdb
+D:\Himanshu\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.My_Project.Resources.resources
+D:\Himanshu\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.csproj.GenerateResource.Cache
+D:\Himanshu\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.csproj.CoreCompileInputs.cache
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_PublicKey.cer
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\Resources\uidai_auth_prod.cer
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_G2B_SANDBOX_UAT_public.pem
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_public.cer
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\Resources\Docsigntest.pfx
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.dll.config
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.dll
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.pdb
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\risersoft.shared.cloud.xml
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\BouncyCastle.Crypto.dll
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\eSignASPLib.dll
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\Microsoft.Owin.dll
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\Newtonsoft.Json.dll
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\Owin.dll
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\Security.Cryptography.dll
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\System.Net.Http.Formatting.dll
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\itextsharp.dll
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\Microsoft.Owin.xml
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\Newtonsoft.Json.xml
+D:\Himanshu\GSTN-master\GSTN.API.Library\bin\Debug\System.Net.Http.Formatting.xml
+D:\Himanshu\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.dll
+D:\Himanshu\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.pdb
+D:\Himanshu\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.csprojResolveAssemblyReference.cache
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_PublicKey.cer
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\Resources\uidai_auth_prod.cer
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_G2B_SANDBOX_UAT_public.pem
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_public.cer
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\Resources\Docsigntest.pfx
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.dll.config
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.dll
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.pdb
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\risersoft.shared.cloud.xml
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\BouncyCastle.Crypto.dll
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\eSignASPLib.dll
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\Microsoft.Owin.dll
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\Newtonsoft.Json.dll
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\Owin.dll
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\Security.Cryptography.dll
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\System.Net.Http.Formatting.dll
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\itextsharp.dll
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\Microsoft.Owin.xml
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\Newtonsoft.Json.xml
+E:\Project\GSTN-master\GSTN.API.Library\bin\Debug\System.Net.Http.Formatting.xml
+E:\Project\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.My_Project.Resources.resources
+E:\Project\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.csproj.GenerateResource.Cache
+E:\Project\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.csproj.CoreCompileInputs.cache
+E:\Project\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.dll
+E:\Project\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.pdb
+E:\Project\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.csprojResolveAssemblyReference.cache
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_PublicKey.cer
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\Resources\uidai_auth_prod.cer
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_G2B_SANDBOX_UAT_public.pem
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_public.cer
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\Resources\Docsigntest.pfx
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.dll.config
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.dll
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.pdb
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\risersoft.shared.cloud.xml
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\BouncyCastle.Crypto.dll
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\eSignASPLib.dll
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\Microsoft.Owin.dll
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\Newtonsoft.Json.dll
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\Owin.dll
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\Security.Cryptography.dll
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\System.Net.Http.Formatting.dll
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\itextsharp.dll
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\Microsoft.Owin.xml
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\Newtonsoft.Json.xml
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\bin\Debug\System.Net.Http.Formatting.xml
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.My_Project.Resources.resources
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.csproj.GenerateResource.Cache
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.csproj.CoreCompileInputs.cache
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.dll
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.pdb
+D:\Desktop\test\GSTN-master\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.csprojResolveAssemblyReference.cache
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_PublicKey.cer
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Resources\uidai_auth_prod.cer
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_G2B_SANDBOX_UAT_public.pem
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_public.cer
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Resources\Docsigntest.pfx
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.dll.config
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.dll
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.pdb
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\risersoft.shared.cloud.xml
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\BouncyCastle.Crypto.dll
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\eSignASPLib.dll
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Microsoft.Owin.dll
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Newtonsoft.Json.dll
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Owin.dll
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Security.Cryptography.dll
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\System.Net.Http.Formatting.dll
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\itextsharp.dll
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Microsoft.Owin.xml
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Newtonsoft.Json.xml
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\System.Net.Http.Formatting.xml
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.csprojResolveAssemblyReference.cache
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.My_Project.Resources.resources
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.csproj.GenerateResource.Cache
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.dll
+D:\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.pdb
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_PublicKey.cer
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Resources\uidai_auth_prod.cer
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_G2B_SANDBOX_UAT_public.pem
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Resources\GSTN_public.cer
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Resources\Docsigntest.pfx
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.dll.config
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.dll
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\GSTN.API.Library.pdb
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\risersoft.shared.cloud.xml
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\BouncyCastle.Crypto.dll
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\eSignASPLib.dll
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Microsoft.Owin.dll
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Newtonsoft.Json.dll
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Owin.dll
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Security.Cryptography.dll
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\System.Net.Http.Formatting.dll
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\itextsharp.dll
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Microsoft.Owin.xml
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Newtonsoft.Json.xml
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\System.Net.Http.Formatting.xml
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.My_Project.Resources.resources
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.csproj.GenerateResource.Cache
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.dll
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.pdb
