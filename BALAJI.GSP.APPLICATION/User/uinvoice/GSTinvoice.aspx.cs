@@ -4360,6 +4360,7 @@ namespace BALAJI.GSP.APPLICATION.User.uinvoice
                     {
                         var user = new ApplicationUser()
                         {
+                            
                             //changes by amits vendor name
                             UserName = txtSellerGSTIN.Text.Replace(" ", "").Trim(),
                             //VendorName = txtSellerGSTIN.Text.Trim(),
