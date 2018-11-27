@@ -6,7 +6,7 @@
     </HeaderTemplate>
     <ItemTemplate>
         <div class="col-md-4 no-padding" style="padding: 5px !important;">
-            <div class="small-box bg-red">
+            <div class='<%#BusinessLogic.Repositories.cls_Invoice.GstrColor(Eval("ReturnStatus")) %>'>
                 <div class="box-header with-border">
                         <h5 style="color: white;"><%#((GST.Utility.EnumConstants.Return)Convert.ToInt32(Eval("ReturnStatus").ToString())).ToDescription()%> </h5>
                     </div>

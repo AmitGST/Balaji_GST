@@ -281,6 +281,32 @@ namespace BusinessLogic.Repositories
         //    email.Send(msg);
         //}
         #endregion
+
+        public static string GstrColor(object gstrType)
+        {
+            string GstrColorBox;
+            EnumConstants.Return GstrType = (EnumConstants.Return)Enum.Parse(typeof(EnumConstants.Return), gstrType != null ? gstrType.ToString() : "-1");
+            switch (GstrType)
+            {
+                case EnumConstants.Return.Gstr1:
+                    GstrColorBox = "small=box bg-blue";
+                    break;
+
+                case EnumConstants.Return.Gstr2A:
+                    GstrColorBox = "small-box label-danger";
+                    break;
+
+                case EnumConstants.Return.Gstr3B:
+                    GstrColorBox = "small-box bg-aqua";
+                    break;
+
+                default:
+                    GstrColorBox = "small-box bg-teal";
+                    break;
+            }
+            return GstrColorBox;
+        }
+
         /// <summary>
         /// 
         /// </summary>

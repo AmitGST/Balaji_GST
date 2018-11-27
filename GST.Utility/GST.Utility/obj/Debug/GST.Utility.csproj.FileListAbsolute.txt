@@ -32,3 +32,16 @@ E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\EntityFramework.S
 E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Debug\GST.Utility.dll
 E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Debug\GST.Utility.pdb
 E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Debug\GST.Utility.csprojResolveAssemblyReference.cache
+D:\GSTGit\GSTApp\GST.Utility\GST.Utility\bin\Debug\GST.Utility.dll
+D:\GSTGit\GSTApp\GST.Utility\GST.Utility\bin\Debug\GST.Utility.pdb
+D:\GSTGit\GSTApp\GST.Utility\GST.Utility\bin\Debug\DataAccessLayer.dll
+D:\GSTGit\GSTApp\GST.Utility\GST.Utility\bin\Debug\EntityFramework.dll
+D:\GSTGit\GSTApp\GST.Utility\GST.Utility\bin\Debug\EntityFramework.SqlServer.dll
+D:\GSTGit\GSTApp\GST.Utility\GST.Utility\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\GSTGit\GSTApp\GST.Utility\GST.Utility\bin\Debug\Newtonsoft.Json.dll
+D:\GSTGit\GSTApp\GST.Utility\GST.Utility\bin\Debug\DataAccessLayer.pdb
+D:\GSTGit\GSTApp\GST.Utility\GST.Utility\bin\Debug\EntityFramework.xml
+D:\GSTGit\GSTApp\GST.Utility\GST.Utility\bin\Debug\EntityFramework.SqlServer.xml
+D:\GSTGit\GSTApp\GST.Utility\GST.Utility\obj\Debug\GST.Utility.dll
+D:\GSTGit\GSTApp\GST.Utility\GST.Utility\obj\Debug\GST.Utility.pdb
+D:\GSTGit\GSTApp\GST.Utility\GST.Utility\obj\Debug\GST.Utility.csprojResolveAssemblyReference.cache

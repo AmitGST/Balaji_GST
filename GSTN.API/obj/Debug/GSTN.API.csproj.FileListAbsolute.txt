@@ -39,3 +39,15 @@ E:\AA\BALAJI.GSP.APPLICATION\GSTN.API\obj\Debug\GSTN.API.csproj.GenerateResource
 E:\AA\BALAJI.GSP.APPLICATION\GSTN.API\obj\Debug\GSTN.API.dll
 E:\AA\BALAJI.GSP.APPLICATION\GSTN.API\obj\Debug\GSTN.API.pdb
 E:\AA\BALAJI.GSP.APPLICATION\GSTN.API\obj\Debug\GSTN.API.csprojResolveAssemblyReference.cache
+D:\GSTGit\GSTApp\GSTN.API\bin\Debug\GSTN.API.dll.config
+D:\GSTGit\GSTApp\GSTN.API\bin\Debug\GSTN.API.dll
+D:\GSTGit\GSTApp\GSTN.API\bin\Debug\GSTN.API.pdb
+D:\GSTGit\GSTApp\GSTN.API\bin\Debug\eSignASPLib.dll
+D:\GSTGit\GSTApp\GSTN.API\bin\Debug\Newtonsoft.Json.dll
+D:\GSTGit\GSTApp\GSTN.API\bin\Debug\Security.Cryptography.dll
+D:\GSTGit\GSTApp\GSTN.API\bin\Debug\itextsharp.dll
+D:\GSTGit\GSTApp\GSTN.API\obj\Debug\GSTN.API.csprojResolveAssemblyReference.cache
+D:\GSTGit\GSTApp\GSTN.API\obj\Debug\GSTN.API.My_Project.Resources.resources
+D:\GSTGit\GSTApp\GSTN.API\obj\Debug\GSTN.API.csproj.GenerateResource.Cache
+D:\GSTGit\GSTApp\GSTN.API\obj\Debug\GSTN.API.dll
+D:\GSTGit\GSTApp\GSTN.API\obj\Debug\GSTN.API.pdb
