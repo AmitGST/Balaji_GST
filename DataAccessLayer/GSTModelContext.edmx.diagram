@@ -135,6 +135,12 @@
         <AssociationConnector Association="GST_DBModel.FK_GST_TRN_OFFLINE_INVOICE_AspNetUsers" />
         <AssociationConnector Association="GST_DBModel.FK_GST_TRN_OFFLINE_INVOICE_AUDIT_TRAIL_AspNetUsers" />
         <AssociationConnector Association="GST_DBModel.FK_GST_TRN_RETURN_STATUS_AspNetUsers" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_SUBSECTION" Width="1.5" PointX="5.25" PointY="13" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_SECTION" Width="1.5" PointX="3" PointY="13.125" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_SUBSECTION_GST_MST_SECTION" />
+        <EntityTypeShape EntityType="GST_DBModel.GST_MST_HEADER" Width="1.5" PointX="0.75" PointY="13.125" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_SECTION_GST_MST_HEADER" />
+        <AssociationConnector Association="GST_DBModel.FK_GST_MST_SUBSECTION_GST_MST_HEADER" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

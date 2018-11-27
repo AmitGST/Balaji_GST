@@ -3,6 +3,7 @@
 
 <%@ Register Src="~/UC/UC_Invoice/uc_invoiceMonth.ascx" TagPrefix="uc1" TagName="uc_invoiceMonth" %>
 <%@ Register Src="~/UC/UC_Gstr/uc_Gstr_Tileview.ascx" TagPrefix="uc1" TagName="uc_Gstr_Tileview" %>
+<%@ Register Src="~/UC/uc_GSTNUsers.ascx" TagPrefix="uc1" TagName="uc_GSTNUsers" %>
 
 
 
@@ -13,7 +14,11 @@
        
         <div class="box box-primary">
             <div class="box-body ">
-               
+                <div class="row" style="padding-top:15px" >
+                    <uc1:uc_GSTNUsers runat="server" ID="uc_GSTNUsers" />
+                    </div>
+                <br/>
+                <div class="row">
                     <div class="col-md-4">
                        
                             <label>Financial Year:</label>
@@ -34,7 +39,7 @@
                                </div>
                           
                         </div>
-
+                    </div>
                </div>
             </div>
            

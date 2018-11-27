@@ -172,6 +172,7 @@ E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\itextsharp.d
 E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Microsoft.Owin.xml
 E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\Newtonsoft.Json.xml
 E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\bin\Debug\System.Net.Http.Formatting.xml
+E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.csprojResolveAssemblyReference.cache
 E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.My_Project.Resources.resources
 E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.csproj.GenerateResource.Cache
 E:\AA\BALAJI.GSP.APPLICATION\GSTN-master\GSTN.API.Library\obj\Debug\GSTN.API.Library.dll

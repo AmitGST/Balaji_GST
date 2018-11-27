@@ -13,6 +13,15 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn {
     public partial class ReturnGstr1 {
         
         /// <summary>
+        /// uc_GSTNUsers control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::BALAJI.GSP.APPLICATION.UC.uc_GSTNUsers uc_GSTNUsers;
+        
+        /// <summary>
         /// ddlfinYear control.
         /// </summary>
         /// <remarks>

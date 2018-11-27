@@ -36,7 +36,7 @@
                 <asp:LinkButton ID="lkbBack" CssClass="btn btn-danger" Style="margin-left: 15px;" OnClick="lkbBack_Click" runat="server"><i class="fa fa-backward"></i> Back</asp:LinkButton>
                     </div>
                 <div class="col-sm-1">
-                <asp:LinkButton ID="lkbFileGSTR1"  OnClick="lkbFileGSTR1_Click" CssClass="btn btn-success" runat="server"><i class="fa fa-cloud-upload"></i> File GSTR-1</asp:LinkButton>
+                <asp:LinkButton ID="lkbFileGSTR1" Visible="false" OnClick="lkbFileGSTR1_Click" CssClass="btn btn-success" runat="server"><i class="fa fa-cloud-upload"></i> File GSTR-1</asp:LinkButton>
                     </div>
                 <div class="col-sm-2">
                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">

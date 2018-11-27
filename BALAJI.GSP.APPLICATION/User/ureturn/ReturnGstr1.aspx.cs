@@ -24,14 +24,61 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn
                 BindFinyear();
                 // BindInvoiceMonth();
 
+                if (Session["Month"] != null)
+                {
+                    var month = Session["Month"].ToString();
+                }
+
             }
 
             uc_Gstr_Tileview.Info_Click += uc_Gstr_Tileview_Info_Click; //AddMoreClick += uc_B2B_Invoices_AddMoreClick;
             uc_invoiceMonth.SelectedIndexChange += uc_invoiceMonth_SelectIndexChange;
+            uc_GSTNUsers.addInvoiceRedirect += uc_GSTNUsers_addInvoiceRedirect;
+            uc_GSTNUsers.addInvoicechkRedirect += uc_GSTNUsers_addInvoicechkRedirect;
         }
+        int MonthName;
+        private void uc_GSTNUsers_addInvoicechkRedirect(object sender, EventArgs e)
+        {
+            var ddlvalue = uc_GSTNUsers.ddlGSTNUsers.SelectedIndex;
+            var chkvalue = uc_GSTNUsers.GetchkValue;
+            // var ddlenable = uc_GSTNUsers.ddlGSTNUsers.Enabled = false;
+            if (ddlvalue == 0)
+            {
+                //ddlenable = false;
+                var loggedInUser = Common.LoggedInUserID();
+                //for turnover start
+                //Label mpLabel = (Label)uc_GSTR_Taxpayer.FindControl("lblTurnoverAMT");
+                int Monthpageload = Convert.ToByte(DateTime.Now.Month - 1);
+                List<string> userLists = new List<string>();
+                if (uc_GSTNUsers.AssociatedUsersIds != null)
+                {
+                    userLists = uc_GSTNUsers.AssociatedUsersIds;//TODO:Repetation remove need to work here again asap by ankita
+                }
+                userLists.Add(loggedInUser);
+                //mpLabel.Text = unitOfwork.InvoiceDataRepository.Filter(f => f.GST_TRN_INVOICE.InvoiceMonth == Monthpageload && userLists.Contains(f.GST_TRN_INVOICE.InvoiceUserID)).Sum(s => s.TaxableAmount).ToString();
+
+                //End
+
+              //  BindAllList(loggedInUser, DateTime.Now.Month - 1);
+              //  uc_invoiceMonth.BindInvoiceMonth();
+            }
+        }
+
+        private void uc_GSTNUsers_addInvoiceRedirect(object sender, EventArgs e)
+        {
+            DropDownList ddl = (DropDownList)sender;
+            uc_GSTNUsers.ddlGSTNUsers.SelectedValue = ddl.SelectedValue;
+
+            var taxuserid = uc_GSTNUsers.ddlGSTNUsers.SelectedValue;
+            Session["taxid"] = taxuserid;
+            var a = Session["taxid"];
+        }
+
+
 
         private void uc_invoiceMonth_SelectIndexChange(object sender, EventArgs e)
         {
+            // int Monthnew = Convert.ToInt32(uc_invoiceMonth.GetIndexValue);
             var month = uc_invoiceMonth.GetIndexValue;
             Session["Month"] = month;
         }
@@ -45,7 +92,7 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn
 
             // var invoiceAudit = unitOfwork.InvoiceAuditTrailRepositry.Filter(f => f.AuditTrailStatus == 0 && ).OrderByDescending(o => o.InvoiceDate).ToList();
             var invoiceList = unitOfwork.InvoiceRepository.Filter(f => f.InvoiceMonth == month && f.Status == true).OrderByDescending(o => o.InvoiceDate).ToList();
-            
+
             //amits for gstr 3b condition 
             Response.Redirect("~/User/ureturn/GSTR1Details.aspx");
         }
@@ -122,10 +169,11 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn
         //    invoiceList = unitOfwork.InvoiceRepository.Filter(f => f.InvoiceUserID == loggedinUser && f.InvoiceMonth == SelectedMonth).ToList();
         //    return invoiceList;
         //}
-        private List<GST_TRN_RETURN_STATUS> GetFilterInvoice(int Year, int SelectedMonth)
+        private List<GST_MST_HEADER> GetFilterInvoice(int Year, int SelectedMonth)
         {
             unitOfwork = new UnitOfWork();
             List<GST_TRN_RETURN_STATUS> invoiceList = new List<GST_TRN_RETURN_STATUS>();
+            List<GST_MST_HEADER> invoices = new List<GST_MST_HEADER>();
             var loggedinUser = Common.LoggedInUserID();
             var return1 = (byte)EnumConstants.Return.Gstr1;
             var return2 = (byte)EnumConstants.Return.Gstr3B;
@@ -133,10 +181,23 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn
             var invstatusfile = (byte)EnumConstants.ReturnFileStatus.FileGstr1;
             var invstatussave = (byte)EnumConstants.ReturnFileStatus.Save;
             var invstatussubmit = (byte)EnumConstants.ReturnFileStatus.Submit;
+            if (uc_GSTNUsers.ddlGSTNUsers.SelectedIndex > 0)
+            {
+                var taxi = Session["taxid"].ToString();
+                var FindMax = unitOfwork.ReturnStatusRepository.Filter(f => f.Period == SelectedMonth && f.FinYear_ID == Year).Max(a => a.Action);
+               // invoiceList = unitOfwork.ReturnStatusRepository.Filter(f => f.User_id == taxi && f.Period == SelectedMonth && f.FinYear_ID == Year && f.Action == FindMax).ToList();
+                invoices = unitOfwork.headerrepository.All().ToList();
 
-            var FindMax = unitOfwork.ReturnStatusRepository.Filter(f => f.Period == SelectedMonth && f.FinYear_ID == Year).Max(a => a.Action);
-            invoiceList = unitOfwork.ReturnStatusRepository.Filter(f => f.User_id == loggedinUser && f.Period == SelectedMonth && f.FinYear_ID == Year && f.Action == FindMax).ToList();
-            return invoiceList;
+                
+            }
+            else
+            {
+                var FindMax = unitOfwork.ReturnStatusRepository.Filter(f => f.Period == SelectedMonth && f.FinYear_ID == Year).Max(a => a.Action);
+                //invoiceList = unitOfwork.ReturnStatusRepository.Filter(f => f.User_id == loggedinUser && f.Period == SelectedMonth && f.FinYear_ID == Year && f.Action == FindMax).ToList();
+                invoices = unitOfwork.headerrepository.All().ToList();
+
+            }
+            return invoices;
         }
 
 
@@ -151,7 +212,7 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn
             var invoicesB2B = GetFilterInvoice(Convert.ToInt16(ddlyear), Convert.ToInt16(ddlmonth));
             var dataB2b = invoicesB2B;
             uc_Gstr_Tileview.InvoiceList = dataB2b;
-           
+
             //if (Status == invstatusfile || Status == invstatussave || Status == invstatussubmit)
             //{
             //    var invoicesB2BA = GetFilterInvoiceReturn(Convert.ToInt16(ddlyear), Convert.ToInt16(ddlmonth));
@@ -166,8 +227,8 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn
             //}
 
 
-            
-         
+
+
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)

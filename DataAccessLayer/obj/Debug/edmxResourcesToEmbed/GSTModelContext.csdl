@@ -71,7 +71,6 @@
     </FunctionImport>
     <FunctionImport Name="PROC_FILE_GSTR_1_4A_test" ReturnType="Collection(GST_DBModel.PROC_FILE_GSTR_1_4A_test_Result)">
       <Parameter Name="SELLERUSERID" Mode="In" Type="String" />
-      <Parameter Name="Month" Mode="In" Type="String" />
     </FunctionImport>
     <FunctionImport Name="PROC_FILE_GSTR_1_4B" ReturnType="Collection(GST_DBModel.PROC_FILE_GSTR_1_4B_Result)">
       <Parameter Name="SellerUserID" Mode="In" Type="String" />
@@ -1420,6 +1419,21 @@
       <Parameter Name="SELLERUSERID" Mode="In" Type="String" />
       <Parameter Name="MONTH" Mode="In" Type="Int32" />
     </FunctionImport>
+    <EntitySet Name="GST_MST_SUBSECTION" EntityType="GST_DBModel.GST_MST_SUBSECTION" />
+    <EntitySet Name="GST_MST_SECTION" EntityType="GST_DBModel.GST_MST_SECTION" />
+    <AssociationSet Name="FK_GST_MST_SUBSECTION_GST_MST_SECTION" Association="GST_DBModel.FK_GST_MST_SUBSECTION_GST_MST_SECTION">
+      <End Role="GST_MST_SECTION" EntitySet="GST_MST_SECTION" />
+      <End Role="GST_MST_SUBSECTION" EntitySet="GST_MST_SUBSECTION" />
+    </AssociationSet>
+    <EntitySet Name="GST_MST_HEADER" EntityType="GST_DBModel.GST_MST_HEADER" />
+    <AssociationSet Name="FK_GST_MST_SECTION_GST_MST_HEADER" Association="GST_DBModel.FK_GST_MST_SECTION_GST_MST_HEADER">
+      <End Role="GST_MST_HEADER" EntitySet="GST_MST_HEADER" />
+      <End Role="GST_MST_SECTION" EntitySet="GST_MST_SECTION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_SUBSECTION_GST_MST_HEADER" Association="GST_DBModel.FK_GST_MST_SUBSECTION_GST_MST_HEADER">
+      <End Role="GST_MST_HEADER" EntitySet="GST_MST_HEADER" />
+      <End Role="GST_MST_SUBSECTION" EntitySet="GST_MST_SUBSECTION" />
+    </AssociationSet>
   </EntityContainer>
   <ComplexType Name="RPT_INVOICE_GENERATE_Result">
     <Property Type="Int64" Name="INVOICEID" Nullable="false" />
@@ -6310,4 +6324,89 @@
     <Property Type="Decimal" Name="SGSTAMT" Nullable="true" Precision="38" Scale="2" />
     <Property Type="String" Name="DESCRIPTION" Nullable="false" MaxLength="22" />
   </ComplexType>
+  <EntityType Name="GST_MST_SUBSECTION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodeID" Type="Int32" />
+    <Property Name="HeaderID" Type="Int32" />
+    <Property Name="SectionID" Type="Int32" />
+    <Property Name="CodeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="GST_MST_SECTION" Relationship="GST_DBModel.FK_GST_MST_SUBSECTION_GST_MST_SECTION" FromRole="GST_MST_SUBSECTION" ToRole="GST_MST_SECTION" />
+    <NavigationProperty Name="GST_MST_HEADER" Relationship="GST_DBModel.FK_GST_MST_SUBSECTION_GST_MST_HEADER" FromRole="GST_MST_SUBSECTION" ToRole="GST_MST_HEADER" />
+  </EntityType>
+  <EntityType Name="GST_MST_SECTION">
+    <Key>
+      <PropertyRef Name="SectionID" />
+    </Key>
+    <Property Name="SectionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HeaderCodeID" Type="Int32" />
+    <Property Name="SectionCode" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="SectionName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="GST_MST_SUBSECTION" Relationship="GST_DBModel.FK_GST_MST_SUBSECTION_GST_MST_SECTION" FromRole="GST_MST_SECTION" ToRole="GST_MST_SUBSECTION" />
+    <NavigationProperty Name="GST_MST_HEADER" Relationship="GST_DBModel.FK_GST_MST_SECTION_GST_MST_HEADER" FromRole="GST_MST_SECTION" ToRole="GST_MST_HEADER" />
+  </EntityType>
+  <Association Name="FK_GST_MST_SUBSECTION_GST_MST_SECTION">
+    <End Type="GST_DBModel.GST_MST_SECTION" Role="GST_MST_SECTION" Multiplicity="0..1" />
+    <End Type="GST_DBModel.GST_MST_SUBSECTION" Role="GST_MST_SUBSECTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_SECTION">
+        <PropertyRef Name="SectionID" />
+      </Principal>
+      <Dependent Role="GST_MST_SUBSECTION">
+        <PropertyRef Name="SectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="GST_MST_HEADER">
+    <Key>
+      <PropertyRef Name="CodeID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CodeID" Type="Int32" Nullable="false" />
+    <Property Name="HeaderCode" Type="Byte" />
+    <Property Name="HeaderName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="Boolean" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="GST_MST_SECTION" Relationship="GST_DBModel.FK_GST_MST_SECTION_GST_MST_HEADER" FromRole="GST_MST_HEADER" ToRole="GST_MST_SECTION" />
+    <NavigationProperty Name="GST_MST_SUBSECTION" Relationship="GST_DBModel.FK_GST_MST_SUBSECTION_GST_MST_HEADER" FromRole="GST_MST_HEADER" ToRole="GST_MST_SUBSECTION" />
+  </EntityType>
+  <Association Name="FK_GST_MST_SECTION_GST_MST_HEADER">
+    <End Type="GST_DBModel.GST_MST_HEADER" Role="GST_MST_HEADER" Multiplicity="0..1" />
+    <End Type="GST_DBModel.GST_MST_SECTION" Role="GST_MST_SECTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_HEADER">
+        <PropertyRef Name="CodeID" />
+      </Principal>
+      <Dependent Role="GST_MST_SECTION">
+        <PropertyRef Name="HeaderCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_SUBSECTION_GST_MST_HEADER">
+    <End Type="GST_DBModel.GST_MST_HEADER" Role="GST_MST_HEADER" Multiplicity="0..1" />
+    <End Type="GST_DBModel.GST_MST_SUBSECTION" Role="GST_MST_SUBSECTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_HEADER">
+        <PropertyRef Name="CodeID" />
+      </Principal>
+      <Dependent Role="GST_MST_SUBSECTION">
+        <PropertyRef Name="HeaderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

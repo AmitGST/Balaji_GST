@@ -212,6 +212,20 @@
     <Property Name="GroupType" Type="tinyint" />
     <Property Name="Status" Type="bit" />
   </EntityType>
+  <EntityType Name="GST_MST_HEADER">
+    <Key>
+      <PropertyRef Name="CodeID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodeID" Type="int" Nullable="false" />
+    <Property Name="HeaderCode" Type="tinyint" />
+    <Property Name="HeaderName" Type="nvarchar(max)" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
   <EntityType Name="GST_MST_ITEM">
     <Key>
       <PropertyRef Name="Item_ID" />
@@ -465,6 +479,20 @@
     <Property Name="CreatedDate" Type="datetime" />
     <Property Name="UpdatedDate" Type="datetime" />
   </EntityType>
+  <EntityType Name="GST_MST_SECTION">
+    <Key>
+      <PropertyRef Name="SectionID" />
+    </Key>
+    <Property Name="SectionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HeaderCodeID" Type="int" />
+    <Property Name="SectionCode" Type="nvarchar" MaxLength="15" />
+    <Property Name="SectionName" Type="nvarchar(max)" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+  </EntityType>
   <EntityType Name="GST_MST_STATE">
     <Key>
       <PropertyRef Name="StateID" />
@@ -499,6 +527,21 @@
     <Property Name="Description" Type="varchar(max)" />
     <Property Name="GroupID" Type="int" />
     <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="GST_MST_SUBSECTION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodeID" Type="int" />
+    <Property Name="HeaderID" Type="int" />
+    <Property Name="SectionID" Type="int" />
+    <Property Name="CodeName" Type="nvarchar(max)" />
+    <Property Name="Status" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
   </EntityType>
   <EntityType Name="GST_MST_USER_BUSINESSTYPE">
     <Key>
@@ -1363,6 +1406,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_GST_MST_SECTION_GST_MST_HEADER">
+    <End Role="GST_MST_HEADER" Type="Self.GST_MST_HEADER" Multiplicity="0..1" />
+    <End Role="GST_MST_SECTION" Type="Self.GST_MST_SECTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_HEADER">
+        <PropertyRef Name="CodeID" />
+      </Principal>
+      <Dependent Role="GST_MST_SECTION">
+        <PropertyRef Name="HeaderCodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_GST_MST_SUBCLASS_GST_MST_CLASS">
     <End Role="GST_MST_CLASS" Type="Self.GST_MST_CLASS" Multiplicity="0..1" />
     <End Role="GST_MST_SUBCLASS" Type="Self.GST_MST_SUBCLASS" Multiplicity="*" />
@@ -1384,6 +1439,30 @@
       </Principal>
       <Dependent Role="GST_MST_SUBGROUP">
         <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_SUBSECTION_GST_MST_HEADER">
+    <End Role="GST_MST_HEADER" Type="Self.GST_MST_HEADER" Multiplicity="0..1" />
+    <End Role="GST_MST_SUBSECTION" Type="Self.GST_MST_SUBSECTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_HEADER">
+        <PropertyRef Name="CodeID" />
+      </Principal>
+      <Dependent Role="GST_MST_SUBSECTION">
+        <PropertyRef Name="HeaderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GST_MST_SUBSECTION_GST_MST_SECTION">
+    <End Role="GST_MST_SECTION" Type="Self.GST_MST_SECTION" Multiplicity="0..1" />
+    <End Role="GST_MST_SUBSECTION" Type="Self.GST_MST_SUBSECTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_MST_SECTION">
+        <PropertyRef Name="SectionID" />
+      </Principal>
+      <Dependent Role="GST_MST_SUBSECTION">
+        <PropertyRef Name="SectionID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -1931,7 +2010,6 @@
   </Function>
   <Function Name="PROC_FILE_GSTR_1_4A_test" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="SELLERUSERID" Type="varchar" Mode="In" />
-    <Parameter Name="Month" Type="varchar" Mode="In" />
   </Function>
   <Function Name="PROC_FILE_GSTR_1_4B" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="SellerUserID" Type="varchar" Mode="In" />
@@ -2913,6 +2991,7 @@
     <EntitySet Name="GST_MST_EXCEPTIONLOG" EntityType="Self.GST_MST_EXCEPTIONLOG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GST_MST_FINYEAR" EntityType="Self.GST_MST_FINYEAR" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GST_MST_GROUP" EntityType="Self.GST_MST_GROUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_HEADER" EntityType="Self.GST_MST_HEADER" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GST_MST_ITEM" EntityType="Self.GST_MST_ITEM" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GST_MST_ITEM_CONDITION" EntityType="Self.GST_MST_ITEM_CONDITION" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GST_MST_ITEM_NOTIFIED" EntityType="Self.GST_MST_ITEM_NOTIFIED" Schema="dbo" store:Type="Tables" />
@@ -2926,9 +3005,11 @@
     <EntitySet Name="GST_MST_REPORT" EntityType="Self.GST_MST_REPORT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GST_MST_REPORT_PERMISSION" EntityType="Self.GST_MST_REPORT_PERMISSION" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GST_MST_SALE_REGISTER" EntityType="Self.GST_MST_SALE_REGISTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_SECTION" EntityType="Self.GST_MST_SECTION" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GST_MST_STATE" EntityType="Self.GST_MST_STATE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GST_MST_SUBCLASS" EntityType="Self.GST_MST_SUBCLASS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GST_MST_SUBGROUP" EntityType="Self.GST_MST_SUBGROUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GST_MST_SUBSECTION" EntityType="Self.GST_MST_SUBSECTION" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GST_MST_USER_BUSINESSTYPE" EntityType="Self.GST_MST_USER_BUSINESSTYPE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GST_MST_USER_CURRENT_TURNOVER" EntityType="Self.GST_MST_USER_CURRENT_TURNOVER" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GST_MST_USER_SIGNATORY" EntityType="Self.GST_MST_USER_SIGNATORY" Schema="dbo" store:Type="Tables" />
@@ -3056,6 +3137,10 @@
       <End Role="GST_TRN_INVOICE" EntitySet="GST_TRN_INVOICE" />
       <End Role="GST_MST_SALE_REGISTER" EntitySet="GST_MST_SALE_REGISTER" />
     </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_SECTION_GST_MST_HEADER" Association="Self.FK_GST_MST_SECTION_GST_MST_HEADER">
+      <End Role="GST_MST_HEADER" EntitySet="GST_MST_HEADER" />
+      <End Role="GST_MST_SECTION" EntitySet="GST_MST_SECTION" />
+    </AssociationSet>
     <AssociationSet Name="FK_GST_MST_SUBCLASS_GST_MST_CLASS" Association="Self.FK_GST_MST_SUBCLASS_GST_MST_CLASS">
       <End Role="GST_MST_CLASS" EntitySet="GST_MST_CLASS" />
       <End Role="GST_MST_SUBCLASS" EntitySet="GST_MST_SUBCLASS" />
@@ -3063,6 +3148,14 @@
     <AssociationSet Name="FK_GST_MST_SUBGROUP_GST_MST_GROUP" Association="Self.FK_GST_MST_SUBGROUP_GST_MST_GROUP">
       <End Role="GST_MST_GROUP" EntitySet="GST_MST_GROUP" />
       <End Role="GST_MST_SUBGROUP" EntitySet="GST_MST_SUBGROUP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_SUBSECTION_GST_MST_HEADER" Association="Self.FK_GST_MST_SUBSECTION_GST_MST_HEADER">
+      <End Role="GST_MST_HEADER" EntitySet="GST_MST_HEADER" />
+      <End Role="GST_MST_SUBSECTION" EntitySet="GST_MST_SUBSECTION" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GST_MST_SUBSECTION_GST_MST_SECTION" Association="Self.FK_GST_MST_SUBSECTION_GST_MST_SECTION">
+      <End Role="GST_MST_SECTION" EntitySet="GST_MST_SECTION" />
+      <End Role="GST_MST_SUBSECTION" EntitySet="GST_MST_SUBSECTION" />
     </AssociationSet>
     <AssociationSet Name="FK_GST_MST_USER_BUSINESSTYPE_AspNetUsers1" Association="Self.FK_GST_MST_USER_BUSINESSTYPE_AspNetUsers1">
       <End Role="AspNetUsers" EntitySet="AspNetUsers" />

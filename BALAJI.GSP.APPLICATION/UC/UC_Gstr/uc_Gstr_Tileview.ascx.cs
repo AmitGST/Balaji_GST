@@ -26,18 +26,66 @@ namespace BALAJI.GSP.APPLICATION.UC.UC_Gstr
             //rptGSTR1.DataSource = // invoiceSum.ToList();
             //rptGSTR1.DataBind();
         }
-        public List<GST_TRN_RETURN_STATUS> InvoiceList
-        {
+        //public List<GST_TRN_RETURN_STATUS> InvoiceList
+        //{
             
+        //    set
+        //    {
+        //        var data = from item in value
+        //                   group item by new { item.Status,item.ReturnStatus,item.Action } into g
+        //                   select new
+        //                   {
+        //                       Status = g.Key.Status,
+        //                       ReturnStatus=g.Key.ReturnStatus
+                            
+        //                       //INVSPLCONDITION = g.Key.InvoiceSpecialCondition,
+        //                       //TotalInvoice = g.Count(),
+        //                       ////QTY = g.Sum(s => s.GST_TRN_INVOICE_DATA.Sum(ds=>ds.Qty)),
+        //                       //TAXABLEAMOUNT = g.Sum(s => s.GST_TRN_INVOICE_DATA.Sum(ds => ds.TaxableAmount)),
+        //                       //IGSTAMT = g.Sum(s => s.GST_TRN_INVOICE_DATA.Sum(ds => ds.IGSTAmt)),
+        //                       //CGSTAMT = g.Sum(s => s.GST_TRN_INVOICE_DATA.Sum(ds => ds.CGSTAmt)),
+        //                       //SGSTAMT = g.Sum(s => s.GST_TRN_INVOICE_DATA.Sum(ds => ds.SGSTAmt)),
+        //                       //CESSAMT = g.Sum(s => s.GST_TRN_INVOICE_DATA.Sum(ds => ds.CessAmt))
+        //                   };
+           
+        //        var invstatusfile =(byte) EnumConstants.ReturnFileStatus.FileGstr1;
+        //        var invstatussave =(byte) EnumConstants.ReturnFileStatus.Save;
+        //        var invstatussubmit =(byte) EnumConstants.ReturnFileStatus.Submit;
+        //        //data.Select(s => s.Status == invstatussave).ToList();
+        //       var Status=data.Select(c=> c.Status).ToList();
+
+        //      // var ab = Convert.ToByte(Status);
+        //        rptGSTR1.DataSource = data.ToList();// invoiceSum.ToList();
+        //        rptGSTR1.DataBind();
+        //        foreach (RepeaterItem item in rptGSTR1.Items)
+        //        {
+        //            HtmlGenericControl control = item.FindControl("beforeFile") as HtmlGenericControl;
+        //            if (Status.Contains(invstatussave))
+        //            {
+        //                control.Visible = true;
+        //            }
+        //            else
+        //            {
+        //                control.Visible = false;
+        //            }
+        //        }
+              
+        //        //rptGsSTR3B.DataSource = EnumConstants.Return.Gstr3B.ToDescription();//.ToList();// invoiceSum.ToList();
+        //        //rptGsSTR3B.DataBind();
+        //    }
+        //}
+        public List<GST_MST_HEADER> InvoiceList
+        {
+
             set
             {
                 var data = from item in value
-                           group item by new { item.Status,item.ReturnStatus,item.Action } into g
+                           group item by new { item.Status, item.HeaderName } into g
                            select new
                            {
                                Status = g.Key.Status,
-                               ReturnStatus=g.Key.ReturnStatus
-                            
+                               ReturnStatus = g.Key.HeaderName
+
                                //INVSPLCONDITION = g.Key.InvoiceSpecialCondition,
                                //TotalInvoice = g.Count(),
                                ////QTY = g.Sum(s => s.GST_TRN_INVOICE_DATA.Sum(ds=>ds.Qty)),
@@ -47,34 +95,34 @@ namespace BALAJI.GSP.APPLICATION.UC.UC_Gstr
                                //SGSTAMT = g.Sum(s => s.GST_TRN_INVOICE_DATA.Sum(ds => ds.SGSTAmt)),
                                //CESSAMT = g.Sum(s => s.GST_TRN_INVOICE_DATA.Sum(ds => ds.CessAmt))
                            };
-           
-                var invstatusfile =(byte) EnumConstants.ReturnFileStatus.FileGstr1;
-                var invstatussave =(byte) EnumConstants.ReturnFileStatus.Save;
-                var invstatussubmit =(byte) EnumConstants.ReturnFileStatus.Submit;
+                var status = unitofwork.headerrepository.Find(f => f.HeaderCode);
+                var invoice=unitofwork.ReturnStatusRepository.Filter(f=>Convert.ToBoolean(f.Status)).Where(w => w.ReturnStatus == status.HeaderCode).ToList();
+                var invstatusfile = (byte)EnumConstants.ReturnFileStatus.FileGstr1;
+                var invstatussave = (byte)EnumConstants.ReturnFileStatus.Save;
+                var invstatussubmit = (byte)EnumConstants.ReturnFileStatus.Submit;
                 //data.Select(s => s.Status == invstatussave).ToList();
-               var Status=data.Select(c=> c.Status).ToList();
+                var Status = data.Select(c => c.Status).ToList();
 
-              // var ab = Convert.ToByte(Status);
+                // var ab = Convert.ToByte(Status);
                 rptGSTR1.DataSource = data.ToList();// invoiceSum.ToList();
                 rptGSTR1.DataBind();
-                foreach (RepeaterItem item in rptGSTR1.Items)
-                {
-                    HtmlGenericControl control = item.FindControl("beforeFile") as HtmlGenericControl;
-                    if (Status.Contains(invstatussave))
-                    {
-                        control.Visible = true;
-                    }
-                    else
-                    {
-                        control.Visible = false;
-                    }
-                }
-              
+                //foreach (RepeaterItem item in rptGSTR1.Items)
+                //{
+                //    HtmlGenericControl control = item.FindControl("beforeFile") as HtmlGenericControl;
+                //    if (Status.Contains(invstatussave))
+                //    {
+                //        control.Visible = true;
+                //    }
+                //    else
+                //    {
+                //        control.Visible = false;
+                //    }
+                //}
+
                 //rptGsSTR3B.DataSource = EnumConstants.Return.Gstr3B.ToDescription();//.ToList();// invoiceSum.ToList();
                 //rptGsSTR3B.DataBind();
             }
         } 
-       
         public EventHandler Info_Click;
         protected void lbinfo_Click(object sender, EventArgs e)
         {

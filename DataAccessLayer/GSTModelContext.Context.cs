@@ -88,6 +88,9 @@ namespace DataAccessLayer
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<GST_TRN_RETURN_STATUS> GST_TRN_RETURN_STATUS { get; set; }
         public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
+        public virtual DbSet<GST_MST_SUBSECTION> GST_MST_SUBSECTION { get; set; }
+        public virtual DbSet<GST_MST_SECTION> GST_MST_SECTION { get; set; }
+        public virtual DbSet<GST_MST_HEADER> GST_MST_HEADER { get; set; }
     
         public virtual ObjectResult<RPT_INVOICE_GENERATE_Result> RPT_INVOICE_GENERATE()
         {
@@ -319,17 +322,13 @@ namespace DataAccessLayer
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PROC_FILE_GSTR_1_4A_Result>("PROC_FILE_GSTR_1_4A", sELLERUSERIDParameter, mONTHParameter);
         }
     
-        public virtual ObjectResult<PROC_FILE_GSTR_1_4A_test_Result> PROC_FILE_GSTR_1_4A_test(string sELLERUSERID, string month)
+        public virtual ObjectResult<PROC_FILE_GSTR_1_4A_test_Result> PROC_FILE_GSTR_1_4A_test(string sELLERUSERID)
         {
             var sELLERUSERIDParameter = sELLERUSERID != null ?
                 new ObjectParameter("SELLERUSERID", sELLERUSERID) :
                 new ObjectParameter("SELLERUSERID", typeof(string));
     
-            var monthParameter = month != null ?
-                new ObjectParameter("Month", month) :
-                new ObjectParameter("Month", typeof(string));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PROC_FILE_GSTR_1_4A_test_Result>("PROC_FILE_GSTR_1_4A_test", sELLERUSERIDParameter, monthParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PROC_FILE_GSTR_1_4A_test_Result>("PROC_FILE_GSTR_1_4A_test", sELLERUSERIDParameter);
         }
     
         public virtual ObjectResult<PROC_FILE_GSTR_1_4B_Result> PROC_FILE_GSTR_1_4B(string sellerUserID, Nullable<int> mONTH)

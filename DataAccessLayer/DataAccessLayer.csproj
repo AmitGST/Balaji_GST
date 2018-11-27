@@ -123,6 +123,9 @@
     <Compile Include="GST_MST_GROUP.cs">
       <DependentUpon>GSTModelContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="GST_MST_HEADER.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="GST_MST_ITEM.cs">
       <DependentUpon>GSTModelContext.tt</DependentUpon>
     </Compile>
@@ -162,6 +165,9 @@
     <Compile Include="GST_MST_SALE_REGISTER.cs">
       <DependentUpon>GSTModelContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="GST_MST_SECTION.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="GST_MST_STATE.cs">
       <DependentUpon>GSTModelContext.tt</DependentUpon>
     </Compile>
@@ -169,6 +175,9 @@
       <DependentUpon>GSTModelContext.tt</DependentUpon>
     </Compile>
     <Compile Include="GST_MST_SUBGROUP.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GST_MST_SUBSECTION.cs">
       <DependentUpon>GSTModelContext.tt</DependentUpon>
     </Compile>
     <Compile Include="GST_MST_USER_BUSINESSTYPE.cs">

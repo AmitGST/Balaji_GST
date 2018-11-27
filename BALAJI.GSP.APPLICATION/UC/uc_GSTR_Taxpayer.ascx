@@ -40,7 +40,7 @@
         <label class="control-label">Month: </label>
     </div>
     <div class="col-md-2">
-        <uc1:uc_invoiceMonth runat="server" ID="uc_invoiceMonth" />
+        <uc1:uc_invoiceMonth Visible="false" runat="server" ID="uc_invoiceMonth" />
     </div>
 </div>
 

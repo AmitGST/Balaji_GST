@@ -25,6 +25,5 @@ E:\AA\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Debug\EntityFramework.dll
 E:\AA\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
 E:\AA\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Debug\EntityFramework.xml
 E:\AA\BALAJI.GSP.APPLICATION\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
-E:\AA\BALAJI.GSP.APPLICATION\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
 E:\AA\BALAJI.GSP.APPLICATION\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 E:\AA\BALAJI.GSP.APPLICATION\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

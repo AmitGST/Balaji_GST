@@ -60,7 +60,8 @@ namespace BusinessLogic.Repositories
         private Repository<GST_MST_MESSAGELOG> messagelogrepository;
         private Repository<GST_MST_EXCEPTIONLOG> exceptionlogrepository;
         private Repository<GST_TRN_RETURN_STATUS> returnstatusrepository;
-
+        private Repository<GST_MST_HEADER> Headerrepository;
+        private Repository<GST_MST_SECTION> Sectionrepository;
 
 
 
@@ -76,6 +77,30 @@ namespace BusinessLogic.Repositories
                 return offlineAudittrailRepository;
             }
         }
+        public Repository<GST_MST_HEADER> headerrepository
+        {
+            get
+            {
+                if (this.Headerrepository == null)
+                {
+                    this.Headerrepository = new Repository<GST_MST_HEADER>(context);
+                }
+                return Headerrepository;
+            }
+        }
+        public Repository<GST_MST_SECTION> sectionrepository
+        {
+            get
+            {
+                if (this.Sectionrepository == null)
+                {
+                    this.Sectionrepository = new Repository<GST_MST_SECTION>(context);
+                }
+                return Sectionrepository;
+            }
+        }
+
+
 
         public Repository<GST_TRN_RETURN_STATUS> ReturnStatusRepository
         {

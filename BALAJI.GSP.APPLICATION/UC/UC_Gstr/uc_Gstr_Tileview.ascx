@@ -8,7 +8,9 @@
         <div class="col-md-4 no-padding" style="padding: 5px !important;">
             <div class="small-box bg-red">
                 <div class="box-header with-border">
-                        <h5 style="color: white;"><%#((GST.Utility.EnumConstants.Return)Convert.ToInt32(Eval("ReturnStatus").ToString())).ToDescription()%> </h5>
+                        <h5 style="color: white;"><%#Eval("ReturnStatus") %></h5>
+                  <%--  <%#((GST.Utility.EnumConstants.Return)Convert.ToInt32(Eval("ReturnStatus").ToString())).ToDescription()%> --%>
+                    
                     </div>
                 <div class="inner">
                     <div class="icon" style="padding-top:68px !important; font-size:45px !important;"> 
@@ -17,7 +19,7 @@
                         <div id="afterFile" runat="server">
                              <div class="row">
                             <div class="col-md-4">
-                            Status:   <%#((GST.Utility.EnumConstants.ReturnFileStatus)Convert.ToInt32(Eval("Status").ToString())).ToDescription() %>
+                          <%--  Status:   <%#((GST.Utility.EnumConstants.ReturnFileStatus)Convert.ToInt32(Eval("Status").ToString())).ToDescription() %>--%>
                         <%--<%#DataBinder.Eval(Container.DataItem,"GST_TRN_INVOICE_AUDIT_TRAIL.AuditTrailStatus")%></p>--%>
                                     <%-- <%# Eval("AuditrailStatus")%>--%>
                                    

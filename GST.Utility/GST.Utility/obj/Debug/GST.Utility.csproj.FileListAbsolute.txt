@@ -29,6 +29,6 @@ E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\Newtonsoft.Json.d
 E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\DataAccessLayer.pdb
 E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\EntityFramework.xml
 E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\bin\Debug\EntityFramework.SqlServer.xml
+E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Debug\GST.Utility.csprojResolveAssemblyReference.cache
 E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Debug\GST.Utility.dll
 E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Debug\GST.Utility.pdb
-E:\AA\BALAJI.GSP.APPLICATION\GST.Utility\GST.Utility\obj\Debug\GST.Utility.csprojResolveAssemblyReference.cache

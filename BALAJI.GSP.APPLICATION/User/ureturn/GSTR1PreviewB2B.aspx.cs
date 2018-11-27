@@ -40,16 +40,35 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn
             if (!IsPostBack)
             {
                 var loggedInUser = Common.LoggedInUserID();
-                BindAllList(loggedInUser, DateTime.Now.Month - 1);
+
+
+
+                
                 //BindAllList(MonthName);
                 //BindAllList((DateTime.Now.Month - 1));
                 var ddlenable = uc_GSTNUsers.ddlGSTNUsers.Enabled = false;
+
+                if (Session["Month"] != null)
+                {
+
+                    var MonthName = Session["Month"].ToString();
+                    var taxi = Session["taxid"].ToString();
+                    BindAllList(taxi, Convert.ToInt32(MonthName));
+                }
             }
             //amits
-            uc_GSTR_Taxpayer.AddMoreClick += uc_GSTR_Taxpayer_AddMoreClick;
+            //uc_GSTR_Taxpayer.AddMoreClick += uc_GSTR_Taxpayer_AddMoreClick;
             uc_GSTNUsers.addInvoiceRedirect += uc_GSTNUsers_addInvoiceRedirect;
             uc_GSTNUsers.addInvoicechkRedirect += uc_GSTNUsers_addInvoicechkRedirect;
-           
+            uc_invoiceMonth.SelectedIndexChange += uc_InvoiceMonth_SelectedIndexChanged;
+        }
+
+        private void uc_InvoiceMonth_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var loggedinUser = Common.LoggedInUserID();
+           // this.MonthName = Convert.ToInt32(uc_invoiceMonth.GetValue);
+            var Month = Session["Month"].ToString();
+            this.MonthName = Month.SingleOrDefault();
 
         }
 
@@ -90,8 +109,10 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn
         //tax consultant by amit
         private void uc_GSTNUsers_addInvoiceRedirect(object sender, EventArgs e)
         {
-            int Month = Convert.ToInt16(uc_GSTR_Taxpayer.SelectedMonth);
-            var SellerUserId = uc_GSTNUsers.GetSellerProfile;
+            var taxid = Session["taxid"].ToString();
+            var Month = Session["Month"].ToString();
+           // int Month = Convert.ToInt16(uc_GSTR_Taxpayer.SelectedMonth);
+            //var SellerUserId = uc_GSTNUsers.GetSellerProfile;
             // for turnover start
             int Monthpageload = Convert.ToByte(DateTime.Now.Month - 1);
             int ddlselected = uc_GSTNUsers.ddlGSTNUsers.SelectedIndex;
@@ -109,7 +130,7 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn
             if (ddlselected > 0)
             {
                 // lblTurnoverAMT.Text = unitOfWork.InvoiceDataRepository.Filter(f => f.GST_TRN_INVOICE.InvoiceMonth == Month && f.GST_TRN_INVOICE.InvoiceUserID == loggedinUser).Sum(s => s.TaxableAmount).ToString();
-                mpLabel.Text = unitOfWork.InvoiceDataRepository.Filter(f => f.GST_TRN_INVOICE.InvoiceMonth == Month && f.GST_TRN_INVOICE.InvoiceUserID == SellerUserId).Sum(s => s.TaxableAmount).ToString();
+                mpLabel.Text = unitOfWork.InvoiceDataRepository.Filter(f => f.GST_TRN_INVOICE.InvoiceMonth ==Convert.ToInt32(Month) && f.GST_TRN_INVOICE.InvoiceUserID == taxid).Sum(s => s.TaxableAmount).ToString();
             }
             else
             {
@@ -117,19 +138,19 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn
                 //lblTurnoverAMT.Text = unitOfWork.InvoiceDataRepository.Filter(f => f.GST_TRN_INVOICE.InvoiceMonth == Month && userLists.Contains(f.GST_TRN_INVOICE.InvoiceUserID)).Sum(s => s.TaxableAmount).ToString();
             }
             //End
-            BindAllList(SellerUserId, Month);
+            BindAllList(taxid, Convert.ToInt32(Month));
         }
 
 
 
-        public void uc_GSTR_Taxpayer_AddMoreClick(object sender, EventArgs e)
-        {
+        //public void uc_GSTR_Taxpayer_AddMoreClick(object sender, EventArgs e)
+        //{
 
-            int mName = Convert.ToInt16(uc_GSTR_Taxpayer.MonthName);
-            var SellerUserId = uc_GSTNUsers.GetSellerProfile;
-            BindAllList(SellerUserId, mName);
+        //    int mName = Convert.ToInt16(uc_GSTR_Taxpayer.MonthName);
+        //    var SellerUserId = uc_GSTNUsers.GetSellerProfile;
+        //    BindAllList(SellerUserId, mName);
 
-        }
+        //}
 
 
         public void BindListView<T>(ListView lvControl, List<T> collectionItem)
@@ -595,6 +616,9 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn
         //end
 
         GST_TRN_INVOICE_AUDIT_TRAIL audittrail = new GST_TRN_INVOICE_AUDIT_TRAIL();
+        
+        
+        //filegstr1 button click code commented by amit 
         protected void lkbFileGSTR1_Click(object sender, EventArgs e)
         {
             try
@@ -770,6 +794,8 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn
                 cls_ErrorLog.LogError(ex, Common.LoggedInUserID());
             }
         }
+        
+        
         public void SendHTMLMail(string invoiceString, string sellerEmail)
         {
             try
