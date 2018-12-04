@@ -91,7 +91,7 @@ namespace BALAJI.GSP.APPLICATION.Account
                 _roleManager = value;
             }
         }
-
+        //amit--
         protected string SuccessMessage
         {
             get;
