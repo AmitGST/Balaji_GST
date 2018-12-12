@@ -15,10 +15,9 @@ namespace DataAccessLayer
     public partial class GST_MST_SUBSECTION
     {
         public int ID { get; set; }
-        public Nullable<int> CodeID { get; set; }
-        public Nullable<int> HeaderID { get; set; }
         public Nullable<int> SectionID { get; set; }
-        public string CodeName { get; set; }
+        public Nullable<int> SubSectionID { get; set; }
+        public string SubSectionName { get; set; }
         public Nullable<bool> Status { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<System.DateTime> UpdatedDate { get; set; }
@@ -26,6 +25,5 @@ namespace DataAccessLayer
         public string UpdatedBy { get; set; }
     
         public virtual GST_MST_SECTION GST_MST_SECTION { get; set; }
-        public virtual GST_MST_HEADER GST_MST_HEADER { get; set; }
     }
 }

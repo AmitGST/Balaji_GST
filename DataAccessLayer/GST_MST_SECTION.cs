@@ -20,7 +20,7 @@ namespace DataAccessLayer
         }
     
         public int SectionID { get; set; }
-        public Nullable<int> HeaderCodeID { get; set; }
+        public Nullable<byte> HeaderCodeID { get; set; }
         public string SectionCode { get; set; }
         public string SectionName { get; set; }
         public Nullable<bool> Status { get; set; }
@@ -29,7 +29,7 @@ namespace DataAccessLayer
         public string CreatedBy { get; set; }
         public string UpdatedBy { get; set; }
     
-        public virtual ICollection<GST_MST_SUBSECTION> GST_MST_SUBSECTION { get; set; }
         public virtual GST_MST_HEADER GST_MST_HEADER { get; set; }
+        public virtual ICollection<GST_MST_SUBSECTION> GST_MST_SUBSECTION { get; set; }
     }
 }

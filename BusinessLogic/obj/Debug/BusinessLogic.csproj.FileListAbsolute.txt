@@ -1,117 +1,30 @@
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\BusinessLogic.dll.config
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\BusinessLogic.XML
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\BusinessLogic.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\BusinessLogic.pdb
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\DataAccessLayer.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\EntityFramework.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\ExcelDataReader.DataSet.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\ExcelDataReader.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\ExceptionHandling.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\GST.Utility.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\GSTN.API.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\Newtonsoft.Json.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\BouncyCastle.Crypto.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\Microsoft.Owin.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\Owin.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\GST.Utility.pdb
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\GSTN.API.pdb
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\DataAccessLayer.pdb
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\EntityFramework.xml
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\ExcelDataReader.xml
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\ExcelDataReader.DataSet.xml
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\Microsoft.Owin.xml
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\obj\Debug\BusinessLogic.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\BusinessLogic\obj\Debug\BusinessLogic.pdb
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\BusinessLogic.dll.config
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\BusinessLogic.XML
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\BusinessLogic.dll
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\BusinessLogic.pdb
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\DataAccessLayer.dll
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\EntityFramework.dll
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\ExcelDataReader.DataSet.dll
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\ExcelDataReader.dll
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\ExceptionHandling.dll
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\GST.Utility.dll
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\GSTN.API.dll
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\GSTN.API.Library.dll
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\Newtonsoft.Json.dll
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\BouncyCastle.Crypto.dll
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\Microsoft.Owin.dll
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\System.Net.Http.Formatting.dll
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\Owin.dll
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\GSTN.API.pdb
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\DataAccessLayer.pdb
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\EntityFramework.xml
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\ExcelDataReader.xml
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\ExcelDataReader.DataSet.xml
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\GST.Utility.pdb
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\GSTN.API.Library.pdb
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\System.Net.Http.Formatting.xml
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\obj\Debug\BusinessLogic.dll
-D:\BALAJI.GSP.APPLICATION\BusinessLogic\obj\Debug\BusinessLogic.pdb
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\BusinessLogic.dll.config
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\BusinessLogic.XML
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\BusinessLogic.dll
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\BusinessLogic.pdb
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\DataAccessLayer.dll
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\EntityFramework.dll
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\ExcelDataReader.DataSet.dll
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\ExcelDataReader.dll
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\ExceptionHandling.dll
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\GST.Utility.dll
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\GSTN.API.dll
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\GSTN.API.Library.dll
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\Newtonsoft.Json.dll
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\BouncyCastle.Crypto.dll
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\Microsoft.Owin.dll
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\System.Net.Http.Formatting.dll
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\Owin.dll
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\GSTN.API.pdb
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\DataAccessLayer.pdb
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\EntityFramework.xml
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\ExcelDataReader.xml
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\ExcelDataReader.DataSet.xml
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\GST.Utility.pdb
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\GSTN.API.Library.pdb
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\bin\Debug\System.Net.Http.Formatting.xml
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\obj\Debug\BusinessLogic.dll
-E:\AA\BALAJI.GSP.APPLICATION\BusinessLogic\obj\Debug\BusinessLogic.pdb
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\BusinessLogic.dll.config
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\BusinessLogic.XML
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\BusinessLogic.dll
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\BusinessLogic.pdb
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\DataAccessLayer.dll
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\EntityFramework.dll
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\ExcelDataReader.DataSet.dll
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\ExcelDataReader.dll
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\ExceptionHandling.dll
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\GST.Utility.dll
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\GSTN.API.dll
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\GSTN.API.Library.dll
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\Newtonsoft.Json.dll
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\BouncyCastle.Crypto.dll
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\Microsoft.Owin.dll
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\System.Net.Http.Formatting.dll
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\Owin.dll
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\GSTN.API.pdb
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\DataAccessLayer.pdb
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\EntityFramework.xml
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\ExcelDataReader.xml
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\ExcelDataReader.DataSet.xml
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\GST.Utility.pdb
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\GSTN.API.Library.pdb
-D:\GSTGit\GSTApp\BusinessLogic\bin\Debug\System.Net.Http.Formatting.xml
-D:\GSTGit\GSTApp\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
-D:\GSTGit\GSTApp\BusinessLogic\obj\Debug\BusinessLogic.dll
-D:\GSTGit\GSTApp\BusinessLogic\obj\Debug\BusinessLogic.pdb
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\BusinessLogic.dll.config
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\BusinessLogic.XML
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\BusinessLogic.dll
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\BusinessLogic.pdb
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\DataAccessLayer.dll
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\EntityFramework.dll
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\ExcelDataReader.DataSet.dll
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\ExcelDataReader.dll
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\ExceptionHandling.dll
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\GST.Utility.dll
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\GSTN.API.dll
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\GSTN.API.Library.dll
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\Newtonsoft.Json.dll
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\BouncyCastle.Crypto.dll
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\Microsoft.Owin.dll
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\System.Net.Http.Formatting.dll
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\Owin.dll
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\GSTN.API.pdb
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\DataAccessLayer.pdb
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\EntityFramework.xml
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\ExcelDataReader.xml
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\ExcelDataReader.DataSet.xml
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\GST.Utility.pdb
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\GSTN.API.Library.pdb
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\bin\Debug\System.Net.Http.Formatting.xml
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\obj\Debug\BusinessLogic.dll
+F:\GSTPROJECTDec2018\GSTApp\BusinessLogic\obj\Debug\BusinessLogic.pdb

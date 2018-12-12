@@ -32,7 +32,7 @@ namespace DataAccessLayer
         public Nullable<System.DateTime> UpdatedDate { get; set; }
         public string UserID { get; set; }
     
-        public virtual ICollection<GST_TRN_OFFLINE> GST_TRN_OFFLINE { get; set; }
         public virtual AspNetUser AspNetUser { get; set; }
+        public virtual ICollection<GST_TRN_OFFLINE> GST_TRN_OFFLINE { get; set; }
     }
 }

@@ -64,10 +64,10 @@ namespace DataAccessLayer
         public Nullable<System.DateTime> UpdatedDate { get; set; }
         public string UpdatedBy { get; set; }
     
+        public virtual AspNetUser AspNetUser { get; set; }
         public virtual GST_MST_STATE GST_MST_STATE { get; set; }
         public virtual GST_TRN_OFFLINE GST_TRN_OFFLINE { get; set; }
         public virtual ICollection<GST_TRN_OFFLINE_INVOICE_DATAITEM> GST_TRN_OFFLINE_INVOICE_DATAITEM { get; set; }
         public virtual GST_TRN_OFFLINE_ISSUINGNOTE_REASON GST_TRN_OFFLINE_ISSUINGNOTE_REASON { get; set; }
-        public virtual AspNetUser AspNetUser { get; set; }
     }
 }

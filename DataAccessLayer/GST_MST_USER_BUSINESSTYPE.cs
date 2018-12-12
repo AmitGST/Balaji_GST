@@ -22,7 +22,7 @@ namespace DataAccessLayer
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<System.DateTime> UpdatedDate { get; set; }
     
-        public virtual GST_MST_BUSINESSTYPE GST_MST_BUSINESSTYPE { get; set; }
         public virtual AspNetUser AspNetUser { get; set; }
+        public virtual GST_MST_BUSINESSTYPE GST_MST_BUSINESSTYPE { get; set; }
     }
 }

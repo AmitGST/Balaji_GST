@@ -37,3 +37,12 @@ D:\GSTGit\GSTApp\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
 D:\GSTGit\GSTApp\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
 D:\GSTGit\GSTApp\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 D:\GSTGit\GSTApp\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+F:\GSTPROJECTDec2018\GSTApp\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+F:\GSTPROJECTDec2018\GSTApp\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+F:\GSTPROJECTDec2018\GSTApp\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+F:\GSTPROJECTDec2018\GSTApp\DataAccessLayer\bin\Debug\EntityFramework.dll
+F:\GSTPROJECTDec2018\GSTApp\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+F:\GSTPROJECTDec2018\GSTApp\DataAccessLayer\bin\Debug\EntityFramework.xml
+F:\GSTPROJECTDec2018\GSTApp\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+F:\GSTPROJECTDec2018\GSTApp\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+F:\GSTPROJECTDec2018\GSTApp\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

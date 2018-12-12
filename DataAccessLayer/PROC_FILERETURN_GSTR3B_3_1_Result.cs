@@ -13,11 +13,17 @@ namespace DataAccessLayer
     
     public partial class PROC_FILERETURN_GSTR3B_3_1_Result
     {
-        public Nullable<decimal> TotalTaxableValue { get; set; }
-        public Nullable<decimal> IntegratedTax { get; set; }
-        public Nullable<decimal> CentralTax { get; set; }
-        public Nullable<decimal> StateTax { get; set; }
-        public Nullable<decimal> CESS { get; set; }
-        public string Description { get; set; }
+        public string SUBSECTIONNAME { get; set; }
+        public Nullable<int> INVOICECOUNT { get; set; }
+        public string InvoiceUserID { get; set; }
+        public Nullable<byte> INVOICEMONTH { get; set; }
+        public Nullable<int> FinYear_ID { get; set; }
+        public Nullable<bool> STATUS { get; set; }
+        public Nullable<decimal> TOTALTAXABLEVALUE { get; set; }
+        public Nullable<decimal> IGSTAMT { get; set; }
+        public Nullable<decimal> CGSTAMT { get; set; }
+        public Nullable<decimal> SGSTAMT { get; set; }
+        public Nullable<decimal> UGSTAMT { get; set; }
+        public Nullable<decimal> CESSAMT { get; set; }
     }
 }

@@ -38,11 +38,11 @@ namespace DataAccessLayer
         public string UpdatedBy { get; set; }
         public Nullable<System.DateTime> UpdatedDate { get; set; }
     
+        public virtual AspNetUser AspNetUser { get; set; }
         public virtual GST_MST_STATE GST_MST_STATE { get; set; }
         public virtual ICollection<GST_MST_VENDOR_SERVICE> GST_MST_VENDOR_SERVICE { get; set; }
         public virtual ICollection<GST_MST_VENDOR_TRANS_SHIPMENT> GST_MST_VENDOR_TRANS_SHIPMENT { get; set; }
         public virtual ICollection<GST_TRN_INVOICE> GST_TRN_INVOICE { get; set; }
         public virtual ICollection<GST_TRN_VENDOR_SERVICE> GST_TRN_VENDOR_SERVICE { get; set; }
-        public virtual AspNetUser AspNetUser { get; set; }
     }
 }

@@ -1,0 +1,1544 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BusinessLogic</name>
+    </assembly>
+    <members>
+        <member name="T:com.B2B.GST.GSTInvoices.AmendedCreditNotesInvoice">
+            <summary>
+            CDNA invoice data
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTInvoices.IInvoice">
+            <summary>
+            Create Invoice and CreateLine enteries are the func of Seller class
+            All the stubs represent the funcitonality fo the Interface Invoice
+            Methods stubs r comman to all types of Invoices
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTInvoices.AmendedDebitNotesInvoice">
+            <summary>
+             CDNA , 
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTInvoices.AmendedB2BExportInvoice">
+            <summary>
+             EXPA invoice data
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTInvoices.AmendedB2BInvoice">
+            <summary>
+            B2BA invoice data
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTInvoices.AdvanceRecieptInvoice">
+            <summary>
+            ATA, invoice data
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTInvoices.AmendedB2CInvoice">
+            <summary>
+            B2CSA, invoice data
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTInvoices.AmendedB2CLargeInvoice">
+            <summary>
+            B2CLA Invoice Data in the Save GSTR-1 file 
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTInvoices.CreditNotesInvoice">
+            <summary>
+             CDN Invoice data , applied on B2b or b2c
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTInvoices.B2BDebitNotesInvoice">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTInvoices.B2BExportInvoice">
+            <summary>
+             EXP invoice data
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTInvoices.B2BTaxLiability_AdvTaxLiabilityPaymentInvoice">
+            <summary>
+            Advance payment of tax liability in B2B transactions.
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTInvoices.B2CLargeInvoice">
+            <summary>
+            B2CL invoice data 
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTInvoices.B2CSmallInvoice">
+            <summary>
+             How to determine an invoice is small or large.
+             2.5 lacs above it is large 
+            </summary>
+        </member>
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.CheckCredentials(System.String,System.String)">
+            <summary>
+            To get the seller information , beta--> from GSTIN rest 
+            Purpose is only for testing, till the time we have the complete data types for DB design
+            TO DO
+            Comment this code.
+            </summary>
+            <param name="gstinNumber"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:com.B2B.GST.ExcelFunctionality.ExcelDB.CheckCredentials(System.Data.DataSet,System.String,System.String)" -->
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.ReadExcelFile(System.String)">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.GetConnectionString(System.String)">
+            <summary>
+            List of Path for various excel files
+            </summary>
+            <returns></returns>
+            
+        </member>
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.GetSellerDetails(System.String)">
+            <summary>
+            To get the seller information , beta--> from GSTIN rest 
+            Purpose is only for testing, till the time we have the complete data types for DB design
+            TO DO
+            Comment this code.
+            </summary>
+            <param name="gstinNumber"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:com.B2B.GST.ExcelFunctionality.ExcelDB.GetSellerDataFrmExl(System.Data.DataSet,System.String,System.Collections.Generic.List{System.String})" -->
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.GetSellerPurchaseRegisterData(System.String)">
+            <summary>
+            Purchase Register data 
+            </summary>
+            <param name="gstinNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.GetSellerSaleRegisterData(System.String,System.String)">
+            <summary>
+             Getting entry of only that particular Product matching with HSN
+            </summary>
+            <param name="hsnNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.GetTotalCountOfGoodsSellerDeals(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="GSTINNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.GetRecieverDetails(System.String)">
+            <summary>
+            To get the seller information , beta--> from GSTIN rest 
+            Purpose is only for testing, till the time we have the complete data types for DB design
+            TO DO
+            Comment this code.
+            </summary>
+            <param name="gstinNumber"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:com.B2B.GST.ExcelFunctionality.ExcelDB.GetRecieverDataFrmExl(System.Data.DataSet,System.String,System.Collections.Generic.List{System.String})" -->
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.GetHSNDataFrmExl(System.String,System.Data.DataSet,System.Collections.Generic.List{System.String})">
+            <summary>
+             based hsn numnber
+            </summary>
+            <param name="hsnNumber"></param>
+            <param name="data"></param>
+            <param name="hsn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.GetHSNNotificationData(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="hsnNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.GetNotifiedHSNConditionsData(System.String)">
+            <summary>
+            TO DO 
+            </summary>
+            <param name="hsnNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.GetSACInformation(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="sacNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.GetSACDataFrmExl(System.String,System.Data.DataSet,System.Collections.Generic.List{System.String})">
+            <summary>
+            
+            </summary>
+            <param name="description"></param>
+            <param name="data"></param>
+            <param name="hsn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.GetSACNotificationData(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="hsnNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.GetNotifiedSACConditionsData(System.String)">
+            <summary>
+            TO DO 
+            </summary>
+            <param name="hsnNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.MatchExpression(System.String)">
+            <summary>
+            Methods declarea a regular expression to check whether or not 15 characters contains
+            alpha numeric characters or not.
+            </summary>
+            <param name="gstinUserName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.CheckGSTIN(System.String)">
+            <summary>
+            function checks for validity of the string at server side 
+            will need a implement in client side via scripting
+            </summary>
+            <param name="gstinNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.CheckGSTINRegisteredStatus(System.String)">
+            <summary>
+            Check whether the username is registerd in GSTIN excel , login page
+            Ignore the case of UserName /GSTIN number
+            </summary>
+            <param name="data"></param>
+            <param name="gstinNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.UpdateLogin(System.String)">
+            <summary>
+            This method gets called in two scenarios
+            when authentication is succesful , then for that particular gstinNumber (username) ,IsLoggedIn is set to 1
+            when 
+            </summary>
+            <param name="gstinNumber"></param>
+            <param name="isLoggedStatus"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.populateInvoiceddl(System.String)">
+            <summary>
+            For all Invoice of Seller
+            </summary>
+            <param name="SellerGSTIN"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.ValidateStructureGSTIN(System.String)">
+            <summary>
+             Private Method:Extracting data from GSTIN string as provided by the seller
+            </summary>
+            <param name="gstinNumber"></param>
+            <returns>Object of SerialNoOfInvoice </returns>
+        </member>
+        <member name="M:com.B2B.GST.ExcelFunctionality.ExcelDB.IsHSNPresentInTheMaster(System.String)">
+            <summary>
+            Checks whether the HSN is present or not in the master
+            </summary>
+            <param name="hsnNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.B2B.GST.GSTIN.Seller">
+            <summary>
+            Seller stand for outward supply
+            When authentication is success , seller object get populated either thru JSON/Local search
+            </summary>
+        </member>
+        <member name="M:com.B2B.GST.GSTIN.Seller.GenerateSerailNoOfInvoice(System.String)">
+            <summary>
+             Exposed Method:Extracting data from GSTIN string as provided by the seller
+            </summary>
+            <param name="gstinNumber"></param>
+            <returns>Object of SerialNoOfInvoice </returns>
+        </member>
+        <member name="M:com.B2B.GST.GSTIN.Seller.ExtractInfoFrmGSTINStr(System.String)">
+            <summary>
+             Private Method:Extracting data from GSTIN string as provided by the seller
+            </summary>
+            <param name="gstinNumber"></param>
+            <returns>Object of SerialNoOfInvoice </returns>
+        </member>
+        <member name="M:com.B2B.GST.GSTIN.Seller.GenerateSellerInvoiceData(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="gstinNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.GSTIN.Seller.GetSellerPurchaseRegisterData(com.B2B.GST.GSTIN.Seller)">
+            <summary>
+            On page load , when seller is authenticated the details related to his purchase register is captured 
+            and populated in the Purchase Register obj of seller.This is usefull when GetGoodsOrServiceInfo txt change event is called
+            on hsn , input parameter is seller obj , return back the seller obj populated with purchase register of the seller 
+            </summary>
+            <param name="seller"></param>
+            <returns> Seller populated wiht purchase register</returns>
+        </member>
+        <member name="M:com.B2B.GST.GSTIN.Seller.GetSellerStockInventoryStatus(System.String,com.B2B.GST.GSTIN.Seller)">
+            <summary>
+            purpose of GetSellerStockInventoryStatus , checks whether 
+            </summary>
+            <param name="hsnNumber"></param>
+            <param name="gstinNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.GSTIN.Seller.GetSellerStockInventoryStatus(System.String,System.String)">
+            <summary>
+            getting particular information of hsn present in the purchase register as per the gstin number of the seller
+            </summary>
+            <param name="hsnNumber"></param>
+            <param name="gstinNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.GSTIN.Seller.UpdateSellerSaleRegisterData(com.B2B.GST.GSTIN.StockRegisterLineEntry)">
+            <summary>
+            
+            </summary>
+            <param name="stockLineEntry"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.GSTIN.Seller.GetTotalCountOfGoodsSellerDeals(System.String)">
+            <summary>
+            this shows as to how many count of HSN , a particular seller deals
+            </summary>
+            <param name="gstinNumber"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.GSTIN.Seller.GenerateRecieverInvoiceData(com.B2B.GST.GSTIN.Seller,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="seller"></param>
+            <param name="recieverGSTIN"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.GSTIN.Seller.GenerateConsigneeInvoiceData(com.B2B.GST.GSTIN.Seller,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="seller"></param>
+            <param name="consigneeGSTIN"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.GSTIN.Seller.CreateLineCollections(System.Collections.Generic.List{System.String},System.Collections.Generic.List{com.B2B.GST.GSTInvoices.LineEntry},System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="hsn"></param>
+            <param name="lineCollection"></param>
+            <returns></returns>
+            
+        </member>
+        <member name="M:com.B2B.GST.GSTIN.Seller.UpdateLineCollections(System.Collections.Generic.List{com.B2B.GST.GSTInvoices.LineEntry},System.Int32,System.String,System.Int32)">
+            <summary>
+            This method is overloaded wiht 3 and 5 parameters
+            This method takes into account when empty string is entered in the second attempt on the same line ID 
+            after a valid HSN/SAC is entered in the first attempt 
+            </summary>
+            <param name="lineCollection">Complete lineCollection with various lineID</param>
+            <param name="lineID">LineID wheere we need to updatee</param>
+            <param name="goodServiceCode"> string contains a HSN/SAC value or empty string</param>
+            <returns>Update LineCollection , so as data sancity is maintained</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:com.B2B.GST.GSTIN.Seller.UpdateLineCollections(System.Collections.Generic.List{com.B2B.GST.GSTInvoices.LineEntry},System.Int32,System.String,System.Collections.Generic.List{System.String},System.String)" -->
+        <member name="M:com.B2B.GST.GSTIN.Seller.GetLineIDOfInvoice(System.String)">
+            <summary>
+            Naming convention of each control , contains the numeric digit at the end , shows the row position only
+            Based  on this row position , we can do manupulation in the UI
+            
+            </summary>
+            <param name="lineID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:com.B2B.GST.GSTIN.Seller.CheckLineIDExist(System.Collections.Generic.List{com.B2B.GST.GSTInvoices.LineEntry},System.Int32)">
+            <summary>
+            from the above dfunciton, we recieve LineID of the line collection,
+            we will check whether the line ID exist in the line collection or not 
+            if it does not exist , then code flow goes normally for CreateLineCollecitons
+            otherwise it goes for UpdateLineCollection.
+            </summary>
+            <param name="lineCollections"></param>
+            <param name="chkLineIDVal"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.B2B.GST.GSTIN.Reciever">
+            <summary>
+            Reciever means billed to entity
+            </summary>
+        </member>
+        <member name="P:com.B2B.GST.GSTIN.Reciever.GSTIN">
+            <summary>
+            In the case of reciever , GSTIN/Unique ID , 
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTIN.Consignee">
+            <summary>
+            StateCode in here determines Intrastate or Interstate.
+            </summary>
+        </member>
+        <member name="P:com.B2B.GST.GSTIN.Consignee.GSTIN">
+            <summary>
+            In the case of reciever , GSTIN/Unique ID , for Govt/PSU/UN.
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTInvoices.HSNSummaryB2BInvoice">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:com.B2B.GST.LoginModule.UserLogin.GenerateNewPassworrd(System.String)">
+            <summary>
+            Applicable only for first time registration, associate the gstin number with 
+            the password entered 
+            gstin number is not case senstive --> stringComparison.OrdinalIgnoreCase 
+            
+            </summary>
+            <param name="gstinUserName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:com.B2B.GST.GSTInvoices.NilRatedInvoice">
+            <summary>
+            Nil rated/Exempemted/Non-GST to Govt/PSU/UN are considered B2C
+            </summary>
+        </member>
+        <member name="M:com.B2B.GST.GSTInvoices.NilRatedInvoice.GetNilRatedOutwardSupplies(System.DateTime,System.DateTime)">
+            <summary>
+            Get all the invoice in the specified date time range.
+            Do a scan on each invoice containing more than one line item on S.No basis
+            whether interstate/intrastate and B2B/B2C.
+            Display the result in PDF, if required 
+            </summary>
+            <param name="taxPeriodStDt"></param>
+            <param name="taxPeriodEdDt"></param>
+        </member>
+        <member name="T:com.B2B.GST.GSTInvoices.OutwardSuppliesThruECommPortal">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTIN.PurchaseLedger">
+            <summary>
+            This class basically maintains stock of HSN or SAC available with the seller
+            at the time of Invoice Creation
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTIN.StockRegisterLineEntry">
+            <summary>
+            This calls maintains the line entry 
+            </summary>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_CreditDebit_Note.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_CreditDebit_Note.SaveNote(DataAccessLayer.GST_TRN_CRDR_NOTE)">
+            <summary>
+            
+            </summary>
+            <param name="itemData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_CreditDebit_Note.DeleteNote(DataAccessLayer.GST_TRN_CRDR_NOTE)">
+            <summary>
+            
+            </summary>
+            <param name="itemData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_CreditDebit_Note.UpdateNote(DataAccessLayer.GST_TRN_CRDR_NOTE)">
+            <summary>
+            
+            </summary>
+            <param name="itemData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_CreditDebit_Note.SaveNote(DataAccessLayer.GST_TRN_INVOICE)">
+            <summary>
+            
+            </summary>
+            <param name="invoice"></param>
+            <param name="note"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_CreditDebit_Note.RefectorNote(DataAccessLayer.GST_TRN_INVOICE)">
+            <summary>
+            
+            </summary>
+            <param name="invoice"></param>
+            <param name="note"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_CreditDebit_Note.ItemData(DataAccessLayer.GST_TRN_INVOICE_DATA)">
+            <summary>
+            
+            </summary>
+            <param name="itemData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_CreditDebit_Note.GetCreditDebitNoteIssued(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_CreditDebit_Note.GetCreditDebitNoteReceived(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:BusinessLogic.Repositories.cls_CreditDebit_Note.GetCreditDebitNote(System.Int64)" -->
+        <member name="M:BusinessLogic.Repositories.cls_CreditDebit_Note.GetModifiedInvoice(System.String)">
+            <summary>
+            All invoices which is modified or Amendment in GSTR2A and immported in 1A  
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_CreditDebit_Note.MisMatchInvoice(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="invoiceID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_CreditDebit_Note.GetCreditDebitNoteData(System.String,System.Decimal)">
+            <summary>
+            For Get Data from GST_TRN_CRDR_NOTE_DATA table when click on edit button after v1.0
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetInvoiceData(System.Collections.Generic.List{System.Int64})">
+            <summary>
+            All Invoice Data
+            </summary>
+            <param name="invoiceDataIDs"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.MisMatchInvoice(System.String)">
+            <summary>
+              Reconsilation invoive with purchage register and give mismatch report
+            </summary>
+            <param name="userID"></param>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetConsolidatetdInvoices(System.String,System.Byte)">
+            <summary>
+            
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetConsolidatetdInvoices(System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userID"></param>
+            <param name="invoiceSplCondition"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.ViewInvoicesType(System.Collections.Generic.List{System.Nullable{System.Int64}})">
+            <summary>
+            
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.MatchedInvoices(System.Collections.Generic.List{System.Nullable{System.Int64}})">
+            <summary>
+            
+            </summary>
+            <param name="userID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.InvoiceColor(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="invoiceType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetInvoiveNoWithPreFix(System.String,GST.Utility.EnumConstants.InvoiceSpecialCondition)">
+            <summary>
+            
+            </summary>
+            <param name="invoiceNo"></param>
+            <param name="invoiceType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.InvoiceNoPreFix(GST.Utility.EnumConstants.InvoiceSpecialCondition)">
+            <summary>
+            
+            </summary>
+            <param name="invoiceType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetAllInvoice">
+            <summary>
+            Get All Invoices throught web api
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR1_FileReturn_4(System.String,System.Int32)">
+            <summary>
+            Get All GSTR1 Summary
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.BindFile_GSTR_4A(System.String,System.Int32)">
+            <summary>
+            Get All GSTR1 Summary
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_4B(System.String,System.Int32)">
+            <summary>
+            Get All GSTR1-4B data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_4C(System.String,System.Int32)">
+            <summary>
+            Get All GSTR1-4B data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_1_6A(System.String,System.Int32)">
+            <summary>
+            Get All GSTR1-6A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_1_6B(System.String,System.Int32)">
+            <summary>
+            Get All GSTR1-6A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_1_6C(System.String,System.Int32)">
+            <summary>
+            Get All GSTR1-6C data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_1_7A_1(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1-7A_1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_1_7A_2(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1-7A_1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_1_7B_1(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1-7A_1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_1_7B_2(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1-7A_1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_1_8A(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1-8A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_1_8B(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1-8B data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_1_8C(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1-8C data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_1_8D(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1-8D data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_1_9B(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1-8D data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_1_9C(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1-9C data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_1_10AA(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1-10A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_1_10BB(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1-10A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_1_11A1(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1-11A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_1_11A2(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1-11A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_1_11B1(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1-11A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR_1_11B2(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1-11A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR_1_12(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1-11A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR2_3(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2-1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR2_4A(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2-1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR2_4B(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2-1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR2_6A(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2-1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR2_6B(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2-1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR2_8A(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2-1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR2_8B(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2-1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR2_9A(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2-1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR2_9B(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2-1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR2_10A_1(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2-1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR2_10A_2(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2-1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR2_10B_1(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2-1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR2_10B_2(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2-1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR2_11_A(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2-1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR2_11_B(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2-1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR2_12(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2-1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetFile_GSTR2_13(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2-1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.BindFile_GSTR1hsnSummary(System.String,System.Int32)">
+            <summary>
+            Get All GSTR1 HSN Summary
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.BindFile_GSTR1_Summary(System.String,System.Int32)">
+            <summary>
+            Get All GSTR1 Summary
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR_2A_3(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2A-3 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR_2A_4(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2A-4 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR_2A_5(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2A-5 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR_2A_6C(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2A-6C data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR_2A_6I(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2A-6C data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR_2A_7A(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2A-7A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR_2A_7B(System.String,System.Int32)">
+            <summary>
+            Get  GSTR2A-7B data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR1A_3A(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1A-3A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR1A_3B(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1A-3B data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR1A_4A(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1A-4A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR1A_4B(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1A-4B data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR1A_5(System.String,System.Int32)">
+            <summary>
+            Get  GSTR1A-5 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_4_1_A(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_4_1A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_4_1_B(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_4_1_B data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_4_1_C(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_4_1_C data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_4_1_D(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_4_1_D data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GSTR3_4_2_A(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_4_2_A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_4_2_B(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_4_2_B data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_4_2_C(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_4_2_C data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_5A_1(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_5A_1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_5A_2(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_5A_2 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_5B_1(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_5B_1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_5B_2(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_5B_1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_6_1(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_6_1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_6_2(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_6_2 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_7(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_6_2 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_8A(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_8A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_8B(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_8B data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_8C(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_8B data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_8D(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_8D data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_9A(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_9A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_9B(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_9A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_10A(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_10A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_10B(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_10B data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_10C(System.String,System.Int32)">
+            <summary>
+            Get  GSTR3_10C data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_10D(System.String,System.Int32)">
+            <summary>
+            Get  GetGSTR3_10D data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_11(System.String,System.Int32)">
+            <summary>
+            Get GSTR3_10D data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_12A(System.String,System.Int32)">
+            <summary>
+            Get GSTR3_12A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_12B(System.String,System.Int32)">
+            <summary>
+            Get GSTR3_12B data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_12C(System.String,System.Int32)">
+            <summary>
+            Get GSTR3_12C data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_12D(System.String,System.Int32)">
+            <summary>
+            Get GSTR3_12D data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_13_1(System.String,System.Int32)">
+            <summary>
+            Get GSTR3_13_1 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_13_2(System.String,System.Int32)">
+            <summary>
+            Get GSTR3_13_2 data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_14A(System.String,System.Int32)">
+            <summary>
+            Get GSTR3_14A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_14B(System.String,System.Int32)">
+            <summary>
+            Get GSTR3_14B data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_14C(System.String,System.Int32)">
+            <summary>
+            Get GSTR3_14C data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_14D(System.String,System.Int32)">
+            <summary>
+            Get GSTR3_14D data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_15A(System.String,System.Int32)">
+            <summary>
+            Get GSTR3_15A data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_15B(System.String,System.Int32)">
+            <summary>
+            Get GSTR3_15B data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_15C(System.String,System.Int32)">
+            <summary>
+            Get GSTR3_15B data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Invoice.GetGSTR3_15D(System.String,System.Int32)">
+            <summary>
+            Get GSTR3_15D data
+            </summary>
+            <param name="userId"></param>
+            <param name="monthName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_ITC.GetITC">
+            <summary>
+            Get ALL ITC
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_ITC.SaveItcReceiver(DataAccessLayer.GST_TRN_INVOICE)">
+            <summary>
+            Receiver SIDE ITC ADD/UPDATE
+            </summary>
+            <param name="invoiceData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_ITC.SaveItc(DataAccessLayer.GST_TRN_INVOICE)">
+            <summary>
+            Seller SIDE ITC ADD/UPDATE
+            </summary>
+            <param name="invoiceData"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Masters.GetStateList">
+            <summary>
+            Get All StateList with state code
+            </summary>
+            <returns>State Code with State Name</returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Masters.GetItemList">
+            <summary>
+            Get All HSN/SAC list 
+            </summary>
+            <returns>Item Code with Description</returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Masters.GetVendorList">
+            <summary>
+            Get All Vendor list
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Masters.GetPurchaseRegister">
+            <summary>
+            Get Purchase Register data
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Message.GetMessage(GST.Utility.EnumConstants.Message,System.String,System.String)">
+            <summary>
+            Replace one text message in email template and other message format..
+            </summary>
+            <param name="messageType"></param>
+            <param name="replaceFrom"></param>
+            <param name="replaceTo"></param>
+            <returns>Replace message Text</returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_Message.GetMessage(GST.Utility.EnumConstants.Message,System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Replace multiple text message in email template and other message format..
+            </summary>
+            <param name="messageType"></param>
+            <param name="replaceItems"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_PurchaseRegister.GetPurchaseRegister(System.String)">
+            <summary>
+            Get one purchase register
+            </summary>
+            <param name="purchaseRegisterID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_PurchaseRegister.UpdateInvoiveDataFromPurchaseRegister(DataAccessLayer.GST_TRN_INVOICE)">
+            <summary>
+            Update Invoice Data line items from purchase regsiter items update qty and others--this will execute in seller 1A
+            </summary>
+            <param name="invoice"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.cls_PurchaseRegister.UpdatePurchaseDataItemFromInvoice(DataAccessLayer.GST_TRN_INVOICE)">
+            <summary>
+            Update purchase data items from invoice--check and update qty  --done--when ACCEPT Condition by receiver--in mismatch GSTR2
+            </summary>
+            <param name="invoice"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BusinessLogic.Repositories.IRepository`1.All">
+            <summary>
+            Gets all objects from database
+            </summary>
+        </member>
+        <member name="M:BusinessLogic.Repositories.IRepository`1.Filter(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Gets objects from database by filter.
+            </summary>
+            <param name="predicate">Specified a filter</param>
+        </member>
+        <member name="M:BusinessLogic.Repositories.IRepository`1.Filter``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32@,System.Int32,System.Int32)">
+            <summary>
+            Gets objects from database with filting and paging.
+            </summary>
+            <typeparam name="Key"></typeparam>
+            <param name="filter">Specified a filter</param>
+            <param name="total">Returns the total records count of the filter.</param>
+            <param name="index">Specified the page index.</param>
+            <param name="size">Specified the page size</param>
+        </member>
+        <member name="M:BusinessLogic.Repositories.IRepository`1.Contains(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Gets the object(s) is exists in database by specified filter.
+            </summary>
+            <param name="predicate">Specified the filter expression</param>
+        </member>
+        <member name="M:BusinessLogic.Repositories.IRepository`1.Find(System.Object[])">
+            <summary>
+            Find object by keys.
+            </summary>
+            <param name="keys">Specified the search keys.</param>
+        </member>
+        <member name="M:BusinessLogic.Repositories.IRepository`1.Find(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Find object by specified expression.
+            </summary>
+            <param name="predicate"></param>
+        </member>
+        <member name="M:BusinessLogic.Repositories.IRepository`1.Create(`0)">
+            <summary>
+            Create a new object to database.
+            </summary>
+            <param name="t">Specified a new object to create.</param>
+        </member>
+        <member name="M:BusinessLogic.Repositories.IRepository`1.Delete(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+            Delete objects from database by specified filter expression.
+            </summary>
+            <param name="predicate"></param>
+        </member>
+        <member name="M:BusinessLogic.Repositories.IRepository`1.Update(`0)">
+            <summary>
+            Update object changes and save to database.
+            </summary>
+            <param name="t">Specified the object to save.</param>
+        </member>
+        <member name="P:BusinessLogic.Repositories.IRepository`1.Count">
+            <summary>
+            Get the total objects count.
+            </summary>
+        </member>
+        <member name="M:BusinessLogic.Repositories.Repository`1.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BusinessLogic.Repositories.Repository`1.#ctor(DataAccessLayer.GST_DBEntities)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:BusinessLogic.Repositories.UnitOfWork">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTInvoices.SACSumamryB2BInvoice">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTInvoices.TaxPaidOnInvoicesIssuedInCurrentPeriod">
+            <summary>
+            Tax paid on the invoices issues , but stock movement has not taken place
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTIN.TransShipment">
+            <summary>
+            Transhipment is the major class that houses OwnershipType (enum),IntermediaryWareHouse(class) , rest all r simple attributes
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTIN.OwnershipType">
+            <summary>
+            enum type which is OwnershipType, it tells whether the transporter 
+            who is providing the commercial vehicle for transportation , the vehicle used is owned or hired
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTIN.IntermediaryWareHouse">
+            <summary>
+            This class houses another class called address , which shows from point of consingnor to consignee 
+            whether any warehouse facility is availed or not
+            </summary>
+        </member>
+        <member name="T:com.B2B.GST.GSTIN.Address">
+            <summary>
+            this class is used in the IntermediaryWareHouse
+            </summary>
+        </member>
+    </members>
+</doc>

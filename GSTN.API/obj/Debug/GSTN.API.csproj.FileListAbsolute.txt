@@ -1,57 +1,13 @@
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\GSTN.API.dll.config
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\GSTN.API.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\GSTN.API.pdb
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\BouncyCastle.Crypto.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\eSignASPLib.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\Microsoft.Owin.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\Newtonsoft.Json.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\Owin.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\Security.Cryptography.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\itextsharp.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\Microsoft.Owin.xml
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GSTN.API\obj\Debug\GSTN.API.My_Project.Resources.resources
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GSTN.API\obj\Debug\GSTN.API.csproj.GenerateResource.Cache
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GSTN.API\obj\Debug\GSTN.API.dll
-E:\GST Project\Gst updated Application Dec\GST_APPLICATION_PROJECT\BALAJI.GSP.APPLICATION\GSTN.API\obj\Debug\GSTN.API.pdb
-D:\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\GSTN.API.dll.config
-D:\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\GSTN.API.dll
-D:\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\GSTN.API.pdb
-D:\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\eSignASPLib.dll
-D:\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\Newtonsoft.Json.dll
-D:\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\Security.Cryptography.dll
-D:\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\System.Net.Http.Formatting.dll
-D:\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\itextsharp.dll
-D:\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\System.Net.Http.Formatting.xml
-D:\BALAJI.GSP.APPLICATION\GSTN.API\obj\Debug\GSTN.API.csprojResolveAssemblyReference.cache
-D:\BALAJI.GSP.APPLICATION\GSTN.API\obj\Debug\GSTN.API.My_Project.Resources.resources
-D:\BALAJI.GSP.APPLICATION\GSTN.API\obj\Debug\GSTN.API.csproj.GenerateResource.Cache
-D:\BALAJI.GSP.APPLICATION\GSTN.API\obj\Debug\GSTN.API.dll
-D:\BALAJI.GSP.APPLICATION\GSTN.API\obj\Debug\GSTN.API.pdb
-E:\AA\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\GSTN.API.dll.config
-E:\AA\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\GSTN.API.dll
-E:\AA\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\GSTN.API.pdb
-E:\AA\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\eSignASPLib.dll
-E:\AA\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\Newtonsoft.Json.dll
-E:\AA\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\Security.Cryptography.dll
-E:\AA\BALAJI.GSP.APPLICATION\GSTN.API\bin\Debug\itextsharp.dll
-E:\AA\BALAJI.GSP.APPLICATION\GSTN.API\obj\Debug\GSTN.API.csprojResolveAssemblyReference.cache
-E:\AA\BALAJI.GSP.APPLICATION\GSTN.API\obj\Debug\GSTN.API.My_Project.Resources.resources
-E:\AA\BALAJI.GSP.APPLICATION\GSTN.API\obj\Debug\GSTN.API.csproj.GenerateResource.Cache
-E:\AA\BALAJI.GSP.APPLICATION\GSTN.API\obj\Debug\GSTN.API.dll
-E:\AA\BALAJI.GSP.APPLICATION\GSTN.API\obj\Debug\GSTN.API.pdb
-<<<<<<< HEAD
-=======
-E:\AA\BALAJI.GSP.APPLICATION\GSTN.API\obj\Debug\GSTN.API.csprojResolveAssemblyReference.cache
-D:\GSTGit\GSTApp\GSTN.API\bin\Debug\GSTN.API.dll.config
-D:\GSTGit\GSTApp\GSTN.API\bin\Debug\GSTN.API.dll
-D:\GSTGit\GSTApp\GSTN.API\bin\Debug\GSTN.API.pdb
-D:\GSTGit\GSTApp\GSTN.API\bin\Debug\eSignASPLib.dll
-D:\GSTGit\GSTApp\GSTN.API\bin\Debug\Newtonsoft.Json.dll
-D:\GSTGit\GSTApp\GSTN.API\bin\Debug\Security.Cryptography.dll
-D:\GSTGit\GSTApp\GSTN.API\bin\Debug\itextsharp.dll
-D:\GSTGit\GSTApp\GSTN.API\obj\Debug\GSTN.API.csprojResolveAssemblyReference.cache
-D:\GSTGit\GSTApp\GSTN.API\obj\Debug\GSTN.API.My_Project.Resources.resources
-D:\GSTGit\GSTApp\GSTN.API\obj\Debug\GSTN.API.csproj.GenerateResource.Cache
-D:\GSTGit\GSTApp\GSTN.API\obj\Debug\GSTN.API.dll
-D:\GSTGit\GSTApp\GSTN.API\obj\Debug\GSTN.API.pdb
->>>>>>> 5d50b22192b952b6562ab94050563c2ade6fe666
+F:\GSTPROJECTDec2018\GSTApp\GSTN.API\bin\Debug\GSTN.API.dll.config
+F:\GSTPROJECTDec2018\GSTApp\GSTN.API\bin\Debug\GSTN.API.dll
+F:\GSTPROJECTDec2018\GSTApp\GSTN.API\bin\Debug\GSTN.API.pdb
+F:\GSTPROJECTDec2018\GSTApp\GSTN.API\bin\Debug\eSignASPLib.dll
+F:\GSTPROJECTDec2018\GSTApp\GSTN.API\bin\Debug\Newtonsoft.Json.dll
+F:\GSTPROJECTDec2018\GSTApp\GSTN.API\bin\Debug\Security.Cryptography.dll
+F:\GSTPROJECTDec2018\GSTApp\GSTN.API\bin\Debug\System.Net.Http.Formatting.dll
+F:\GSTPROJECTDec2018\GSTApp\GSTN.API\bin\Debug\itextsharp.dll
+F:\GSTPROJECTDec2018\GSTApp\GSTN.API\bin\Debug\System.Net.Http.Formatting.xml
+F:\GSTPROJECTDec2018\GSTApp\GSTN.API\obj\Debug\GSTN.API.My_Project.Resources.resources
+F:\GSTPROJECTDec2018\GSTApp\GSTN.API\obj\Debug\GSTN.API.csproj.GenerateResource.Cache
+F:\GSTPROJECTDec2018\GSTApp\GSTN.API\obj\Debug\GSTN.API.dll
+F:\GSTPROJECTDec2018\GSTApp\GSTN.API\obj\Debug\GSTN.API.pdb

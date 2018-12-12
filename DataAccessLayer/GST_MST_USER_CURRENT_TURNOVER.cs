@@ -27,7 +27,7 @@ namespace DataAccessLayer
         public Nullable<System.DateTime> UpdatedDate { get; set; }
         public string UpdatedBy { get; set; }
     
-        public virtual GST_TRN_INVOICE GST_TRN_INVOICE { get; set; }
         public virtual AspNetUser AspNetUser { get; set; }
+        public virtual GST_TRN_INVOICE GST_TRN_INVOICE { get; set; }
     }
 }

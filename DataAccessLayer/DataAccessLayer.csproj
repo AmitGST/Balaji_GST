@@ -87,6 +87,36 @@
     <Compile Include="C__MigrationHistory.cs">
       <DependentUpon>GSTModelContext.tt</DependentUpon>
     </Compile>
+    <Compile Include="EWB_MST_SUBSUPPLY_TYPE.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EWB_MST_VEHICLE_REASON.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EWB_TRN_CANCEL_EWBILL.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EWB_TRN_CONSOLIDATED_EWBILL.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EWB_TRN_EWBILL.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EWB_TRN_EWBILL_AUDITTRAIL.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EWB_TRN_EWBILL_ITEM.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EWB_TRN_REJECT_EWBILL.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EWB_TRN_REPONSE_EWBILL.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EWB_TRN_UPDATE_VEHICLE.cs">
+      <DependentUpon>GSTModelContext.tt</DependentUpon>
+    </Compile>
     <Compile Include="GSTModelContext.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

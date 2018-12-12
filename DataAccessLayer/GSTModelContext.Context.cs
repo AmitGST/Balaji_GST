@@ -37,6 +37,17 @@ namespace DataAccessLayer
         public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
         public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
         public virtual DbSet<AspNetUserRole> AspNetUserRoles { get; set; }
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
+        public virtual DbSet<EWB_MST_SUBSUPPLY_TYPE> EWB_MST_SUBSUPPLY_TYPE { get; set; }
+        public virtual DbSet<EWB_MST_VEHICLE_REASON> EWB_MST_VEHICLE_REASON { get; set; }
+        public virtual DbSet<EWB_TRN_CANCEL_EWBILL> EWB_TRN_CANCEL_EWBILL { get; set; }
+        public virtual DbSet<EWB_TRN_CONSOLIDATED_EWBILL> EWB_TRN_CONSOLIDATED_EWBILL { get; set; }
+        public virtual DbSet<EWB_TRN_EWBILL> EWB_TRN_EWBILL { get; set; }
+        public virtual DbSet<EWB_TRN_EWBILL_AUDITTRAIL> EWB_TRN_EWBILL_AUDITTRAIL { get; set; }
+        public virtual DbSet<EWB_TRN_EWBILL_ITEM> EWB_TRN_EWBILL_ITEM { get; set; }
+        public virtual DbSet<EWB_TRN_REJECT_EWBILL> EWB_TRN_REJECT_EWBILL { get; set; }
+        public virtual DbSet<EWB_TRN_REPONSE_EWBILL> EWB_TRN_REPONSE_EWBILL { get; set; }
+        public virtual DbSet<EWB_TRN_UPDATE_VEHICLE> EWB_TRN_UPDATE_VEHICLE { get; set; }
         public virtual DbSet<GST_API_LOG> GST_API_LOG { get; set; }
         public virtual DbSet<GST_MST_BUSINESSTYPE> GST_MST_BUSINESSTYPE { get; set; }
         public virtual DbSet<GST_MST_CLASS> GST_MST_CLASS { get; set; }
@@ -44,6 +55,7 @@ namespace DataAccessLayer
         public virtual DbSet<GST_MST_EXCEPTIONLOG> GST_MST_EXCEPTIONLOG { get; set; }
         public virtual DbSet<GST_MST_FINYEAR> GST_MST_FINYEAR { get; set; }
         public virtual DbSet<GST_MST_GROUP> GST_MST_GROUP { get; set; }
+        public virtual DbSet<GST_MST_HEADER> GST_MST_HEADER { get; set; }
         public virtual DbSet<GST_MST_ITEM> GST_MST_ITEM { get; set; }
         public virtual DbSet<GST_MST_ITEM_CONDITION> GST_MST_ITEM_CONDITION { get; set; }
         public virtual DbSet<GST_MST_ITEM_NOTIFIED> GST_MST_ITEM_NOTIFIED { get; set; }
@@ -57,9 +69,11 @@ namespace DataAccessLayer
         public virtual DbSet<GST_MST_REPORT> GST_MST_REPORT { get; set; }
         public virtual DbSet<GST_MST_REPORT_PERMISSION> GST_MST_REPORT_PERMISSION { get; set; }
         public virtual DbSet<GST_MST_SALE_REGISTER> GST_MST_SALE_REGISTER { get; set; }
+        public virtual DbSet<GST_MST_SECTION> GST_MST_SECTION { get; set; }
         public virtual DbSet<GST_MST_STATE> GST_MST_STATE { get; set; }
         public virtual DbSet<GST_MST_SUBCLASS> GST_MST_SUBCLASS { get; set; }
         public virtual DbSet<GST_MST_SUBGROUP> GST_MST_SUBGROUP { get; set; }
+        public virtual DbSet<GST_MST_SUBSECTION> GST_MST_SUBSECTION { get; set; }
         public virtual DbSet<GST_MST_USER_BUSINESSTYPE> GST_MST_USER_BUSINESSTYPE { get; set; }
         public virtual DbSet<GST_MST_USER_CURRENT_TURNOVER> GST_MST_USER_CURRENT_TURNOVER { get; set; }
         public virtual DbSet<GST_MST_USER_SIGNATORY> GST_MST_USER_SIGNATORY { get; set; }
@@ -84,13 +98,9 @@ namespace DataAccessLayer
         public virtual DbSet<GST_TRN_OFFLINE_INVOICE_RATE> GST_TRN_OFFLINE_INVOICE_RATE { get; set; }
         public virtual DbSet<GST_TRN_OFFLINE_INVOICE_SECTION_RULE> GST_TRN_OFFLINE_INVOICE_SECTION_RULE { get; set; }
         public virtual DbSet<GST_TRN_OFFLINE_ISSUINGNOTE_REASON> GST_TRN_OFFLINE_ISSUINGNOTE_REASON { get; set; }
+        public virtual DbSet<GST_TRN_RETURN_STATUS> GST_TRN_RETURN_STATUS { get; set; }
         public virtual DbSet<GST_TRN_VENDOR_SERVICE> GST_TRN_VENDOR_SERVICE { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<GST_TRN_RETURN_STATUS> GST_TRN_RETURN_STATUS { get; set; }
-        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
-        public virtual DbSet<GST_MST_SUBSECTION> GST_MST_SUBSECTION { get; set; }
-        public virtual DbSet<GST_MST_SECTION> GST_MST_SECTION { get; set; }
-        public virtual DbSet<GST_MST_HEADER> GST_MST_HEADER { get; set; }
     
         public virtual ObjectResult<RPT_INVOICE_GENERATE_Result> RPT_INVOICE_GENERATE()
         {
@@ -3464,7 +3474,7 @@ namespace DataAccessLayer
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PROC_FILERETURN_GSTR_1_HEADER_Result1>("PROC_FILERETURN_GSTR_1_HEADER", sELLERUSERIDParameter, mONTHParameter);
         }
     
-        public virtual ObjectResult<PROC_FILERETURN_GSTR3B_3_2_Result> PROC_FILERETURN_GSTR3B_3_2(string sELLERUSERID, Nullable<int> mONTH)
+        public virtual ObjectResult<PROC_FILERETURN_GSTR3B_3_2_Result> PROC_FILERETURN_GSTR3B_3_2(string sELLERUSERID, Nullable<int> mONTH, Nullable<byte> yEAR)
         {
             var sELLERUSERIDParameter = sELLERUSERID != null ?
                 new ObjectParameter("SELLERUSERID", sELLERUSERID) :
@@ -3474,10 +3484,14 @@ namespace DataAccessLayer
                 new ObjectParameter("MONTH", mONTH) :
                 new ObjectParameter("MONTH", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PROC_FILERETURN_GSTR3B_3_2_Result>("PROC_FILERETURN_GSTR3B_3_2", sELLERUSERIDParameter, mONTHParameter);
+            var yEARParameter = yEAR.HasValue ?
+                new ObjectParameter("YEAR", yEAR) :
+                new ObjectParameter("YEAR", typeof(byte));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PROC_FILERETURN_GSTR3B_3_2_Result>("PROC_FILERETURN_GSTR3B_3_2", sELLERUSERIDParameter, mONTHParameter, yEARParameter);
         }
     
-        public virtual ObjectResult<PROC_FILERETURN_GSTR3B_5_Result> PROC_FILERETURN_GSTR3B_5(string sELLERUSERID, Nullable<int> mONTH)
+        public virtual ObjectResult<PROC_FILERETURN_GSTR3B_5_Result> PROC_FILERETURN_GSTR3B_5(string sELLERUSERID, Nullable<int> mONTH, Nullable<byte> yEAR)
         {
             var sELLERUSERIDParameter = sELLERUSERID != null ?
                 new ObjectParameter("SELLERUSERID", sELLERUSERID) :
@@ -3487,10 +3501,14 @@ namespace DataAccessLayer
                 new ObjectParameter("MONTH", mONTH) :
                 new ObjectParameter("MONTH", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PROC_FILERETURN_GSTR3B_5_Result>("PROC_FILERETURN_GSTR3B_5", sELLERUSERIDParameter, mONTHParameter);
+            var yEARParameter = yEAR.HasValue ?
+                new ObjectParameter("YEAR", yEAR) :
+                new ObjectParameter("YEAR", typeof(byte));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PROC_FILERETURN_GSTR3B_5_Result>("PROC_FILERETURN_GSTR3B_5", sELLERUSERIDParameter, mONTHParameter, yEARParameter);
         }
     
-        public virtual ObjectResult<PROC_FILERETURN_GSTR3B_5_1_Result> PROC_FILERETURN_GSTR3B_5_1(string sELLERUSERID, Nullable<int> mONTH)
+        public virtual ObjectResult<PROC_FILERETURN_GSTR3B_5_1_Result> PROC_FILERETURN_GSTR3B_5_1(string sELLERUSERID, Nullable<int> mONTH, Nullable<byte> yEAR)
         {
             var sELLERUSERIDParameter = sELLERUSERID != null ?
                 new ObjectParameter("SELLERUSERID", sELLERUSERID) :
@@ -3500,10 +3518,14 @@ namespace DataAccessLayer
                 new ObjectParameter("MONTH", mONTH) :
                 new ObjectParameter("MONTH", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PROC_FILERETURN_GSTR3B_5_1_Result>("PROC_FILERETURN_GSTR3B_5_1", sELLERUSERIDParameter, mONTHParameter);
+            var yEARParameter = yEAR.HasValue ?
+                new ObjectParameter("YEAR", yEAR) :
+                new ObjectParameter("YEAR", typeof(byte));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PROC_FILERETURN_GSTR3B_5_1_Result>("PROC_FILERETURN_GSTR3B_5_1", sELLERUSERIDParameter, mONTHParameter, yEARParameter);
         }
     
-        public virtual ObjectResult<PROC_FILERETURN_GSTR3B_ITC_Result> PROC_FILERETURN_GSTR3B_ITC(string sELLERUSERID, Nullable<int> mONTH)
+        public virtual ObjectResult<PROC_FILERETURN_GSTR3B_ITC_Result> PROC_FILERETURN_GSTR3B_ITC(string sELLERUSERID, Nullable<int> mONTH, Nullable<byte> yEAR)
         {
             var sELLERUSERIDParameter = sELLERUSERID != null ?
                 new ObjectParameter("SELLERUSERID", sELLERUSERID) :
@@ -3513,20 +3535,11 @@ namespace DataAccessLayer
                 new ObjectParameter("MONTH", mONTH) :
                 new ObjectParameter("MONTH", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PROC_FILERETURN_GSTR3B_ITC_Result>("PROC_FILERETURN_GSTR3B_ITC", sELLERUSERIDParameter, mONTHParameter);
-        }
+            var yEARParameter = yEAR.HasValue ?
+                new ObjectParameter("YEAR", yEAR) :
+                new ObjectParameter("YEAR", typeof(byte));
     
-        public virtual ObjectResult<PROC_FILERETURN_GSTR3B_3_1_Result> PROC_FILERETURN_GSTR3B_3_1(string sELLERUSERID, Nullable<int> month)
-        {
-            var sELLERUSERIDParameter = sELLERUSERID != null ?
-                new ObjectParameter("SELLERUSERID", sELLERUSERID) :
-                new ObjectParameter("SELLERUSERID", typeof(string));
-    
-            var monthParameter = month.HasValue ?
-                new ObjectParameter("Month", month) :
-                new ObjectParameter("Month", typeof(int));
-    
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PROC_FILERETURN_GSTR3B_3_1_Result>("PROC_FILERETURN_GSTR3B_3_1", sELLERUSERIDParameter, monthParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PROC_FILERETURN_GSTR3B_ITC_Result>("PROC_FILERETURN_GSTR3B_ITC", sELLERUSERIDParameter, mONTHParameter, yEARParameter);
         }
     
         public virtual ObjectResult<PROC_FILERETURN_GSTR1_4A4B4C6B6C_B2B_Result> PROC_FILERETURN_GSTR1_4A4B4C6B6C_B2B(string sELLERUSERID, Nullable<int> mONTH)
@@ -3553,6 +3566,23 @@ namespace DataAccessLayer
                 new ObjectParameter("MONTH", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PROC_FILERETURN_GSTR1_5A5B_B2C_Result>("PROC_FILERETURN_GSTR1_5A5B_B2C", sELLERUSERIDParameter, mONTHParameter);
+        }
+    
+        public virtual ObjectResult<PROC_FILERETURN_GSTR3B_3_1_Result> PROC_FILERETURN_GSTR3B_3_1(string sELLERUSERID, Nullable<int> month, Nullable<byte> yEAR)
+        {
+            var sELLERUSERIDParameter = sELLERUSERID != null ?
+                new ObjectParameter("SELLERUSERID", sELLERUSERID) :
+                new ObjectParameter("SELLERUSERID", typeof(string));
+    
+            var monthParameter = month.HasValue ?
+                new ObjectParameter("Month", month) :
+                new ObjectParameter("Month", typeof(int));
+    
+            var yEARParameter = yEAR.HasValue ?
+                new ObjectParameter("YEAR", yEAR) :
+                new ObjectParameter("YEAR", typeof(byte));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<PROC_FILERETURN_GSTR3B_3_1_Result>("PROC_FILERETURN_GSTR3B_3_1", sELLERUSERIDParameter, monthParameter, yEARParameter);
         }
     }
 }

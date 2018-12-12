@@ -3569,6 +3569,144 @@
         </ComplexTypeMapping>
       </ResultMapping>
     </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_FILERETURN_GSTR_3B_HEADER" FunctionName="GST_DBModel.Store.PROC_FILERETURN_GSTR_3B_HEADER">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GST_DBModel.PROC_FILERETURN_GSTR_3B_HEADER_Result">
+          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+          <ScalarProperty Name="TotalValue" ColumnName="TotalValue" />
+          <ScalarProperty Name="TotalTaxableValue" ColumnName="TotalTaxableValue" />
+          <ScalarProperty Name="TotalTaxLiability" ColumnName="TotalTaxLiability" />
+          <ScalarProperty Name="IGSTAmt" ColumnName="IGSTAmt" />
+          <ScalarProperty Name="IGSTRate" ColumnName="IGSTRate" />
+          <ScalarProperty Name="CESSAmt" ColumnName="CESSAmt" />
+          <ScalarProperty Name="CESSRate" ColumnName="CESSRate" />
+          <ScalarProperty Name="CGSTAmt" ColumnName="CGSTAmt" />
+          <ScalarProperty Name="CSGTRate" ColumnName="CSGTRate" />
+          <ScalarProperty Name="SGSTAmt" ColumnName="SGSTAmt" />
+          <ScalarProperty Name="SGSTRate" ColumnName="SGSTRate" />
+          <ScalarProperty Name="UGSTAmt" ColumnName="UGSTAmt" />
+          <ScalarProperty Name="UGSTRate" ColumnName="UGSTRate" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="Css" ColumnName="Css" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_FILERETURN_GSTR_1_HEADER" FunctionName="GST_DBModel.Store.PROC_FILERETURN_GSTR_1_HEADER">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GST_DBModel.PROC_FILERETURN_GSTR_1_HEADER_Result1">
+          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
+          <ScalarProperty Name="TotalValue" ColumnName="TotalValue" />
+          <ScalarProperty Name="TotalTaxableValue" ColumnName="TotalTaxableValue" />
+          <ScalarProperty Name="TotalTaxLiability" ColumnName="TotalTaxLiability" />
+          <ScalarProperty Name="IGSTAmt" ColumnName="IGSTAmt" />
+          <ScalarProperty Name="IGSTRate" ColumnName="IGSTRate" />
+          <ScalarProperty Name="CESSAmt" ColumnName="CESSAmt" />
+          <ScalarProperty Name="CESSRate" ColumnName="CESSRate" />
+          <ScalarProperty Name="CGSTAmt" ColumnName="CGSTAmt" />
+          <ScalarProperty Name="CSGTRate" ColumnName="CSGTRate" />
+          <ScalarProperty Name="SGSTAmt" ColumnName="SGSTAmt" />
+          <ScalarProperty Name="SGSTRate" ColumnName="SGSTRate" />
+          <ScalarProperty Name="UGSTAmt" ColumnName="UGSTAmt" />
+          <ScalarProperty Name="UGSTRate" ColumnName="UGSTRate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_FILERETURN_GSTR3B_3_2" FunctionName="GST_DBModel.Store.PROC_FILERETURN_GSTR3B_3_2">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GST_DBModel.PROC_FILERETURN_GSTR3B_3_2_Result">
+          <ScalarProperty Name="PlaceOfSupply" ColumnName="PlaceOfSupply" />
+          <ScalarProperty Name="TotalTaxableValue" ColumnName="TotalTaxableValue" />
+          <ScalarProperty Name="AmountOfIntegratedTax" ColumnName="AmountOfIntegratedTax" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_FILERETURN_GSTR3B_5" FunctionName="GST_DBModel.Store.PROC_FILERETURN_GSTR3B_5">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GST_DBModel.PROC_FILERETURN_GSTR3B_5_Result">
+          <ScalarProperty Name="InterStateSupplies" ColumnName="InterStateSupplies" />
+          <ScalarProperty Name="IntraStateSupplies" ColumnName="IntraStateSupplies" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_FILERETURN_GSTR3B_5_1" FunctionName="GST_DBModel.Store.PROC_FILERETURN_GSTR3B_5_1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GST_DBModel.PROC_FILERETURN_GSTR3B_5_1_Result">
+          <ScalarProperty Name="IntegratedTax" ColumnName="IntegratedTax" />
+          <ScalarProperty Name="CentralTax" ColumnName="CentralTax" />
+          <ScalarProperty Name="StateTax" ColumnName="StateTax" />
+          <ScalarProperty Name="CESS" ColumnName="CESS" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_FILERETURN_GSTR3B_ITC" FunctionName="GST_DBModel.Store.PROC_FILERETURN_GSTR3B_ITC">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GST_DBModel.PROC_FILERETURN_GSTR3B_ITC_Result">
+          <ScalarProperty Name="TotalTaxableValue" ColumnName="TotalTaxableValue" />
+          <ScalarProperty Name="IntegratedTax" ColumnName="IntegratedTax" />
+          <ScalarProperty Name="CentralTax" ColumnName="CentralTax" />
+          <ScalarProperty Name="StateTax" ColumnName="StateTax" />
+          <ScalarProperty Name="CESS" ColumnName="CESS" />
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_FILERETURN_GSTR1_4A4B4C6B6C_B2B" FunctionName="GST_DBModel.Store.PROC_FILERETURN_GSTR1_4A4B4C6B6C_B2B">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GST_DBModel.PROC_FILERETURN_GSTR1_4A4B4C6B6C_B2B_Result">
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="INVOICENO" ColumnName="INVOICENO" />
+          <ScalarProperty Name="INVOICEDATE" ColumnName="INVOICEDATE" />
+          <ScalarProperty Name="RECIVERGSTN" ColumnName="RECIVERGSTN" />
+          <ScalarProperty Name="TOTALVALUE" ColumnName="TOTALVALUE" />
+          <ScalarProperty Name="TOTALTAXABLEVALUE" ColumnName="TOTALTAXABLEVALUE" />
+          <ScalarProperty Name="IGSTAMT" ColumnName="IGSTAMT" />
+          <ScalarProperty Name="CESSAMT" ColumnName="CESSAMT" />
+          <ScalarProperty Name="CGSTAMT" ColumnName="CGSTAMT" />
+          <ScalarProperty Name="SGSTAMT" ColumnName="SGSTAMT" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_FILERETURN_GSTR1_5A5B_B2C" FunctionName="GST_DBModel.Store.PROC_FILERETURN_GSTR1_5A5B_B2C">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GST_DBModel.PROC_FILERETURN_GSTR1_5A5B_B2C_Result">
+          <ScalarProperty Name="INVOICEID" ColumnName="INVOICEID" />
+          <ScalarProperty Name="LineID" ColumnName="LineID" />
+          <ScalarProperty Name="INVOICENO" ColumnName="INVOICENO" />
+          <ScalarProperty Name="INVOICEDATE" ColumnName="INVOICEDATE" />
+          <ScalarProperty Name="RECIVERGSTN" ColumnName="RECIVERGSTN" />
+          <ScalarProperty Name="TOTALVALUE" ColumnName="TOTALVALUE" />
+          <ScalarProperty Name="TOTALTAXABLEVALUE" ColumnName="TOTALTAXABLEVALUE" />
+          <ScalarProperty Name="IGSTAMT" ColumnName="IGSTAMT" />
+          <ScalarProperty Name="CESSAMT" ColumnName="CESSAMT" />
+          <ScalarProperty Name="CGSTAMT" ColumnName="CGSTAMT" />
+          <ScalarProperty Name="SGSTAMT" ColumnName="SGSTAMT" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="PROC_FILERETURN_GSTR3B_3_1" FunctionName="GST_DBModel.Store.PROC_FILERETURN_GSTR3B_3_1">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="GST_DBModel.PROC_FILERETURN_GSTR3B_3_1_Result">
+          <ScalarProperty Name="SUBSECTIONNAME" ColumnName="SUBSECTIONNAME" />
+          <ScalarProperty Name="INVOICECOUNT" ColumnName="INVOICECOUNT" />
+          <ScalarProperty Name="InvoiceUserID" ColumnName="InvoiceUserID" />
+          <ScalarProperty Name="INVOICEMONTH" ColumnName="INVOICEMONTH" />
+          <ScalarProperty Name="FinYear_ID" ColumnName="FinYear_ID" />
+          <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+          <ScalarProperty Name="TOTALTAXABLEVALUE" ColumnName="TOTALTAXABLEVALUE" />
+          <ScalarProperty Name="IGSTAMT" ColumnName="IGSTAMT" />
+          <ScalarProperty Name="CGSTAMT" ColumnName="CGSTAMT" />
+          <ScalarProperty Name="SGSTAMT" ColumnName="SGSTAMT" />
+          <ScalarProperty Name="UGSTAMT" ColumnName="UGSTAMT" />
+          <ScalarProperty Name="CESSAMT" ColumnName="CESSAMT" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
     <EntitySetMapping Name="C__MigrationHistory">
       <EntityTypeMapping TypeName="GST_DBModel.C__MigrationHistory">
         <MappingFragment StoreEntitySet="__MigrationHistory">
@@ -3674,6 +3812,249 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="GST_DBModel.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Flag" ColumnName="Flag" />
+          <ScalarProperty Name="LargeImage" ColumnName="LargeImage" />
+          <ScalarProperty Name="SmallImage" ColumnName="SmallImage" />
+          <ScalarProperty Name="ITC" ColumnName="ITC" />
+          <ScalarProperty Name="UserType" ColumnName="UserType" />
+          <ScalarProperty Name="RegisterWithUs" ColumnName="RegisterWithUs" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="NameOfSignatory" ColumnName="NameOfSignatory" />
+          <ScalarProperty Name="GSTINUserId" ColumnName="GSTINUserId" />
+          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
+          <ScalarProperty Name="GrossTurnOver" ColumnName="GrossTurnOver" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="OrganizationName" ColumnName="OrganizationName" />
+          <ScalarProperty Name="ParentUserID" ColumnName="ParentUserID" />
+          <ScalarProperty Name="GSTNNo" ColumnName="GSTNNo" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_MST_SUBSUPPLY_TYPE">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_MST_SUBSUPPLY_TYPE">
+        <MappingFragment StoreEntitySet="EWB_MST_SUBSUPPLY_TYPE">
+          <ScalarProperty Name="SupplyType" ColumnName="SupplyType" />
+          <ScalarProperty Name="SubSupplyTypeName" ColumnName="SubSupplyTypeName" />
+          <ScalarProperty Name="SubSupplyTypeID" ColumnName="SubSupplyTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_MST_VEHICLE_REASON">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_MST_VEHICLE_REASON">
+        <MappingFragment StoreEntitySet="EWB_MST_VEHICLE_REASON">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ReasonText" ColumnName="ReasonText" />
+          <ScalarProperty Name="VehicleReasonID" ColumnName="VehicleReasonID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_TRN_CANCEL_EWBILL">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_TRN_CANCEL_EWBILL">
+        <MappingFragment StoreEntitySet="EWB_TRN_CANCEL_EWBILL">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CancelRmrk" ColumnName="CancelRmrk" />
+          <ScalarProperty Name="CancelRsnCode" ColumnName="CancelRsnCode" />
+          <ScalarProperty Name="EWBNo" ColumnName="EWBNo" />
+          <ScalarProperty Name="EWB_ID" ColumnName="EWB_ID" />
+          <ScalarProperty Name="CancleEW_ID" ColumnName="CancleEW_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_TRN_CONSOLIDATED_EWBILL">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_TRN_CONSOLIDATED_EWBILL">
+        <MappingFragment StoreEntitySet="EWB_TRN_CONSOLIDATED_EWBILL">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="EWBNo" ColumnName="EWBNo" />
+          <ScalarProperty Name="TripSheetEWBBills" ColumnName="TripSheetEWBBills" />
+          <ScalarProperty Name="FromState" ColumnName="FromState" />
+          <ScalarProperty Name="TransDocDate" ColumnName="TransDocDate" />
+          <ScalarProperty Name="TransDocNo" ColumnName="TransDocNo" />
+          <ScalarProperty Name="TransMode" ColumnName="TransMode" />
+          <ScalarProperty Name="FromPlace" ColumnName="FromPlace" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="EWB_ID" ColumnName="EWB_ID" />
+          <ScalarProperty Name="ConsolidatedID" ColumnName="ConsolidatedID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_TRN_EWBILL">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_TRN_EWBILL">
+        <MappingFragment StoreEntitySet="EWB_TRN_EWBILL">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ValidUpto" ColumnName="ValidUpto" />
+          <ScalarProperty Name="EwayBillDate" ColumnName="EwayBillDate" />
+          <ScalarProperty Name="EwayBillNo" ColumnName="EwayBillNo" />
+          <ScalarProperty Name="EWBDocNo" ColumnName="EWBDocNo" />
+          <ScalarProperty Name="ErrorCodes" ColumnName="ErrorCodes" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="TransDocDate" ColumnName="TransDocDate" />
+          <ScalarProperty Name="TransDocNo" ColumnName="TransDocNo" />
+          <ScalarProperty Name="TransporterName" ColumnName="TransporterName" />
+          <ScalarProperty Name="TransporterId" ColumnName="TransporterId" />
+          <ScalarProperty Name="TransDistance" ColumnName="TransDistance" />
+          <ScalarProperty Name="VehicleType" ColumnName="VehicleType" />
+          <ScalarProperty Name="TransMode" ColumnName="TransMode" />
+          <ScalarProperty Name="CessValue" ColumnName="CessValue" />
+          <ScalarProperty Name="IGSTValue" ColumnName="IGSTValue" />
+          <ScalarProperty Name="SGSTValue" ColumnName="SGSTValue" />
+          <ScalarProperty Name="CGSTValue" ColumnName="CGSTValue" />
+          <ScalarProperty Name="TotalValue" ColumnName="TotalValue" />
+          <ScalarProperty Name="ToStateCode" ColumnName="ToStateCode" />
+          <ScalarProperty Name="ToPincode" ColumnName="ToPincode" />
+          <ScalarProperty Name="ToPlace" ColumnName="ToPlace" />
+          <ScalarProperty Name="ToAddress2" ColumnName="ToAddress2" />
+          <ScalarProperty Name="ToAddress1" ColumnName="ToAddress1" />
+          <ScalarProperty Name="ToTrdName" ColumnName="ToTrdName" />
+          <ScalarProperty Name="ActToStateCode" ColumnName="ActToStateCode" />
+          <ScalarProperty Name="ToGSTIN" ColumnName="ToGSTIN" />
+          <ScalarProperty Name="FromStateCode" ColumnName="FromStateCode" />
+          <ScalarProperty Name="FromPincode" ColumnName="FromPincode" />
+          <ScalarProperty Name="FromPlace" ColumnName="FromPlace" />
+          <ScalarProperty Name="FromAddress2" ColumnName="FromAddress2" />
+          <ScalarProperty Name="FromAddress1" ColumnName="FromAddress1" />
+          <ScalarProperty Name="FromTrdName" ColumnName="FromTrdName" />
+          <ScalarProperty Name="ActFromStateCode" ColumnName="ActFromStateCode" />
+          <ScalarProperty Name="FromGSTIN" ColumnName="FromGSTIN" />
+          <ScalarProperty Name="DocDate" ColumnName="DocDate" />
+          <ScalarProperty Name="DocNo" ColumnName="DocNo" />
+          <ScalarProperty Name="DocType" ColumnName="DocType" />
+          <ScalarProperty Name="SubSupplyType" ColumnName="SubSupplyType" />
+          <ScalarProperty Name="SupplyType" ColumnName="SupplyType" />
+          <ScalarProperty Name="UserGSTIN" ColumnName="UserGSTIN" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="EWB_ID" ColumnName="EWB_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_TRN_EWBILL_AUDITTRAIL">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_TRN_EWBILL_AUDITTRAIL">
+        <MappingFragment StoreEntitySet="EWB_TRN_EWBILL_AUDITTRAIL">
+          <ScalarProperty Name="Updateddate" ColumnName="Updateddate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="AuditTrailStatus" ColumnName="AuditTrailStatus" />
+          <ScalarProperty Name="EWB_ID" ColumnName="EWB_ID" />
+          <ScalarProperty Name="AuditTrailID" ColumnName="AuditTrailID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_TRN_EWBILL_ITEM">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_TRN_EWBILL_ITEM">
+        <MappingFragment StoreEntitySet="EWB_TRN_EWBILL_ITEM">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CESSRate" ColumnName="CESSRate" />
+          <ScalarProperty Name="IGSTRate" ColumnName="IGSTRate" />
+          <ScalarProperty Name="SGSTRate" ColumnName="SGSTRate" />
+          <ScalarProperty Name="CGSTRate" ColumnName="CGSTRate" />
+          <ScalarProperty Name="TaxableAmount" ColumnName="TaxableAmount" />
+          <ScalarProperty Name="QtyUnit" ColumnName="QtyUnit" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="HsnCode" ColumnName="HsnCode" />
+          <ScalarProperty Name="ProductDesc" ColumnName="ProductDesc" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+          <ScalarProperty Name="EWB_ID" ColumnName="EWB_ID" />
+          <ScalarProperty Name="Product_ID" ColumnName="Product_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_TRN_REJECT_EWBILL">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_TRN_REJECT_EWBILL">
+        <MappingFragment StoreEntitySet="EWB_TRN_REJECT_EWBILL">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="RejectStatus" ColumnName="RejectStatus" />
+          <ScalarProperty Name="RejectRemark" ColumnName="RejectRemark" />
+          <ScalarProperty Name="RejectReasonCode" ColumnName="RejectReasonCode" />
+          <ScalarProperty Name="EWBNo" ColumnName="EWBNo" />
+          <ScalarProperty Name="EWB_ID" ColumnName="EWB_ID" />
+          <ScalarProperty Name="RejectEWB_ID" ColumnName="RejectEWB_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_TRN_REPONSE_EWBILL">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_TRN_REPONSE_EWBILL">
+        <MappingFragment StoreEntitySet="EWB_TRN_REPONSE_EWBILL">
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ErrorDescription" ColumnName="ErrorDescription" />
+          <ScalarProperty Name="ErrorCode" ColumnName="ErrorCode" />
+          <ScalarProperty Name="ValidUpto" ColumnName="ValidUpto" />
+          <ScalarProperty Name="EwayBillDate" ColumnName="EwayBillDate" />
+          <ScalarProperty Name="EwaybillNo" ColumnName="EwaybillNo" />
+          <ScalarProperty Name="InvoiceNo" ColumnName="InvoiceNo" />
+          <ScalarProperty Name="EWB_ID" ColumnName="EWB_ID" />
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="ReponseEW_ID" ColumnName="ReponseEW_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EWB_TRN_UPDATE_VEHICLE">
+      <EntityTypeMapping TypeName="GST_DBModel.EWB_TRN_UPDATE_VEHICLE">
+        <MappingFragment StoreEntitySet="EWB_TRN_UPDATE_VEHICLE">
+          <ScalarProperty Name="Updateddate" ColumnName="Updateddate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TransMode" ColumnName="TransMode" />
+          <ScalarProperty Name="TransDocDate" ColumnName="TransDocDate" />
+          <ScalarProperty Name="TransDocNo" ColumnName="TransDocNo" />
+          <ScalarProperty Name="ReasonRem" ColumnName="ReasonRem" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="ReasonCode" ColumnName="ReasonCode" />
+          <ScalarProperty Name="FromState" ColumnName="FromState" />
+          <ScalarProperty Name="FromPlace" ColumnName="FromPlace" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="EWBNo" ColumnName="EWBNo" />
+          <ScalarProperty Name="EWB_ID" ColumnName="EWB_ID" />
+          <ScalarProperty Name="VehicleUpdate_ID" ColumnName="VehicleUpdate_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="GST_API_LOG">
       <EntityTypeMapping TypeName="GST_DBModel.GST_API_LOG">
         <MappingFragment StoreEntitySet="GST_API_LOG">
@@ -3755,6 +4136,21 @@
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="GroupCode" ColumnName="GroupCode" />
           <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_HEADER">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_HEADER">
+        <MappingFragment StoreEntitySet="GST_MST_HEADER">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="HeaderName" ColumnName="HeaderName" />
+          <ScalarProperty Name="HeaderCodeID" ColumnName="HeaderCodeID" />
+          <ScalarProperty Name="CodeID" ColumnName="CodeID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -4024,6 +4420,21 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_SECTION">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_SECTION">
+        <MappingFragment StoreEntitySet="GST_MST_SECTION">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SectionName" ColumnName="SectionName" />
+          <ScalarProperty Name="SectionCode" ColumnName="SectionCode" />
+          <ScalarProperty Name="HeaderCodeID" ColumnName="HeaderCodeID" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="GST_MST_STATE">
       <EntityTypeMapping TypeName="GST_DBModel.GST_MST_STATE">
         <MappingFragment StoreEntitySet="GST_MST_STATE">
@@ -4059,6 +4470,21 @@
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="SubGroupCode" ColumnName="SubGroupCode" />
           <ScalarProperty Name="SubGroupID" ColumnName="SubGroupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GST_MST_SUBSECTION">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_SUBSECTION">
+        <MappingFragment StoreEntitySet="GST_MST_SUBSECTION">
+          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SubSectionName" ColumnName="SubSectionName" />
+          <ScalarProperty Name="SubSectionID" ColumnName="SubSectionID" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -4600,48 +5026,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="GST_TRN_VENDOR_SERVICE">
-      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_VENDOR_SERVICE">
-        <MappingFragment StoreEntitySet="GST_TRN_VENDOR_SERVICE">
-          <ScalarProperty Name="VendorID" ColumnName="VendorID" />
-          <ScalarProperty Name="Item_ID" ColumnName="Item_ID" />
-          <ScalarProperty Name="VendorServiceID" ColumnName="VendorServiceID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="GST_DBModel.sysdiagram">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="definition" ColumnName="definition" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="name" ColumnName="name" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="PROC_FILERETURN_GSTR_3B_HEADER" FunctionName="GST_DBModel.Store.PROC_FILERETURN_GSTR_3B_HEADER">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="GST_DBModel.PROC_FILERETURN_GSTR_3B_HEADER_Result">
-          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
-          <ScalarProperty Name="TotalValue" ColumnName="TotalValue" />
-          <ScalarProperty Name="TotalTaxableValue" ColumnName="TotalTaxableValue" />
-          <ScalarProperty Name="TotalTaxLiability" ColumnName="TotalTaxLiability" />
-          <ScalarProperty Name="IGSTAmt" ColumnName="IGSTAmt" />
-          <ScalarProperty Name="IGSTRate" ColumnName="IGSTRate" />
-          <ScalarProperty Name="CESSAmt" ColumnName="CESSAmt" />
-          <ScalarProperty Name="CESSRate" ColumnName="CESSRate" />
-          <ScalarProperty Name="CGSTAmt" ColumnName="CGSTAmt" />
-          <ScalarProperty Name="CSGTRate" ColumnName="CSGTRate" />
-          <ScalarProperty Name="SGSTAmt" ColumnName="SGSTAmt" />
-          <ScalarProperty Name="SGSTRate" ColumnName="SGSTRate" />
-          <ScalarProperty Name="UGSTAmt" ColumnName="UGSTAmt" />
-          <ScalarProperty Name="UGSTRate" ColumnName="UGSTRate" />
-          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
-          <ScalarProperty Name="Css" ColumnName="Css" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
     <EntitySetMapping Name="GST_TRN_RETURN_STATUS">
       <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_RETURN_STATUS">
         <MappingFragment StoreEntitySet="GST_TRN_RETURN_STATUS">
@@ -4662,194 +5046,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="AspNetUsers">
-      <EntityTypeMapping TypeName="GST_DBModel.AspNetUser">
-        <MappingFragment StoreEntitySet="AspNetUsers">
-          <ScalarProperty Name="Flag" ColumnName="Flag" />
-          <ScalarProperty Name="LargeImage" ColumnName="LargeImage" />
-          <ScalarProperty Name="SmallImage" ColumnName="SmallImage" />
-          <ScalarProperty Name="ITC" ColumnName="ITC" />
-          <ScalarProperty Name="UserType" ColumnName="UserType" />
-          <ScalarProperty Name="RegisterWithUs" ColumnName="RegisterWithUs" />
-          <ScalarProperty Name="Designation" ColumnName="Designation" />
-          <ScalarProperty Name="NameOfSignatory" ColumnName="NameOfSignatory" />
-          <ScalarProperty Name="GSTINUserId" ColumnName="GSTINUserId" />
-          <ScalarProperty Name="StateCode" ColumnName="StateCode" />
-          <ScalarProperty Name="GrossTurnOver" ColumnName="GrossTurnOver" />
-          <ScalarProperty Name="Address" ColumnName="Address" />
-          <ScalarProperty Name="OrganizationName" ColumnName="OrganizationName" />
-          <ScalarProperty Name="ParentUserID" ColumnName="ParentUserID" />
-          <ScalarProperty Name="GSTNNo" ColumnName="GSTNNo" />
-          <ScalarProperty Name="LastName" ColumnName="LastName" />
-          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-          <ScalarProperty Name="UserName" ColumnName="UserName" />
-          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
-          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
-          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
-          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
-          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
-          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
-          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
-          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
-          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
+    <EntitySetMapping Name="GST_TRN_VENDOR_SERVICE">
+      <EntityTypeMapping TypeName="GST_DBModel.GST_TRN_VENDOR_SERVICE">
+        <MappingFragment StoreEntitySet="GST_TRN_VENDOR_SERVICE">
+          <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+          <ScalarProperty Name="Item_ID" ColumnName="Item_ID" />
+          <ScalarProperty Name="VendorServiceID" ColumnName="VendorServiceID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="PROC_FILERETURN_GSTR_1_HEADER" FunctionName="GST_DBModel.Store.PROC_FILERETURN_GSTR_1_HEADER">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="GST_DBModel.PROC_FILERETURN_GSTR_1_HEADER_Result1">
-          <ScalarProperty Name="TotalCount" ColumnName="TotalCount" />
-          <ScalarProperty Name="TotalValue" ColumnName="TotalValue" />
-          <ScalarProperty Name="TotalTaxableValue" ColumnName="TotalTaxableValue" />
-          <ScalarProperty Name="TotalTaxLiability" ColumnName="TotalTaxLiability" />
-          <ScalarProperty Name="IGSTAmt" ColumnName="IGSTAmt" />
-          <ScalarProperty Name="IGSTRate" ColumnName="IGSTRate" />
-          <ScalarProperty Name="CESSAmt" ColumnName="CESSAmt" />
-          <ScalarProperty Name="CESSRate" ColumnName="CESSRate" />
-          <ScalarProperty Name="CGSTAmt" ColumnName="CGSTAmt" />
-          <ScalarProperty Name="CSGTRate" ColumnName="CSGTRate" />
-          <ScalarProperty Name="SGSTAmt" ColumnName="SGSTAmt" />
-          <ScalarProperty Name="SGSTRate" ColumnName="SGSTRate" />
-          <ScalarProperty Name="UGSTAmt" ColumnName="UGSTAmt" />
-          <ScalarProperty Name="UGSTRate" ColumnName="UGSTRate" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="PROC_FILERETURN_GSTR3B_3_2" FunctionName="GST_DBModel.Store.PROC_FILERETURN_GSTR3B_3_2">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="GST_DBModel.PROC_FILERETURN_GSTR3B_3_2_Result">
-          <ScalarProperty Name="PlaceOfSupply" ColumnName="PlaceOfSupply" />
-          <ScalarProperty Name="TotalTaxableValue" ColumnName="TotalTaxableValue" />
-          <ScalarProperty Name="AmountOfIntegratedTax" ColumnName="AmountOfIntegratedTax" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="PROC_FILERETURN_GSTR3B_5" FunctionName="GST_DBModel.Store.PROC_FILERETURN_GSTR3B_5">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="GST_DBModel.PROC_FILERETURN_GSTR3B_5_Result">
-          <ScalarProperty Name="InterStateSupplies" ColumnName="InterStateSupplies" />
-          <ScalarProperty Name="IntraStateSupplies" ColumnName="IntraStateSupplies" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="PROC_FILERETURN_GSTR3B_5_1" FunctionName="GST_DBModel.Store.PROC_FILERETURN_GSTR3B_5_1">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="GST_DBModel.PROC_FILERETURN_GSTR3B_5_1_Result">
-          <ScalarProperty Name="IntegratedTax" ColumnName="IntegratedTax" />
-          <ScalarProperty Name="CentralTax" ColumnName="CentralTax" />
-          <ScalarProperty Name="StateTax" ColumnName="StateTax" />
-          <ScalarProperty Name="CESS" ColumnName="CESS" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="PROC_FILERETURN_GSTR3B_ITC" FunctionName="GST_DBModel.Store.PROC_FILERETURN_GSTR3B_ITC">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="GST_DBModel.PROC_FILERETURN_GSTR3B_ITC_Result">
-          <ScalarProperty Name="TotalTaxableValue" ColumnName="TotalTaxableValue" />
-          <ScalarProperty Name="IntegratedTax" ColumnName="IntegratedTax" />
-          <ScalarProperty Name="CentralTax" ColumnName="CentralTax" />
-          <ScalarProperty Name="StateTax" ColumnName="StateTax" />
-          <ScalarProperty Name="CESS" ColumnName="CESS" />
-          <ScalarProperty Name="Details" ColumnName="Details" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="PROC_FILERETURN_GSTR3B_3_1" FunctionName="GST_DBModel.Store.PROC_FILERETURN_GSTR3B_3_1">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="GST_DBModel.PROC_FILERETURN_GSTR3B_3_1_Result">
-          <ScalarProperty Name="TotalTaxableValue" ColumnName="TotalTaxableValue" />
-          <ScalarProperty Name="IntegratedTax" ColumnName="IntegratedTax" />
-          <ScalarProperty Name="CentralTax" ColumnName="CentralTax" />
-          <ScalarProperty Name="StateTax" ColumnName="StateTax" />
-          <ScalarProperty Name="CESS" ColumnName="CESS" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="PROC_FILERETURN_GSTR1_4A4B4C6B6C_B2B" FunctionName="GST_DBModel.Store.PROC_FILERETURN_GSTR1_4A4B4C6B6C_B2B">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="GST_DBModel.PROC_FILERETURN_GSTR1_4A4B4C6B6C_B2B_Result">
-          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
-          <ScalarProperty Name="INVOICENO" ColumnName="INVOICENO" />
-          <ScalarProperty Name="INVOICEDATE" ColumnName="INVOICEDATE" />
-          <ScalarProperty Name="RECIVERGSTN" ColumnName="RECIVERGSTN" />
-          <ScalarProperty Name="TOTALVALUE" ColumnName="TOTALVALUE" />
-          <ScalarProperty Name="TOTALTAXABLEVALUE" ColumnName="TOTALTAXABLEVALUE" />
-          <ScalarProperty Name="IGSTAMT" ColumnName="IGSTAMT" />
-          <ScalarProperty Name="CESSAMT" ColumnName="CESSAMT" />
-          <ScalarProperty Name="CGSTAMT" ColumnName="CGSTAMT" />
-          <ScalarProperty Name="SGSTAMT" ColumnName="SGSTAMT" />
-          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <FunctionImportMapping FunctionImportName="PROC_FILERETURN_GSTR1_5A5B_B2C" FunctionName="GST_DBModel.Store.PROC_FILERETURN_GSTR1_5A5B_B2C">
-      <ResultMapping>
-        <ComplexTypeMapping TypeName="GST_DBModel.PROC_FILERETURN_GSTR1_5A5B_B2C_Result">
-          <ScalarProperty Name="INVOICEID" ColumnName="INVOICEID" />
-          <ScalarProperty Name="LineID" ColumnName="LineID" />
-          <ScalarProperty Name="INVOICENO" ColumnName="INVOICENO" />
-          <ScalarProperty Name="INVOICEDATE" ColumnName="INVOICEDATE" />
-          <ScalarProperty Name="RECIVERGSTN" ColumnName="RECIVERGSTN" />
-          <ScalarProperty Name="TOTALVALUE" ColumnName="TOTALVALUE" />
-          <ScalarProperty Name="TOTALTAXABLEVALUE" ColumnName="TOTALTAXABLEVALUE" />
-          <ScalarProperty Name="IGSTAMT" ColumnName="IGSTAMT" />
-          <ScalarProperty Name="CESSAMT" ColumnName="CESSAMT" />
-          <ScalarProperty Name="CGSTAMT" ColumnName="CGSTAMT" />
-          <ScalarProperty Name="SGSTAMT" ColumnName="SGSTAMT" />
-          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
-        </ComplexTypeMapping>
-      </ResultMapping>
-    </FunctionImportMapping>
-    <EntitySetMapping Name="GST_MST_SUBSECTION">
-      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_SUBSECTION">
-        <MappingFragment StoreEntitySet="GST_MST_SUBSECTION">
-          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
-          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="CodeName" ColumnName="CodeName" />
-          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
-          <ScalarProperty Name="HeaderID" ColumnName="HeaderID" />
-          <ScalarProperty Name="CodeID" ColumnName="CodeID" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="GST_MST_SECTION">
-      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_SECTION">
-        <MappingFragment StoreEntitySet="GST_MST_SECTION">
-          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
-          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="SectionName" ColumnName="SectionName" />
-          <ScalarProperty Name="SectionCode" ColumnName="SectionCode" />
-          <ScalarProperty Name="HeaderCodeID" ColumnName="HeaderCodeID" />
-          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="GST_MST_HEADER">
-      <EntityTypeMapping TypeName="GST_DBModel.GST_MST_HEADER">
-        <MappingFragment StoreEntitySet="GST_MST_HEADER">
-          <ScalarProperty Name="UpdatedBy" ColumnName="UpdatedBy" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
-          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-          <ScalarProperty Name="Status" ColumnName="Status" />
-          <ScalarProperty Name="HeaderName" ColumnName="HeaderName" />
-          <ScalarProperty Name="HeaderCode" ColumnName="HeaderCode" />
-          <ScalarProperty Name="CodeID" ColumnName="CodeID" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="GST_DBModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

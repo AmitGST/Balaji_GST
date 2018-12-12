@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="GST_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="GST_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="__MigrationHistory">
     <Key>
       <PropertyRef Name="MigrationId" />
@@ -135,6 +135,204 @@
     <Property Name="LargeImage" Type="image" />
     <Property Name="Flag" Type="bit" />
   </EntityType>
+  <EntityType Name="EWB_MST_SUBSUPPLY_TYPE">
+    <Key>
+      <PropertyRef Name="SubSupplyTypeID" />
+    </Key>
+    <Property Name="SubSupplyTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubSupplyTypeName" Type="varchar" MaxLength="40" />
+    <Property Name="SupplyType" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="EWB_MST_VEHICLE_REASON">
+    <Key>
+      <PropertyRef Name="VehicleReasonID" />
+    </Key>
+    <Property Name="VehicleReasonID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReasonText" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EWB_TRN_CANCEL_EWBILL">
+    <Key>
+      <PropertyRef Name="CancleEW_ID" />
+    </Key>
+    <Property Name="CancleEW_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EWB_ID" Type="int" Nullable="false" />
+    <Property Name="EWBNo" Type="int" />
+    <Property Name="CancelRsnCode" Type="int" />
+    <Property Name="CancelRmrk" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EWB_TRN_CONSOLIDATED_EWBILL">
+    <Key>
+      <PropertyRef Name="ConsolidatedID" />
+    </Key>
+    <Property Name="ConsolidatedID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EWB_ID" Type="int" />
+    <Property Name="VehicleNo" Type="varchar" MaxLength="20" />
+    <Property Name="FromPlace" Type="varchar" MaxLength="50" />
+    <Property Name="TransMode" Type="int" />
+    <Property Name="TransDocNo" Type="varchar" MaxLength="50" />
+    <Property Name="TransDocDate" Type="datetime" />
+    <Property Name="FromState" Type="int" />
+    <Property Name="TripSheetEWBBills" Type="nvarchar" MaxLength="50" />
+    <Property Name="EWBNo" Type="int" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EWB_TRN_EWBILL">
+    <Key>
+      <PropertyRef Name="EWB_ID" />
+    </Key>
+    <Property Name="EWB_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="128" />
+    <Property Name="UserGSTIN" Type="varchar" MaxLength="15" />
+    <Property Name="SupplyType" Type="tinyint" />
+    <Property Name="SubSupplyType" Type="int" />
+    <Property Name="DocType" Type="varchar" MaxLength="5" />
+    <Property Name="DocNo" Type="varchar" MaxLength="50" />
+    <Property Name="DocDate" Type="datetime" />
+    <Property Name="FromGSTIN" Type="varchar" MaxLength="15" />
+    <Property Name="ActFromStateCode" Type="int" />
+    <Property Name="FromTrdName" Type="varchar" MaxLength="100" />
+    <Property Name="FromAddress1" Type="varchar" MaxLength="120" />
+    <Property Name="FromAddress2" Type="varchar" MaxLength="120" />
+    <Property Name="FromPlace" Type="varchar" MaxLength="50" />
+    <Property Name="FromPincode" Type="int" />
+    <Property Name="FromStateCode" Type="int" />
+    <Property Name="ToGSTIN" Type="varchar" MaxLength="15" />
+    <Property Name="ActToStateCode" Type="int" />
+    <Property Name="ToTrdName" Type="varchar" MaxLength="100" />
+    <Property Name="ToAddress1" Type="varchar" MaxLength="120" />
+    <Property Name="ToAddress2" Type="varchar" MaxLength="120" />
+    <Property Name="ToPlace" Type="varchar" MaxLength="50" />
+    <Property Name="ToPincode" Type="int" />
+    <Property Name="ToStateCode" Type="int" />
+    <Property Name="TotalValue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CGSTValue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SGSTValue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IGSTValue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CessValue" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="TransMode" Type="int" />
+    <Property Name="VehicleType" Type="char" MaxLength="1" />
+    <Property Name="TransDistance" Type="int" />
+    <Property Name="TransporterId" Type="nvarchar" MaxLength="15" />
+    <Property Name="TransporterName" Type="varchar" MaxLength="100" />
+    <Property Name="TransDocNo" Type="varchar" MaxLength="15" />
+    <Property Name="TransDocDate" Type="datetime" />
+    <Property Name="VehicleNo" Type="varchar" MaxLength="10" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="ErrorCodes" Type="varchar" MaxLength="200" />
+    <Property Name="EWBDocNo" Type="varchar" MaxLength="50" />
+    <Property Name="EwayBillNo" Type="int" />
+    <Property Name="EwayBillDate" Type="datetime" />
+    <Property Name="ValidUpto" Type="datetime" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EWB_TRN_EWBILL_AUDITTRAIL">
+    <Key>
+      <PropertyRef Name="AuditTrailID" />
+    </Key>
+    <Property Name="AuditTrailID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EWB_ID" Type="int" />
+    <Property Name="AuditTrailStatus" Type="tinyint" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="Updateddate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EWB_TRN_EWBILL_ITEM">
+    <Key>
+      <PropertyRef Name="Product_ID" />
+    </Key>
+    <Property Name="Product_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EWB_ID" Type="int" />
+    <Property Name="ProductName" Type="varchar" MaxLength="100" />
+    <Property Name="ProductDesc" Type="varchar(max)" />
+    <Property Name="HsnCode" Type="int" />
+    <Property Name="Quantity" Type="decimal" Precision="8" Scale="2" />
+    <Property Name="QtyUnit" Type="varchar" MaxLength="3" />
+    <Property Name="TaxableAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CGSTRate" Type="decimal" Precision="6" Scale="3" />
+    <Property Name="SGSTRate" Type="decimal" Precision="6" Scale="3" />
+    <Property Name="IGSTRate" Type="decimal" Precision="6" Scale="3" />
+    <Property Name="CESSRate" Type="decimal" Precision="6" Scale="3" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EWB_TRN_REJECT_EWBILL">
+    <Key>
+      <PropertyRef Name="RejectEWB_ID" />
+    </Key>
+    <Property Name="RejectEWB_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EWB_ID" Type="int" />
+    <Property Name="EWBNo" Type="int" />
+    <Property Name="RejectReasonCode" Type="int" />
+    <Property Name="RejectRemark" Type="varchar" MaxLength="50" />
+    <Property Name="RejectStatus" Type="tinyint" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EWB_TRN_REPONSE_EWBILL">
+    <Key>
+      <PropertyRef Name="ReponseEW_ID" />
+    </Key>
+    <Property Name="ReponseEW_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InvoiceID" Type="bigint" />
+    <Property Name="EWB_ID" Type="int" />
+    <Property Name="InvoiceNo" Type="nvarchar" MaxLength="100" />
+    <Property Name="EwaybillNo" Type="int" />
+    <Property Name="EwayBillDate" Type="datetime" />
+    <Property Name="ValidUpto" Type="datetime" />
+    <Property Name="ErrorCode" Type="int" />
+    <Property Name="ErrorDescription" Type="varchar(max)" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EWB_TRN_UPDATE_VEHICLE">
+    <Key>
+      <PropertyRef Name="VehicleUpdate_ID" />
+    </Key>
+    <Property Name="VehicleUpdate_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EWB_ID" Type="int" />
+    <Property Name="EWBNo" Type="int" />
+    <Property Name="VehicleNo" Type="varchar" MaxLength="20" />
+    <Property Name="FromPlace" Type="varchar" MaxLength="50" />
+    <Property Name="FromState" Type="int" />
+    <Property Name="ReasonCode" Type="int" />
+    <Property Name="Reason" Type="varchar" MaxLength="50" />
+    <Property Name="ReasonRem" Type="varchar" MaxLength="50" />
+    <Property Name="TransDocNo" Type="varchar" MaxLength="50" />
+    <Property Name="TransDocDate" Type="datetime" />
+    <Property Name="TransMode" Type="int" />
+    <Property Name="Status" Type="tinyint" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="UpdatedBy" Type="nvarchar" MaxLength="128" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Updateddate" Type="datetime" />
+  </EntityType>
   <EntityType Name="GST_API_LOG">
     <Key>
       <PropertyRef Name="Id" />
@@ -144,6 +342,21 @@
     <Property Name="ActionName" Type="varchar" MaxLength="50" />
     <Property Name="HitDateTime" Type="datetime" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'BALAJI_GST_DB_LOCAL.dbo.GST_MST_3B_CONSOLIDATE' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="GST_MST_3B_CONSOLIDATE">
+          <Property Name="HeaderList" Type="varchar(max)" />
+          <Property Name="InvoiceMonth" Type="tinyint" />
+          <Property Name="InvoiceYear" Type="tinyint" />
+          <Property Name="UserID" Type="nvarchar(max)" />
+          <Property Name="InvoiceCount" Type="int" />
+          <Property Name="TotalTaxableAmount" Type="int" />
+          <Property Name="IGST" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CGST" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SGST" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="UGST" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="CESS" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>-->
   <EntityType Name="GST_MST_BUSINESSTYPE">
     <Key>
       <PropertyRef Name="BusinessID" />
@@ -214,11 +427,11 @@
   </EntityType>
   <EntityType Name="GST_MST_HEADER">
     <Key>
-      <PropertyRef Name="CodeID" />
+      <PropertyRef Name="HeaderCodeID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="CodeID" Type="int" Nullable="false" />
-    <Property Name="HeaderCode" Type="tinyint" />
+    <Property Name="HeaderCodeID" Type="tinyint" Nullable="false" />
     <Property Name="HeaderName" Type="nvarchar(max)" />
     <Property Name="Status" Type="bit" />
     <Property Name="CreatedDate" Type="datetime" />
@@ -484,7 +697,7 @@
       <PropertyRef Name="SectionID" />
     </Key>
     <Property Name="SectionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="HeaderCodeID" Type="int" />
+    <Property Name="HeaderCodeID" Type="tinyint" />
     <Property Name="SectionCode" Type="nvarchar" MaxLength="15" />
     <Property Name="SectionName" Type="nvarchar(max)" />
     <Property Name="Status" Type="bit" />
@@ -533,10 +746,9 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="CodeID" Type="int" />
-    <Property Name="HeaderID" Type="int" />
     <Property Name="SectionID" Type="int" />
-    <Property Name="CodeName" Type="nvarchar(max)" />
+    <Property Name="SubSectionID" Type="int" />
+    <Property Name="SubSectionName" Type="nvarchar(max)" />
     <Property Name="Status" Type="bit" />
     <Property Name="CreatedDate" Type="datetime" />
     <Property Name="UpdatedDate" Type="datetime" />
@@ -1214,6 +1426,126 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_EWB_TRN_CANCEL_EWBILL_EWB_TRN_EWBILLS">
+    <End Role="EWB_TRN_EWBILL" Type="Self.EWB_TRN_EWBILL" Multiplicity="1" />
+    <End Role="EWB_TRN_CANCEL_EWBILL" Type="Self.EWB_TRN_CANCEL_EWBILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWB_TRN_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Principal>
+      <Dependent Role="EWB_TRN_CANCEL_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWB_TRN_CONSOLIDATED_EWBILL_EWB_TRN_EWBILLS">
+    <End Role="EWB_TRN_EWBILL" Type="Self.EWB_TRN_EWBILL" Multiplicity="0..1" />
+    <End Role="EWB_TRN_CONSOLIDATED_EWBILL" Type="Self.EWB_TRN_CONSOLIDATED_EWBILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWB_TRN_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Principal>
+      <Dependent Role="EWB_TRN_CONSOLIDATED_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWB_TRN_EWBILLS_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="EWB_TRN_EWBILL" Type="Self.EWB_TRN_EWBILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EWB_TRN_EWBILL">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWB_TRN_EWBILLS_AUDITTRAIL_EWB_TRN_EWBILLS">
+    <End Role="EWB_TRN_EWBILL" Type="Self.EWB_TRN_EWBILL" Multiplicity="0..1" />
+    <End Role="EWB_TRN_EWBILL_AUDITTRAIL" Type="Self.EWB_TRN_EWBILL_AUDITTRAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWB_TRN_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Principal>
+      <Dependent Role="EWB_TRN_EWBILL_AUDITTRAIL">
+        <PropertyRef Name="EWB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWB_TRN_EWBILLS_EWB_MST_SUBSUPPLY_TYPE">
+    <End Role="EWB_MST_SUBSUPPLY_TYPE" Type="Self.EWB_MST_SUBSUPPLY_TYPE" Multiplicity="0..1" />
+    <End Role="EWB_TRN_EWBILL" Type="Self.EWB_TRN_EWBILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWB_MST_SUBSUPPLY_TYPE">
+        <PropertyRef Name="SubSupplyTypeID" />
+      </Principal>
+      <Dependent Role="EWB_TRN_EWBILL">
+        <PropertyRef Name="SubSupplyType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWB_TRN_EWBILLS_PRODUCT_EWB_TRN_EWBILLS">
+    <End Role="EWB_TRN_EWBILL" Type="Self.EWB_TRN_EWBILL" Multiplicity="0..1" />
+    <End Role="EWB_TRN_EWBILL_ITEM" Type="Self.EWB_TRN_EWBILL_ITEM" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWB_TRN_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Principal>
+      <Dependent Role="EWB_TRN_EWBILL_ITEM">
+        <PropertyRef Name="EWB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWB_TRN_REJECT_EWBILL_EWB_TRN_EWBILLS">
+    <End Role="EWB_TRN_EWBILL" Type="Self.EWB_TRN_EWBILL" Multiplicity="0..1" />
+    <End Role="EWB_TRN_REJECT_EWBILL" Type="Self.EWB_TRN_REJECT_EWBILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWB_TRN_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Principal>
+      <Dependent Role="EWB_TRN_REJECT_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWB_TRN_REPONSE_EWBILL_EWB_TRN_EWBILLS">
+    <End Role="EWB_TRN_EWBILL" Type="Self.EWB_TRN_EWBILL" Multiplicity="0..1" />
+    <End Role="EWB_TRN_REPONSE_EWBILL" Type="Self.EWB_TRN_REPONSE_EWBILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWB_TRN_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Principal>
+      <Dependent Role="EWB_TRN_REPONSE_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWB_TRN_REPONSE_EWBILL_GST_TRN_INVOICE">
+    <End Role="GST_TRN_INVOICE" Type="Self.GST_TRN_INVOICE" Multiplicity="0..1" />
+    <End Role="EWB_TRN_REPONSE_EWBILL" Type="Self.EWB_TRN_REPONSE_EWBILL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GST_TRN_INVOICE">
+        <PropertyRef Name="InvoiceID" />
+      </Principal>
+      <Dependent Role="EWB_TRN_REPONSE_EWBILL">
+        <PropertyRef Name="InvoiceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EWB_TRN_UPDATE_VEHICLE_EWB_TRN_EWBILLS">
+    <End Role="EWB_TRN_EWBILL" Type="Self.EWB_TRN_EWBILL" Multiplicity="0..1" />
+    <End Role="EWB_TRN_UPDATE_VEHICLE" Type="Self.EWB_TRN_UPDATE_VEHICLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EWB_TRN_EWBILL">
+        <PropertyRef Name="EWB_ID" />
+      </Principal>
+      <Dependent Role="EWB_TRN_UPDATE_VEHICLE">
+        <PropertyRef Name="EWB_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_GST_MST_CLASS_GST_MST_SUBGROUP">
     <End Role="GST_MST_SUBGROUP" Type="Self.GST_MST_SUBGROUP" Multiplicity="0..1" />
     <End Role="GST_MST_CLASS" Type="Self.GST_MST_CLASS" Multiplicity="*" />
@@ -1411,7 +1743,7 @@
     <End Role="GST_MST_SECTION" Type="Self.GST_MST_SECTION" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="GST_MST_HEADER">
-        <PropertyRef Name="CodeID" />
+        <PropertyRef Name="HeaderCodeID" />
       </Principal>
       <Dependent Role="GST_MST_SECTION">
         <PropertyRef Name="HeaderCodeID" />
@@ -1439,18 +1771,6 @@
       </Principal>
       <Dependent Role="GST_MST_SUBGROUP">
         <PropertyRef Name="GroupID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_GST_MST_SUBSECTION_GST_MST_HEADER">
-    <End Role="GST_MST_HEADER" Type="Self.GST_MST_HEADER" Multiplicity="0..1" />
-    <End Role="GST_MST_SUBSECTION" Type="Self.GST_MST_SUBSECTION" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="GST_MST_HEADER">
-        <PropertyRef Name="CodeID" />
-      </Principal>
-      <Dependent Role="GST_MST_SUBSECTION">
-        <PropertyRef Name="HeaderID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -2589,22 +2909,27 @@
   <Function Name="PROC_FILERETURN_GSTR3B_3_1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="SELLERUSERID" Type="varchar" Mode="In" />
     <Parameter Name="Month" Type="int" Mode="In" />
+    <Parameter Name="YEAR" Type="tinyint" Mode="In" />
   </Function>
   <Function Name="PROC_FILERETURN_GSTR3B_3_2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="SELLERUSERID" Type="varchar" Mode="In" />
     <Parameter Name="MONTH" Type="int" Mode="In" />
+    <Parameter Name="YEAR" Type="tinyint" Mode="In" />
   </Function>
   <Function Name="PROC_FILERETURN_GSTR3B_5" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="SELLERUSERID" Type="varchar" Mode="In" />
     <Parameter Name="MONTH" Type="int" Mode="In" />
+    <Parameter Name="YEAR" Type="tinyint" Mode="In" />
   </Function>
   <Function Name="PROC_FILERETURN_GSTR3B_5_1" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="SELLERUSERID" Type="varchar" Mode="In" />
     <Parameter Name="MONTH" Type="int" Mode="In" />
+    <Parameter Name="YEAR" Type="tinyint" Mode="In" />
   </Function>
   <Function Name="PROC_FILERETURN_GSTR3B_ITC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="SELLERUSERID" Type="varchar" Mode="In" />
     <Parameter Name="MONTH" Type="int" Mode="In" />
+    <Parameter Name="YEAR" Type="tinyint" Mode="In" />
   </Function>
   <Function Name="PROC_GSTR1_HSN_SUMMARY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="GSTNNO" Type="varchar" Mode="In" />
@@ -2984,6 +3309,16 @@
     <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_MST_SUBSUPPLY_TYPE" EntityType="Self.EWB_MST_SUBSUPPLY_TYPE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_MST_VEHICLE_REASON" EntityType="Self.EWB_MST_VEHICLE_REASON" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_TRN_CANCEL_EWBILL" EntityType="Self.EWB_TRN_CANCEL_EWBILL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_TRN_CONSOLIDATED_EWBILL" EntityType="Self.EWB_TRN_CONSOLIDATED_EWBILL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_TRN_EWBILL" EntityType="Self.EWB_TRN_EWBILL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_TRN_EWBILL_AUDITTRAIL" EntityType="Self.EWB_TRN_EWBILL_AUDITTRAIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_TRN_EWBILL_ITEM" EntityType="Self.EWB_TRN_EWBILL_ITEM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_TRN_REJECT_EWBILL" EntityType="Self.EWB_TRN_REJECT_EWBILL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_TRN_REPONSE_EWBILL" EntityType="Self.EWB_TRN_REPONSE_EWBILL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EWB_TRN_UPDATE_VEHICLE" EntityType="Self.EWB_TRN_UPDATE_VEHICLE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GST_API_LOG" EntityType="Self.GST_API_LOG" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GST_MST_BUSINESSTYPE" EntityType="Self.GST_MST_BUSINESSTYPE" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="GST_MST_CLASS" EntityType="Self.GST_MST_CLASS" Schema="dbo" store:Type="Tables" />
@@ -3073,6 +3408,46 @@
       <End Role="AspNetUsers" EntitySet="AspNetUsers" />
       <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
     </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_CANCEL_EWBILL_EWB_TRN_EWBILLS" Association="Self.FK_EWB_TRN_CANCEL_EWBILL_EWB_TRN_EWBILLS">
+      <End Role="EWB_TRN_EWBILL" EntitySet="EWB_TRN_EWBILL" />
+      <End Role="EWB_TRN_CANCEL_EWBILL" EntitySet="EWB_TRN_CANCEL_EWBILL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_CONSOLIDATED_EWBILL_EWB_TRN_EWBILLS" Association="Self.FK_EWB_TRN_CONSOLIDATED_EWBILL_EWB_TRN_EWBILLS">
+      <End Role="EWB_TRN_EWBILL" EntitySet="EWB_TRN_EWBILL" />
+      <End Role="EWB_TRN_CONSOLIDATED_EWBILL" EntitySet="EWB_TRN_CONSOLIDATED_EWBILL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_EWBILLS_AspNetUsers" Association="Self.FK_EWB_TRN_EWBILLS_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="EWB_TRN_EWBILL" EntitySet="EWB_TRN_EWBILL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_EWBILLS_AUDITTRAIL_EWB_TRN_EWBILLS" Association="Self.FK_EWB_TRN_EWBILLS_AUDITTRAIL_EWB_TRN_EWBILLS">
+      <End Role="EWB_TRN_EWBILL" EntitySet="EWB_TRN_EWBILL" />
+      <End Role="EWB_TRN_EWBILL_AUDITTRAIL" EntitySet="EWB_TRN_EWBILL_AUDITTRAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_EWBILLS_EWB_MST_SUBSUPPLY_TYPE" Association="Self.FK_EWB_TRN_EWBILLS_EWB_MST_SUBSUPPLY_TYPE">
+      <End Role="EWB_MST_SUBSUPPLY_TYPE" EntitySet="EWB_MST_SUBSUPPLY_TYPE" />
+      <End Role="EWB_TRN_EWBILL" EntitySet="EWB_TRN_EWBILL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_EWBILLS_PRODUCT_EWB_TRN_EWBILLS" Association="Self.FK_EWB_TRN_EWBILLS_PRODUCT_EWB_TRN_EWBILLS">
+      <End Role="EWB_TRN_EWBILL" EntitySet="EWB_TRN_EWBILL" />
+      <End Role="EWB_TRN_EWBILL_ITEM" EntitySet="EWB_TRN_EWBILL_ITEM" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_REJECT_EWBILL_EWB_TRN_EWBILLS" Association="Self.FK_EWB_TRN_REJECT_EWBILL_EWB_TRN_EWBILLS">
+      <End Role="EWB_TRN_EWBILL" EntitySet="EWB_TRN_EWBILL" />
+      <End Role="EWB_TRN_REJECT_EWBILL" EntitySet="EWB_TRN_REJECT_EWBILL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_REPONSE_EWBILL_EWB_TRN_EWBILLS" Association="Self.FK_EWB_TRN_REPONSE_EWBILL_EWB_TRN_EWBILLS">
+      <End Role="EWB_TRN_EWBILL" EntitySet="EWB_TRN_EWBILL" />
+      <End Role="EWB_TRN_REPONSE_EWBILL" EntitySet="EWB_TRN_REPONSE_EWBILL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_REPONSE_EWBILL_GST_TRN_INVOICE" Association="Self.FK_EWB_TRN_REPONSE_EWBILL_GST_TRN_INVOICE">
+      <End Role="GST_TRN_INVOICE" EntitySet="GST_TRN_INVOICE" />
+      <End Role="EWB_TRN_REPONSE_EWBILL" EntitySet="EWB_TRN_REPONSE_EWBILL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EWB_TRN_UPDATE_VEHICLE_EWB_TRN_EWBILLS" Association="Self.FK_EWB_TRN_UPDATE_VEHICLE_EWB_TRN_EWBILLS">
+      <End Role="EWB_TRN_EWBILL" EntitySet="EWB_TRN_EWBILL" />
+      <End Role="EWB_TRN_UPDATE_VEHICLE" EntitySet="EWB_TRN_UPDATE_VEHICLE" />
+    </AssociationSet>
     <AssociationSet Name="FK_GST_MST_CLASS_GST_MST_SUBGROUP" Association="Self.FK_GST_MST_CLASS_GST_MST_SUBGROUP">
       <End Role="GST_MST_SUBGROUP" EntitySet="GST_MST_SUBGROUP" />
       <End Role="GST_MST_CLASS" EntitySet="GST_MST_CLASS" />
@@ -3148,10 +3523,6 @@
     <AssociationSet Name="FK_GST_MST_SUBGROUP_GST_MST_GROUP" Association="Self.FK_GST_MST_SUBGROUP_GST_MST_GROUP">
       <End Role="GST_MST_GROUP" EntitySet="GST_MST_GROUP" />
       <End Role="GST_MST_SUBGROUP" EntitySet="GST_MST_SUBGROUP" />
-    </AssociationSet>
-    <AssociationSet Name="FK_GST_MST_SUBSECTION_GST_MST_HEADER" Association="Self.FK_GST_MST_SUBSECTION_GST_MST_HEADER">
-      <End Role="GST_MST_HEADER" EntitySet="GST_MST_HEADER" />
-      <End Role="GST_MST_SUBSECTION" EntitySet="GST_MST_SUBSECTION" />
     </AssociationSet>
     <AssociationSet Name="FK_GST_MST_SUBSECTION_GST_MST_SECTION" Association="Self.FK_GST_MST_SUBSECTION_GST_MST_SECTION">
       <End Role="GST_MST_SECTION" EntitySet="GST_MST_SECTION" />

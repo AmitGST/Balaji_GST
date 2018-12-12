@@ -22,6 +22,7 @@ namespace DataAccessLayer
             this.AspNetUserRoles = new HashSet<AspNetUserRole>();
             this.AspNetUserRoles1 = new HashSet<AspNetUserRole>();
             this.GST_MST_USER_SIGNATORY = new HashSet<GST_MST_USER_SIGNATORY>();
+            this.EWB_TRN_EWBILL = new HashSet<EWB_TRN_EWBILL>();
             this.GST_MST_ITEM = new HashSet<GST_MST_ITEM>();
             this.GST_MST_PRESENT_USER = new HashSet<GST_MST_PRESENT_USER>();
             this.GST_MST_PURCHASE_REGISTER = new HashSet<GST_MST_PURCHASE_REGISTER>();
@@ -77,6 +78,7 @@ namespace DataAccessLayer
         public virtual ICollection<AspNetUserRole> AspNetUserRoles { get; set; }
         public virtual ICollection<AspNetUserRole> AspNetUserRoles1 { get; set; }
         public virtual ICollection<GST_MST_USER_SIGNATORY> GST_MST_USER_SIGNATORY { get; set; }
+        public virtual ICollection<EWB_TRN_EWBILL> EWB_TRN_EWBILL { get; set; }
         public virtual ICollection<GST_MST_ITEM> GST_MST_ITEM { get; set; }
         public virtual ICollection<GST_MST_PRESENT_USER> GST_MST_PRESENT_USER { get; set; }
         public virtual ICollection<GST_MST_PURCHASE_REGISTER> GST_MST_PURCHASE_REGISTER { get; set; }

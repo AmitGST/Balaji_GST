@@ -29,7 +29,7 @@ namespace DataAccessLayer
         public string CreatedBy { get; set; }
         public string UpdatedBy { get; set; }
     
-        public virtual GST_MST_USER_SIGNATORY GST_MST_USER_SIGNATORY { get; set; }
         public virtual AspNetUser AspNetUser { get; set; }
+        public virtual GST_MST_USER_SIGNATORY GST_MST_USER_SIGNATORY { get; set; }
     }
 }

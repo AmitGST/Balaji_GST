@@ -35,7 +35,7 @@ namespace DataAccessLayer
         public Nullable<System.DateTime> CreatedDate { get; set; }
         public Nullable<System.DateTime> UpdatedDate { get; set; }
     
-        public virtual ICollection<GST_TRN_RETURN_STATUS> GST_TRN_RETURN_STATUS { get; set; }
         public virtual AspNetUser AspNetUser { get; set; }
+        public virtual ICollection<GST_TRN_RETURN_STATUS> GST_TRN_RETURN_STATUS { get; set; }
     }
 }

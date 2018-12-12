@@ -37,10 +37,10 @@ namespace DataAccessLayer
         public string UpdatedBy { get; set; }
         public Nullable<System.DateTime> UpdatedDate { get; set; }
     
+        public virtual AspNetUser AspNetUser { get; set; }
+        public virtual AspNetUser AspNetUser1 { get; set; }
         public virtual ICollection<GST_TRN_CRDR_AUDIT_TRAIL> GST_TRN_CRDR_AUDIT_TRAIL { get; set; }
         public virtual ICollection<GST_TRN_CRDR_NOTE_DATA> GST_TRN_CRDR_NOTE_DATA { get; set; }
         public virtual GST_TRN_INVOICE GST_TRN_INVOICE { get; set; }
-        public virtual AspNetUser AspNetUser { get; set; }
-        public virtual AspNetUser AspNetUser1 { get; set; }
     }
 }

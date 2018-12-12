@@ -17,12 +17,11 @@ namespace DataAccessLayer
         public GST_MST_HEADER()
         {
             this.GST_MST_SECTION = new HashSet<GST_MST_SECTION>();
-            this.GST_MST_SUBSECTION = new HashSet<GST_MST_SUBSECTION>();
         }
     
         public int ID { get; set; }
         public int CodeID { get; set; }
-        public Nullable<byte> HeaderCode { get; set; }
+        public byte HeaderCodeID { get; set; }
         public string HeaderName { get; set; }
         public Nullable<bool> Status { get; set; }
         public Nullable<System.DateTime> CreatedDate { get; set; }
@@ -31,6 +30,5 @@ namespace DataAccessLayer
         public string UpdatedBy { get; set; }
     
         public virtual ICollection<GST_MST_SECTION> GST_MST_SECTION { get; set; }
-        public virtual ICollection<GST_MST_SUBSECTION> GST_MST_SUBSECTION { get; set; }
     }
 }

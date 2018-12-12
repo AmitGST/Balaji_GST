@@ -55,6 +55,7 @@ namespace DataAccessLayer
         public Nullable<System.DateTime> UpdatedDate { get; set; }
         public Nullable<int> BuisnessTypeId { get; set; }
     
+        public virtual AspNetUser AspNetUser { get; set; }
         public virtual GST_MST_BUSINESSTYPE GST_MST_BUSINESSTYPE { get; set; }
         public virtual GST_MST_SUBGROUP GST_MST_SUBGROUP { get; set; }
         public virtual GST_MST_SUBCLASS GST_MST_SUBCLASS { get; set; }
@@ -66,6 +67,5 @@ namespace DataAccessLayer
         public virtual ICollection<GST_TRN_CRDR_NOTE_DATA> GST_TRN_CRDR_NOTE_DATA { get; set; }
         public virtual ICollection<GST_TRN_INVOICE_DATA> GST_TRN_INVOICE_DATA { get; set; }
         public virtual ICollection<GST_TRN_VENDOR_SERVICE> GST_TRN_VENDOR_SERVICE { get; set; }
-        public virtual AspNetUser AspNetUser { get; set; }
     }
 }

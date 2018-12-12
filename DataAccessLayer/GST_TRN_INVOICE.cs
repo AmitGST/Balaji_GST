@@ -16,6 +16,7 @@ namespace DataAccessLayer
     {
         public GST_TRN_INVOICE()
         {
+            this.EWB_TRN_REPONSE_EWBILL = new HashSet<EWB_TRN_REPONSE_EWBILL>();
             this.GST_MST_SALE_REGISTER = new HashSet<GST_MST_SALE_REGISTER>();
             this.GST_MST_USER_CURRENT_TURNOVER = new HashSet<GST_MST_USER_CURRENT_TURNOVER>();
             this.GST_TRN_CONSOLIDATED_INVOICE = new HashSet<GST_TRN_CONSOLIDATED_INVOICE>();
@@ -56,6 +57,10 @@ namespace DataAccessLayer
         public string CreatedBy { get; set; }
         public string UpdatedBy { get; set; }
     
+        public virtual AspNetUser AspNetUser { get; set; }
+        public virtual AspNetUser AspNetUser1 { get; set; }
+        public virtual AspNetUser AspNetUser2 { get; set; }
+        public virtual ICollection<EWB_TRN_REPONSE_EWBILL> EWB_TRN_REPONSE_EWBILL { get; set; }
         public virtual GST_MST_FINYEAR GST_MST_FINYEAR { get; set; }
         public virtual ICollection<GST_MST_SALE_REGISTER> GST_MST_SALE_REGISTER { get; set; }
         public virtual ICollection<GST_MST_USER_CURRENT_TURNOVER> GST_MST_USER_CURRENT_TURNOVER { get; set; }
@@ -66,8 +71,5 @@ namespace DataAccessLayer
         public virtual ICollection<GST_TRN_INVOICE_AUDIT_TRAIL> GST_TRN_INVOICE_AUDIT_TRAIL { get; set; }
         public virtual ICollection<GST_TRN_INVOICE_DATA> GST_TRN_INVOICE_DATA { get; set; }
         public virtual ICollection<GST_TRN_ITC> GST_TRN_ITC { get; set; }
-        public virtual AspNetUser AspNetUser { get; set; }
-        public virtual AspNetUser AspNetUser1 { get; set; }
-        public virtual AspNetUser AspNetUser2 { get; set; }
     }
 }
