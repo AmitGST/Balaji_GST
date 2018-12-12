@@ -15,7 +15,7 @@ namespace BALAJI.GSP.APPLICATION.UC.UC_Gstr
     {
 
         UnitOfWork unitofwork = new UnitOfWork();
-        Return_Status status = new Return_Status();
+        Return_Status statuss = new Return_Status();
 
 
         protected void Page_Load(object sender, EventArgs e)
