@@ -40,33 +40,6 @@ namespace BALAJI.GSP.APPLICATION.Account {
         protected global::System.Web.UI.WebControls.TextBox Password;
         
         /// <summary>
-        /// Captcha1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::MSCaptcha.CaptchaControl Captcha1;
-        
-        /// <summary>
-        /// txtcaptcha control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtcaptcha;
-        
-        /// <summary>
-        /// ValidateCaptcha control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator ValidateCaptcha;
-        
-        /// <summary>
         /// RememberMe control.
         /// </summary>
         /// <remarks>

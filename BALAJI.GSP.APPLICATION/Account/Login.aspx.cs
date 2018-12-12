@@ -133,20 +133,20 @@ namespace BALAJI.GSP.APPLICATION.Account
                 cls_ErrorLog.LogError(ex, Common.LoggedInUserID());
             }
         }
-        protected void ValidateCaptcha_ServerValidate(object source, ServerValidateEventArgs e)
-        {
-            Captcha1.ValidateCaptcha(txtcaptcha.Text.Trim());
-            e.IsValid = Captcha1.UserValidated;
-            if (e.IsValid)
-            {
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Valid Captcha!');", true);
-                FailureText.Visible = true;
-            }
-            else
-            {
-                FailureText.Visible = false;
-            }
-        }
+        //protected void ValidateCaptcha_ServerValidate(object source, ServerValidateEventArgs e)
+        //{
+        //    Captcha1.ValidateCaptcha(txtcaptcha.Text.Trim());
+        //    e.IsValid = Captcha1.UserValidated;
+        //    if (e.IsValid)
+        //    {
+        //        ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Valid Captcha!');", true);
+        //        FailureText.Visible = true;
+        //    }
+        //    else
+        //    {
+        //        FailureText.Visible = false;
+        //    }
+        //}
     }
     public class LoginRedirectByRoleSection : ConfigurationSection
     {
