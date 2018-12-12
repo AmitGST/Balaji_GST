@@ -289,7 +289,7 @@ namespace BusinessLogic.Repositories
             switch (GstrType)
             {
                 case EnumConstants.Return.Gstr1:
-                    GstrColorBox = "small=box bg-blue";
+                    GstrColorBox = "small-box bg-blue";
                     break;
 
                 case EnumConstants.Return.Gstr2A:
@@ -670,31 +670,31 @@ namespace BusinessLogic.Repositories
             return result;
         }
         //TestAnkitaGSTR3B
-        public List<PROC_FILERETURN_GSTR3B_3_1_Result> GetGSTR_3B_1(string SellerUserID, int month)
+        public List<PROC_FILERETURN_GSTR3B_3_1_Result> GetGSTR_3B_1(string SellerUserID, int month, byte year)
         {
-            var result = unitOfWork.GetGSTR_3B_3_1(SellerUserID, month).ToList();
+            var result = unitOfWork.GetGSTR_3B_3_1(SellerUserID, month,year).ToList();
             return result;
         }
-        public List<PROC_FILERETURN_GSTR3B_3_2_Result> GetGSTR_3B_2(string SellerUserID, int month)
-        {
-            var result = unitOfWork.GetGSTR_3B_3_2(SellerUserID, month).ToList();
-            return result;
-        }
-        public List<PROC_FILERETURN_GSTR3B_5_Result> GetGSTR_3B_5(string SellerUserID, int month)
-        {
-            var result = unitOfWork.GetGSTR_3B_3_5(SellerUserID, month).ToList();
-            return result;
-        }
-        public List<PROC_FILERETURN_GSTR3B_5_1_Result> GetGSTR_3B_5_1(string SellerUserID, int month)
-        {
-            var result = unitOfWork.GetGSTR_3B_5_1(SellerUserID, month).ToList();
-            return result;
-        }
-        public List<PROC_FILERETURN_GSTR3B_ITC_Result> GetGSTR_3B_ITC(string SellerUserID, int month)
-        {
-            var result = unitOfWork.GetGSTR_3B_ITC(SellerUserID, month).ToList();
-            return result;
-        }
+        //public List<PROC_FILERETURN_GSTR3B_3_2_Result> GetGSTR_3B_2(string SellerUserID, int month)
+        //{
+        //    var result = unitOfWork.GetGSTR_3B_3_2(SellerUserID, month).ToList();
+        //    return result;
+        //}
+        //public List<PROC_FILERETURN_GSTR3B_5_Result> GetGSTR_3B_5(string SellerUserID, int month)
+        //{
+        //    var result = unitOfWork.GetGSTR_3B_3_5(SellerUserID, month).ToList();
+        //    return result;
+        //}
+        //public List<PROC_FILERETURN_GSTR3B_5_1_Result> GetGSTR_3B_5_1(string SellerUserID, int month)
+        //{
+        //    var result = unitOfWork.GetGSTR_3B_5_1(SellerUserID, month).ToList();
+        //    return result;
+        //}
+        //public List<PROC_FILERETURN_GSTR3B_ITC_Result> GetGSTR_3B_ITC(string SellerUserID, int month)
+        //{
+        //    var result = unitOfWork.GetGSTR_3B_ITC(SellerUserID, month).ToList();
+        //    return result;
+        //}
 
 
 
