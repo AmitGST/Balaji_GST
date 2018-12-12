@@ -17,7 +17,7 @@
                 <div class="row" style="padding-top:15px" >
                     <uc1:uc_GSTNUsers runat="server" ID="uc_GSTNUsers" />
                     </div>
-                <br/>
+               
                 <div class="row">
                     <div class="col-md-4">
                        
@@ -39,10 +39,18 @@
                                </div>
                           
                         </div>
+                    <div class="col-md-2"></div>
                     </div>
                </div>
+
+
+        
             </div>
+        <div class="box box-default">    
+             <uc1:uc_Gstr_Tileview runat="server" ID="uc_Gstr_Tileview" />
+
+        </div>
            
-                <uc1:uc_Gstr_Tileview runat="server" ID="uc_Gstr_Tileview" />
+               
 </div>
 </asp:Content>

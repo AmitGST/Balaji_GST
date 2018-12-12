@@ -71,7 +71,7 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn
 
             var taxuserid = uc_GSTNUsers.ddlGSTNUsers.SelectedValue;
             Session["taxid"] = taxuserid;
-            var a = Session["taxid"];
+            //var taxConsultantId = Session["taxid"];
         }
 
 
@@ -85,16 +85,35 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn
 
         private void uc_Gstr_Tileview_Info_Click(object sender, EventArgs e)
         {
-            var year = ddlfinYear.SelectedValue;
-            // var month = Convert.ToByte(ddlmonth.SelectedValue);
-            var month = uc_invoiceMonth.GetIndexValue;
-            Session["Month"] = month;
+            //var year =Convert.ToInt16( ddlfinYear.SelectedValue);
+            //// var month = Convert.ToByte(ddlmonth.SelectedValue);
+            //var month =Convert.ToInt16( uc_invoiceMonth.GetIndexValue);
+            //Session["Month"] = month;
+            //var a = (byte);
+            ////var b = (byte)EnumConstants.Return.Gstr2A;
+            ////var c = (byte)EnumConstants.Return.Gstr3B;
 
+            //var status = uc_Gstr_Tileview.ReturenHeaderStatus(year, month);
+
+            ////var ReturnStatus = ;// .Select(s => s.ReturnStatus); // unitOfwork.ReturnStatusRepository.Filter(f => f.ReturnStatus ==Status.Contains).Select(s => s.ReturnStatus);
+
+            //if (status.Where(w => w.ReturnStatus == a).SingleOrDefault().ReturnStatus==a)
+            //{
+            //    Response.Redirect("~/User/ureturn/GSTR1Details.aspx");
+            //}
+            //else if (status.Where(w => w.ReturnStatus == b).SingleOrDefault().ReturnStatus == b)
+            //{
+
+            //}
+            //else
+            //{
+            //    Response.Redirect("~/User/ureturn/GSTR3BDetails.aspx");
+            //}
             // var invoiceAudit = unitOfwork.InvoiceAuditTrailRepositry.Filter(f => f.AuditTrailStatus == 0 && ).OrderByDescending(o => o.InvoiceDate).ToList();
-            var invoiceList = unitOfwork.InvoiceRepository.Filter(f => f.InvoiceMonth == month && f.Status == true).OrderByDescending(o => o.InvoiceDate).ToList();
+            //var invoiceList = unitOfwork.InvoiceRepository.Filter(f => f.InvoiceMonth == month && f.Status == true).OrderByDescending(o => o.InvoiceDate).ToList();
 
             //amits for gstr 3b condition 
-            Response.Redirect("~/User/ureturn/GSTR1Details.aspx");
+          
         }
 
         protected void ddlfinYear_SelectedIndexChanged(object sender, EventArgs e)
@@ -169,49 +188,55 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn
         //    invoiceList = unitOfwork.InvoiceRepository.Filter(f => f.InvoiceUserID == loggedinUser && f.InvoiceMonth == SelectedMonth).ToList();
         //    return invoiceList;
         //}
-        private List<GST_MST_HEADER> GetFilterInvoice(int Year, int SelectedMonth)
+        public int GetFilterInvoice(int Year, int SelectedMonth,string UserId)
         {
             unitOfwork = new UnitOfWork();
-            List<GST_TRN_RETURN_STATUS> invoiceList = new List<GST_TRN_RETURN_STATUS>();
-            List<GST_MST_HEADER> invoices = new List<GST_MST_HEADER>();
             var loggedinUser = Common.LoggedInUserID();
-            var return1 = (byte)EnumConstants.Return.Gstr1;
-            var return2 = (byte)EnumConstants.Return.Gstr3B;
 
-            var invstatusfile = (byte)EnumConstants.ReturnFileStatus.FileGstr1;
-            var invstatussave = (byte)EnumConstants.ReturnFileStatus.Save;
-            var invstatussubmit = (byte)EnumConstants.ReturnFileStatus.Submit;
-            if (uc_GSTNUsers.ddlGSTNUsers.SelectedIndex > 0)
-            {
-                var taxi = Session["taxid"].ToString();
-                var FindMax = unitOfwork.ReturnStatusRepository.Filter(f => f.Period == SelectedMonth && f.FinYear_ID == Year).Max(a => a.Action);
-               // invoiceList = unitOfwork.ReturnStatusRepository.Filter(f => f.User_id == taxi && f.Period == SelectedMonth && f.FinYear_ID == Year && f.Action == FindMax).ToList();
-                invoices = unitOfwork.headerrepository.All().ToList();
+            uc_Gstr_Tileview.ReturenHeaderStatus(Year, SelectedMonth, UserId);
 
-                
-            }
-            else
-            {
-                var FindMax = unitOfwork.ReturnStatusRepository.Filter(f => f.Period == SelectedMonth && f.FinYear_ID == Year).Max(a => a.Action);
-                //invoiceList = unitOfwork.ReturnStatusRepository.Filter(f => f.User_id == loggedinUser && f.Period == SelectedMonth && f.FinYear_ID == Year && f.Action == FindMax).ToList();
-                invoices = unitOfwork.headerrepository.All().ToList();
+            //if (uc_GSTNUsers.ddlGSTNUsers.SelectedIndex > 0)
+            //{
+            //    var taxi = Session["taxid"].ToString();
+            //    var FindMax = unitOfwork.ReturnStatusRepository.Filter(f => f.Period == SelectedMonth && f.FinYear_ID == Year).Max(a => a.Action);
+            //    // invoiceList = unitOfwork.ReturnStatusRepository.Filter(f => f.User_id == taxi && f.Period == SelectedMonth && f.FinYear_ID == Year && f.Action == FindMax).ToList();
+            //    //invoices = unitOfwork.headerrepository.All().ToList();
 
-            }
-            return invoices;
+
+            //}
+            //else
+            //{
+            //    var FindMax = unitOfwork.ReturnStatusRepository.Filter(f => f.Period == SelectedMonth && f.FinYear_ID == Year).Max(a => a.Action);
+            //    //invoiceList = unitOfwork.ReturnStatusRepository.Filter(f => f.User_id == loggedinUser && f.Period == SelectedMonth && f.FinYear_ID == Year && f.Action == FindMax).ToList();
+            //    //invoices = unitOfwork.headerrepository.All().ToList();
+
+            //}
+            return 0;
         }
 
 
         private void PopulateTileViewInvoices(int Year, int SelectedMonth, int Status)
         {
-
+            var taxConsultantId = Session["taxid"];
+            var loggedInUser = Common.LoggedInUserID();
             var ddlmonth = uc_invoiceMonth.GetIndexValue;
             var ddlyear = ddlfinYear.SelectedValue;
             var invstatusfile = EnumConstants.ReturnFileStatus.FileGstr1;
             var invstatussave = EnumConstants.ReturnFileStatus.Save;
             var invstatussubmit = (byte)EnumConstants.ReturnFileStatus.Submit;
-            var invoicesB2B = GetFilterInvoice(Convert.ToInt16(ddlyear), Convert.ToInt16(ddlmonth));
-            var dataB2b = invoicesB2B;
-            uc_Gstr_Tileview.InvoiceList = dataB2b;
+
+
+            if (uc_GSTNUsers.ddlGSTNUsers.SelectedIndex > 0)
+            {
+                var invoicesB2B = GetFilterInvoice(Convert.ToInt16(ddlyear), Convert.ToInt16(ddlmonth), Convert.ToString(taxConsultantId));
+                var dataB2b = invoicesB2B;
+            }
+            else 
+            {
+                var invoicesB2B = GetFilterInvoice(Convert.ToInt16(ddlyear), Convert.ToInt16(ddlmonth), Convert.ToString(loggedInUser));
+                var dataB2b = invoicesB2B;
+            }
+            //uc_Gstr_Tileview.InvoiceList = dataB2b;
 
             //if (Status == invstatusfile || Status == invstatussave || Status == invstatussubmit)
             //{
