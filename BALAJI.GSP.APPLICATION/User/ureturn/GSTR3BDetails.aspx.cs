@@ -29,7 +29,7 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn
             //lblmonth.Text =Convert.ToString(uc_invoiceMonth.GetValue);//Convert.ToString(DateTime.Now.Month - 1);
              uc_invoiceMonth.SelectedIndexChange += uc_invoiceMonth_SelectedIndexChange;
              var loogedinUser=Common.LoggedInUserID();
-            BindlistView(loogedinUser, 9);
+            BindlistView(loogedinUser, 9,3);
            
             //var invoice = unitofwork.GetGSTR_3B_3_1(loogedinUser, 9);
             //lvGstr3B_1.DataSource = invoice.ToList(); 
@@ -41,12 +41,12 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn
             var month = uc_invoiceMonth.GetValue;
 
         }
-        private void BindlistView(string SellerUserId, int month)
+        private void BindlistView(string SellerUserId, int month , int year)
         {
             var loogedinUser = Common.LoggedInUserID();
-            GetFile_GSTR_3B_1(loogedinUser,9);
-            GetFile_GSTR_3B_2(loogedinUser,9);
-            GetFile_GSTR_3B_5(loogedinUser, 9);
+            GetFile_GSTR_3B_1(loogedinUser,9,3);
+            //GetFile_GSTR_3B_2(loogedinUser,9);
+            //GetFile_GSTR_3B_5(loogedinUser, 9);
                
         }
         public void BindListView<T>(ListView lvControl, List<T> collectionItem)
@@ -55,12 +55,12 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn
             lvControl.DataSource = collectionItem;
             lvControl.DataBind();
         }
-        public void GetFile_GSTR_3B_1(string SellerUserId, int month)
+        public void GetFile_GSTR_3B_1(string SellerUserId, int month, byte year)
         {
             try
             {
 
-                BindListView(lvGstr3B_1, _invoice.GetGSTR_3B_1(SellerUserId, month));
+                BindListView(lvGstr3B_1, _invoice.GetGSTR_3B_1(SellerUserId, month,year));
             }
             catch (Exception ex)
             {
@@ -68,32 +68,32 @@ namespace BALAJI.GSP.APPLICATION.User.ureturn
                 cls_ErrorLog.LogError(ex, Common.LoggedInUserID());
             }
         }
-        public void GetFile_GSTR_3B_2(string SellerUserId, int month)
-        {
-            try
-            {
+        //public void GetFile_GSTR_3B_2(string SellerUserId, int month)
+        //{
+        //    try
+        //    {
 
-                BindListView(lv_Gstr3B_3_2, _invoice.GetGSTR_3B_2(SellerUserId, month));
-            }
-            catch (Exception ex)
-            {
-                cls_ErrorLog ob = new cls_ErrorLog();
-                cls_ErrorLog.LogError(ex, Common.LoggedInUserID());
-            }
-        }
-        public void GetFile_GSTR_3B_5(string SellerUserId, int month)
-        {
-            try
-            {
+        //        BindListView(lv_Gstr3B_3_2, _invoice.GetGSTR_3B_2(SellerUserId, month));
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        cls_ErrorLog ob = new cls_ErrorLog();
+        //        cls_ErrorLog.LogError(ex, Common.LoggedInUserID());
+        //    }
+        //}
+        //public void GetFile_GSTR_3B_5(string SellerUserId, int month)
+        //{
+        //    try
+        //    {
 
-                BindListView(lv_Gstr3B_5, _invoice.GetGSTR_3B_5(SellerUserId, month));
-            }
-            catch (Exception ex)
-            {
-                cls_ErrorLog ob = new cls_ErrorLog();
-                cls_ErrorLog.LogError(ex, Common.LoggedInUserID());
-            }
-        }
+        //        BindListView(lv_Gstr3B_5, _invoice.GetGSTR_3B_5(SellerUserId, month));
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        cls_ErrorLog ob = new cls_ErrorLog();
+        //        cls_ErrorLog.LogError(ex, Common.LoggedInUserID());
+        //    }
+        //}
                 
         //Get seller User id start
         private ApplicationUserManager _userManager;

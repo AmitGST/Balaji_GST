@@ -35,20 +35,20 @@
                                 <%# Container.DataItemIndex+1 %>.
                             </td>
                             <td style="width: 55%">
-                                <asp:Label ID="lblDescrip" runat="server" Text='<%# Eval("Description") %>'></asp:Label>
+                                <asp:Label ID="lblDescrip" runat="server" Text='<%# Eval("SUBSECTIONNAME") %>'></asp:Label>
                             </td>
                             <td>
-                                <asp:TextBox ID="txtTotalValue" disabled runat="server" Text='<%# Eval("TotalTaxableValue") %>'></asp:TextBox>
+                                <asp:TextBox ID="txtTotalValue" disabled runat="server" Text='<%# Eval("TOTALTAXABLEVALUE") %>'></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="txtIGST" disabled runat="server" Text='<%# Eval("IntegratedTax") %>'></asp:TextBox>
+                                <asp:TextBox ID="txtIGST" disabled runat="server" Text='<%# Eval("IGSTAMT") %>'></asp:TextBox>
                             </td>
                             <td>
-                                <asp:TextBox ID="txtCGST" disabled runat="server" Text='<%# Eval("CentralTax") %>'></asp:TextBox></td>
+                                <asp:TextBox ID="txtCGST" disabled runat="server" Text='<%# Eval("CGSTAMT") %>'></asp:TextBox></td>
                             <td>
-                                <asp:TextBox ID="txtSGST" disabled runat="server" Text='<%# Eval("StateTax") %>'></asp:TextBox></td>
+                                <asp:TextBox ID="txtSGST" disabled runat="server" Text='<%# Eval("SGSTAMT") %>'></asp:TextBox></td>
                             <td>
-                                <asp:TextBox ID="txtCess" disabled runat="server" Text='<%# Eval("CESS") %>'></asp:TextBox></td>
+                                <asp:TextBox ID="txtCess" disabled runat="server" Text='<%# Eval("CESSAMT") %>'></asp:TextBox></td>
                         </tr>
                     </ItemTemplate>
                     <LayoutTemplate>
