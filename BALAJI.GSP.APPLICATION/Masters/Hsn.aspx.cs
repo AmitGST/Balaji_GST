@@ -226,16 +226,7 @@ namespace BALAJI.GSP.APPLICATION.Masters
             }
             catch (Exception ex)
             {
-                //foreach (var eve in ex.EntityValidationErrors)
-                //{
-                //    Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
-                //        eve.Entry.Entity.GetType().Name, eve.Entry.State);
-                //    foreach (var ve in eve.ValidationErrors)
-                //    {
-                //        Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
-                //            ve.PropertyName, ve.ErrorMessage);
-                //    }
-                //}
+                
                 cls_ErrorLog ob = new cls_ErrorLog();
                 cls_ErrorLog.LogError(ex, Common.LoggedInUserID());
                 uc_sucess.ErrorMessage = ex.Message;
@@ -367,16 +358,6 @@ namespace BALAJI.GSP.APPLICATION.Masters
             {
                 cls_ErrorLog ob = new cls_ErrorLog();
                 cls_ErrorLog.LogError(ex, Common.LoggedInUserID());
-                //foreach (var eve in ex.EntityValidationErrors)
-                //{
-                //    Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
-                //        eve.Entry.Entity.GetType().Name, eve.Entry.State);
-                //    foreach (var ve in eve.ValidationErrors)
-                //    {
-                //        Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
-                //            ve.PropertyName, ve.ErrorMessage);
-                //    }
-                //}
                 uc_sucess_notified.ErrorMessage = ex.Message;
                 uc_sucess_notified.VisibleError = true;
             }
@@ -415,16 +396,6 @@ namespace BALAJI.GSP.APPLICATION.Masters
             {
                 cls_ErrorLog ob = new cls_ErrorLog();
                 cls_ErrorLog.LogError(ex, Common.LoggedInUserID());
-                //foreach (var eve in ex.EntityValidationErrors)
-                //{
-                //    Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
-                //        eve.Entry.Entity.GetType().Name, eve.Entry.State);
-                //    foreach (var ve in eve.ValidationErrors)
-                //    {
-                //        Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
-                //            ve.PropertyName, ve.ErrorMessage);
-                //    }
-                //}
                 uc_sucess_condition.ErrorMessage = ex.Message;
                 uc_sucess_condition.VisibleError = true;
             }

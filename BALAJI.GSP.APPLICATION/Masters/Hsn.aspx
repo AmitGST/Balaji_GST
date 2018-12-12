@@ -294,9 +294,9 @@
                             <ItemTemplate>
                                 <tr>
                                     <td><%# Container.DataItemIndex + 1%>.</td>
-                                    <td><%#DataBinder.Eval(Container.DataItem,"GST_MST_SUBGROUP.SubGroupCode")%></td>
-                                    <td><%# Eval("ItemCode") %></td>
-                                    <td><%# Eval("Description") %></td>
+                                    <td><%#DataBinder.Eval(Container.DataItem,"GST_MST_BUSINESSTYPE.BusinessType") %><%--<%#DataBinder.Eval(Container.DataItem,"GST_MST_SUBGROUP.SubGroupCode")%>--%></td>
+                                    <td> <asp:Label runat="server" ID="hsnName" ToolTip='<%# Eval("Description") %>' Text='<%# Eval("ItemCode") %>'></asp:Label></td>
+                                    <td><asp:Label runat="server" ID="lblDescription" ToolTip='<%# Eval("Description") %>' Text='<%# clsCommon.GetStringTruncate(Eval("Description").ToString(),20) %>'></asp:Label></td>
                                     <td><%# Eval("Unit") %></td>
                                     <td><%# Eval("IGST") %></td>
                                     <td><%# Eval("CGST") %></td>
@@ -326,55 +326,7 @@
                                                                 </h4>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <%--   <asp:ListView ID="lvHSNData" DataKeyNames="Tarrif,SerialNo" runat="server">
-                                                                        <EmptyDataTemplate>
-                                                                            <table class="table table-striped">
-                                                                                <tr>
-                                                                                    <td>No data was returned.</td>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </EmptyDataTemplate>
-                                                                        <ItemTemplate>
-                                                                            <tr>
-                                                                                <td><%# Container.DataItemIndex + 1%>.</td>
-                                                                                <td>
-                                                                                    <asp:Label ID="lblSN" runat="server" Text='<%# Eval("SerialNo") %>' />
-                                                                                </td>
-                                                                                <td>
-                                                                                    <asp:Label ID="lblHSN" runat="server" Text='<%# Eval("HSNNumber") %>' />
-                                                                                </td>
-                                                                                <td>
-                                                                                    <asp:Label ID="lblNN" runat="server" Text='<%# Eval("NotificationNo") %>' />
-                                                                                </td>
-                                                                                <td>
-                                                                                    <asp:Label ID="lblNSNO" runat="server" Text='<%# Eval("NotificationSNo") %>' />
-                                                                                </td>
-                                                                                <td>
-                                                                                    <asp:Label ID="lblTariff" runat="server" Text='<%# Eval("Tarrif") %> '></asp:Label>
-                                                                                </td>
-                                                                                <td>
-                                                                                    <asp:Button ID="btnSelect" runat="server" CommandArgument='<%# Eval("Tarrif") %>' OnClick="rblHSNID_CheckedChanged" CssClass="btn btn-primary btn-xs" Text="Select" />
-                                                                                </td>
-                                                                            </tr>
-                                                                        </ItemTemplate>
-                                                                        <LayoutTemplate>
-                                                                            <table class="table table-striped">
-                                                                                <tr>
-                                                                                    <th style="width: 10px">#</th>
-                                                                                    <th>S.No.</th>
-                                                                                    <th>HSN No.</th>
-                                                                                    <th>Notifi. No</th>
-                                                                                    <th>Notifi. S.No</th>
-                                                                                    <th>Tarrif/Plan</th>
-                                                                                    <th></th>
-                                                                                    <tbody>
-                                                                                        <tr id="itemPlaceholder" runat="server">
-                                                                                        </tr>
-                                                                                    </tbody>
-                                                                                </tr>
-                                                                            </table>
-                                                                        </LayoutTemplate>
-                                                                    </asp:ListView>--%>
+                                                                
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button class="btn btn-info" data-dismiss="modal" aria-hidden="true">
@@ -395,7 +347,7 @@
                                 <table class="table">
                                     <tr>
                                         <th style="width: 4%">#</th>
-                                        <th style="width: 6%">Sub-Group</th>
+                                        <th style="width: 6%">Business Type</th>
                                         <th style="width: 5%">HSN No</th>
                                         <th style="width: 39%">Description</th>
                                         <th style="width: 2%">Unit</th>
