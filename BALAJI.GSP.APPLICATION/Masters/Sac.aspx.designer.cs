@@ -202,6 +202,24 @@ namespace BALAJI.GSP.APPLICATION.Masters {
         protected global::System.Web.UI.WebControls.DropDownList ddlZeroRated;
         
         /// <summary>
+        /// ddlBusinessType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlBusinessType;
+        
+        /// <summary>
+        /// BusinessTypeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator BusinessTypeValidator;
+        
+        /// <summary>
         /// txtDescription control.
         /// </summary>
         /// <remarks>

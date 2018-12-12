@@ -36,6 +36,7 @@ namespace BALAJI.GSP.APPLICATION.Masters
                 BindSubClass();
                 BindNotifiedItem();
                 BindConditioned();
+                BindBusinessType();
                 // ddlSubClass.DataBind();
             }
         }
@@ -58,6 +59,15 @@ namespace BALAJI.GSP.APPLICATION.Masters
             ddlNotifiedItem.DataTextField = "ItemCode";
             ddlNotifiedItem.DataBind();
             ddlNotifiedItem.Items.Insert(0, new ListItem(" [ Select ] ", "0"));
+        }
+
+        private void BindBusinessType()
+        {
+            ddlBusinessType.DataSource = unitOfwork.BuisnessTypeRepository.All().Select(f => new { Key = f.BusinessID, Value = f.BusinessType }).ToList();
+            ddlBusinessType.DataTextField = "Value";
+            ddlBusinessType.DataValueField = "Key";
+            ddlBusinessType.DataBind();
+            ddlBusinessType.Items.Insert(0, new ListItem(" [ Select ] ", "-1"));
         }
 
         private void BindConditioned()
@@ -144,6 +154,7 @@ namespace BALAJI.GSP.APPLICATION.Masters
                 sac.IsExempted = ddlExempted.SelectedIndex > 0 ? Convert.ToBoolean(ddlExempted.SelectedItem.Text) : false;
                 sac.IsZeroRated = ddlZeroRated.SelectedIndex > 0 ? Convert.ToBoolean(ddlZeroRated.SelectedItem.Text) : false;
                 sac.IsNonGSTGoods = ddlNonGSTGoods.SelectedIndex > 0 ? Convert.ToBoolean(ddlNonGSTGoods.SelectedItem.Text) : false;
+                sac.BuisnessTypeId = Convert.ToInt32(ddlBusinessType.SelectedValue);
                 sac.Description = txtDescription.Text.Trim();
                 string itemid = Convert.ToString(ViewState["Item_ID"]);
                 if (itemid == "" || itemid == null)
@@ -232,26 +243,11 @@ namespace BALAJI.GSP.APPLICATION.Masters
 
             catch (Exception ex)
             {
-                //foreach (var eve in ex.EntityValidationErrors)
-                //{
-                //    Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
-                //        eve.Entry.Entity.GetType().Name, eve.Entry.State);
-                //    foreach (var ve in eve.ValidationErrors)
-                //    {
-                //        Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
-                //            ve.PropertyName, ve.ErrorMessage);
-                //    }
-                //}
                 cls_ErrorLog ob = new cls_ErrorLog();
                 cls_ErrorLog.LogError(ex, Common.LoggedInUserID());
                 uc_sucess_sac.ErrorMessage = ex.Message;
                 uc_sucess_sac.VisibleError = true;
             }
-            //catch (Exception ex)
-            //{
-            //    uc_sucess_sac.ErrorMessage = ex.Message;
-            //    uc_sucess_sac.VisibleError = true;
-            //}
         }
 
         protected void btnNotified_Click(object sender, EventArgs e)
@@ -287,16 +283,6 @@ namespace BALAJI.GSP.APPLICATION.Masters
             }
             catch (Exception ex)
             {
-                //foreach (var eve in ex.EntityValidationErrors)
-                //{
-                //    Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
-                //        eve.Entry.Entity.GetType().Name, eve.Entry.State);
-                //    foreach (var ve in eve.ValidationErrors)
-                //    {
-                //        Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
-                //            ve.PropertyName, ve.ErrorMessage);
-                //    }
-                //}
                 cls_ErrorLog ob = new cls_ErrorLog();
                 cls_ErrorLog.LogError(ex, Common.LoggedInUserID());
                 uc_sucess_notified.ErrorMessage = ex.Message;
@@ -331,26 +317,11 @@ namespace BALAJI.GSP.APPLICATION.Masters
 
             catch (Exception ex)
             {
-                //foreach (var eve in ex.EntityValidationErrors)
-                //{
-                //    Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
-                //        eve.Entry.Entity.GetType().Name, eve.Entry.State);
-                //    foreach (var ve in eve.ValidationErrors)
-                //    {
-                //        Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
-                //            ve.PropertyName, ve.ErrorMessage);
-                //    }
-                //}
                 cls_ErrorLog ob = new cls_ErrorLog();
                 cls_ErrorLog.LogError(ex, Common.LoggedInUserID());
                 uc_sucess_condition.ErrorMessage = ex.Message;
                 uc_sucess_condition.VisibleError = true;
             }
-            //catch (Exception ex)
-            //{
-            //    uc_sucess_condition.ErrorMessage = ex.Message;
-            //    uc_sucess_condition.VisibleError = true;
-            //}
         }
         private void BindIsNotified()
         {
