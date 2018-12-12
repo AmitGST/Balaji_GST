@@ -36,7 +36,10 @@ using System.Configuration;
 
 public class clsCommon
 {
-
+    public static string GetStringTruncate(string text, int length)
+    {
+        return text.Truncate(length, "...");
+    }
 }
 
 public class ReportGenerate
@@ -64,6 +67,8 @@ public class ReportGenerate
 
         }
     }
+
+   
     public static void CreatePDF(string invoiceName, ReportViewer reportViewer)
     {
         // Variables
